@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import "./App.css";
 import { DisplayTask } from "./DisplayTask";
+
+const [role] = useState<string>("super"); //remove this once the real state for role is ready, this is for testing purposes
 
 const TASK: Task =
     //this is a completely random test task to get something displayed, needs to be deleted once we have an actual task list

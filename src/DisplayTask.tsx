@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import TASK from "../src/App";
+import { editTask } from "../src/EditTask";
 
 interface taskProps {
     name: string;
@@ -28,6 +29,9 @@ export function DisplayTask(task: taskProps): JSX.Element {
             <div>{task.steps}</div>
             <div>{task.numUsers}</div>
             <div>{task.image}</div>
+            <Button onClick={editTask}>Edit Task</Button>
         </div>
     );
+
+    //edit task might need to get props passed in later
 }

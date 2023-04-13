@@ -8,6 +8,10 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript,
             </header>
             <h1>man up</h1>
+            <div>
+                Team Members: Sydni Wright, Kaitlyn Sullivan, Aaron Oster, Will
+                Sharp, Cornelia Meiss
+            </div>
         </div>
     );
 }

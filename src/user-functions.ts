@@ -19,21 +19,17 @@ export function deleteUser(user: User): void {
 /**
  * deleteTask function, deletes a task from the userList
  */
-export function deleteTask(task: Task): void {
-    task.name = "";
-    task.description = "";
-    task.difficulty = 0;
-    task.image = "";
-    task.numUsers = 0;
-    task.status = false;
-    task.steps = [];
-    task.time = 0;
+export function deleteTask(user: User, task: Task): Task[] {
+    let list = [...user.userList];
+    list = list.filter((item: Task): boolean => item != task);
+    return list;
 }
 
 /**
  * addTask function, adds a task fto the userList
  */
 export function makeTask(
+    user: User,
     name: string,
     desc: string,
     stat: boolean,
@@ -42,7 +38,7 @@ export function makeTask(
     diff: number,
     num: number,
     time: number
-): Task {
+): Task[] {
     const task: Task = {
         name: name,
         description: desc,
@@ -53,5 +49,7 @@ export function makeTask(
         numUsers: num,
         time: time
     };
-    return task;
+    const list = [...user.userList];
+    list.push(task);
+    return list;
 }

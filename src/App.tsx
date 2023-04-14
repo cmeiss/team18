@@ -36,7 +36,7 @@ const TASK: Task[] =
     ];
 
 function App(): JSX.Element {
-    const [roles] = useState<string>("Super");
+    const [roles] = useState<string>("super"); //This needs to be set by drop down menu
     return (
         <div className="App">
             <header className="App-header">

@@ -58,8 +58,11 @@ export function DisplayTask(display: displayProps): JSX.Element {
             </Row>
             <Row>
                 <div>
-                    Number of Users:{" "}
-                    {display.role === "super" ? display.numUsers : ""}
+                    {display.role === "super" ? (
+                        <div>Number of Users: {display.numUsers}</div>
+                    ) : (
+                        <div>{""}</div>
+                    )}
                 </div>
                 <Button onClick={editTask}>Edit Task</Button>
             </Row>

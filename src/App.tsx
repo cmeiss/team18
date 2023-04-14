@@ -3,15 +3,9 @@ import { Task } from "../interfaces/task";
 import "./App.css";
 import { DisplayTask } from "./DisplayTask";
 
-//const [roles] = useState<string>("admin");
-// interface roleProp {
-//     roles: string;
-// }
-
-//const roles = "admin";
-
 const TASK: Task[] =
-    //this is a completely random test task to get something displayed, needs to be deleted once we have an actual task list
+    //this is a completely random test task array to get something
+    //displayed, needs to be deleted once we have an actual task list
     [
         {
             name: "test",
@@ -47,6 +41,10 @@ function App(): JSX.Element {
                 Team Members: Sydni Wright, Kaitlyn Sullivan, Aaron Oster, Will
                 Sharp, Cornelia Meiss
             </div>
+            {/*  This div statement exists only to test the DisplayTask component
+            and show how it works by displaying the TASK array,
+            This div statement needs to be deleted together with the TASK array
+            when we have our actual tasks arrays and showList components */}
             {TASK.map((TASK: Task) => (
                 <DisplayTask
                     key={5}
@@ -61,16 +59,9 @@ function App(): JSX.Element {
                     role={roles}
                 ></DisplayTask>
             ))}
-            {/* <DisplayTask
-                name={TASK.name}
-                description={TASK.description}
-                status={TASK.status}
-                image={TASK.image}
-                steps={TASK.steps}
-                difficulty={TASK.difficulty}
-                numUsers={TASK.numUsers}
-                time={TASK.time}
-            ></DisplayTask> */}
+            {/* The key is necessary for display task to work, 
+                    ideally we should try to have an increasing number to keep track
+                    of the tasks */}
         </div>
     );
 }

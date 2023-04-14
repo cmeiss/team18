@@ -13,12 +13,8 @@ interface displayProps {
     difficulty: number;
     numUsers: number;
     time: number;
-    role: string;
+    role: string; //added this in here to be able to pass the role state from app
 }
-
-// interface roleProp {
-//     role: string;
-// }
 
 export function DisplayTask(display: displayProps): JSX.Element {
     const [done, setDone] = useState<boolean>(display.status); //done = true means task is not done
@@ -57,6 +53,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                 </Col>
             </Row>
             <Row>
+                {/* The content of this row is only visible if role is super */}
                 <div>
                     {display.role === "super" ? (
                         <div>Number of Users: {display.numUsers}</div>
@@ -65,7 +62,21 @@ export function DisplayTask(display: displayProps): JSX.Element {
                     )}
                 </div>
                 <Button onClick={editTask}>Edit Task</Button>
+                {/*EditTask will probably not be an own file, but we will rather
+                have multiple editing components that are going to be called in here,
+                we might also have to switch the editMode by clicking anywhere on
+                the task and not on a specific button, but we should ask the professor 
+                about that*/}
             </Row>
         </div>
     );
 }
+
+//To implement the edit mode, we will have to create and import components
+//to edit all the attributes. These components need to be imported
+//and called in DisplayView
+//We will need an "editMode" state that specifies whether or not
+//the edit components are showed
+//This "editMode" state is changed when component is clicked, ask if
+//this can be a button or if this needs to be throught the drag and
+//drop technique

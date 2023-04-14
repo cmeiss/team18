@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
-import { Task } from "../interfaces/task";
+import React from "react";
+//import { Button } from "react-bootstrap";
+//import { Task } from "./interfaces/task";
 
 export function editTask(): JSX.Element {
     console.log("clicked edit button");

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Task } from "../interfaces/task";
+import { Task } from "./interfaces/task";
 import "./App.css";
 import { DisplayTask } from "./DisplayTask";
 

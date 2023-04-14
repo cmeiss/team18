@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Task } from "../interfaces/task";
-import TASK from "../src/App";
+//import { Task } from "../interfaces/task";
+//import TASK from "../src/App";
 import { editTask } from "../src/EditTask";
 
 interface taskProps {
@@ -32,6 +32,4 @@ export function DisplayTask(task: taskProps): JSX.Element {
             <Button onClick={editTask}>Edit Task</Button>
         </div>
     );
-
-    //edit task might need to get props passed in later
 }

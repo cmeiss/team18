@@ -29,7 +29,7 @@ function App(): JSX.Element {
                 Team Members: Sydni Wright, Kaitlyn Sullivan, Aaron Oster, Will
                 Sharp, Cornelia Meiss
             </div>
-            <DisplayTask
+            {/* <DisplayTask
                 name={TASK.name}
                 description={TASK.description}
                 status={TASK.status}
@@ -38,7 +38,7 @@ function App(): JSX.Element {
                 difficulty={TASK.difficulty}
                 numUsers={TASK.numUsers}
                 time={TASK.time}
-            ></DisplayTask>
+            ></DisplayTask> */}
         </div>
     );
 }

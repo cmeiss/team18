@@ -3,6 +3,13 @@ import { Task } from "../interfaces/task";
 import "./App.css";
 import { DisplayTask } from "./DisplayTask";
 
+//const [roles] = useState<string>("admin");
+// interface roleProp {
+//     roles: string;
+// }
+
+//const roles = "admin";
+
 const TASK: Task[] =
     //this is a completely random test task to get something displayed, needs to be deleted once we have an actual task list
     [
@@ -29,6 +36,7 @@ const TASK: Task[] =
     ];
 
 function App(): JSX.Element {
+    const [roles] = useState<string>("Super");
     return (
         <div className="App">
             <header className="App-header">
@@ -50,6 +58,7 @@ function App(): JSX.Element {
                     difficulty={TASK.difficulty}
                     numUsers={TASK.numUsers}
                     time={TASK.time}
+                    role={roles}
                 ></DisplayTask>
             ))}
             {/* <DisplayTask

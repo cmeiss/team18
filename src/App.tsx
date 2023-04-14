@@ -3,8 +3,6 @@ import { Task } from "../interfaces/task";
 import "./App.css";
 import { DisplayTask } from "./DisplayTask";
 
-const [role] = useState<string>("super"); //remove this once the real state for role is ready, this is for testing purposes
-
 const TASK: Task =
     //this is a completely random test task to get something displayed, needs to be deleted once we have an actual task list
     {
@@ -29,7 +27,7 @@ function App(): JSX.Element {
                 Team Members: Sydni Wright, Kaitlyn Sullivan, Aaron Oster, Will
                 Sharp, Cornelia Meiss
             </div>
-            {/* <DisplayTask
+            <DisplayTask
                 name={TASK.name}
                 description={TASK.description}
                 status={TASK.status}
@@ -38,7 +36,7 @@ function App(): JSX.Element {
                 difficulty={TASK.difficulty}
                 numUsers={TASK.numUsers}
                 time={TASK.time}
-            ></DisplayTask> */}
+            ></DisplayTask>
         </div>
     );
 }

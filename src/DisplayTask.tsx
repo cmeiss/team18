@@ -3,6 +3,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 //import { Task } from "../interfaces/task";
 //import TASK from "../src/App";
 import { editTask } from "../src/EditTask";
+import "./DisplayTask.css";
 
 interface displayProps {
     name: string;

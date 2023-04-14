@@ -3,7 +3,7 @@ import { Task } from "../interfaces/task";
 import "./App.css";
 import { DisplayTask } from "./DisplayTask";
 
-const TASK: Task[] =
+const TAsk: Task[] =
     //this is a completely random test task array to get something
     //displayed, needs to be deleted once we have an actual task list
     [
@@ -30,6 +30,7 @@ const TASK: Task[] =
     ];
 
 function App(): JSX.Element {
+    const [TASK] = useState<Task[]>(TAsk);
     const [roles] = useState<string>("super"); //This needs to be set by drop down menu
     return (
         <div className="App">

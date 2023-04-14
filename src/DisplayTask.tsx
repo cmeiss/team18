@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 //import { Task } from "../interfaces/task";
 //import TASK from "../src/App";
 import { editTask } from "../src/EditTask";
@@ -16,6 +16,7 @@ interface taskProps {
 }
 
 export function DisplayTask(task: taskProps): JSX.Element {
+    const [done, setDone] = useState<boolean>(task.status); //done = true means task is not done
     return (
         <div>
             <h3>Task: {task.name}</h3>
@@ -23,7 +24,16 @@ export function DisplayTask(task: taskProps): JSX.Element {
             <Row>
                 <Col>
                     <ul>
-                        <li>{task.status ? "Done" : "ToDo"}</li>
+                        <li>
+                            <Form.Check
+                                type="checkbox"
+                                id="is-done-check"
+                                label=""
+                                checked={done}
+                                onChange={() => setDone(!done)}
+                            />
+                            <div>This task is {done ? "done" : "not done"}</div>
+                        </li>
                         <li>{task.image}</li>
                     </ul>
                 </Col>

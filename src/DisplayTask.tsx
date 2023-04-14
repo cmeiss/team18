@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 //import { Task } from "../interfaces/task";
 //import TASK from "../src/App";
 import { editTask } from "../src/EditTask";
@@ -20,16 +20,32 @@ export function DisplayTask(task: taskProps): JSX.Element {
         <div>
             <h3>Task: {task.name}</h3>
             <div>{task.description}</div>
-            <div>
-                {task.status ? "Done" : "ToDo"}
-                {"     "} difficulty: {task.difficulty}
-                {"     "}
-                do at {task.time}
-            </div>
-            <div>{task.steps}</div>
-            <div>{task.numUsers}</div>
-            <div>{task.image}</div>
-            <Button onClick={editTask}>Edit Task</Button>
+            <Row>
+                <Col>
+                    <ul>
+                        <li>{task.status ? "Done" : "ToDo"}</li>
+                        <li>{task.image}</li>
+                    </ul>
+                </Col>
+                <Col>
+                    <ul>
+                        <li>Difficulty: {task.difficulty}</li>
+                        <li>Time: {task.time}</li>
+                    </ul>
+                </Col>
+                <Col>
+                    <div>Necessary Steps:</div>
+                    <ul>
+                        {task.steps.map((step: string) => (
+                            <li key={step}>{step}</li>
+                        ))}
+                    </ul>
+                </Col>
+            </Row>
+            <Row>
+                <div>Number of Users: {task.numUsers}</div>
+                <Button onClick={editTask}>Edit Task</Button>
+            </Row>
         </div>
     );
 }

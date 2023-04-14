@@ -7,7 +7,7 @@ const TASK: Task =
     //this is a completely random test task to get something displayed, needs to be deleted once we have an actual task list
     {
         name: "test",
-        description: "abc",
+        description: "this is the description",
         status: false,
         image: "picture",
         steps: ["a", "b", "c"],

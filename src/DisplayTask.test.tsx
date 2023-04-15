@@ -47,6 +47,10 @@ describe("DisplayView Tests", () => {
         });
         expect(doneCheckbox).toBeInTheDocument();
     });
+    test("Description of the task is displayed", () => {
+        const desc = screen.getByText(testTask.description);
+        expect(desc).toBeInTheDocument();
+    });
 });
 
 //testing with role being admin

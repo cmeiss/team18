@@ -66,8 +66,7 @@ describe("DisplayView Tests", () => {
             />
         );
     });
-    // test("Num of TaskUsers is not there if role is admin", () => {
-    //     const UserNum1 = screen.getByText(/Number of Users/i);
-    //     expect(UserNum1).toBeNull();
-    // });
+    test("Num of TaskUsers is not there if role is admin", () => {
+        expect(screen.queryByText(/Number of User/i)).toBeNull();
+    });
 });

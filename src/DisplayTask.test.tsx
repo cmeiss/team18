@@ -8,7 +8,7 @@ const testTask = {
     description: "this is the description",
     status: false,
     image: "picture",
-    steps: ["a", "b", "c"],
+    steps: ["a", "b", "c", "GutenTag", "469476"],
     difficulty: 3,
     numUsers: 2,
     time: 1345
@@ -50,6 +50,12 @@ describe("DisplayView Tests", () => {
     test("Description of the task is displayed", () => {
         const desc = screen.getByText(testTask.description);
         expect(desc).toBeInTheDocument();
+    });
+    test("Steps are displayed", () => {
+        testTask.steps.every((step) => {
+            const text = screen.getByText(step);
+            expect(text).toBeInTheDocument;
+        });
     });
 });
 

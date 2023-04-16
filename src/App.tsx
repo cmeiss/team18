@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Task } from "./interfaces/task";
 import "./App.css";
+import { ChangeRole } from "./selectuser";
 import { DisplayTask } from "./DisplayTask";
 
 const TASK: Task[] =
@@ -36,6 +37,8 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript, Final Project
             </header>
+            <h1>man up</h1>
+            <ChangeRole></ChangeRole>
             <h1>man up </h1>
             <div>
                 Team Members: Sydni Wright, Kaitlyn Sullivan, Aaron Oster, Will

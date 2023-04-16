@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { DisplayTask } from "./DisplayTask";
-import { Task } from "./interfaces/task";
 
 const testTask = {
     name: "test",
@@ -17,6 +16,7 @@ const testTask = {
 const testRole1 = "super";
 const testRole2 = "admin";
 
+//testing with role being super
 describe("DisplayView Tests", () => {
     beforeEach(() => {
         render(

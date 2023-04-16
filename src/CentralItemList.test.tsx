@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { CentralItemList } from "./CentralItemList";
+import { DisplayTask } from "./DisplayTask";
 
 const TaskList = [
     {
@@ -11,8 +12,7 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 3,
         numUsers: 2,
-        time: 1345,
-        role: "super"
+        time: 1345
     },
     {
         name: "test2",
@@ -22,8 +22,7 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 3,
         numUsers: 2,
-        time: 1345,
-        role: "admin"
+        time: 1345
     },
     {
         name: "test3",
@@ -33,7 +32,52 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 3,
         numUsers: 2,
-        time: 1345,
-        role: "user"
+        time: 1345
     }
 ];
+
+const role1 = "super";
+const role2 = "admin";
+const role3 = "user";
+
+describe("CentralItemList with Role super", () => {
+    beforeEach(() => {
+        render(<CentralItemList tasks={TaskList} role={role1} />);
+    });
+    //test1: check that every task in array is displayed by accesing their name
+    test("all tasks are displayed", () => {
+        TaskList.every((task) => {
+            const taskDisplayed = screen.getByText(task.name);
+            expect(taskDisplayed).toBeInTheDocument();
+        });
+    });
+    //test2: check that there is a button to add a task if role=super
+    test("There is a button to add tasks if role is super", () => {
+        const addTButton = screen.getByRole("button", { name: /Add Task/i });
+        expect(addTButton).toBeInTheDocument();
+    });
+    //test3: are tasks draggable
+    //
+});
+
+describe("CentralItemList with Role admin", () => {
+    beforeEach(() => {
+        render(<CentralItemList tasks={TaskList} role={role2} />);
+    });
+    //testing that there is a button to addTasks if role is admin
+    test("There is a button to addTasks if role is admin", () => {
+        const addTButton = screen.getByRole("button", { name: /Add Task/i });
+        expect(addTButton).toBeInTheDocument();
+    });
+});
+
+describe("CentralItemList with Role user", () => {
+    beforeEach(() => {
+        render(<CentralItemList tasks={TaskList} role={role3} />);
+    });
+    //testing that there is no addTasks button if role user (not admin or super)
+    test("There isn't a button to addTasks if role is user", () => {
+        const addTButton = screen.queryByRole("button", { name: /Add Task/i });
+        expect(addTButton).toBeNull();
+    });
+});

@@ -5,31 +5,796 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
-PASS src/DisplayTask.test.tsx
-  DisplayView Tests
-    ✓ Taskname is displayed (50 ms)
-    ✓ Num of TaskUsers is there if role is super (13 ms)
-    ✓ There is a checkbox (71 ms)
-    ✓ Description of the task is displayed (8 ms)
-    ✓ Steps are displayed (8 ms)
-    ✓ Num of TaskUsers is not there if role is admin (13 ms)
+FAIL src/CentralItemList.test.tsx
+  ● Console
 
---------------------|---------|----------|---------|---------|-------------------
-File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------|---------|----------|---------|---------|-------------------
-All files           |      10 |       75 |   11.11 |   10.34 |                   
- src                |      10 |       75 |   11.11 |   10.34 |                   
-  App.tsx           |       0 |      100 |       0 |       0 | 9-49              
-  DisplayTask.tsx   |      75 |       75 |   66.66 |      75 | 35                
-  EditTask.tsx      |       0 |      100 |       0 |       0 | 6-7               
-  TaskFunctions.ts  |       0 |      100 |       0 |       0 | 16-73             
-  user-functions.ts |       0 |      100 |       0 |       0 | 7-54              
- src/interfaces     |       0 |        0 |       0 |       0 |                   
-  task.ts           |       0 |        0 |       0 |       0 |                   
-  user.ts           |       0 |        0 |       0 |       0 |                   
---------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 passed, 1 total
-Tests:       6 passed, 6 total
+    console.error
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+          at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+          at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+          at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+          at reconcileChildFibers (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+          at reconcileChildren (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+          at updateHostComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+          at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+          at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+          at workLoopSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+          at renderRootSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+          at performSyncWorkOnRoot (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+          at scheduleUpdateOnFiber (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+          at updateContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+          at /home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26021:7
+          at unbatchedUpdates (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+          at legacyRenderSubtreeIntoContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+          at Object.render (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+          at /home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:101:25
+          at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+          at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+          at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:45:9)
+          at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusHook (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:181:40)
+          at _runTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:148:5)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:475:34)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+
+    console.error
+      The above error occurred in the <div> component:
+      
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+      
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:20085:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:20118:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:12318:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:12339:9)
+      at commitLifeCycles (node_modules/react-dom/cjs/react-dom.development.js:20736:11)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:23426:7)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+
+    console.error
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+          at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+          at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+          at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+          at reconcileChildFibers (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+          at reconcileChildren (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+          at updateHostComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+          at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+          at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+          at workLoopSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+          at renderRootSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+          at performSyncWorkOnRoot (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+          at scheduleUpdateOnFiber (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+          at updateContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+          at /home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26021:7
+          at unbatchedUpdates (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+          at legacyRenderSubtreeIntoContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+          at Object.render (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+          at /home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:101:25
+          at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+          at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+          at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:45:9)
+          at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusHook (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:181:40)
+          at _runTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:148:5)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:475:34)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+
+    console.error
+      The above error occurred in the <div> component:
+      
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+      
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:20085:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:20118:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:12318:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:12339:9)
+      at commitLifeCycles (node_modules/react-dom/cjs/react-dom.development.js:20736:11)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:23426:7)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+
+    console.error
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+          at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+          at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+          at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+          at reconcileChildFibers (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+          at reconcileChildren (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+          at updateHostComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+          at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+          at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+          at workLoopSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+          at renderRootSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+          at performSyncWorkOnRoot (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+          at scheduleUpdateOnFiber (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+          at updateContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+          at /home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26021:7
+          at unbatchedUpdates (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+          at legacyRenderSubtreeIntoContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+          at Object.render (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+          at /home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:101:25
+          at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+          at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+          at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:45:9)
+          at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusHook (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:181:40)
+          at _runTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:148:5)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:475:34)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+
+    console.error
+      The above error occurred in the <div> component:
+      
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+      
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:20085:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:20118:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:12318:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:12339:9)
+      at commitLifeCycles (node_modules/react-dom/cjs/react-dom.development.js:20736:11)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:23426:7)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+
+    console.error
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+          at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+          at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+          at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+          at reconcileChildFibers (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+          at reconcileChildren (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+          at updateHostComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+          at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+          at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+          at workLoopSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+          at renderRootSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+          at performSyncWorkOnRoot (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+          at scheduleUpdateOnFiber (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+          at updateContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+          at /home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26021:7
+          at unbatchedUpdates (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+          at legacyRenderSubtreeIntoContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+          at Object.render (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+          at /home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:101:25
+          at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+          at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+          at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:70:9)
+          at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusHook (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:181:40)
+          at _runTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:148:5)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:475:34)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+
+    console.error
+      The above error occurred in the <div> component:
+      
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+      
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:20085:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:20118:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:12318:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:12339:9)
+      at commitLifeCycles (node_modules/react-dom/cjs/react-dom.development.js:20736:11)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:23426:7)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+
+    console.error
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+          at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+          at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+          at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+          at reconcileChildFibers (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+          at reconcileChildren (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+          at updateHostComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+          at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+          at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+          at workLoopSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+          at renderRootSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+          at performSyncWorkOnRoot (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+          at scheduleUpdateOnFiber (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+          at updateContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+          at /home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26021:7
+          at unbatchedUpdates (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+          at legacyRenderSubtreeIntoContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+          at Object.render (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+          at /home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:101:25
+          at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+          at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+          at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:70:9)
+          at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusHook (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:181:40)
+          at _runTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:148:5)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:475:34)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+
+    console.error
+      The above error occurred in the <div> component:
+      
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+      
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:20085:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:20118:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:12318:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:12339:9)
+      at commitLifeCycles (node_modules/react-dom/cjs/react-dom.development.js:20736:11)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:23426:7)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+
+    console.error
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+          at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+          at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+          at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+          at reconcileChildFibers (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+          at reconcileChildren (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+          at updateHostComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+          at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+          at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+          at workLoopSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+          at renderRootSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+          at performSyncWorkOnRoot (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+          at scheduleUpdateOnFiber (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+          at updateContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+          at /home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26021:7
+          at unbatchedUpdates (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+          at legacyRenderSubtreeIntoContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+          at Object.render (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+          at /home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:101:25
+          at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+          at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+          at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:87:9)
+          at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusHook (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:181:40)
+          at _runTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:148:5)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:475:34)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+
+    console.error
+      The above error occurred in the <div> component:
+      
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+      
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:20085:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:20118:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:12318:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:12339:9)
+      at commitLifeCycles (node_modules/react-dom/cjs/react-dom.development.js:20736:11)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:23426:7)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+
+  ● CentralItemList with Role super › all tasks are displayed
+
+    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+
+      43 | describe("CentralItemList with Role super", () => {
+      44 |     beforeEach(() => {
+    > 45 |         render(<CentralItemList tasks={TaskList} role={role1} />);
+         |         ^
+      46 |     });
+      47 |     //test1: check that every task in array is displayed by accessing their name
+      48 |     test("all tasks are displayed", () => {
+
+      at throwOnInvalidObjectType (node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+      at createChild (node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
+      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/CentralItemList.test.tsx:45:9)
+
+  ● CentralItemList with Role super › There is a button to add tasks if role is super
+
+    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+
+      43 | describe("CentralItemList with Role super", () => {
+      44 |     beforeEach(() => {
+    > 45 |         render(<CentralItemList tasks={TaskList} role={role1} />);
+         |         ^
+      46 |     });
+      47 |     //test1: check that every task in array is displayed by accessing their name
+      48 |     test("all tasks are displayed", () => {
+
+      at throwOnInvalidObjectType (node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+      at createChild (node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
+      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/CentralItemList.test.tsx:45:9)
+
+  ● CentralItemList with Role super › There is a button to add a user
+
+    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+
+      43 | describe("CentralItemList with Role super", () => {
+      44 |     beforeEach(() => {
+    > 45 |         render(<CentralItemList tasks={TaskList} role={role1} />);
+         |         ^
+      46 |     });
+      47 |     //test1: check that every task in array is displayed by accessing their name
+      48 |     test("all tasks are displayed", () => {
+
+      at throwOnInvalidObjectType (node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+      at createChild (node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
+      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/CentralItemList.test.tsx:45:9)
+
+  ● CentralItemList with Role admin › There is a button to addTasks if role is admin
+
+    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+
+      68 | describe("CentralItemList with Role admin", () => {
+      69 |     beforeEach(() => {
+    > 70 |         render(<CentralItemList tasks={TaskList} role={role2} />);
+         |         ^
+      71 |     });
+      72 |     //testing that there is a button to addTasks if role is admin
+      73 |     test("There is a button to addTasks if role is admin", () => {
+
+      at throwOnInvalidObjectType (node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+      at createChild (node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
+      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/CentralItemList.test.tsx:70:9)
+
+  ● CentralItemList with Role admin › There isn't a button to add a user
+
+    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+
+      68 | describe("CentralItemList with Role admin", () => {
+      69 |     beforeEach(() => {
+    > 70 |         render(<CentralItemList tasks={TaskList} role={role2} />);
+         |         ^
+      71 |     });
+      72 |     //testing that there is a button to addTasks if role is admin
+      73 |     test("There is a button to addTasks if role is admin", () => {
+
+      at throwOnInvalidObjectType (node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+      at createChild (node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
+      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/CentralItemList.test.tsx:70:9)
+
+  ● CentralItemList with Role user › There isn't a button to addTasks if role is user
+
+    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+
+      85 | describe("CentralItemList with Role user", () => {
+      86 |     beforeEach(() => {
+    > 87 |         render(<CentralItemList tasks={TaskList} role={role3} />);
+         |         ^
+      88 |     });
+      89 |     //testing that there is no addTasks button if role is user (not admin or super)
+      90 |     test("There isn't a button to addTasks if role is user", () => {
+
+      at throwOnInvalidObjectType (node_modules/react-dom/cjs/react-dom.development.js:13231:15)
+      at createChild (node_modules/react-dom/cjs/react-dom.development.js:13469:7)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13719:25)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19080:14)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:3945:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:3994:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4056:31)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:23964:7)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22779:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
+      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:21881:7)
+      at updateContainer (node_modules/react-dom/cjs/react-dom.development.js:25482:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:26021:7
+      at unbatchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:22431:12)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:26020:5)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:26103:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
+      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/CentralItemList.test.tsx:87:9)
+
+PASS src/DisplayTask.test.tsx
+----------------------|---------|----------|---------|---------|-------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------------|---------|----------|---------|---------|-------------------
+All files             |    12.9 |       75 |   15.78 |   13.33 |                   
+ src                  |    12.9 |       75 |   15.78 |   13.33 |                   
+  App.tsx             |       0 |      100 |       0 |       0 | 9-49              
+  CentralItemList.tsx |     100 |      100 |     100 |     100 |                   
+  DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                
+  EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7               
+  TaskFunctions.ts    |       0 |      100 |       0 |       0 | 16-73             
+  user-functions.ts   |       0 |      100 |       0 |       0 | 7-54              
+ src/interfaces       |       0 |        0 |       0 |       0 |                   
+  task.ts             |       0 |        0 |       0 |       0 |                   
+  user.ts             |       0 |        0 |       0 |       0 |                   
+----------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       6 failed, 6 passed, 12 total
 Snapshots:   0 total
-Time:        2.136 s
+Time:        2.772 s
 Ran all test suites.

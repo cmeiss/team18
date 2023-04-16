@@ -2,11 +2,34 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-No tests found, exiting with code 1
-Run with `--passWithNoTests` to exit with code 0
-In /home/runner/work/team18/team18
-  11 files checked.
-  testMatch: /home/runner/work/team18/team18/src/**/__tests__/**/*.{js,jsx,ts,tsx}, /home/runner/work/team18/team18/src/**/*.{spec,test}.{js,jsx,ts,tsx} - 0 matches
-  testPathIgnorePatterns: /node_modules/ - 11 matches
-  testRegex:  - 0 matches
-Pattern:  - 0 matches
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+PASS src/DisplayTask.test.tsx
+  DisplayView Tests
+    ✓ Taskname is displayed (50 ms)
+    ✓ Num of TaskUsers is there if role is super (13 ms)
+    ✓ There is a checkbox (71 ms)
+    ✓ Description of the task is displayed (8 ms)
+    ✓ Steps are displayed (8 ms)
+    ✓ Num of TaskUsers is not there if role is admin (13 ms)
+
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |      10 |       75 |   11.11 |   10.34 |                   
+ src                |      10 |       75 |   11.11 |   10.34 |                   
+  App.tsx           |       0 |      100 |       0 |       0 | 9-49              
+  DisplayTask.tsx   |      75 |       75 |   66.66 |      75 | 35                
+  EditTask.tsx      |       0 |      100 |       0 |       0 | 6-7               
+  TaskFunctions.ts  |       0 |      100 |       0 |       0 | 16-73             
+  user-functions.ts |       0 |      100 |       0 |       0 | 7-54              
+ src/interfaces     |       0 |        0 |       0 |       0 |                   
+  task.ts           |       0 |        0 |       0 |       0 |                   
+  user.ts           |       0 |        0 |       0 |       0 |                   
+--------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        2.136 s
+Ran all test suites.

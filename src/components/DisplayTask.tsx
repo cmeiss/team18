@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 //import { Task } from "../interfaces/task";
 //import TASK from "../src/App";
-import { editTask } from "../src/EditTask";
+import { editTask } from "./EditTask";
 import "./DisplayTask.css";
 
-export interface displayProps {
+interface displayProps {
     name: string;
     description: string;
     status: boolean;

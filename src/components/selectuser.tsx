@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { User } from "./interfaces/user";
+import { User } from "../interfaces/user";
 //this is a function that returns a jsx element in our app.tsx file
 interface ChangeRoleProperties {
     Role: User;

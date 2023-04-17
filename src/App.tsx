@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import { DisplayTask } from "./DisplayTask";
+import { DisplayTask } from "./components/DisplayTask";
 import { Task } from "./interfaces/task";
-import { ChangeRole } from "./selectuser";
+import { ChangeRole } from "./components/selectuser";
 import { User } from "./interfaces/user";
 
 const TASK: Task[] =

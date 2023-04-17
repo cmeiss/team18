@@ -3,17 +3,23 @@ import { Task } from "./interfaces/task";
 /**
  * addUser function, adds user to the list of roles
  */
-export function makeUser(user: string, tasks: Task[]): User {
+const roles: User[] = [];
+
+export function makeUser(user: string, tasks: Task[]): User[] {
     const newUser: User = { name: user, userList: tasks };
-    return newUser;
+    roles.push(newUser);
+    return roles;
 }
 
 /**
  * deleteUser function, deletes a user from the list of roles
  */
-export function deleteUser(user: User): void {
+export function deleteUser(user: User): User[] {
     user.name = "";
     user.userList = [];
+    let list = [...roles];
+    list = list.filter((item: User): boolean => item != user);
+    return list;
 }
 
 /**

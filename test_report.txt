@@ -10,7 +10,7 @@ FAIL src/CentralItemList.test.tsx
   ● Console
 
     console.error
-      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.]
           at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
           at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -20,7 +20,7 @@ FAIL src/CentralItemList.test.tsx
           at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
           at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
           at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
-          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
           at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
           at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
           at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
@@ -78,7 +78,7 @@ FAIL src/CentralItemList.test.tsx
       The above error occurred in the <div> component:
       
           at div
-          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+          at CentralItemList
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -93,7 +93,7 @@ FAIL src/CentralItemList.test.tsx
       at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
 
     console.error
-      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.]
           at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
           at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -103,7 +103,7 @@ FAIL src/CentralItemList.test.tsx
           at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
           at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
           at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
-          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
           at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
           at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
           at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
@@ -161,7 +161,7 @@ FAIL src/CentralItemList.test.tsx
       The above error occurred in the <div> component:
       
           at div
-          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+          at CentralItemList
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -176,7 +176,7 @@ FAIL src/CentralItemList.test.tsx
       at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
 
     console.error
-      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.]
           at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
           at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -186,7 +186,7 @@ FAIL src/CentralItemList.test.tsx
           at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
           at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
           at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
-          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
           at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
           at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
           at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
@@ -244,7 +244,7 @@ FAIL src/CentralItemList.test.tsx
       The above error occurred in the <div> component:
       
           at div
-          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+          at CentralItemList
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -259,7 +259,7 @@ FAIL src/CentralItemList.test.tsx
       at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
 
     console.error
-      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.]
           at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
           at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -269,7 +269,7 @@ FAIL src/CentralItemList.test.tsx
           at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
           at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
           at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
-          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
           at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
           at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
           at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
@@ -327,7 +327,7 @@ FAIL src/CentralItemList.test.tsx
       The above error occurred in the <div> component:
       
           at div
-          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+          at CentralItemList
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -342,7 +342,7 @@ FAIL src/CentralItemList.test.tsx
       at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
 
     console.error
-      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.]
           at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
           at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -352,7 +352,7 @@ FAIL src/CentralItemList.test.tsx
           at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
           at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
           at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
-          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
           at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
           at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
           at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
@@ -410,7 +410,7 @@ FAIL src/CentralItemList.test.tsx
       The above error occurred in the <div> component:
       
           at div
-          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+          at CentralItemList
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -425,7 +425,7 @@ FAIL src/CentralItemList.test.tsx
       at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
 
     console.error
-      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.]
+      Error: Uncaught [Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.]
           at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
           at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -435,7 +435,7 @@ FAIL src/CentralItemList.test.tsx
           at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:3994:16)
           at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4056:31)
           at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:23964:7)
-          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22779:12) Error: Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
           at throwOnInvalidObjectType (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13231:15)
           at createChild (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13469:7)
           at reconcileChildrenArray (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:13719:25)
@@ -493,7 +493,7 @@ FAIL src/CentralItemList.test.tsx
       The above error occurred in the <div> component:
       
           at div
-          at CentralItemList (/home/runner/work/team18/team18/src/CentralItemList.tsx:11:65)
+          at CentralItemList
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -509,7 +509,7 @@ FAIL src/CentralItemList.test.tsx
 
   ● CentralItemList with Role super › all tasks are displayed
 
-    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+    Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
 
       43 | describe("CentralItemList with Role super", () => {
       44 |     beforeEach(() => {
@@ -554,7 +554,7 @@ FAIL src/CentralItemList.test.tsx
 
   ● CentralItemList with Role super › There is a button to add tasks if role is super
 
-    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+    Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
 
       43 | describe("CentralItemList with Role super", () => {
       44 |     beforeEach(() => {
@@ -599,7 +599,7 @@ FAIL src/CentralItemList.test.tsx
 
   ● CentralItemList with Role super › There is a button to add a user
 
-    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+    Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
 
       43 | describe("CentralItemList with Role super", () => {
       44 |     beforeEach(() => {
@@ -644,7 +644,7 @@ FAIL src/CentralItemList.test.tsx
 
   ● CentralItemList with Role admin › There is a button to addTasks if role is admin
 
-    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+    Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
 
       68 | describe("CentralItemList with Role admin", () => {
       69 |     beforeEach(() => {
@@ -689,7 +689,7 @@ FAIL src/CentralItemList.test.tsx
 
   ● CentralItemList with Role admin › There isn't a button to add a user
 
-    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+    Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
 
       68 | describe("CentralItemList with Role admin", () => {
       69 |     beforeEach(() => {
@@ -734,7 +734,7 @@ FAIL src/CentralItemList.test.tsx
 
   ● CentralItemList with Role user › There isn't a button to addTasks if role is user
 
-    Objects are not valid as a React child (found: object with keys {name, description, status, image, steps, difficulty, numUsers, time}). If you meant to render a collection of children, use an array instead.
+    Objects are not valid as a React child (found: object with keys {tasks, role}). If you meant to render a collection of children, use an array instead.
 
       85 | describe("CentralItemList with Role user", () => {
       86 |     beforeEach(() => {
@@ -781,22 +781,23 @@ PASS src/DisplayTask.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   24.56 |    21.42 |   29.41 |      25 |                   
- src                  |   24.56 |    21.42 |   29.41 |      25 |                   
-  App.tsx             |       0 |      100 |       0 |       0 | 12-58             
+All files             |   19.44 |    21.42 |   26.31 |      20 |                   
+ src                  |   19.44 |    21.42 |   26.31 |      20 |                   
+  App.tsx             |       0 |      100 |       0 |       0 | 12-59             
   CentralItemList.tsx |     100 |      100 |     100 |     100 |                   
   DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                
   EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7               
   TaskFunctions.ts    |    62.5 |      100 |   53.84 |    62.5 | 33-35,62-83       
   selectuser.tsx      |       0 |        0 |       0 |       0 | 12-53             
-  user-functions.ts   |       0 |      100 |       0 |       0 | 7-54              
+  user-functions.ts   |       0 |      100 |       0 |       0 | 6-60              
+  user-tests.tsx      |       0 |      100 |       0 |       0 | 6-51              
  src/interfaces       |       0 |        0 |       0 |       0 |                   
   task.ts             |       0 |        0 |       0 |       0 |                   
   user.ts             |       0 |        0 |       0 |       0 |                   
 ----------------------|---------|----------|---------|---------|-------------------
 
 Test Suites: 1 failed, 2 passed, 3 total
-Tests:       6 failed, 12 passed, 18 total
+Tests:       6 failed, 14 passed, 20 total
 Snapshots:   0 total
-Time:        4.411 s
+Time:        3.413 s
 Ran all test suites.

@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+//this is a function that returns a jsx element in our app.tsx file
+interface ChangeRoleProperties {
+    Role: string;
+    roles: string[];
+}
 
-export function ChangeRole(): JSX.Element {
-    const [Role, setRole] = useState<string>("User");
-    const [roles, setRoles] = useState<string[]>(["Super", "Admin", "User1"]); //learn how to map this and append to this list so we can map it to out dropdown
-    const [editmode, seteditmode] = useState<boolean>(false);
-    const [newUser, setNewUser] = useState<string>("User2");
-
+export function ChangeRole(ChangeRoleProps: ChangeRoleProperties): JSX.Element {
+    // creating 4 states here that will be used by our components to add and delete users
+    const [Role, setRole] = useState<string>(ChangeRoleProps.Role); //Starting role default set to user
+    const [roles, setRoles] = useState<string[]>(ChangeRoleProps.roles); // these are original users these can be changed
+    const [editmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
+    const [newUser, setNewUser] = useState<string>("User2"); //the value currently in the text box of edit mode
+    // function that sets role based on the role clicked
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
         setRole(event.target.value);
     }
@@ -31,7 +37,7 @@ export function ChangeRole(): JSX.Element {
     }
     return (
         <div>
-            <h3>Change Role Son</h3>
+            <h3>Change Role</h3>
             <div>
                 <Form.Group controlId="userEmotions">
                     <Form.Label>Select Your Role</Form.Label>

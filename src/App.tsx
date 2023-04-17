@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Task } from "./interfaces/task";
 import "./App.css";
-import { ChangeRole } from "./selectuser";
+
 import { DisplayTask } from "./DisplayTask";
+import { Task } from "./interfaces/task";
+import { ChangeRole } from "./selectuser";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -31,19 +32,18 @@ const TASK: Task[] =
     ];
 
 function App(): JSX.Element {
-    const [roles] = useState<string>("super"); //This needs to be set by drop down menu
+    const [role] = useState<string>("super"); //This needs to be set by drop down menu
+    const [roles] = useState<string[]>(["Super", "Admin", "User1"]); // these are original users these can be changed
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript, Final Project
+                UD CISC275 with React Hooks and TypeScript,
             </header>
-            <h1>man up</h1>
-            <ChangeRole></ChangeRole>
-            <h1>man up </h1>
             <div>
                 Team Members: Sydni Wright, Kaitlyn Sullivan, Aaron Oster, Will
                 Sharp, Cornelia Meiss
             </div>
+            <ChangeRole Role={role} roles={roles}></ChangeRole>
             {/*  This div statement exists only to test the DisplayTask component
             and show how it works by displaying the TASK array,
             This div statement needs to be deleted together with the TASK array
@@ -59,7 +59,7 @@ function App(): JSX.Element {
                     difficulty={TASK.difficulty}
                     numUsers={TASK.numUsers}
                     time={TASK.time}
-                    role={roles}
+                    role={role}
                 ></DisplayTask>
             ))}
             {/* The key is necessary for display task to work, 

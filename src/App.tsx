@@ -43,12 +43,13 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript,
-            </header>
+            </header> aoster@udel.edu/AaronOster
 
             <div>
                 Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster
             </div>
 
+         
             <ChangeRole Role={role} roles={roles}></ChangeRole>
             {/*  This div statement exists only to test the DisplayTask component
             and show how it works by displaying the TASK array,

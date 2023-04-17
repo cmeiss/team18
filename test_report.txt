@@ -5,6 +5,7 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+PASS src/TaskFunctions.test.ts
 FAIL src/CentralItemList.test.tsx
   ● Console
 
@@ -776,107 +777,26 @@ FAIL src/CentralItemList.test.tsx
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/CentralItemList.test.tsx:87:9)
 
-FAIL src/TaskFunctions.test.ts
-  ● Testing the task functions › Testing the makeTask function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 5
-    + Received  + 1
-
-    @@ -3,12 +3,8 @@
-        "difficulty": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-    -   "steps": Array [
-    -     "i",
-    -     "am",
-    -     "immutable",
-    -   ],
-    +   "steps": Array [],
-        "time": 0,
-      }
-
-      73 |         expect(
-      74 |             makeTask("test", "taskfunc test task", false, "blank", [], 0, 0, 0)
-    > 75 |         ).toEqual(TESTTASK);
-         |           ^
-      76 |     });
-      77 |     test("Testing the delTask function", () => {
-      78 |         expect(delTask(TESTTASK, TASKARR)).toEqual([TASK2, TASK3]);
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:75:11)
-
-  ● Testing the task functions › Testing the delTask function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 16
-    + Received  +  0
-
-    @@ -1,21 +1,6 @@
-      Array [
-    -   Array [
-    -     Object {
-    -       "description": "taskfunc test task",
-    -       "difficulty": 0,
-    -       "image": "blank",
-    -       "name": "test",
-    -       "numUsers": 0,
-    -       "status": false,
-    -       "steps": Array [
-    -         "i",
-    -         "am",
-    -         "immutable",
-    -       ],
-    -       "time": 0,
-    -     },
-        Object {
-          "description": "taskarr ind 1",
-          "difficulty": 1,
-          "image": "dog",
-          "name": "test2",
-    @@ -39,7 +24,6 @@
-            "love",
-            "feed",
-          ],
-          "time": 2,
-        },
-    -   ],
-      ]
-
-      78 |         expect(delTask(TESTTASK, TASKARR)).toEqual([TASK2, TASK3]);
-      79 |         expect(delTask(TASK2, TASKARR)).toEqual([TESTTASK, TASK3]);
-    > 80 |         expect(delTask(BACKUPTASK, TASKARR)).toEqual([TASKARR]);
-         |                                              ^
-      81 |     });
-      82 |     test("Testing the setSteps function", () => {
-      83 |         expect(setSteps(STEPS, TESTTASK)).toEqual({
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:80:46)
-
 PASS src/DisplayTask.test.tsx
-----------------------|---------|----------|---------|---------|--------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
-----------------------|---------|----------|---------|---------|--------------------
-All files             |   19.29 |    21.42 |   20.58 |   19.64 |                    
- src                  |   19.29 |    21.42 |   20.58 |   19.64 |                    
-  App.tsx             |       0 |      100 |       0 |       0 | 12-57              
-  CentralItemList.tsx |     100 |      100 |     100 |     100 |                    
-  DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                 
-  EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7                
-  TaskFunctions.ts    |   43.75 |      100 |   30.76 |   43.75 | 33-35,62-83,97-111 
-  selectuser.tsx      |       0 |        0 |       0 |       0 | 12-53              
-  user-functions.ts   |       0 |      100 |       0 |       0 | 7-54               
- src/interfaces       |       0 |        0 |       0 |       0 |                    
-  task.ts             |       0 |        0 |       0 |       0 |                    
-  user.ts             |       0 |        0 |       0 |       0 |                    
-----------------------|---------|----------|---------|---------|--------------------
+----------------------|---------|----------|---------|---------|-------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------------|---------|----------|---------|---------|-------------------
+All files             |   24.56 |    21.42 |   29.41 |      25 |                   
+ src                  |   24.56 |    21.42 |   29.41 |      25 |                   
+  App.tsx             |       0 |      100 |       0 |       0 | 12-57             
+  CentralItemList.tsx |     100 |      100 |     100 |     100 |                   
+  DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                
+  EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7               
+  TaskFunctions.ts    |    62.5 |      100 |   53.84 |    62.5 | 33-35,62-83       
+  selectuser.tsx      |       0 |        0 |       0 |       0 | 12-53             
+  user-functions.ts   |       0 |      100 |       0 |       0 | 7-54              
+ src/interfaces       |       0 |        0 |       0 |       0 |                   
+  task.ts             |       0 |        0 |       0 |       0 |                   
+  user.ts             |       0 |        0 |       0 |       0 |                   
+----------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 2 failed, 1 passed, 3 total
-Tests:       8 failed, 7 passed, 15 total
+Test Suites: 1 failed, 2 passed, 3 total
+Tests:       6 failed, 12 passed, 18 total
 Snapshots:   0 total
-Time:        3.091 s
+Time:        4.192 s
 Ran all test suites.

@@ -1,5 +1,5 @@
 import React from "react";
-import { Task } from "./interfaces/task";
+import { Task } from "../interfaces/task";
 //import { addTask } from "./TaskFunctions";
 //import { displayProps, DisplayTask } from "./DisplayTask";
 

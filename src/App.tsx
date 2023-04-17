@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import { ChangeRole } from "./selectuser";
+
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "./interfaces/task";
+import { ChangeRole } from "./selectuser";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something

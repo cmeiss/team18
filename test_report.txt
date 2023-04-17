@@ -783,7 +783,7 @@ File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line 
 ----------------------|---------|----------|---------|---------|-------------------
 All files             |   24.56 |    21.42 |   29.41 |      25 |                   
  src                  |   24.56 |    21.42 |   29.41 |      25 |                   
-  App.tsx             |       0 |      100 |       0 |       0 | 12-54             
+  App.tsx             |       0 |      100 |       0 |       0 | 12-58             
   CentralItemList.tsx |     100 |      100 |     100 |     100 |                   
   DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                
   EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7               
@@ -798,5 +798,5 @@ All files             |   24.56 |    21.42 |   29.41 |      25 |
 Test Suites: 1 failed, 2 passed, 3 total
 Tests:       6 failed, 12 passed, 18 total
 Snapshots:   0 total
-Time:        3.387 s
+Time:        4.411 s
 Ran all test suites.

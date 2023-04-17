@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/TaskFunctions.test.ts
-FAIL src/CentralItemList.test.tsx
+FAIL src/list-components/CentralItemList.test.tsx
   ● Console
 
     console.error
@@ -52,7 +52,7 @@ FAIL src/CentralItemList.test.tsx
           at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
           at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
           at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
-          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:45:9)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/list-components/CentralItemList.test.tsx:45:9)
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>)
           at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
@@ -135,7 +135,7 @@ FAIL src/CentralItemList.test.tsx
           at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
           at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
           at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
-          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:45:9)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/list-components/CentralItemList.test.tsx:45:9)
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>)
           at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
@@ -218,7 +218,7 @@ FAIL src/CentralItemList.test.tsx
           at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
           at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
           at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
-          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:45:9)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/list-components/CentralItemList.test.tsx:45:9)
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>)
           at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
@@ -301,7 +301,7 @@ FAIL src/CentralItemList.test.tsx
           at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
           at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
           at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
-          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:70:9)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/list-components/CentralItemList.test.tsx:70:9)
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>)
           at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
@@ -384,7 +384,7 @@ FAIL src/CentralItemList.test.tsx
           at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
           at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
           at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
-          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:70:9)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/list-components/CentralItemList.test.tsx:70:9)
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>)
           at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
@@ -467,7 +467,7 @@ FAIL src/CentralItemList.test.tsx
           at batchedUpdates$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:22380:12)
           at act (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
           at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
-          at Object.<anonymous> (/home/runner/work/team18/team18/src/CentralItemList.test.tsx:87:9)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/list-components/CentralItemList.test.tsx:87:9)
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>)
           at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
@@ -550,7 +550,7 @@ FAIL src/CentralItemList.test.tsx
       at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
       at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:45:9)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:45:9)
 
   ● CentralItemList with Role super › There is a button to add tasks if role is super
 
@@ -595,7 +595,7 @@ FAIL src/CentralItemList.test.tsx
       at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
       at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:45:9)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:45:9)
 
   ● CentralItemList with Role super › There is a button to add a user
 
@@ -640,7 +640,7 @@ FAIL src/CentralItemList.test.tsx
       at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
       at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:45:9)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:45:9)
 
   ● CentralItemList with Role admin › There is a button to addTasks if role is admin
 
@@ -685,7 +685,7 @@ FAIL src/CentralItemList.test.tsx
       at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
       at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:70:9)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:70:9)
 
   ● CentralItemList with Role admin › There isn't a button to add a user
 
@@ -730,7 +730,7 @@ FAIL src/CentralItemList.test.tsx
       at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
       at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:70:9)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:70:9)
 
   ● CentralItemList with Role user › There isn't a button to addTasks if role is user
 
@@ -775,29 +775,31 @@ FAIL src/CentralItemList.test.tsx
       at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22380:12)
       at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:87:9)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:87:9)
 
-PASS src/DisplayTask.test.tsx
-----------------------|---------|----------|---------|---------|-------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------------------|---------|----------|---------|---------|-------------------
-All files             |   18.18 |    21.42 |   26.31 |   18.66 |                   
- src                  |   18.18 |    21.42 |   26.31 |   18.66 |                   
-  App.tsx             |       0 |      100 |       0 |       0 | 12-59             
-  CentralItemList.tsx |     100 |      100 |     100 |     100 |                   
-  DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                
-  EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7               
-  TaskFunctions.ts    |    62.5 |      100 |   53.84 |    62.5 | 33-35,62-83       
-  selectuser.tsx      |       0 |        0 |       0 |       0 | 12-53             
-  user-functions.ts   |       0 |      100 |       0 |       0 | 7-58              
-  user-tests.tsx      |       0 |      100 |       0 |       0 | 6-57              
- src/interfaces       |       0 |        0 |       0 |       0 |                   
-  task.ts             |       0 |        0 |       0 |       0 |                   
-  user.ts             |       0 |        0 |       0 |       0 |                   
-----------------------|---------|----------|---------|---------|-------------------
+PASS src/list-components/DisplayTask.test.tsx
+------------------------|---------|----------|---------|---------|-------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------|---------|----------|---------|---------|-------------------
+All files               |   18.18 |    21.42 |   26.31 |   18.66 |                   
+ src                    |   18.86 |      100 |   29.16 |    19.6 |                   
+  App.tsx               |       0 |      100 |       0 |       0 | 12-59             
+  TaskFunctions.ts      |    62.5 |      100 |   53.84 |    62.5 | 33-35,62-83       
+  user-functions.ts     |       0 |      100 |       0 |       0 | 7-58              
+  user-tests.tsx        |       0 |      100 |       0 |       0 | 6-57              
+ src/editing-components |       0 |      100 |       0 |       0 |                   
+  EditTask.tsx          |       0 |      100 |       0 |       0 | 6-7               
+ src/interfaces         |       0 |        0 |       0 |       0 |                   
+  task.ts               |       0 |        0 |       0 |       0 |                   
+  user.ts               |       0 |        0 |       0 |       0 |                   
+ src/list-components    |   18.18 |    21.42 |   23.07 |   18.18 |                   
+  CentralItemList.tsx   |     100 |      100 |     100 |     100 |                   
+  DisplayTask.tsx       |      75 |       75 |   66.66 |      75 | 35                
+  selectuser.tsx        |       0 |        0 |       0 |       0 | 12-53             
+------------------------|---------|----------|---------|---------|-------------------
 
 Test Suites: 1 failed, 2 passed, 3 total
 Tests:       6 failed, 14 passed, 20 total
 Snapshots:   0 total
-Time:        3.127 s
+Time:        3.6 s
 Ran all test suites.

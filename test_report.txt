@@ -780,14 +780,14 @@ PASS src/DisplayTask.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |    8.69 |       25 |   11.11 |    8.88 |                   
- src                  |    8.69 |       25 |   11.11 |    8.88 |                   
-  App.tsx             |       0 |      100 |       0 |       0 | 11-52             
+All files             |    8.16 |    21.42 |   10.71 |    8.33 |                   
+ src                  |    8.16 |    21.42 |   10.71 |    8.33 |                   
+  App.tsx             |       0 |      100 |       0 |       0 | 12-57             
   CentralItemList.tsx |     100 |      100 |     100 |     100 |                   
   DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                
   EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7               
   TaskFunctions.ts    |       0 |      100 |       0 |       0 | 16-73             
-  selectuser.tsx      |       0 |        0 |       0 |       0 | 11-47             
+  selectuser.tsx      |       0 |        0 |       0 |       0 | 12-53             
   user-functions.ts   |       0 |      100 |       0 |       0 | 7-54              
  src/interfaces       |       0 |        0 |       0 |       0 |                   
   task.ts             |       0 |        0 |       0 |       0 |                   
@@ -797,5 +797,5 @@ All files             |    8.69 |       25 |   11.11 |    8.88 |
 Test Suites: 1 failed, 1 passed, 2 total
 Tests:       6 failed, 6 passed, 12 total
 Snapshots:   0 total
-Time:        2.968 s
+Time:        2.723 s
 Ran all test suites.

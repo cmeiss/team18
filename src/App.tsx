@@ -4,6 +4,7 @@ import "./App.css";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "./interfaces/task";
 import { ChangeRole } from "./selectuser";
+import { User } from "./interfaces/user";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -32,8 +33,12 @@ const TASK: Task[] =
     ];
 
 function App(): JSX.Element {
-    const [role] = useState<string>("super"); //This needs to be set by drop down menu
-    const [roles] = useState<string[]>(["Super", "Admin", "User1"]); // these are original users these can be changed
+    const [role] = useState<User>({ name: "super", userList: [] }); //This needs to be set by drop down menu
+    const [roles] = useState<User[]>([
+        { name: "Super", userList: [] },
+        { name: "Admin", userList: [] },
+        { name: "User1", userList: [] }
+    ]); // these are original users these can be changed
     return (
         <div className="App">
             <header className="App-header">
@@ -59,7 +64,7 @@ function App(): JSX.Element {
                     difficulty={TASK.difficulty}
                     numUsers={TASK.numUsers}
                     time={TASK.time}
-                    role={role}
+                    role={role.name}
                 ></DisplayTask>
             ))}
             {/* The key is necessary for display task to work, 

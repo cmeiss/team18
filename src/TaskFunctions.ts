@@ -42,8 +42,18 @@ export function addTask(task: Task, tasks: Task[]) {
 }
 
 /*
-Delete task from a task array
+Delete task from a task array by receiving the task to be removed
+accessing it's name and filtering the list of tasks by not including the task with that name,
+Ids for each task would work better just in case tasks would have the same name.
+So this may need amendment later on.
 */
+export function delTask(task: Task, tasks: Task[]) {
+    const taskToRemove = task.name;
+    const newTasks = tasks.filter(
+        (task: Task): boolean => task.name !== taskToRemove
+    );
+    return newTasks;
+}
 
 /*
 Modify Name attribute

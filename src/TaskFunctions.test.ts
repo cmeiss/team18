@@ -2,18 +2,17 @@ import { Task } from "./interfaces/task";
 
 import {
     makeTask,
-    addTask,
+    //addTask,
     delTask,
-    setName,
-    setDescription,
-    setStatus,
-    setImage,
-    setSteps,
-    setDifficulty,
-    setNumUsers,
-    setTime
+    //setName,
+    //setDescription,
+    //setStatus,
+    //setImage,
+    setSteps
+    //, setDifficulty,
+    //setNumUsers,
+    //setTime
 } from "./TaskFunctions";
-import { deleteTask } from "./user-functions";
 
 // Creating a test task to use as a immuatable object in all tests
 const TESTTASK: Task = {

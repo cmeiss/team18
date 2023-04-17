@@ -3,9 +3,7 @@ import { Task } from "./interfaces/task";
 /**
  * addUser function, adds user to the list of roles
  */
-const roles: User[] = [];
-
-export function makeUser(user: string, tasks: Task[]): User[] {
+export function makeUser(user: string, tasks: Task[], roles: User[]): User[] {
     const newUser: User = { name: user, userList: tasks };
     roles.push(newUser);
     return roles;
@@ -14,7 +12,7 @@ export function makeUser(user: string, tasks: Task[]): User[] {
 /**
  * deleteUser function, deletes a user from the list of roles
  */
-export function deleteUser(user: User): User[] {
+export function deleteUser(user: User, roles: User[]): User[] {
     user.name = "";
     user.userList = [];
     let list = [...roles];

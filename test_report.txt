@@ -781,16 +781,16 @@ PASS src/DisplayTask.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   19.44 |    21.42 |   26.31 |      20 |                   
- src                  |   19.44 |    21.42 |   26.31 |      20 |                   
+All files             |   18.18 |    21.42 |   26.31 |   18.66 |                   
+ src                  |   18.18 |    21.42 |   26.31 |   18.66 |                   
   App.tsx             |       0 |      100 |       0 |       0 | 12-59             
   CentralItemList.tsx |     100 |      100 |     100 |     100 |                   
   DisplayTask.tsx     |      75 |       75 |   66.66 |      75 | 35                
   EditTask.tsx        |       0 |      100 |       0 |       0 | 6-7               
   TaskFunctions.ts    |    62.5 |      100 |   53.84 |    62.5 | 33-35,62-83       
   selectuser.tsx      |       0 |        0 |       0 |       0 | 12-53             
-  user-functions.ts   |       0 |      100 |       0 |       0 | 6-60              
-  user-tests.tsx      |       0 |      100 |       0 |       0 | 6-51              
+  user-functions.ts   |       0 |      100 |       0 |       0 | 7-58              
+  user-tests.tsx      |       0 |      100 |       0 |       0 | 6-57              
  src/interfaces       |       0 |        0 |       0 |       0 |                   
   task.ts             |       0 |        0 |       0 |       0 |                   
   user.ts             |       0 |        0 |       0 |       0 |                   
@@ -799,5 +799,5 @@ All files             |   19.44 |    21.42 |   26.31 |      20 |
 Test Suites: 1 failed, 2 passed, 3 total
 Tests:       6 failed, 14 passed, 20 total
 Snapshots:   0 total
-Time:        3.413 s
+Time:        3.584 s
 Ran all test suites.

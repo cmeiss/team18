@@ -46,7 +46,8 @@ function App(): JSX.Element {
             </header>
 
             <div>
-                Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster
+                Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster,
+                William Sharp
             </div>
 
             <ChangeRole Role={role} roles={roles}></ChangeRole>

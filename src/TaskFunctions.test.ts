@@ -10,8 +10,8 @@ import {
     //setImage,
     setSteps,
     setDifficulty,
-    setNumUsers
-    //setTime
+    setNumUsers,
+    setTime
 } from "./TaskFunctions";
 
 // Creating a test task to use as a immuatable object in all tests
@@ -154,6 +154,29 @@ describe("Testing the task functions", () => {
             difficulty: 0,
             numUsers: 10,
             time: 0
+        });
+    });
+    test("Testing the setTime function", () => {
+        expect(setTime(200, TESTTASK)).toEqual({
+            // we may want this to be a string rather than a number so we can do 2:00pm
+            name: "test",
+            description: "taskfunc test task",
+            status: false,
+            image: "blank",
+            steps: ["i", "am", "immutable"],
+            difficulty: 0,
+            numUsers: 0,
+            time: 200
+        });
+        expect(setTime(500, TESTTASK)).toEqual({
+            name: "test",
+            description: "taskfunc test task",
+            status: false,
+            image: "blank",
+            steps: ["i", "am", "immutable"],
+            difficulty: 0,
+            numUsers: 0,
+            time: 500
         });
     });
     afterEach(() => {

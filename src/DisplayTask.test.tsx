@@ -57,6 +57,14 @@ describe("DisplayView Tests", () => {
             expect(text).toBeInTheDocument;
         });
     });
+    test("difficulty of task is displayed", () => {
+        const diff = screen.getByText(/Difficulty:/i);
+        expect(diff).toBeInTheDocument();
+    });
+    test("time is displayed", () => {
+        const time = screen.getByText(/1345/i);
+        expect(time).toBeInTheDocument();
+    });
 });
 
 //testing with role being admin

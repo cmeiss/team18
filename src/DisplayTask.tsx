@@ -5,7 +5,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { editTask } from "../src/EditTask";
 import "./DisplayTask.css";
 
-interface displayProps {
+export interface displayProps {
     name: string;
     description: string;
     status: boolean;

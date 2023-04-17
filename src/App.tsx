@@ -44,7 +44,7 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript,
             </header>
-            <div>Team Members: Kaitlyn Sullivan</div>
+            <div>Team Members: Cornelia Meiss</div>
             <ChangeRole Role={role} roles={roles}></ChangeRole>
             {/*  This div statement exists only to test the DisplayTask component
             and show how it works by displaying the TASK array,

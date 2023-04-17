@@ -8,9 +8,9 @@ import {
     //setDescription,
     //setStatus,
     //setImage,
-    setSteps
-    //, setDifficulty,
-    //setNumUsers,
+    setSteps,
+    setDifficulty,
+    setNumUsers
     //setTime
 } from "./TaskFunctions";
 
@@ -71,13 +71,24 @@ const BACKUPTASKARR: Task[] = [TESTTASK, TASK2, TASK3];
 describe("Testing the task functions", () => {
     test("Testing the makeTask function", () => {
         expect(
-            makeTask("test", "taskfunc test task", false, "blank", [], 0, 0, 0)
+            makeTask(
+                "test",
+                "taskfunc test task",
+                false,
+                "blank",
+                ["i", "am", "immutable"],
+                0,
+                0,
+                0
+            )
         ).toEqual(TESTTASK);
     });
     test("Testing the delTask function", () => {
         expect(delTask(TESTTASK, TASKARR)).toEqual([TASK2, TASK3]);
         expect(delTask(TASK2, TASKARR)).toEqual([TESTTASK, TASK3]);
-        expect(delTask(BACKUPTASK, TASKARR)).toEqual([TASKARR]);
+        expect(delTask({ ...BACKUPTASK, name: "na" }, TASKARR)).toEqual(
+            TASKARR
+        );
     });
     test("Testing the setSteps function", () => {
         expect(setSteps(STEPS, TESTTASK)).toEqual({
@@ -98,6 +109,50 @@ describe("Testing the task functions", () => {
             steps: ["3", "2", "1"],
             difficulty: 0,
             numUsers: 0,
+            time: 0
+        });
+    });
+    test("Testing the setDifficultly function", () => {
+        expect(setDifficulty(2, TESTTASK)).toEqual({
+            name: "test",
+            description: "taskfunc test task",
+            status: false,
+            image: "blank",
+            steps: ["i", "am", "immutable"],
+            difficulty: 2,
+            numUsers: 0,
+            time: 0
+        });
+        expect(setDifficulty(10, TESTTASK)).toEqual({
+            name: "test",
+            description: "taskfunc test task",
+            status: false,
+            image: "blank",
+            steps: ["i", "am", "immutable"],
+            difficulty: 10,
+            numUsers: 0,
+            time: 0
+        });
+    });
+    test("Testing the setNumUsers function", () => {
+        expect(setNumUsers(2, TESTTASK)).toEqual({
+            name: "test",
+            description: "taskfunc test task",
+            status: false,
+            image: "blank",
+            steps: ["i", "am", "immutable"],
+            difficulty: 0,
+            numUsers: 2,
+            time: 0
+        });
+        expect(setNumUsers(10, TESTTASK)).toEqual({
+            name: "test",
+            description: "taskfunc test task",
+            status: false,
+            image: "blank",
+            steps: ["i", "am", "immutable"],
+            difficulty: 0,
+            numUsers: 10,
             time: 0
         });
     });

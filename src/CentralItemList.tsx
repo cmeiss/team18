@@ -1,7 +1,7 @@
 import React from "react";
 import { Task } from "./interfaces/task";
-//import { addTask } from "./TaskFunctions";
-//import { displayProps, DisplayTask } from "./DisplayTask";
+import { addTask } from "./TaskFunctions";
+import { displayProps, DisplayTask } from "./DisplayTask";
 
 interface CentralItemProps {
     tasks: Task[];
@@ -10,7 +10,7 @@ interface CentralItemProps {
 
 /**
  * Helper function used to establish which role is populating the list.
- 
+ */
 function whichRole(role: string): number {
     if (role === "super") {
         return 1;
@@ -20,12 +20,12 @@ function whichRole(role: string): number {
         return 3;
     }
 }
-*/
+
 export function CentralItemList(list: CentralItemProps): JSX.Element {
-    //const thisRole = list.role;
+    const thisRole = list.role;
     /**
-     * Converting the array of tasks to an array of displayProps to be able to be used in DisplayTask
-     
+     * Converting the array of tasks to an array of displayProps interfaces to be able to be used in DisplayTask
+     */
     const displayPropList: displayProps[] = list.tasks.map(
         (task: Task): displayProps => ({
             name: task.name,
@@ -39,13 +39,13 @@ export function CentralItemList(list: CentralItemProps): JSX.Element {
             role: thisRole
         })
     );
-    */
     /** 
-    const convertedDisplay: JSX.Element = displayPropList.map(
+    const convertedDisplay: JSX.Element[] = displayPropList.map(
         (prop: displayProps): JSX.Element => ({
             DisplayTask(prop);
         })
     );
-    */
+*/
+
     return <div>The central item list:{list} </div>;
 }

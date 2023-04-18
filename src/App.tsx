@@ -83,6 +83,7 @@ function App(): JSX.Element {
                 William Sharp, Sydni Wright
             </div>
 
+            {/*Handling state for role selection: */}
             <div>
                 <h3>Change Role</h3>
                 <div>
@@ -137,6 +138,7 @@ function App(): JSX.Element {
                     ) : null}
                 </div>
             </div>
+            {/*End of role selection part*/}
 
             {/*  This div statement exists only to test the DisplayTask component
             and show how it works by displaying the TASK array,

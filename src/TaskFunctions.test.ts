@@ -2,7 +2,7 @@ import { Task } from "./interfaces/task";
 
 import {
     makeTask,
-    //addTask,
+    addTask,
     delTask,
     setName,
     setDescription,
@@ -268,6 +268,20 @@ describe("Testing the task functions", () => {
             numUsers: 0,
             time: 0
         });
+    });
+    test("Testing the addTask function", () => {
+        expect(addTask(TASK2, TASKARR)).toEqual([
+            TESTTASK,
+            TASK2,
+            TASK3,
+            TASK2
+        ]);
+        expect(addTask(TASK3, TASKARR)).toEqual([
+            TESTTASK,
+            TASK2,
+            TASK3,
+            TASK3
+        ]);
     });
     afterEach(() => {
         expect(TESTTASK).toEqual(BACKUPTASK);

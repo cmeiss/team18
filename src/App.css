@@ -15,8 +15,8 @@
 
 .App-header {
     width: 100%;
-    background-color: #5b6d91;
-    min-height: 30vh;
+    background-image: url(/Calendaring.jpg);
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;

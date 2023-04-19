@@ -80,7 +80,21 @@ function App(): JSX.Element {
                     <h1>TimeWise</h1>
                     <i>Never waste another second</i>
                 </hgroup>
+                <div className="dropdown">
+                    <span>Role select</span>
+                    <div className="dropdown-content">
+                        <Form.Select value={role.name} onChange={updateRole}>
+                            {roles.map((role: User) => (
+                                // eslint-disable-next-line react/jsx-key
+                                <option value={role.name}>{role.name}</option>
+                            ))}
+                        </Form.Select>
+                    </div>
+                </div>
             </header>
+            <div className="welcome">
+                Welcome {role.name}, lets reclaim the day!
+            </div>
             <div>
                 Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster,
                 William Sharp, Sydni Wright
@@ -88,21 +102,6 @@ function App(): JSX.Element {
 
             {/*Handling state for role selection: */}
             <div>
-                <h3>Change Role</h3>
-                <div>
-                    {/*This form.group creates the drop down menu to choose the role*/}
-                    <Form.Group controlId="userEmotions">
-                        <Form.Label>Select Your Role</Form.Label>
-                        <Form.Select value={role.name} onChange={updateRole}>
-                            {roles.map((role: User) => (
-                                // eslint-disable-next-line react/jsx-key
-                                <option value={role.name}>{role.name}</option>
-                            ))}
-                        </Form.Select>
-                    </Form.Group>
-                    The user Chose {role.name}
-                </div>
-
                 <div>
                     {role.name === "Super" ? (
                         <div>

@@ -35,7 +35,7 @@ const TASK: Task[] =
     ];
 
 function App(): JSX.Element {
-    const [role, setRole] = useState<User>({ name: "User1", userList: TASK }); //This needs to be set by drop down menu
+    const [role, setRole] = useState<User>({ name: "User1", userList: TASK }); //I set this intial user to make the user list display something
     const [roles, setRoles] = useState<User[]>([
         { name: "Super", userList: [] },
         { name: "Admin", userList: [] },

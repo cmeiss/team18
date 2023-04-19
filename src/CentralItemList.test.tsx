@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { CentralItemList } from "./CentralItemList";
+import { CentralItemList } from "./list-components/CentralItemList";
 
 const TaskList = [
     {

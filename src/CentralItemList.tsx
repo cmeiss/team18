@@ -1,9 +1,11 @@
 import React from "react";
 import { Task } from "./interfaces/task";
 import { addTask } from "./TaskFunctions";
+import { Button } from "react-bootstrap";
 import { displayProps, DisplayTask } from "./DisplayTask";
-
+import { TASK1, TASK2, TASK3 } from "./user-tests";
 interface CentralItemProps {
+    setTasks: (newTaskList: Task[]) => void;
     tasks: Task[];
     role: string;
 }
@@ -21,8 +23,9 @@ function whichRole(role: string): number {
     }
 }
 
-export function CentralItemList(list: CentralItemProps): JSX.Element {
-    const thisRole = list.role;
+export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
+    //Place holder for the main item list
+    const centralItemList = [TASK1, TASK2, TASK3];
     /**
      * Converting the array of tasks to an array of displayProps interfaces to be able to be used in DisplayTask
      */
@@ -39,13 +42,15 @@ export function CentralItemList(list: CentralItemProps): JSX.Element {
             role: thisRole
         })
     );
-    /** 
-    const convertedDisplay: JSX.Element[] = displayPropList.map(
-        (prop: displayProps): JSX.Element => ({
-            DisplayTask(prop);
-        })
-    );
-*/
 
-    return <div>The central item list:{list} </div>;
+    return (
+        <div className="List">
+            <div className="central">
+                <span> Central List </span>
+                {centralItemList.map((item: Task) => (
+
+                ))}
+            </div>
+        </div>
+    );
 }

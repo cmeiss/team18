@@ -3,7 +3,7 @@ import { Task } from "./interfaces/task";
 import { makeUser, deleteUser } from "./user-functions";
 
 //creating basic tasks to use in userList attribute of users
-const TASK1: Task = {
+export const TASK1: Task = {
     name: "task1",
     description: "test task",
     status: false,
@@ -13,7 +13,7 @@ const TASK1: Task = {
     numUsers: 0,
     time: 2
 };
-const TASK2: Task = {
+export const TASK2: Task = {
     name: "task2",
     description: "test task",
     status: false,
@@ -23,7 +23,7 @@ const TASK2: Task = {
     numUsers: 3,
     time: 0
 };
-const TASK3: Task = {
+export const TASK3: Task = {
     name: "task3",
     description: "test task",
     status: false,

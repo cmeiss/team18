@@ -142,28 +142,6 @@ function App(): JSX.Element {
             {/*End of role selection part*/}
 
             <UserList user={role}></UserList>
-
-            {/*  This div statement exists only to test the DisplayTask component
-            and show how it works by displaying the TASK array,
-            This div statement needs to be deleted together with the TASK array
-            when we have our actual tasks arrays and showList components */}
-            {TASK.map((TASK: Task) => (
-                <DisplayTask
-                    key={5}
-                    name={TASK.name}
-                    description={TASK.description}
-                    status={TASK.status}
-                    image={TASK.image}
-                    steps={TASK.steps}
-                    difficulty={TASK.difficulty}
-                    numUsers={TASK.numUsers}
-                    time={TASK.time}
-                    role={role.name}
-                ></DisplayTask>
-            ))}
-            {/* The key is necessary for display task to work, 
-                    ideally we should try to have an increasing number to keep track
-                    of the tasks */}
         </div>
     );
 }

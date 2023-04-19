@@ -6,6 +6,7 @@ import { Task } from "./interfaces/task";
 //import { ChangeRole } from "./list-components/selectuser";
 import { User } from "./interfaces/user";
 import { Button, Form } from "react-bootstrap";
+import { UserList } from "./list-components/UserList";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -34,11 +35,11 @@ const TASK: Task[] =
     ];
 
 function App(): JSX.Element {
-    const [role, setRole] = useState<User>({ name: "super", userList: [] }); //This needs to be set by drop down menu
+    const [role, setRole] = useState<User>({ name: "User1", userList: TASK }); //This needs to be set by drop down menu
     const [roles, setRoles] = useState<User[]>([
         { name: "Super", userList: [] },
         { name: "Admin", userList: [] },
-        { name: "User1", userList: [] }
+        { name: "User1", userList: TASK }
     ]); // these are original users these can be changed
     const [editmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
     const [newUser, setNewUser] = useState<string>("User2"); //the value currently in the text box of edit mode
@@ -139,6 +140,8 @@ function App(): JSX.Element {
                 </div>
             </div>
             {/*End of role selection part*/}
+
+            <UserList user={role}></UserList>
 
             {/*  This div statement exists only to test the DisplayTask component
             and show how it works by displaying the TASK array,

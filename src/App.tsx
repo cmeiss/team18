@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-
+import { CentralItemList } from "./list-components/CentralItemList";
 import { Task } from "./interfaces/task";
 //import { ChangeRole } from "./list-components/selectuser";
 import { User } from "./interfaces/user";
@@ -143,6 +143,7 @@ function App(): JSX.Element {
             {/*End of role selection part*/}
 
             <UserList user={role}></UserList>
+            <CentralItemList tasks={TASK} role={role.name}></CentralItemList>
         </div>
     );
 }

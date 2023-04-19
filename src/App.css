@@ -15,14 +15,17 @@
 
 .App-header {
     width: 100%;
-    background-image: url(/Calendaring.jpg);
-    min-height: 50vh;
+    background-image: url(/desktopview.jpg);
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    background-position: center;
+    min-height: 35vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: rgb(168, 69, 11);
 }
 
 .App-link {

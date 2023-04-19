@@ -76,7 +76,10 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript,
+                <hgroup>
+                    <h1>TimeWise</h1>
+                    <i>Never waste another second</i>
+                </hgroup>
             </header>
             <div>
                 Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster,

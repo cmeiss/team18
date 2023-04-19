@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { User } from "./interfaces/user";
+import { User } from "../interfaces/user";
 //this is a function that returns a jsx element in our app.tsx file
 interface ChangeRoleProperties {
     Role: User;
@@ -13,7 +13,7 @@ export function ChangeRole(ChangeRoleProps: ChangeRoleProperties): JSX.Element {
     const [roles, setRoles] = useState<User[]>(ChangeRoleProps.roles); // these are original users these can be changed
     const [editmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
     const [newUser, setNewUser] = useState<string>("User2"); //the value currently in the text box of edit mode
-    // function that sets role based on the role clicked
+    //function that sets role based on the role clicked
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
         const NewRole = roles.find(
             (role: User) => role.name === event.target.value

@@ -1,9 +1,10 @@
 import React from "react";
-import { Task } from "./interfaces/task";
 import { addTask } from "./TaskFunctions";
 import { Button } from "react-bootstrap";
 import { displayProps, DisplayTask } from "./DisplayTask";
-import { TASK1, TASK2, TASK3 } from "./user-tests";
+import { TASK1, TASK2, TASK3 } from "../user-tests";
+import { Task } from "../interfaces/task";
+
 interface CentralItemProps {
     setTasks: (newTaskList: Task[]) => void;
     tasks: Task[];

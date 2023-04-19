@@ -48,7 +48,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
             <div className="central">
                 <span> Central List </span>
                 {centralItemList.map((item: Task) => (
-
+                    <div></div>
                 ))}
             </div>
         </div>

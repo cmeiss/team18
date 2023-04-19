@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import { DisplayTask } from "./list-components/DisplayTask";
 import { Task } from "./interfaces/task";
 //import { ChangeRole } from "./list-components/selectuser";
 import { User } from "./interfaces/user";

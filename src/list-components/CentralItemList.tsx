@@ -1,5 +1,4 @@
-import React from "react";
-import { addTask } from "./TaskFunctions";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { displayProps, DisplayTask } from "./DisplayTask";
 import { TASK1, TASK2, TASK3 } from "../user-tests";
@@ -25,12 +24,13 @@ function whichRole(role: string): number {
 }
 
 export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
+    const [Tasks] = useState<Task[]>(tasks);
     //Place holder for the main item list
-    const centralItemList = [TASK1, TASK2, TASK3];
+    //const centralItemList = [TASK1, TASK2, TASK3];
     /**
      * Converting the array of tasks to an array of displayProps interfaces to be able to be used in DisplayTask
      */
-    const displayPropList: displayProps[] = list.tasks.map(
+    const displayPropList: displayProps[] = tasks.map(
         (task: Task): displayProps => ({
             name: task.name,
             description: task.description,
@@ -40,7 +40,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
             difficulty: task.difficulty,
             numUsers: task.numUsers,
             time: task.time,
-            role: thisRole
+            role: role
         })
     );
 
@@ -48,9 +48,11 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         <div className="List">
             <div className="central">
                 <span> Central List </span>
-                {centralItemList.map((item: Task) => (
-                    <div></div>
-                ))}
+                {displayPropList.map(
+                    (displayProp: displayProps): JSX.Element => (
+                        <DisplayTask display={displayProp}></DisplayTask>
+                    )
+                )}
             </div>
         </div>
     );

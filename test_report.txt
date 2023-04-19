@@ -783,7 +783,7 @@ File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Lin
 ------------------------|---------|----------|---------|---------|-------------------
 All files               |   15.05 |       10 |   21.27 |   15.38 |                   
  src                    |   15.15 |        0 |   22.58 |   15.62 |                   
-  App.tsx               |       0 |        0 |       0 |       0 | 13-96             
+  App.tsx               |       0 |        0 |       0 |       0 | 13-89             
   TaskFunctions.ts      |    62.5 |      100 |   53.84 |    62.5 | 33-35,62-83       
   user-functions.ts     |       0 |      100 |       0 |       0 | 7-58              
   user-tests.tsx        |       0 |      100 |       0 |       0 | 6-57              
@@ -802,5 +802,5 @@ All files               |   15.05 |       10 |   21.27 |   15.38 |
 Test Suites: 1 failed, 2 passed, 3 total
 Tests:       6 failed, 14 passed, 20 total
 Snapshots:   0 total
-Time:        4.2 s
+Time:        3.944 s
 Ran all test suites.

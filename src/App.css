@@ -77,3 +77,19 @@
     font-size: larger;
     margin: 20px;
 }
+
+.central {
+    text-align: center;
+    float: left;
+    width: 500px;
+    height: 500px;
+    outline: 2px solid black;
+}
+
+.user-list {
+    text-align: center;
+    float: right;
+    width: 500px;
+    height: 500px;
+    outline: 2px solid black;
+}

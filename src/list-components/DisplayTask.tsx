@@ -5,7 +5,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { editTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
 
-interface displayProps {
+export interface displayProps {
     name: string;
     description: string;
     status: boolean;
@@ -62,7 +62,18 @@ export function DisplayTask(display: displayProps): JSX.Element {
                         <div>{""}</div>
                     )}
                 </div>
-                <Button onClick={editTask}>Edit Task</Button>
+                <Button
+                    style={{
+                        backgroundColor: "red",
+                        width: "100px",
+                        height: "40px",
+                        display: "inline-block",
+                        marginLeft: "220px"
+                    }}
+                    onClick={editTask}
+                >
+                    Edit Task
+                </Button>
                 {/*EditTask will probably not be an own file, but we will rather
                 have multiple editing components that are going to be called in here,
                 we might also have to switch the editMode by clicking anywhere on

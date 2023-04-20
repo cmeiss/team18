@@ -9,7 +9,6 @@ interface AdminItemProps {
 }
 
 export function AdminList({ role, tasks }: AdminItemProps) {
-    const [AdminTasks, SetAdminTask] = useState<Task[]>(tasks);
     const [Tasks] = useState<Task[]>(tasks);
     const [Role] = useState<string>(role);
 

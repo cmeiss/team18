@@ -37,13 +37,39 @@ const TaskList = [
 ];
 
 const User1: User = { name: "user1", userList: TaskList };
+const User2: User = { name: "Super", userList: TaskList };
+const User3: User = { name: "Admin", userList: TaskList };
 
 describe("Testing User List", () => {
     beforeEach(() => {
         render(<UserList user={User1}></UserList>);
     });
-    test("Header is displayed", () => {
-        const header = screen.getByRole("header");
+    test("User name is displayed", () => {
+        const header = screen.getByText(/user1/i);
         expect(header).toBeInTheDocument();
     });
+    test("All tasks are displayed", () => {
+        User1.userList.every((task) => {
+            const taskItem = screen.queryByText(task.name); //had to use query because the it might find parts of the name twice (e.g. test1 and test2 might both be found if searching for test)
+            expect(taskItem).toBeInTheDocument;
+        });
+    });
+    test("Check presence of header", () => {
+        const header = screen.getByRole("heading", { name: /List/i });
+        expect(header).toBeInTheDocument();
+    });
+});
+
+describe("Testing that user list is not displayed if role is super", () => {
+    test("test for empty DOM element", () => {
+        const { container } = render(<UserList user={User2}></UserList>);
+        expect(container).toBeEmptyDOMElement();
+    }); //this test is not passing, I need to make a change in userList so that the component returns null if role is super
+});
+
+describe("Testing that user list is not displayed if role is admin", () => {
+    test("test for empty DOM element", () => {
+        const { container } = render(<UserList user={User3}></UserList>);
+        expect(container).toBeEmptyDOMElement();
+    }); //this test is not passing, I need to make a change in userList so that the component returns null if role is admin
 });

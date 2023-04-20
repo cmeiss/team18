@@ -4,10 +4,10 @@ import { CentralItemList } from "./list-components/CentralItemList";
 import { Task } from "./interfaces/task";
 //import { ChangeRole } from "./list-components/selectuser";
 import { User } from "./interfaces/user";
-import { Button, Form } from "react-bootstrap";
+//import { Button, Form } from "react-bootstrap";
 import { UserList } from "./list-components/UserList";
 import { ChangeRole } from "./list-components/ChangeRole";
-import { ModifyUsers } from "./list-components/selectuser";
+import { ModifyUsers } from "./list-components/ModifyUsers";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -38,14 +38,11 @@ const TASK: Task[] =
 function App(): JSX.Element {
     const [role, setRole] = useState<User>({ name: "User1", userList: TASK }); //I set this intial user to make the user list display something
     const [roles, setRoles] = useState<User[]>([
-        { name: "user5", userList: [] },
+        { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
         { name: "Admin", userList: [] },
         { name: "User1", userList: TASK }
     ]); // these are original users these can be changed
-    const [editmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
-    const [newUser, setNewUser] = useState<string>("User2"); //the value currently in the text box of edit mode
-
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
         const NewRole = roles.find(
             (role: User) => role.name === event.target.value
@@ -55,27 +52,6 @@ function App(): JSX.Element {
         }
     }
 
-    function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
-        seteditmode(event.target.checked);
-    }
-    function updateUsers(event: React.ChangeEvent<HTMLInputElement>) {
-        setNewUser(event.target.value);
-    }
-
-    function AddUsersandEditMode() {
-        setRoles([...roles, { name: newUser, userList: [] }]);
-        seteditmode(false);
-    }
-
-    function DeleteUsersandEditMode() {
-        setRoles(
-            [...roles].filter((role: User): boolean =>
-                role.name !== newUser ? true : false
-            )
-        );
-        seteditmode(false);
-    }
-
     return (
         <div className="App">
             <header className="App-header">
@@ -83,23 +59,19 @@ function App(): JSX.Element {
                     <h1>TimeWise</h1>
                     <i>Never waste another second</i>
                 </hgroup>
-                {/* <div className="dropdown">
+
+                {/*Role Selection, DropDown Menu: */}
+                <div className="dropdown">
                     <span>Role select</span>
                     <div className="dropdown-content">
-                        <Form.Select value={role.name} onChange={updateRole}>
-                            {roles.map((role: User) => (
-                                // eslint-disable-next-line react/jsx-key
-                                <option value={role.name}>{role.name}</option>
-                            ))}
-                        </Form.Select>
+                        <div>
+                            <ChangeRole
+                                Role={role}
+                                roles={roles}
+                                setRole={updateRole}
+                            ></ChangeRole>
+                        </div>
                     </div>
-                </div> */}
-                <div>
-                    <ChangeRole
-                        Role={role}
-                        roles={roles}
-                        setRole={updateRole}
-                    ></ChangeRole>
                 </div>
             </header>
             <div className="welcome">
@@ -110,10 +82,9 @@ function App(): JSX.Element {
                 William Sharp, Sydni Wright
             </div>
 
-            {/*Handling state for role selection: */}
+            {/*Adding and Deleting Users: */}
             <div>
                 <div>
-                    {role.name}
                     {role.name === "Super" ? (
                         <ModifyUsers
                             Role={role}
@@ -123,7 +94,8 @@ function App(): JSX.Element {
                     ) : null}
                 </div>
             </div>
-            {/*End of role selection part*/}
+
+            {/* Displaying the Lists: */}
             <div className="user-list">
                 <UserList user={role}></UserList>
             </div>

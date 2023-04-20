@@ -6,6 +6,7 @@ import { Task } from "./interfaces/task";
 import { User } from "./interfaces/user";
 import { Button, Form } from "react-bootstrap";
 import { UserList } from "./list-components/UserList";
+import { AdminList } from "./list-components/adminlist";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -28,7 +29,7 @@ const TASK: Task[] =
             image: "picture",
             steps: ["a", "b", "c"],
             difficulty: 3,
-            numUsers: 2,
+            numUsers: 1,
             time: 1345
         }
     ];
@@ -149,6 +150,9 @@ function App(): JSX.Element {
                     tasks={TASK}
                     role={role.name}
                 ></CentralItemList>
+                <div className="admin-list">
+                    <AdminList tasks={TASK} role={role.name}></AdminList>
+                </div>
             </div>
         </div>
     );

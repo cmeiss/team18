@@ -150,7 +150,9 @@ function App(): JSX.Element {
                     tasks={TASK}
                     role={role.name}
                 ></CentralItemList>
-                <AdminList tasks={TASK} role={role.name}></AdminList>
+                <div className="admin-list">
+                    <AdminList tasks={TASK} role={role.name}></AdminList>
+                </div>
             </div>
         </div>
     );

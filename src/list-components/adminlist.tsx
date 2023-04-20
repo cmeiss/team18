@@ -19,7 +19,7 @@ export function AdminList({ role, tasks }: AdminItemProps) {
         return (
             <div className="AdminList">
                 <div className="Admin">
-                    <span> Central List </span>
+                    <span> Admin List </span>
                     {NewTasks.map((TASK: Task) => (
                         <DisplayTask
                             key={5}

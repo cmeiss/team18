@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/TaskFunctions.test.ts
-FAIL src/CentralItemList.test.tsx
+FAIL src/CentralItemList.test.tsx (5.336 s)
   ● Console
 
     console.error
@@ -4119,9 +4119,9 @@ FAIL src/list-components/UserList.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   27.08 |    23.33 |   39.58 |   27.65 |                   
+All files               |      25 |    20.58 |   37.25 |   25.49 |                   
  src                    |   24.24 |        0 |   41.93 |      25 |                   
-  App.tsx               |       0 |        0 |       0 |       0 | 13-89             
+  App.tsx               |       0 |        0 |       0 |       0 | 14-90             
   TaskFunctions.ts      |     100 |      100 |     100 |     100 |                   
   user-functions.ts     |       0 |      100 |       0 |       0 | 7-58              
   user-tests.tsx        |       0 |      100 |       0 |       0 | 6-57              
@@ -4130,14 +4130,15 @@ All files               |   27.08 |    23.33 |   39.58 |   27.65 |
  src/interfaces         |       0 |        0 |       0 |       0 |                   
   task.ts               |       0 |        0 |       0 |       0 |                   
   user.ts               |       0 |        0 |       0 |       0 |                   
- src/list-components    |   35.71 |    38.88 |    37.5 |   35.71 |                   
+ src/list-components    |   27.77 |    31.81 |   31.57 |   27.77 |                   
   CentralItemList.tsx   |     100 |      100 |     100 |     100 |                   
   DisplayTask.tsx       |      75 |       75 |   66.66 |      75 | 35                
   UserList.tsx          |     100 |      100 |     100 |     100 |                   
+  adminlist.tsx         |       0 |        0 |       0 |       0 | 12-41             
   selectuser.tsx        |       0 |        0 |       0 |       0 | 12-53             
 ------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 3 failed, 2 passed, 5 total
 Tests:       10 failed, 26 passed, 36 total
 Snapshots:   0 total
-Time:        9.52 s
+Time:        15.291 s
 Ran all test suites.

@@ -8,6 +8,7 @@ import { User } from "./interfaces/user";
 import { UserList } from "./list-components/UserList";
 import { ChangeRole } from "./list-components/ChangeRole";
 import { ModifyUsers } from "./list-components/ModifyUsers";
+import { AdminList } from "./list-components/adminlist";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -30,7 +31,7 @@ const TASK: Task[] =
             image: "picture",
             steps: ["a", "b", "c"],
             difficulty: 3,
-            numUsers: 2,
+            numUsers: 1,
             time: 1345
         }
     ];
@@ -104,6 +105,9 @@ function App(): JSX.Element {
                     tasks={TASK}
                     role={role.name}
                 ></CentralItemList>
+                <div className="admin-list">
+                    <AdminList tasks={TASK} role={role.name}></AdminList>
+                </div>
             </div>
         </div>
     );

@@ -7,6 +7,7 @@ import { User } from "./interfaces/user";
 import { Button, Form } from "react-bootstrap";
 import { UserList } from "./list-components/UserList";
 import { ChangeRole } from "./list-components/ChangeRole";
+import { ModifyUsers } from "./list-components/selectuser";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -37,6 +38,7 @@ const TASK: Task[] =
 function App(): JSX.Element {
     const [role, setRole] = useState<User>({ name: "User1", userList: TASK }); //I set this intial user to make the user list display something
     const [roles, setRoles] = useState<User[]>([
+        { name: "user5", userList: [] },
         { name: "Super", userList: [] },
         { name: "Admin", userList: [] },
         { name: "User1", userList: TASK }
@@ -111,40 +113,13 @@ function App(): JSX.Element {
             {/*Handling state for role selection: */}
             <div>
                 <div>
+                    {role.name}
                     {role.name === "Super" ? (
-                        <div>
-                            <h3>Click Switch to add or delete users</h3>
-                            <Form.Check
-                                type={"switch"}
-                                id="editMode"
-                                label=""
-                                checked={editmode}
-                                onChange={updateEditMode}
-                            />
-                            {editmode ? (
-                                <Form.Group controlId="ChecKAnswer">
-                                    <Form.Label>
-                                        Enter New User Below:
-                                    </Form.Label>
-                                    <Form.Control
-                                        as="textarea"
-                                        rows={3}
-                                        value={newUser}
-                                        onChange={updateUsers}
-                                    />
-                                </Form.Group>
-                            ) : null}
-                            {editmode ? (
-                                <Button onClick={AddUsersandEditMode}>
-                                    Add User and Leave Edit Mode
-                                </Button>
-                            ) : null}
-                            {editmode ? (
-                                <Button onClick={DeleteUsersandEditMode}>
-                                    Delete User and Leave Edit Mode
-                                </Button>
-                            ) : null}
-                        </div>
+                        <ModifyUsers
+                            Role={role}
+                            roles={roles}
+                            setRoles={setRoles}
+                        ></ModifyUsers>
                     ) : null}
                 </div>
             </div>

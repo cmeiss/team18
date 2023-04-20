@@ -141,9 +141,15 @@ function App(): JSX.Element {
                 </div>
             </div>
             {/*End of role selection part*/}
-
-            <UserList user={role}></UserList>
-            <CentralItemList tasks={TASK} role={role.name}></CentralItemList>
+            <div className="user-list">
+                <UserList user={role}></UserList>
+            </div>
+            <div className="central">
+                <CentralItemList
+                    tasks={TASK}
+                    role={role.name}
+                ></CentralItemList>
+            </div>
         </div>
     );
 }

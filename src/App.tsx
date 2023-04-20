@@ -6,6 +6,7 @@ import { Task } from "./interfaces/task";
 import { User } from "./interfaces/user";
 import { Button, Form } from "react-bootstrap";
 import { UserList } from "./list-components/UserList";
+import { ChangeRole } from "./list-components/ChangeRole";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -80,7 +81,7 @@ function App(): JSX.Element {
                     <h1>TimeWise</h1>
                     <i>Never waste another second</i>
                 </hgroup>
-                <div className="dropdown">
+                {/* <div className="dropdown">
                     <span>Role select</span>
                     <div className="dropdown-content">
                         <Form.Select value={role.name} onChange={updateRole}>
@@ -90,6 +91,13 @@ function App(): JSX.Element {
                             ))}
                         </Form.Select>
                     </div>
+                </div> */}
+                <div>
+                    <ChangeRole
+                        Role={role}
+                        roles={roles}
+                        setRole={updateRole}
+                    ></ChangeRole>
                 </div>
             </header>
             <div className="welcome">

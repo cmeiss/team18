@@ -3987,7 +3987,8 @@ FAIL src/list-components/UserList.test.tsx
     console.error
       Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:11:31)
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -4001,7 +4002,8 @@ FAIL src/list-components/UserList.test.tsx
     console.error
       Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:11:31)
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -4015,7 +4017,8 @@ FAIL src/list-components/UserList.test.tsx
     console.error
       Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:11:31)
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -4029,7 +4032,8 @@ FAIL src/list-components/UserList.test.tsx
     console.error
       Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:11:31)
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -4043,7 +4047,8 @@ FAIL src/list-components/UserList.test.tsx
     console.error
       Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:11:31)
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -4057,7 +4062,8 @@ FAIL src/list-components/UserList.test.tsx
     console.error
       Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:11:31)
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -4073,7 +4079,7 @@ FAIL src/list-components/UserList.test.tsx
     expect(element).toBeEmptyDOMElement()
 
     Received:
-      "<div>null</div>"
+      "<div><div></div></div>"
 
       64 |     test("test for empty DOM element", () => {
       65 |         const { container } = render(<UserList user={User2}></UserList>);
@@ -4094,7 +4100,7 @@ FAIL src/list-components/UserList.test.tsx
     expect(element).toBeEmptyDOMElement()
 
     Received:
-      "<div>null</div>"
+      "<div><div></div></div>"
 
       71 |     test("test for empty DOM element", () => {
       72 |         const { container } = render(<UserList user={User3}></UserList>);
@@ -4113,7 +4119,7 @@ FAIL src/list-components/UserList.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   22.58 |       25 |   32.75 |   22.95 |                   
+All files               |   21.31 |       25 |   32.75 |   21.66 |                   
  src                    |   28.57 |        0 |      52 |   29.62 |                   
   App.tsx               |       0 |        0 |       0 |       0 | 16-56             
   TaskFunctions.ts      |     100 |      100 |     100 |     100 |                   
@@ -4124,17 +4130,17 @@ All files               |   22.58 |       25 |   32.75 |   22.95 |
  src/interfaces         |       0 |        0 |       0 |       0 |                   
   task.ts               |       0 |        0 |       0 |       0 |                   
   user.ts               |       0 |        0 |       0 |       0 |                   
- src/list-components    |   18.18 |    29.16 |   18.75 |   18.18 |                   
+ src/list-components    |   15.62 |    29.16 |   18.75 |   15.62 |                   
   CentralItemList.tsx   |     100 |      100 |     100 |     100 |                   
   ChangeRole.tsx        |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx       |      75 |       75 |   66.66 |      75 | 35                
   ModifyUsers.tsx       |       0 |        0 |       0 |       0 | 14-39             
   UserList.tsx          |     100 |      100 |     100 |     100 |                   
   adminListTest.tsx     |       0 |        0 |       0 |       0 | 5-80              
-  adminlist.tsx         |       0 |        0 |       0 |       0 | 12-41             
+  adminlist.tsx         |       0 |        0 |       0 |       0 | 13-42             
 ------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 3 failed, 2 passed, 5 total
 Tests:       10 failed, 26 passed, 36 total
 Snapshots:   0 total
-Time:        9.515 s
+Time:        9.485 s
 Ran all test suites.

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 //import { Button } from "react-bootstrap";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
+import "./adminList.css";
 
 export interface AdminItemProps {
     tasks: Task[];
@@ -38,6 +39,6 @@ export function AdminList({ role, tasks }: AdminItemProps) {
             </div>
         );
     } else {
-        return <span>Man UP</span>;
+        return <span></span>;
     }
 }

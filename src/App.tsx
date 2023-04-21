@@ -97,7 +97,7 @@ function App(): JSX.Element {
             </div>
 
             {/* Displaying the Lists: */}
-            <div className="user-list">
+            <div>
                 <UserList user={role}></UserList>
             </div>
             <div className="central">
@@ -105,7 +105,7 @@ function App(): JSX.Element {
                     tasks={TASK}
                     role={role.name}
                 ></CentralItemList>
-                <div className="admin-list">
+                <div>
                     <AdminList tasks={TASK} role={role.name}></AdminList>
                 </div>
             </div>

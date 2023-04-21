@@ -97,7 +97,7 @@ function App(): JSX.Element {
             </div>
 
             {/* Displaying the Lists: */}
-            <div className="user-list">
+            <div>
                 <UserList user={role}></UserList>
             </div>
             <div className="central">

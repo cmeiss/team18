@@ -23,9 +23,9 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
             <div className="AdminList">
                 <div className="Admin">
                     <span> Admin List </span>
-                    {NewTasks.map((TASK: Task) => (
+                    {NewTasks.map((TASK: Task, index: number) => (
                         <DisplayTask
-                            key={5}
+                            key={index}
                             task={TASK}
                             tasks={tasks}
                             updateTasks={setTasks}

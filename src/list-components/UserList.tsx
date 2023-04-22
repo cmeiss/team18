@@ -20,9 +20,9 @@ export function UserList(user: UserProps): JSX.Element {
             ) : (
                 <div className="userList">
                     <h3>{user.user.name}s List:</h3>
-                    {list.map((TASK: Task) => (
+                    {list.map((TASK: Task, index: number) => (
                         <DisplayTask
-                            key={5}
+                            key={index}
                             task={TASK}
                             tasks={user.tasks}
                             updateTasks={user.setTasks}

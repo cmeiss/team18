@@ -18,9 +18,9 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         <div className="List">
             <div className="central">
                 <span> Central List </span>
-                {Tasks.map((TASK: Task) => (
+                {Tasks.map((TASK: Task, index: number) => (
                     <DisplayTask
-                        key={5}
+                        key={index}
                         task={TASK}
                         tasks={tasks}
                         updateTasks={setTasks}

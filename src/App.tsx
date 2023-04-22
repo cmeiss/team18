@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, createContext, useState } from "react";
 import "./App.css";
 import { CentralItemList } from "./list-components/CentralItemList";
 import { Task } from "./interfaces/task";
@@ -10,6 +10,7 @@ import { ChangeRole } from "./list-components/ChangeRole";
 import { ModifyUsers } from "./list-components/ModifyUsers";
 import { AdminList } from "./list-components/adminlist";
 import { TASKS } from "./TASKS";
+import { EditTask } from "./editing-components/EditTask";
 
 // const TASK: Task[] =
 //     //this is a completely random test task array to get something
@@ -56,6 +57,10 @@ function App(): JSX.Element {
         }
     }
 
+    // function updateTasks(tasks: Task[]) {
+    //     setTasks(tasks);
+    // }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -99,17 +104,34 @@ function App(): JSX.Element {
                 </div>
             </div>
 
+            {/* <div>
+                <EditTask
+                    tasks={tasks}
+                    updateTasks={setTasks}
+                    task={tasks[0]}
+                ></EditTask>
+            </div> */}
+
             {/* Displaying the Lists: */}
             <div>
-                <UserList user={role}></UserList>
+                <UserList
+                    user={role}
+                    tasks={tasks}
+                    setTasks={setTasks}
+                ></UserList>
             </div>
             <div className="central">
                 <CentralItemList
                     tasks={tasks}
                     role={role.name}
+                    setTasks={setTasks}
                 ></CentralItemList>
                 <div>
-                    <AdminList tasks={tasks} role={role.name}></AdminList>
+                    <AdminList
+                        tasks={tasks}
+                        role={role.name}
+                        setTasks={setTasks}
+                    ></AdminList>
                 </div>
             </div>
         </div>

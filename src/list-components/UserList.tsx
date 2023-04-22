@@ -6,10 +6,13 @@ import "./UserList.css";
 
 interface UserProps {
     user: User;
+    tasks: Task[];
+    //setTasks: (newTasks: Task[]) => void;
+    setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export function UserList(user: UserProps): JSX.Element {
-    const list: Task[] = user.user.userList;
+    const list = user.user.userList;
     return (
         <div>
             {user.user.name === "Super" || user.user.name === "Admin" ? (
@@ -20,14 +23,9 @@ export function UserList(user: UserProps): JSX.Element {
                     {list.map((TASK: Task) => (
                         <DisplayTask
                             key={5}
-                            name={TASK.name}
-                            description={TASK.description}
-                            status={TASK.status}
-                            image={TASK.image}
-                            steps={TASK.steps}
-                            difficulty={TASK.difficulty}
-                            numUsers={TASK.numUsers}
-                            time={TASK.time}
+                            task={TASK}
+                            tasks={user.tasks}
+                            updateTasks={user.setTasks}
                             role={user.user.name}
                         ></DisplayTask>
                     ))}

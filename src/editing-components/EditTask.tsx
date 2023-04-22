@@ -1,10 +1,119 @@
-import React from "react";
+import React, { useState } from "react";
 //import { Button } from "react-bootstrap";
-//import { Task } from "./interfaces/task";
+import { Task } from "../interfaces/task";
+import { Button } from "react-bootstrap";
+import { makeTask } from "../TaskFunctions";
+//import { newTasks } from "./NewTasksFunction";
 
-export function editTask(): JSX.Element {
-    console.log("clicked edit button");
-    return <div>This is going to be the EditTask component. </div>;
+interface editProps {
+    tasks: Task[];
+    //updateTasks: (newTasks: Task[]) => void;
+    updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    task: Task;
+}
+
+const abc: Task[] = [
+    {
+        name: "test",
+        description: "this is the description",
+        status: false,
+        image: "picture",
+        steps: ["a", "b", "c"],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+    },
+    {
+        name: "test2",
+        description: "this is the description",
+        status: false,
+        image: "picture",
+        steps: ["a", "b", "c"],
+        difficulty: 3,
+        numUsers: 1,
+        time: 1345
+    }
+];
+
+function newTasks(
+    tasks: Task[],
+    name: string,
+    desc: string,
+    stat: boolean,
+    img: string,
+    steps: string[],
+    diff: number,
+    num: number,
+    time: number
+): Task[] {
+    const newTask = makeTask(name, desc, stat, img, steps, diff, num, time);
+    const newTaskArray = tasks.map((TASK: Task) =>
+        TASK.name === name ? newTask : { ...TASK, steps: [...TASK.steps] }
+    );
+    return newTaskArray;
+}
+
+export function EditTask(edit: editProps): JSX.Element {
+    {
+        /* all attribute state goes here */
+    }
+    const [name, setName] = useState<string>(edit.task.name);
+    const [desc, setDesc] = useState<string>(edit.task.description);
+    const [status, setStatus] = useState<boolean>(edit.task.status);
+    const [img, setImg] = useState<string>(edit.task.image);
+    const [steps, setSteps] = useState<string[]>(edit.task.steps);
+    const [diff, setDiff] = useState<number>(edit.task.difficulty);
+    const [numUsers, setNumUsers] = useState<number>(edit.task.numUsers);
+    const [time, setTime] = useState<number>(edit.task.time);
+    const [visible, setVisible] = useState<boolean>(false);
+    function updateVisibility() {
+        setVisible(!visible);
+    }
+
+    //for now this is only a testing function adding a new task to the end, in the future we need a function to just replace the old task
+    function changeTasks() {
+        const copy = edit.tasks.map((oTask: Task) => ({
+            ...oTask,
+            steps: [...oTask.steps]
+        }));
+        edit.updateTasks([
+            ...copy,
+            {
+                name: "test",
+                description: "this is the description",
+                status: false,
+                image: "picture",
+                steps: ["a", "b", "c"],
+                difficulty: 3,
+                numUsers: 2,
+                time: 1345
+            }
+        ]);
+    }
+    return (
+        <div>
+            <Button
+                style={{
+                    backgroundColor: "red",
+                    width: "100px",
+                    height: "40px",
+                    display: "inline-block",
+                    marginLeft: "220px"
+                }}
+                onClick={updateVisibility}
+            >
+                Edit Task
+            </Button>
+            {!visible ? null : (
+                <div>
+                    {/* <Button onClick={() => setTime(1200)}>change time</Button> */}
+                    <div>
+                        <Button onClick={changeTasks}>Save Changes</Button>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
 }
 
 //we probably won't need this file!!, see explanation in display view

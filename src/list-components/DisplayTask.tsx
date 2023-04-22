@@ -1,28 +1,59 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
-//import { Task } from "../interfaces/task";
+import { Task } from "../interfaces/task";
 //import TASK from "../src/App";
-import { editTask } from "../editing-components/EditTask";
+import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
 
+// export interface displayProps {
+//     name: string;
+//     description: string;
+//     status: boolean;
+//     image: string;
+//     steps: string[];
+//     difficulty: number;
+//     numUsers: number;
+//     time: number;
+//     role: string; //added this in here to be able to pass the role state from app
+// }
+
 export interface displayProps {
-    name: string;
-    description: string;
-    status: boolean;
-    image: string;
-    steps: string[];
-    difficulty: number;
-    numUsers: number;
-    time: number;
-    role: string; //added this in here to be able to pass the role state from app
+    task: Task;
+    tasks: Task[];
+    updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    role: string;
 }
 
+// const abc: Task[] = [
+//     {
+//         name: "test",
+//         description: "this is the description",
+//         status: false,
+//         image: "picture",
+//         steps: ["a", "b", "c"],
+//         difficulty: 3,
+//         numUsers: 2,
+//         time: 1345
+//     },
+//     {
+//         name: "test2",
+//         description: "this is the description",
+//         status: false,
+//         image: "picture",
+//         steps: ["a", "b", "c"],
+//         difficulty: 3,
+//         numUsers: 1,
+//         time: 1345
+//     }
+// ];
+
 export function DisplayTask(display: displayProps): JSX.Element {
-    const [done, setDone] = useState<boolean>(display.status); //done = true means task is not done
+    const [done, setDone] = useState<boolean>(display.task.status); //done = true means task is not done
+    //const [abC] = useState<Task[]>(abc);
     return (
         <div>
-            <h3>Task: {display.name}</h3>
-            <div>{display.description}</div>
+            <h3>Task: {display.task.name}</h3>
+            <div>{display.task.description}</div>
             <Row>
                 <Col>
                     <ul>
@@ -35,19 +66,19 @@ export function DisplayTask(display: displayProps): JSX.Element {
                                 onChange={() => setDone(!done)}
                             />
                         </li>
-                        <li>{display.image}</li>
+                        <li>{display.task.image}</li>
                     </ul>
                 </Col>
                 <Col>
                     <ul>
-                        <li>Difficulty: {display.difficulty}</li>
-                        <li>Time: {display.time}</li>
+                        <li>Difficulty: {display.task.difficulty}</li>
+                        <li>Time: {display.task.time}</li>
                     </ul>
                 </Col>
                 <Col>
                     <div>Necessary Steps:</div>
                     <ul>
-                        {display.steps.map((step: string) => (
+                        {display.task.steps.map((step: string) => (
                             <li key={step}>{step}</li>
                         ))}
                     </ul>
@@ -57,12 +88,19 @@ export function DisplayTask(display: displayProps): JSX.Element {
                 {/* The content of this row is only visible if role is super */}
                 <div>
                     {display.role === "super" ? (
-                        <div>Number of Users: {display.numUsers}</div>
+                        <div>Number of Users: {display.task.numUsers}</div>
                     ) : (
                         <div>{""}</div>
                     )}
                 </div>
-                <Button
+                <div>
+                    <EditTask
+                        tasks={display.tasks}
+                        updateTasks={display.updateTasks}
+                        task={display.task}
+                    ></EditTask>
+                </div>
+                {/* <Button
                     style={{
                         backgroundColor: "red",
                         width: "100px",
@@ -73,7 +111,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                     onClick={editTask}
                 >
                     Edit Task
-                </Button>
+                </Button> */}
                 {/*EditTask will probably not be an own file, but we will rather
                 have multiple editing components that are going to be called in here,
                 we might also have to switch the editMode by clicking anywhere on

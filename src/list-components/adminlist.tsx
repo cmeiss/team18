@@ -7,9 +7,11 @@ import "./adminList.css";
 export interface AdminItemProps {
     tasks: Task[];
     role: string;
+    //setTasks: (newTasks: Task[]) => void;
+    setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export function AdminList({ role, tasks }: AdminItemProps) {
+export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
     const [Tasks] = useState<Task[]>(tasks);
     const [Role] = useState<string>(role);
 
@@ -24,14 +26,9 @@ export function AdminList({ role, tasks }: AdminItemProps) {
                     {NewTasks.map((TASK: Task) => (
                         <DisplayTask
                             key={5}
-                            name={TASK.name}
-                            description={TASK.description}
-                            status={TASK.status}
-                            image={TASK.image}
-                            steps={TASK.steps}
-                            difficulty={TASK.difficulty}
-                            numUsers={TASK.numUsers}
-                            time={TASK.time}
+                            task={TASK}
+                            tasks={tasks}
+                            updateTasks={setTasks}
                             role={Role}
                         ></DisplayTask>
                     ))}

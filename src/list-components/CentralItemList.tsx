@@ -6,9 +6,11 @@ import { Task } from "../interfaces/task";
 interface CentralItemProps {
     tasks: Task[];
     role: string;
+    //setTasks: (newTasks: Task[]) => void;
+    setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export function CentralItemList({ role, tasks }: CentralItemProps) {
+export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
     const [Tasks] = useState<Task[]>(tasks);
     const [Role] = useState<string>(role);
 
@@ -19,14 +21,9 @@ export function CentralItemList({ role, tasks }: CentralItemProps) {
                 {Tasks.map((TASK: Task) => (
                     <DisplayTask
                         key={5}
-                        name={TASK.name}
-                        description={TASK.description}
-                        status={TASK.status}
-                        image={TASK.image}
-                        steps={TASK.steps}
-                        difficulty={TASK.difficulty}
-                        numUsers={TASK.numUsers}
-                        time={TASK.time}
+                        task={TASK}
+                        tasks={tasks}
+                        updateTasks={setTasks}
                         role={Role}
                     ></DisplayTask>
                 ))}

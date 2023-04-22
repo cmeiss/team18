@@ -83,19 +83,21 @@ export function EditTask(edit: editProps): JSX.Element {
         num: number,
         time: number
     ) {
-        const NewT: Task[] = newTasks(
-            tasks,
-            name,
-            desc,
-            stat,
-            img,
-            steps,
-            diff,
-            num,
-            time
-        );
+        // const NewT: Task[] = newTasks(
+        //     tasks,
+        //     name,
+        //     desc,
+        //     stat,
+        //     img,
+        //     steps,
+        //     diff,
+        //     num,
+        //     time
+        // );
+        const newTask = makeTask(name, desc, stat, img, steps, diff, num, time);
+        const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         //console.log(...NewT);
-        edit.updateTasks([...NewT]);
+        edit.updateTasks([...copy, newTask]);
         // const copy = edit.tasks.map((oTask: Task) => ({
         //     ...oTask,
         //     steps: [...oTask.steps]

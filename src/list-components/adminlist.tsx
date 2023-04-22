@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
 
-export interface AdminItemProps {
+interface AdminItemProps {
     tasks: Task[];
     role: string;
 }

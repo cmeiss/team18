@@ -46,8 +46,9 @@ function newTasks(
     num: number,
     time: number
 ): Task[] {
+    const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
     const newTask = makeTask(name, desc, stat, img, steps, diff, num, time);
-    const newTaskArray = tasks.map((TASK: Task) =>
+    const newTaskArray = copy.map((TASK: Task) =>
         TASK.name === name ? newTask : { ...TASK, steps: [...TASK.steps] }
     );
     return newTaskArray;
@@ -71,24 +72,47 @@ export function EditTask(edit: editProps): JSX.Element {
     }
 
     //for now this is only a testing function adding a new task to the end, in the future we need a function to just replace the old task
-    function changeTasks() {
-        const copy = edit.tasks.map((oTask: Task) => ({
-            ...oTask,
-            steps: [...oTask.steps]
-        }));
-        edit.updateTasks([
-            ...copy,
-            {
-                name: "test",
-                description: "this is the description",
-                status: false,
-                image: "picture",
-                steps: ["a", "b", "c"],
-                difficulty: 3,
-                numUsers: 2,
-                time: 1345
-            }
-        ]);
+    function changeTasks(
+        tasks: Task[],
+        name: string,
+        desc: string,
+        stat: boolean,
+        img: string,
+        steps: string[],
+        diff: number,
+        num: number,
+        time: number
+    ) {
+        const NewT: Task[] = newTasks(
+            tasks,
+            name,
+            desc,
+            stat,
+            img,
+            steps,
+            diff,
+            num,
+            time
+        );
+        //console.log(...NewT);
+        edit.updateTasks([...NewT]);
+        // const copy = edit.tasks.map((oTask: Task) => ({
+        //     ...oTask,
+        //     steps: [...oTask.steps]
+        // }));
+        // edit.updateTasks([
+        //     ...copy,
+        //     {
+        //         name: "test",
+        //         description: "this is the description",
+        //         status: false,
+        //         image: "picture",
+        //         steps: ["a", "b", "c"],
+        //         difficulty: 3,
+        //         numUsers: 2,
+        //         time: 1345
+        //     }
+        // ]);
     }
     return (
         <div>
@@ -106,9 +130,26 @@ export function EditTask(edit: editProps): JSX.Element {
             </Button>
             {!visible ? null : (
                 <div>
-                    {/* <Button onClick={() => setTime(1200)}>change time</Button> */}
+                    <Button onClick={() => setTime(1200)}>change time</Button>
+                    The current time is {time}
                     <div>
-                        <Button onClick={changeTasks}>Save Changes</Button>
+                        <Button
+                            onClick={() =>
+                                changeTasks(
+                                    edit.tasks,
+                                    name,
+                                    desc,
+                                    status,
+                                    img,
+                                    steps,
+                                    diff,
+                                    numUsers,
+                                    time
+                                )
+                            }
+                        >
+                            Save Changes
+                        </Button>
                     </div>
                 </div>
             )}

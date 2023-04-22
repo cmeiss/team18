@@ -4,7 +4,7 @@ import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
 import "./adminList.css";
 
-export interface AdminItemProps {
+interface AdminItemProps {
     tasks: Task[];
     role: string;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
+import "./UserList.css";
 
 interface UserProps {
     user: User;
@@ -11,8 +12,10 @@ export function UserList(user: UserProps): JSX.Element {
     const list: Task[] = user.user.userList;
     return (
         <div>
-            {user.user.name === "Super" || user.user.name === "Admin" ? null : (
-                <div>
+            {user.user.name === "Super" || user.user.name === "Admin" ? (
+                <div></div>
+            ) : (
+                <div className="userList">
                     <h3>{user.user.name}s List:</h3>
                     {list.map((TASK: Task) => (
                         <DisplayTask

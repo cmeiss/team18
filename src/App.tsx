@@ -9,6 +9,7 @@ import { UserList } from "./list-components/UserList";
 import { ChangeRole } from "./list-components/ChangeRole";
 import { ModifyUsers } from "./list-components/ModifyUsers";
 import { AdminList } from "./list-components/adminlist";
+import { EditTime } from "./editing-components/EditTime";
 
 const TASK: Task[] =
     //this is a completely random test task array to get something
@@ -44,6 +45,7 @@ function App(): JSX.Element {
         { name: "Admin", userList: [] },
         { name: "User1", userList: TASK }
     ]); // these are original users these can be changed
+
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
         const NewRole = roles.find(
             (role: User) => role.name === event.target.value

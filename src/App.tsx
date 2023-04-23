@@ -111,6 +111,7 @@ function App(): JSX.Element {
                     task={tasks[0]}
                 ></EditTask>
             </div> */}
+            <div>{console.log(...tasks)}</div>
 
             {/* Displaying the Lists: */}
             <div>

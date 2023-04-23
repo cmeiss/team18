@@ -31,6 +31,8 @@ export function UserList(user: UserProps): JSX.Element {
                     ))}
                 </div>
             )}
+            {console.log("userList")}
+            {console.log(...user.tasks)}
         </div>
     );
 }

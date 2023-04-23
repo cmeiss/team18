@@ -83,6 +83,28 @@ export function EditTask(edit: editProps): JSX.Element {
         num: number,
         time: number
     ) {
+        // edit.updateTasks([
+        //     {
+        //         name: "test",
+        //         description: "this is the description",
+        //         status: false,
+        //         image: "picture",
+        //         steps: ["a", "b", "c"],
+        //         difficulty: 3,
+        //         numUsers: 2,
+        //         time: 1345
+        //     },
+        //     {
+        //         name: "test2",
+        //         description: "this is the description",
+        //         status: false,
+        //         image: "picture",
+        //         steps: ["a", "b", "c"],
+        //         difficulty: 3,
+        //         numUsers: 1,
+        //         time: 1345
+        //     }
+        // ]);
         // const NewT: Task[] = newTasks(
         //     tasks,
         //     name,
@@ -94,10 +116,24 @@ export function EditTask(edit: editProps): JSX.Element {
         //     num,
         //     time
         // );
-        const newTask = makeTask(name, desc, stat, img, steps, diff, num, time);
+        //const newTask = makeTask(name, desc, stat, img, steps, diff, num, time);
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         //console.log(...NewT);
-        edit.updateTasks([...copy, newTask]);
+        //edit.updateTasks([...copy, newTask]);
+        edit.updateTasks(
+            copy.map((TASK: Task) =>
+                TASK.name === name
+                    ? makeTask(name, desc, stat, img, steps, diff, num, time)
+                    : { ...TASK, steps: [...TASK.steps] }
+            )
+        );
+        console.log(
+            tasks.map((TASK: Task) =>
+                TASK.name === name
+                    ? makeTask(name, desc, stat, img, steps, diff, num, time)
+                    : { ...TASK, steps: [...TASK.steps] }
+            )
+        );
         // const copy = edit.tasks.map((oTask: Task) => ({
         //     ...oTask,
         //     steps: [...oTask.steps]

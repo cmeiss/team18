@@ -100,6 +100,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                         task={display.task}
                     ></EditTask>
                 </div>
+                {console.log("DisplayTask is rendered")}
                 {/* <Button
                     style={{
                         backgroundColor: "red",

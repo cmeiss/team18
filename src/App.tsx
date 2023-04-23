@@ -1,4 +1,4 @@
-import React, { ChangeEvent, createContext, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { CentralItemList } from "./list-components/CentralItemList";
 import { Task } from "./interfaces/task";
@@ -10,33 +10,6 @@ import { ChangeRole } from "./list-components/ChangeRole";
 import { ModifyUsers } from "./list-components/ModifyUsers";
 import { AdminList } from "./list-components/adminlist";
 import { TASKS } from "./TASKS";
-import { EditTask } from "./editing-components/EditTask";
-
-// const TASK: Task[] =
-//     //this is a completely random test task array to get something
-//     //displayed, needs to be deleted once we have an actual task list
-//     [
-//         {
-//             name: "test",
-//             description: "this is the description",
-//             status: false,
-//             image: "picture",
-//             steps: ["a", "b", "c"],
-//             difficulty: 3,
-//             numUsers: 2,
-//             time: 1345
-//         },
-//         {
-//             name: "test2",
-//             description: "this is the description",
-//             status: false,
-//             image: "picture",
-//             steps: ["a", "b", "c"],
-//             difficulty: 3,
-//             numUsers: 1,
-//             time: 1345
-//         }
-//     ];
 
 function App(): JSX.Element {
     const [role, setRole] = useState<User>({ name: "User1", userList: TASKS }); //I set this intial user to make the user list display something
@@ -57,9 +30,10 @@ function App(): JSX.Element {
         }
     }
 
-    // function updateTasks(tasks: Task[]) {
-    //     setTasks(tasks);
-    // }
+    //the following function is just calling setTasks but is easier to include in test cases than the setTask function alone
+    function updateTasks(tasks: Task[]) {
+        setTasks(tasks);
+    }
 
     return (
         <div className="App">
@@ -104,34 +78,25 @@ function App(): JSX.Element {
                 </div>
             </div>
 
-            {/* <div>
-                <EditTask
-                    tasks={tasks}
-                    updateTasks={setTasks}
-                    task={tasks[0]}
-                ></EditTask>
-            </div> */}
-            {console.log(...tasks)}
-
             {/* Displaying the Lists: */}
             <div>
                 <UserList
                     user={role}
                     tasks={tasks}
-                    setTasks={setTasks}
+                    setTasks={updateTasks}
                 ></UserList>
             </div>
             <div className="central">
                 <CentralItemList
                     tasks={tasks}
                     role={role.name}
-                    setTasks={setTasks}
+                    setTasks={updateTasks}
                 ></CentralItemList>
                 <div>
                     <AdminList
                         tasks={tasks}
                         role={role.name}
-                        setTasks={setTasks}
+                        setTasks={updateTasks}
                     ></AdminList>
                 </div>
             </div>

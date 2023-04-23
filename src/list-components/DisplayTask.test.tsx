@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
@@ -47,10 +47,15 @@ const TaskList = [
     }
 ];
 
+const tasks = TaskList;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
+
 const testRole1 = "super";
 const testRole2 = "admin";
-
-const [tasks, setTasks] = useState<Task[]>(TaskList); //this state should not exists but I don't know how to do setTasks without state
 
 //testing with role being super
 describe("DisplayView Tests", () => {
@@ -58,7 +63,7 @@ describe("DisplayView Tests", () => {
         render(
             <DisplayTask
                 task={testTask}
-                tasks={TaskList}
+                tasks={tasks}
                 updateTasks={setTasks}
                 role={testRole1}
             />
@@ -104,7 +109,7 @@ describe("DisplayView Tests", () => {
         render(
             <DisplayTask
                 task={testTask}
-                tasks={TaskList}
+                tasks={tasks}
                 updateTasks={setTasks}
                 role={testRole2}
             />

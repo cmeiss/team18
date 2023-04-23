@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { CentralItemList } from "./CentralItemList";
 import { Task } from "../interfaces/task";
@@ -36,7 +36,12 @@ const TaskList = [
     }
 ];
 
-const [tasks, setTasks] = useState<Task[]>(TaskList);
+const tasks = TaskList;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
 
 const role1 = "super";
 const role2 = "admin";

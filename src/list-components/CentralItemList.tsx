@@ -6,8 +6,8 @@ import { Task } from "../interfaces/task";
 interface CentralItemProps {
     tasks: Task[];
     role: string;
-    //setTasks: (newTasks: Task[]) => void;
-    setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    setTasks: (newTasks: Task[]) => void;
+    //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
@@ -28,6 +28,9 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
                     ></DisplayTask>
                 ))}
             </div>
+            {console.log("Central Item List")}
+            {console.log(...tasks)}
+            {/*the purpose of this console.log statement is to display the changes in the tasks in the console because they are not showing in the displayed app right now*/}
         </div>
     );
 }

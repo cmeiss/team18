@@ -7,8 +7,8 @@ import "./adminList.css";
 export interface AdminItemProps {
     tasks: Task[];
     role: string;
-    //setTasks: (newTasks: Task[]) => void;
-    setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    setTasks: (newTasks: Task[]) => void;
+    //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export function AdminList({ role, tasks, setTasks }: AdminItemProps) {

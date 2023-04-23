@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import { Task } from "../interfaces/task";
-//import TASK from "../src/App";
 import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
 
+//this is the old interface for the display task function, I am keeping it here as a reference if we need it again
 // export interface displayProps {
 //     name: string;
 //     description: string;
@@ -20,36 +20,13 @@ import "./DisplayTask.css";
 export interface displayProps {
     task: Task;
     tasks: Task[];
-    updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    //updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    updateTasks: (newTasks: Task[]) => void;
     role: string;
 }
 
-// const abc: Task[] = [
-//     {
-//         name: "test",
-//         description: "this is the description",
-//         status: false,
-//         image: "picture",
-//         steps: ["a", "b", "c"],
-//         difficulty: 3,
-//         numUsers: 2,
-//         time: 1345
-//     },
-//     {
-//         name: "test2",
-//         description: "this is the description",
-//         status: false,
-//         image: "picture",
-//         steps: ["a", "b", "c"],
-//         difficulty: 3,
-//         numUsers: 1,
-//         time: 1345
-//     }
-// ];
-
 export function DisplayTask(display: displayProps): JSX.Element {
-    const [done, setDone] = useState<boolean>(display.task.status); //done = true means task is not done
-    //const [abC] = useState<Task[]>(abc);
+    const [done, setDone] = useState<boolean>(display.task.status);
     return (
         <div>
             <h3>Task: {display.task.name}</h3>
@@ -100,24 +77,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                         task={display.task}
                     ></EditTask>
                 </div>
-                {console.log("DisplayTask is rendered")}
-                {/* <Button
-                    style={{
-                        backgroundColor: "red",
-                        width: "100px",
-                        height: "40px",
-                        display: "inline-block",
-                        marginLeft: "220px"
-                    }}
-                    onClick={editTask}
-                >
-                    Edit Task
-                </Button> */}
-                {/*EditTask will probably not be an own file, but we will rather
-                have multiple editing components that are going to be called in here,
-                we might also have to switch the editMode by clicking anywhere on
-                the task and not on a specific button, but we should ask the professor 
-                about that*/}
+                {/*The Edit Task function is producing the button to open the editing field*/}
             </Row>
         </div>
     );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { AdminList } from "./adminlist";
 import { Task } from "../interfaces/task";
@@ -33,7 +33,12 @@ const ROLE1 = "super";
 const ROLE2 = "admin";
 const ROLE3 = "user";
 
-const [tasks, setTasks] = useState<Task[]>(TASKLIST1);
+const tasks = TASKLIST1;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
 
 describe("AdminList with super role", () => {
     beforeEach(() => {

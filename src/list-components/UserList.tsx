@@ -7,8 +7,8 @@ import "./UserList.css";
 interface UserProps {
     user: User;
     tasks: Task[];
-    //setTasks: (newTasks: Task[]) => void;
-    setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    setTasks: (newTasks: Task[]) => void;
+    //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export function UserList(user: UserProps): JSX.Element {

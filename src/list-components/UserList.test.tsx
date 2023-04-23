@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { UserList } from "./UserList";
 import { User } from "../interfaces/user";
@@ -37,14 +37,18 @@ const TaskList = [
     }
 ];
 
-//const [tasks, setTasks] = useState<Task[]>(TaskList);
+const tasks = TaskList;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
 
 const User1: User = { name: "user1", userList: TaskList };
 const User2: User = { name: "Super", userList: TaskList };
 const User3: User = { name: "Admin", userList: TaskList };
 
 describe("Testing User List", () => {
-    const [tasks, setTasks] = useState<Task[]>(TaskList);
     beforeEach(() => {
         render(
             <UserList tasks={tasks} setTasks={setTasks} user={User1}></UserList>
@@ -68,7 +72,6 @@ describe("Testing User List", () => {
 
 describe("Testing that user list is not displayed if role is super", () => {
     test("test for empty DOM element", () => {
-        const [tasks, setTasks] = useState<Task[]>(TaskList);
         const { container } = render(
             <UserList tasks={tasks} setTasks={setTasks} user={User2}></UserList>
         );
@@ -78,7 +81,6 @@ describe("Testing that user list is not displayed if role is super", () => {
 
 describe("Testing that user list is not displayed if role is admin", () => {
     test("test for empty DOM element", () => {
-        const [tasks, setTasks] = useState<Task[]>(TaskList);
         const { container } = render(
             <UserList tasks={tasks} setTasks={setTasks} user={User3}></UserList>
         );

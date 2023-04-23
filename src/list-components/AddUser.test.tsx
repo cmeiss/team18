@@ -8,15 +8,17 @@ const ROLE1: User = { name: "user1", userList: [] };
 const ROLE2: User = { name: "user2", userList: [] };
 const ROLE3: User = { name: "user3", userList: [] };
 
-describe("Modify user tests", () => {
+describe("Modify User tests", () => {
     beforeEach(() =>
         render(
             <ModifyUsers
                 Role={ROLE1}
                 roles={[ROLE1, ROLE2, ROLE3]}
-                setRoles={function (newUsers: User[]): void {
-                    throw new Error("Function not implemented.");
-                }}
+                setRoles={
+                    function (/*newUsers: User[]*/): void {
+                        throw new Error("Function not implemented.");
+                    }
+                }
             />
         )
     );

@@ -9,41 +9,17 @@ import { UserList } from "./list-components/UserList";
 import { ChangeRole } from "./list-components/ChangeRole";
 import { ModifyUsers } from "./list-components/ModifyUsers";
 import { AdminList } from "./list-components/adminlist";
-
-const TASK: Task[] =
-    //this is a completely random test task array to get something
-    //displayed, needs to be deleted once we have an actual task list
-    [
-        {
-            name: "test",
-            description: "this is the description",
-            status: false,
-            image: "picture",
-            steps: ["a", "b", "c"],
-            difficulty: 3,
-            numUsers: 2,
-            time: 1345
-        },
-        {
-            name: "test2",
-            description: "this is the description",
-            status: false,
-            image: "picture",
-            steps: ["a", "b", "c"],
-            difficulty: 3,
-            numUsers: 1,
-            time: 1345
-        }
-    ];
+import { TASKS } from "./TASKS";
 
 function App(): JSX.Element {
-    const [role, setRole] = useState<User>({ name: "User1", userList: TASK }); //I set this intial user to make the user list display something
+    const [role, setRole] = useState<User>({ name: "User1", userList: TASKS }); //I set this intial user to make the user list display something
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
         { name: "Admin", userList: [] },
-        { name: "User1", userList: TASK }
+        { name: "User1", userList: TASKS }
     ]); // these are original users these can be changed
+    const [tasks, setTasks] = useState<Task[]>(TASKS);
 
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
         const NewRole = roles.find(
@@ -52,6 +28,11 @@ function App(): JSX.Element {
         if (NewRole) {
             setRole(NewRole);
         }
+    }
+
+    //the following function is just calling setTasks but is easier to include in test cases than the setTask function alone
+    function updateTasks(tasks: Task[]) {
+        setTasks(tasks);
     }
 
     return (
@@ -99,15 +80,24 @@ function App(): JSX.Element {
 
             {/* Displaying the Lists: */}
             <div>
-                <UserList user={role}></UserList>
+                <UserList
+                    user={role}
+                    tasks={tasks}
+                    setTasks={updateTasks}
+                ></UserList>
             </div>
             <div className="central">
                 <CentralItemList
-                    tasks={TASK}
+                    tasks={tasks}
                     role={role.name}
+                    setTasks={updateTasks}
                 ></CentralItemList>
                 <div>
-                    <AdminList tasks={TASK} role={role.name}></AdminList>
+                    <AdminList
+                        tasks={tasks}
+                        role={role.name}
+                        setTasks={updateTasks}
+                    ></AdminList>
                 </div>
             </div>
         </div>

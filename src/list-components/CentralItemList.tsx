@@ -6,9 +6,11 @@ import { Task } from "../interfaces/task";
 interface CentralItemProps {
     tasks: Task[];
     role: string;
+    setTasks: (newTasks: Task[]) => void;
+    //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export function CentralItemList({ role, tasks }: CentralItemProps) {
+export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
     const [Tasks] = useState<Task[]>(tasks);
     const [Role] = useState<string>(role);
 
@@ -16,21 +18,19 @@ export function CentralItemList({ role, tasks }: CentralItemProps) {
         <div className="List">
             <div className="central">
                 <span> Central List </span>
-                {Tasks.map((TASK: Task) => (
+                {Tasks.map((TASK: Task, index: number) => (
                     <DisplayTask
-                        key={5}
-                        name={TASK.name}
-                        description={TASK.description}
-                        status={TASK.status}
-                        image={TASK.image}
-                        steps={TASK.steps}
-                        difficulty={TASK.difficulty}
-                        numUsers={TASK.numUsers}
-                        time={TASK.time}
+                        key={index}
+                        task={TASK}
+                        tasks={tasks}
+                        updateTasks={setTasks}
                         role={Role}
                     ></DisplayTask>
                 ))}
             </div>
+            {console.log("Central Item List")}
+            {console.log(...tasks)}
+            {/*the purpose of this console.log statement is to display the changes in the tasks in the console because they are not showing in the displayed app right now*/}
         </div>
     );
 }

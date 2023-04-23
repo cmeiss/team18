@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { CentralItemList } from "./CentralItemList";
+import { Task } from "../interfaces/task";
 
 const TaskList = [
     {
@@ -35,6 +36,13 @@ const TaskList = [
     }
 ];
 
+const tasks = TaskList;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
+
 const role1 = "super";
 const role2 = "admin";
 const role3 = "user";
@@ -42,7 +50,9 @@ const role3 = "user";
 //testing with role being super
 describe("CentralItemList with Role super", () => {
     beforeEach(() => {
-        render(<CentralItemList tasks={TaskList} role={role1} />);
+        render(
+            <CentralItemList tasks={tasks} role={role1} setTasks={setTasks} />
+        );
     });
     //test1: check that every task in array is displayed by accessing their name
     test("all tasks are displayed", () => {
@@ -67,7 +77,13 @@ describe("CentralItemList with Role super", () => {
 //testing with role being admin
 describe("CentralItemList with Role admin", () => {
     beforeEach(() => {
-        render(<CentralItemList tasks={TaskList} role={role2} />);
+        render(
+            <CentralItemList
+                tasks={TaskList}
+                role={role2}
+                setTasks={setTasks}
+            />
+        );
     });
     //testing that there is a button to addTasks if role is admin
     test("There is a button to addTasks if role is admin", () => {
@@ -84,7 +100,13 @@ describe("CentralItemList with Role admin", () => {
 //testing with role being user
 describe("CentralItemList with Role user", () => {
     beforeEach(() => {
-        render(<CentralItemList tasks={TaskList} role={role3} />);
+        render(
+            <CentralItemList
+                tasks={TaskList}
+                role={role3}
+                setTasks={setTasks}
+            />
+        );
     });
     //testing that there is no addTasks button if role is user (not admin or super)
     test("There isn't a button to addTasks if role is user", () => {

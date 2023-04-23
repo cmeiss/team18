@@ -6,2175 +6,230 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/TaskFunctions.test.ts
-FAIL src/CentralItemList.test.tsx
-  ● Console
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-  ● CentralItemList with Role super › all tasks are displayed
-
-    TestingLibraryElementError: Unable to find an element with the text: test1. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"List"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"central"[39m
-          [36m>[39m
-            [36m<span>[39m
-              [0m Central List [0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest1[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mdescription a[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest2[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mthis is the description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest3[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0ma good description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      48 |     test("all tasks are displayed", () => {
-      49 |         TaskList.every((task) => {
-    > 50 |             const taskDisplayed = screen.getByText(task.name);
-         |                                          ^
-      51 |             expect(taskDisplayed).toBeInTheDocument();
-      52 |         });
-      53 |     });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at every (src/CentralItemList.test.tsx:50:42)
-          at Array.every (<anonymous>)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:49:18)
-
-  ● CentralItemList with Role super › There is a button to add tasks if role is super
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add Task/i`
-
-    Here are the accessible roles:
-
-      heading:
-
-      Name "Task: test1":
-      [36m<h3 />[39m
-
-      Name "Task: test2":
-      [36m<h3 />[39m
-
-      Name "Task: test3":
-      [36m<h3 />[39m
-
-      --------------------------------------------------
-      list:
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      --------------------------------------------------
-      listitem:
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      --------------------------------------------------
-      checkbox:
-
-      Name "❌ ❌ ❌":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      button:
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"List"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"central"[39m
-          [36m>[39m
-            [36m<span>[39m
-              [0m Central List [0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest1[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mdescription a[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest2[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mthis is the description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest3[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0ma good description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      54 |     //test2: check that there is a button to add a task if role is super
-      55 |     test("There is a button to add tasks if role is super", () => {
-    > 56 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
-         |                                   ^
-      57 |         expect(addTButton).toBeInTheDocument();
-      58 |     });
-      59 |     //test3: there is a button to add a user if the role is super
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:56:35)
-
-  ● CentralItemList with Role super › There is a button to add a user
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add User/i`
-
-    Here are the accessible roles:
-
-      heading:
-
-      Name "Task: test1":
-      [36m<h3 />[39m
-
-      Name "Task: test2":
-      [36m<h3 />[39m
-
-      Name "Task: test3":
-      [36m<h3 />[39m
-
-      --------------------------------------------------
-      list:
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      --------------------------------------------------
-      listitem:
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      --------------------------------------------------
-      checkbox:
-
-      Name "❌ ❌ ❌":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      button:
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"List"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"central"[39m
-          [36m>[39m
-            [36m<span>[39m
-              [0m Central List [0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest1[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mdescription a[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest2[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mthis is the description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest3[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0ma good description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [0mNumber of Users: [0m
-                    [0m2[0m
-                  [36m</div>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      59 |     //test3: there is a button to add a user if the role is super
-      60 |     test("There is a button to add a user", () => {
-    > 61 |         const addUButton = screen.getByRole("button", { name: /Add User/i });
-         |                                   ^
-      62 |         expect(addUButton).toBeInTheDocument();
-      63 |     });
-      64 |     //
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:61:35)
-
-  ● CentralItemList with Role admin › There is a button to addTasks if role is admin
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add Task/i`
-
-    Here are the accessible roles:
-
-      heading:
-
-      Name "Task: test1":
-      [36m<h3 />[39m
-
-      Name "Task: test2":
-      [36m<h3 />[39m
-
-      Name "Task: test3":
-      [36m<h3 />[39m
-
-      --------------------------------------------------
-      list:
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      Name "":
-      [36m<ul />[39m
-
-      --------------------------------------------------
-      listitem:
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      Name "":
-      [36m<li />[39m
-
-      --------------------------------------------------
-      checkbox:
-
-      Name "❌ ❌ ❌":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"is-done-check"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-      button:
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      Name "Edit Task":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"List"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"central"[39m
-          [36m>[39m
-            [36m<span>[39m
-              [0m Central List [0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest1[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mdescription a[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div />[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest2[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0mthis is the description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div />[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h3>[39m
-                [0mTask: [0m
-                [0mtest3[0m
-              [36m</h3>[39m
-              [36m<div>[39m
-                [0ma good description[0m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"is-done-check"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"is-done-check"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0m❌[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mpicture[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0mDifficulty: [0m
-                      [0m3[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mTime: [0m
-                      [0m1345[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [0mNecessary Steps:[0m
-                  [36m</div>[39m
-                  [36m<ul>[39m
-                    [36m<li>[39m
-                      [0ma[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mb[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mc[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0mGutenTag[0m
-                    [36m</li>[39m
-                    [36m<li>[39m
-                      [0m469476[0m
-                    [36m</li>[39m
-                  [36m</ul>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div />[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      72 |     //testing that there is a button to addTasks if role is admin
-      73 |     test("There is a button to addTasks if role is admin", () => {
-    > 74 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
-         |                                   ^
-      75 |         expect(addTButton).toBeInTheDocument();
-      76 |     });
-      77 |     //testing that there isn't an addUserButton if role is admin
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/CentralItemList.test.tsx:74:35)
-
 FAIL src/list-components/CentralItemList.test.tsx
   ● Console
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      Central Item List
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:31:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:32:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      Central Item List
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:31:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:32:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      Central Item List
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:31:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:32:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      Central Item List
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:31:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:32:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      Central Item List
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:31:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:32:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      Central Item List
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:31:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:11:35)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at CentralItemList (src/list-components/CentralItemList.tsx:32:22)
 
   ● CentralItemList with Role super › all tasks are displayed
 
@@ -2278,13 +333,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -2373,13 +432,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -2468,13 +531,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
           [36m</div>[39m
@@ -2482,21 +549,21 @@ FAIL src/list-components/CentralItemList.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      48 |     test("all tasks are displayed", () => {
-      49 |         TaskList.every((task) => {
-    > 50 |             const taskDisplayed = screen.getByText(task.name);
+      58 |     test("all tasks are displayed", () => {
+      59 |         TaskList.every((task) => {
+    > 60 |             const taskDisplayed = screen.getByText(task.name);
          |                                          ^
-      51 |             expect(taskDisplayed).toBeInTheDocument();
-      52 |         });
-      53 |     });
+      61 |             expect(taskDisplayed).toBeInTheDocument();
+      62 |         });
+      63 |     });
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at every (src/list-components/CentralItemList.test.tsx:50:42)
+      at every (src/list-components/CentralItemList.test.tsx:60:42)
           at Array.every (<anonymous>)
-      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:49:18)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:59:18)
 
   ● CentralItemList with Role super › There is a button to add tasks if role is super
 
@@ -2777,13 +844,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -2872,13 +943,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -2967,13 +1042,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
           [36m</div>[39m
@@ -2981,19 +1060,19 @@ FAIL src/list-components/CentralItemList.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      54 |     //test2: check that there is a button to add a task if role is super
-      55 |     test("There is a button to add tasks if role is super", () => {
-    > 56 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
+      64 |     //test2: check that there is a button to add a task if role is super
+      65 |     test("There is a button to add tasks if role is super", () => {
+    > 66 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
          |                                   ^
-      57 |         expect(addTButton).toBeInTheDocument();
-      58 |     });
-      59 |     //test3: there is a button to add a user if the role is super
+      67 |         expect(addTButton).toBeInTheDocument();
+      68 |     });
+      69 |     //test3: there is a button to add a user if the role is super
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:56:35)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:66:35)
 
   ● CentralItemList with Role super › There is a button to add a user
 
@@ -3274,13 +1353,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -3369,13 +1452,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -3464,13 +1551,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                     [0m2[0m
                   [36m</div>[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
           [36m</div>[39m
@@ -3478,19 +1569,19 @@ FAIL src/list-components/CentralItemList.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      59 |     //test3: there is a button to add a user if the role is super
-      60 |     test("There is a button to add a user", () => {
-    > 61 |         const addUButton = screen.getByRole("button", { name: /Add User/i });
+      69 |     //test3: there is a button to add a user if the role is super
+      70 |     test("There is a button to add a user", () => {
+    > 71 |         const addUButton = screen.getByRole("button", { name: /Add User/i });
          |                                   ^
-      62 |         expect(addUButton).toBeInTheDocument();
-      63 |     });
-      64 |     //
+      72 |         expect(addUButton).toBeInTheDocument();
+      73 |     });
+      74 |     //
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:61:35)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:71:35)
 
   ● CentralItemList with Role admin › There is a button to addTasks if role is admin
 
@@ -3768,13 +1859,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                 [36m<div>[39m
                   [36m<div />[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -3860,13 +1955,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                 [36m<div>[39m
                   [36m<div />[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -3952,13 +2051,17 @@ FAIL src/list-components/CentralItemList.test.tsx
                 [36m<div>[39m
                   [36m<div />[39m
                 [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mEdit Task[0m
-                [36m</button>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit Task[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
           [36m</div>[39m
@@ -3966,113 +2069,208 @@ FAIL src/list-components/CentralItemList.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      72 |     //testing that there is a button to addTasks if role is admin
-      73 |     test("There is a button to addTasks if role is admin", () => {
-    > 74 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
+      88 |     //testing that there is a button to addTasks if role is admin
+      89 |     test("There is a button to addTasks if role is admin", () => {
+    > 90 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
          |                                   ^
-      75 |         expect(addTButton).toBeInTheDocument();
-      76 |     });
-      77 |     //testing that there isn't an addUserButton if role is admin
+      91 |         expect(addTButton).toBeInTheDocument();
+      92 |     });
+      93 |     //testing that there isn't an addUserButton if role is admin
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:74:35)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:90:35)
 
 PASS src/list-components/DisplayTask.test.tsx
 FAIL src/list-components/UserList.test.tsx
   ● Console
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
+    console.log
+      userList
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at UserList (src/list-components/UserList.tsx:35:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
+    console.log
+      userList
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at UserList (src/list-components/UserList.tsx:35:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
+    console.log
+      userList
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
-    console.error
-      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-          at div
-          at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:12:31)
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
 
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+      at UserList (src/list-components/UserList.tsx:35:22)
+
+    console.log
+      userList
+
+      at UserList (src/list-components/UserList.tsx:34:22)
+
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
+
+      at UserList (src/list-components/UserList.tsx:35:22)
+
+    console.log
+      userList
+
+      at UserList (src/list-components/UserList.tsx:34:22)
+
+    console.log
+      {
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      } {
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+      }
+
+      at UserList (src/list-components/UserList.tsx:35:22)
 
   ● Testing that user list is not displayed if role is super › test for empty DOM element
 
@@ -4081,15 +2279,15 @@ FAIL src/list-components/UserList.test.tsx
     Received:
       "<div><div></div></div>"
 
-      64 |     test("test for empty DOM element", () => {
-      65 |         const { container } = render(<UserList user={User2}></UserList>);
-    > 66 |         expect(container).toBeEmptyDOMElement();
+      76 |             <UserList tasks={tasks} setTasks={setTasks} user={User2}></UserList>
+      77 |         );
+    > 78 |         expect(container).toBeEmptyDOMElement();
          |                           ^
-      67 |     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is super
-      68 | });
-      69 |
+      79 |     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is super
+      80 | });
+      81 |
 
-      at Object.<anonymous> (src/list-components/UserList.test.tsx:66:27)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:78:27)
 
   ● Testing that user list is not displayed if role is admin › test for empty DOM element
 
@@ -4098,15 +2296,15 @@ FAIL src/list-components/UserList.test.tsx
     Received:
       "<div><div></div></div>"
 
-      71 |     test("test for empty DOM element", () => {
-      72 |         const { container } = render(<UserList user={User3}></UserList>);
-    > 73 |         expect(container).toBeEmptyDOMElement();
+      85 |             <UserList tasks={tasks} setTasks={setTasks} user={User3}></UserList>
+      86 |         );
+    > 87 |         expect(container).toBeEmptyDOMElement();
          |                           ^
-      74 |     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is admin
-      75 | });
-      76 |
+      88 |     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is admin
+      89 | });
+      90 |
 
-      at Object.<anonymous> (src/list-components/UserList.test.tsx:73:27)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:87:27)
 
 FAIL src/list-components/AddUser.test.tsx
   ● Console
@@ -4334,31 +2532,32 @@ FAIL src/list-components/AddUser.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   20.51 |    34.21 |   29.87 |   20.77 |                   
- src                       |   28.57 |        0 |      52 |   29.62 |                   
-  App.tsx                  |       0 |        0 |       0 |       0 | 16-57             
+All files                  |   23.72 |    31.81 |    27.9 |   24.13 |                   
+ src                       |   27.58 |        0 |      50 |   28.57 |                   
+  App.tsx                  |       0 |        0 |       0 |       0 | 15-38             
+  TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-58              
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-57              
- src/editing-components    |       0 |      100 |       0 |       0 |                   
-  EditTask.tsx             |       0 |      100 |       0 |       0 | 6-7               
+ src/editing-components    |   41.66 |    16.66 |    9.09 |   43.47 |                   
+  EditTask.tsx             |   52.63 |    16.66 |    12.5 |   55.55 | 28-52,74-79       
   EditTime.tsx             |       0 |      100 |       0 |       0 | 9-22              
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |    17.2 |    38.23 |   20.83 |    17.2 |                   
+ src/list-components       |   16.84 |    38.23 |    20.4 |   16.84 |                   
   CentralItemList.tsx      |     100 |      100 |     100 |     100 |                   
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
-  DisplayTask.tsx          |      75 |       75 |   66.66 |      75 | 35                
+  DisplayTask.tsx          |      75 |       75 |   66.66 |      75 | 43                
   ModifyUsers.tsx          |      60 |       75 |   66.66 |      60 | 29-37             
   UserList.tsx             |     100 |      100 |     100 |     100 |                   
   addTask.tsx              |       0 |        0 |       0 |       0 | 15-81             
-  adminListTest.tsx        |       0 |        0 |       0 |       0 | 5-80              
-  adminlist.tsx            |       0 |        0 |       0 |       0 | 13-42             
+  adminListTest.tsx        |       0 |        0 |       0 |       0 | 6-104             
+  adminlist.tsx            |       0 |        0 |       0 |       0 | 15-39             
   deleteTask-component.tsx |       0 |        0 |       0 |       0 | 13-30             
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 4 failed, 2 passed, 6 total
-Tests:       11 failed, 28 passed, 39 total
+Test Suites: 3 failed, 2 passed, 5 total
+Tests:       7 failed, 26 passed, 33 total
 Snapshots:   0 total
-Time:        10.776 s
+Time:        7.471 s
 Ran all test suites.

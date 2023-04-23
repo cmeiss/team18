@@ -88,13 +88,61 @@ export function editNew(taskProps: addTaskProp): JSX.Element {
                 onChange={updateEditMode}
             />
             {neweditmode ? (
-                <Form.Group controlId="ChecKAnswer">
-                    <Form.Label>Enter New Task Below:</Form.Label>
+                <Form.Group controlId="CheckAnswer">
+                    <Form.Label>Enter New Task Name Below:</Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={3}
                         value={newTask}
                         onChange={updateNewTask}
+                    />
+                    <Form.Label>Enter New Task Description Below:</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newdescription}
+                        onChange={updateDescription}
+                    />
+                    <Form.Label>Check New Task Status Below:</Form.Label>
+                    <Form.Control
+                        type="checbox"
+                        checked={newstatus}
+                        onChange={updateStatus}
+                    />
+                    <Form.Label>Enter New Task Image Below:</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newimage}
+                        onChange={updateImage}
+                    />
+                    <Form.Label>Enter New Task Steps Below:</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newsteps}
+                        onChange={updateSteps}
+                    />
+                    <Form.Label>Enter New Task Difficulty Below:</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newdifficulty}
+                        onChange={updateDifficulty}
+                    />
+                    <Form.Label>Enter New Task Time Below:</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newtime}
+                        onChange={updateTime}
+                    />
+                    <Form.Label>Enter New Task Num Users Below:</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newnumusers}
+                        onChange={updateNumUsers}
                     />
                 </Form.Group>
             ) : null}

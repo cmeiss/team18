@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import { Button } from "react-bootstrap";
 import { makeTask } from "../TaskFunctions";
+import { EditTime } from "./EditTime";
 
 interface editProps {
     tasks: Task[];
@@ -71,8 +72,7 @@ export function EditTask(edit: editProps): JSX.Element {
             </Button>
             {!visible ? null : (
                 <div>
-                    <Button onClick={() => setTime(1200)}>change time</Button>
-                    The current time is {time}
+                    <EditTime time={time} setTime={setTime}></EditTime>
                     <div>
                         <Button
                             onClick={() =>

@@ -15,8 +15,10 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
     const [Tasks] = useState<Task[]>(tasks);
     const [Role] = useState<string>(role);
 
-    const NewTasks = Tasks.filter((task: Task): boolean =>
-        task.numUsers < 2 ? true : false
+    const [NewTasks] = useState<Task[]>(
+        Tasks.filter((task: Task): boolean =>
+            task.numUsers < 2 ? true : false
+        )
     );
     if (role === "Admin") {
         return (

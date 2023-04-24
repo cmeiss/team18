@@ -17,4 +17,8 @@ describe("Testing EditTime", () => {
         const dropDown = screen.getByRole("select");
         expect(dropDown).toBeInTheDocument();
     });
+    test("time is displayed in military format", () => {
+        const displayedTime = screen.getByText(/10:00/i);
+        expect(displayedTime).toBeInTheDocument();
+    });
 });

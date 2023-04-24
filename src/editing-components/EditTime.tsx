@@ -18,10 +18,12 @@ export function EditTime({ time, setTime }: TimeProps) {
         let display = "time";
         if (time < 100) {
             display = "00:" + time.toString();
+        } else if (time < 1000 && time % 100 === 0) {
+            display = "0" + Math.trunc(time / 100) + ":00";
         } else if (time < 1000) {
-            display = "0" + time / 100 + ":" + (time % 100).toString();
+            "0" + Math.trunc(time / 100) + ":" + (time % 100).toString();
         } else {
-            display = time / 100 + ":" + (time % 100).toString();
+            display = Math.trunc(time / 100) + ":" + (time % 100).toString();
         }
         return display;
     }

@@ -9,7 +9,7 @@ export const TASKS: Task[] = [
         steps: ["Class 1", "Class 2"],
         difficulty: 0,
         numUsers: 2,
-        time: 8000
+        time: 1800
     },
     {
         name: "get gas",
@@ -39,7 +39,7 @@ export const TASKS: Task[] = [
         steps: ["order online", "pick up"],
         difficulty: 3,
         numUsers: 2,
-        time: 7000
+        time: 700
     },
     {
         name: "go to class",

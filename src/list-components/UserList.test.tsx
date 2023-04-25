@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { UserList } from "./UserList";
 import { User } from "../interfaces/user";
+import { Task } from "../interfaces/task";
 
 const TaskList = [
     {
@@ -36,13 +37,22 @@ const TaskList = [
     }
 ];
 
+const tasks = TaskList;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
+
 const User1: User = { name: "user1", userList: TaskList };
 const User2: User = { name: "Super", userList: TaskList };
 const User3: User = { name: "Admin", userList: TaskList };
 
 describe("Testing User List", () => {
     beforeEach(() => {
-        render(<UserList user={User1}></UserList>);
+        render(
+            <UserList tasks={tasks} setTasks={setTasks} user={User1}></UserList>
+        );
     });
     test("User name is displayed", () => {
         const header = screen.getByText(/user1/i);
@@ -62,14 +72,18 @@ describe("Testing User List", () => {
 
 describe("Testing that user list is not displayed if role is super", () => {
     test("test for empty DOM element", () => {
-        const { container } = render(<UserList user={User2}></UserList>);
+        const { container } = render(
+            <UserList tasks={tasks} setTasks={setTasks} user={User2}></UserList>
+        );
         expect(container).toBeEmptyDOMElement();
     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is super
 });
 
 describe("Testing that user list is not displayed if role is admin", () => {
     test("test for empty DOM element", () => {
-        const { container } = render(<UserList user={User3}></UserList>);
+        const { container } = render(
+            <UserList tasks={tasks} setTasks={setTasks} user={User3}></UserList>
+        );
         expect(container).toBeEmptyDOMElement();
     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is admin
 });

@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { DisplayTask } from "./DisplayTask";
+import { Task } from "../interfaces/task";
 
 const testTask = {
     name: "test",
@@ -13,6 +14,46 @@ const testTask = {
     time: 1345
 };
 
+const TaskList = [
+    {
+        name: "test1",
+        description: "description a",
+        status: false,
+        image: "picture",
+        steps: ["a", "b", "c", "GutenTag", "469476"],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+    },
+    {
+        name: "test2",
+        description: "this is the description",
+        status: false,
+        image: "picture",
+        steps: ["a", "b", "c", "GutenTag", "469476"],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+    },
+    {
+        name: "test3",
+        description: "a good description",
+        status: false,
+        image: "picture",
+        steps: ["a", "b", "c", "GutenTag", "469476"],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1345
+    }
+];
+
+const tasks = TaskList;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
+
 const testRole1 = "super";
 const testRole2 = "admin";
 
@@ -21,14 +62,9 @@ describe("DisplayView Tests", () => {
     beforeEach(() => {
         render(
             <DisplayTask
-                name={testTask.name}
-                description={testTask.description}
-                status={testTask.status}
-                image={testTask.image}
-                steps={testTask.steps}
-                difficulty={testTask.difficulty}
-                numUsers={testTask.numUsers}
-                time={testTask.time}
+                task={testTask}
+                tasks={tasks}
+                updateTasks={setTasks}
                 role={testRole1}
             />
         );
@@ -72,14 +108,9 @@ describe("DisplayView Tests", () => {
     beforeEach(() => {
         render(
             <DisplayTask
-                name={testTask.name}
-                description={testTask.description}
-                status={testTask.status}
-                image={testTask.image}
-                steps={testTask.steps}
-                difficulty={testTask.difficulty}
-                numUsers={testTask.numUsers}
-                time={testTask.time}
+                task={testTask}
+                tasks={tasks}
+                updateTasks={setTasks}
                 role={testRole2}
             />
         );

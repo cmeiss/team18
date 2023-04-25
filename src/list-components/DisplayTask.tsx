@@ -1,28 +1,36 @@
 import React, { useState } from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
-//import { Task } from "../interfaces/task";
-//import TASK from "../src/App";
-import { editTask } from "../editing-components/EditTask";
+import { Col, Form, Row } from "react-bootstrap";
+import { Task } from "../interfaces/task";
+import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
 
+//this is the old interface for the display task function, I am keeping it here as a reference if we need it again
+// export interface displayProps {
+//     name: string;
+//     description: string;
+//     status: boolean;
+//     image: string;
+//     steps: string[];
+//     difficulty: number;
+//     numUsers: number;
+//     time: number;
+//     role: string; //added this in here to be able to pass the role state from app
+// }
+
 export interface displayProps {
-    name: string;
-    description: string;
-    status: boolean;
-    image: string;
-    steps: string[];
-    difficulty: number;
-    numUsers: number;
-    time: number;
-    role: string; //added this in here to be able to pass the role state from app
+    task: Task;
+    tasks: Task[];
+    //updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+    updateTasks: (newTasks: Task[]) => void;
+    role: string;
 }
 
 export function DisplayTask(display: displayProps): JSX.Element {
-    const [done, setDone] = useState<boolean>(display.status); //done = true means task is not done
+    const [done, setDone] = useState<boolean>(display.task.status);
     return (
         <div>
-            <h3>Task: {display.name}</h3>
-            <div>{display.description}</div>
+            <h3>Task: {display.task.name}</h3>
+            <div>{display.task.description}</div>
             <Row>
                 <Col>
                     <ul>
@@ -35,19 +43,19 @@ export function DisplayTask(display: displayProps): JSX.Element {
                                 onChange={() => setDone(!done)}
                             />
                         </li>
-                        <li>{display.image}</li>
+                        <li>{display.task.image}</li>
                     </ul>
                 </Col>
                 <Col>
                     <ul>
-                        <li>Difficulty: {display.difficulty}</li>
-                        <li>Time: {display.time}</li>
+                        <li>Difficulty: {display.task.difficulty}</li>
+                        <li>Time: {display.task.time}</li>
                     </ul>
                 </Col>
                 <Col>
                     <div>Necessary Steps:</div>
                     <ul>
-                        {display.steps.map((step: string) => (
+                        {display.task.steps.map((step: string) => (
                             <li key={step}>{step}</li>
                         ))}
                     </ul>
@@ -57,28 +65,19 @@ export function DisplayTask(display: displayProps): JSX.Element {
                 {/* The content of this row is only visible if role is super */}
                 <div>
                     {display.role === "super" ? (
-                        <div>Number of Users: {display.numUsers}</div>
+                        <div>Number of Users: {display.task.numUsers}</div>
                     ) : (
                         <div>{""}</div>
                     )}
                 </div>
-                <Button
-                    style={{
-                        backgroundColor: "red",
-                        width: "100px",
-                        height: "40px",
-                        display: "inline-block",
-                        marginLeft: "220px"
-                    }}
-                    onClick={editTask}
-                >
-                    Edit Task
-                </Button>
-                {/*EditTask will probably not be an own file, but we will rather
-                have multiple editing components that are going to be called in here,
-                we might also have to switch the editMode by clicking anywhere on
-                the task and not on a specific button, but we should ask the professor 
-                about that*/}
+                <div>
+                    <EditTask
+                        tasks={display.tasks}
+                        updateTasks={display.updateTasks}
+                        task={display.task}
+                    ></EditTask>
+                </div>
+                {/*The Edit Task function is producing the button to open the editing field*/}
             </Row>
         </div>
     );

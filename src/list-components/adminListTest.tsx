@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { AdminList } from "./adminlist";
+import { Task } from "../interfaces/task";
 
 const TASK2 = {
     name: "task 2",
@@ -32,9 +33,22 @@ const ROLE1 = "super";
 const ROLE2 = "admin";
 const ROLE3 = "user";
 
+const tasks = TASKLIST1;
+
+//this function does nothing and exists only to be able to call the component
+function setTasks(newTasks: Task[]) {
+    newTasks;
+}
+
 describe("AdminList with super role", () => {
     beforeEach(() => {
-        render(<AdminList role={ROLE1} tasks={TASKLIST1}></AdminList>); //makes admin list visible when role is super
+        render(
+            <AdminList
+                role={ROLE1}
+                tasks={tasks}
+                setTasks={setTasks}
+            ></AdminList>
+        ); //makes admin list visible when role is super
     });
     //testing that all tasks in a list have 0 or 1 num of users
     test("All the tasks in the list fit the requiremnet of having being used by 0 or 1 users", () => {
@@ -55,7 +69,13 @@ describe("AdminList with super role", () => {
 //testing with role being admin
 describe("AdminList with admin role", () => {
     beforeEach(() => {
-        render(<AdminList role={ROLE2} tasks={TASKLIST3}></AdminList>);
+        render(
+            <AdminList
+                role={ROLE2}
+                tasks={TASKLIST3}
+                setTasks={setTasks}
+            ></AdminList>
+        );
     }); //testing that all tasks in a list have 0 or 1 num of users
     test("All the tasks in the list fit the requiremnet of having being used by 0 or 1 users", () => {
         TASKLIST3.every((task) => {
@@ -75,7 +95,11 @@ describe("AdminList with admin role", () => {
 describe("Testing that admin list is not displayed if role is super", () => {
     test("test for empty DOM element", () => {
         const { container } = render(
-            <AdminList role={ROLE3} tasks={TASKLIST3}></AdminList>
+            <AdminList
+                role={ROLE3}
+                tasks={TASKLIST3}
+                setTasks={setTasks}
+            ></AdminList>
         );
         expect(container).toBeEmptyDOMElement();
     });

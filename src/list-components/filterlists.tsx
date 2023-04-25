@@ -11,7 +11,9 @@ function filter_by_difficulty(list_of_tasks: Task[]): void {
     //sorts the tasks based on comparison function
     list_of_tasks.sort(mycomparator);
 }
+// the function filter_by_alphabetical_order sorts the task list by the order of the task names in alphabetical order
 function filter_by_alphabetical_order(list_of_tasks: Task[]): void {
+    // sort works like map, in js here I am just passing my sorting function found this on stack overflow
     list_of_tasks.sort(function (a, b) {
         const nameA = a.name.toLowerCase();
         const nameB = b.name.toLowerCase();

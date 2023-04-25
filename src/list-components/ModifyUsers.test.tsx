@@ -55,4 +55,21 @@ describe("Modify User tests", () => {
         expect(screen.getByRole("textbox")).toBeNull();
         expect(screen.getByRole("button")).toBeNull();
     });
+    // how are we deleting users? it shouldn't be through textbox entry
+    test("Clicking delete user adds a user and leaves edit mode", () => {
+        // setting up the scenario
+        const switchButton = screen.getByRole("checkbox");
+        switchButton.click();
+        const delUser = screen.getByRole("button", {
+            name: /Delete User and Leave Edit Mode/i
+        });
+        const inputUser = screen.getByRole("textbox");
+        userEvent.type(inputUser, "user test");
+        // on add user button click
+        delUser.click();
+        // need help figuring out if it actually adds a user
+        // leaves edit mode: no textbox and no buttons
+        expect(screen.getByRole("textbox")).toBeNull();
+        expect(screen.getByRole("button")).toBeNull();
+    });
 });

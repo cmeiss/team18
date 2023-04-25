@@ -13,12 +13,19 @@ function filter_by_difficulty(list_of_tasks: Task[]): void {
 }
 function filter_by_alphabetical_order(list_of_tasks: Task[]): void {
     list_of_tasks.sort(function (a, b) {
-        const nameA = a.name.toLowerCase(),
-            nameB = b.name.toLowerCase();
+        const nameA = a.name.toLowerCase();
+        const nameB = b.name.toLowerCase();
         if (nameA < nameB)
             //sort string ascending
             return -1;
         if (nameA > nameB) return 1;
         return 0; //default return value (no sorting)
     });
+}
+
+function filter_by_time_needed(list_of_tasks: Task[]): void {
+    function mycomparator(a: Task, b: Task) {
+        return a.time - b.time;
+    }
+    list_of_tasks.sort(mycomparator);
 }

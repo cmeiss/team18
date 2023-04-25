@@ -32,15 +32,16 @@ export function EditTime({ time, setTime }: TimeProps) {
         <div>
             <Form.Group controlId="editTime">
                 <Form.Label>Choose Time</Form.Label>
-                <Form.Select value={time.toString()} onChange={updateTime}>
+
+                <Form.Select value={time.toString()} onChange={updateTime} role={"select"}>
                     {times.map((newTime: string, index: number) => (
-                        <option key={index} value={newTime.toString()}>
+                        <option key={index} role={"option"} value={newTime.toString()}>
                             {newTime}
                         </option>
                     ))}
                 </Form.Select>
             </Form.Group>
-            Current Time: {printTime(time)}
+            Selected Time: {printTime(time)}
         </div>
     );
 }

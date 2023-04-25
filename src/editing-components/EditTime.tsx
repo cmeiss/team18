@@ -23,7 +23,11 @@ export function EditTime({ time, setTime }: TimeProps) {
                     role={"select"}
                 >
                     {times.map((newTime: number, index: number) => (
-                        <option key={index} value={newTime.toString()}>
+                        <option
+                            key={index}
+                            role="option"
+                            value={newTime.toString()}
+                        >
                             {newTime}
                         </option>
                     ))}

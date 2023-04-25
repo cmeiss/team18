@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/TaskFunctions.test.ts
-FAIL src/list-components/CentralItemList.test.tsx (5.203 s)
+FAIL src/list-components/CentralItemList.test.tsx (5.19 s)
   ● Console
 
     console.log
@@ -2090,7 +2090,7 @@ FAIL src/list-components/UserList.test.tsx
     console.log
       userList
 
-      at UserList (src/list-components/UserList.tsx:34:22)
+      at UserList (src/list-components/UserList.tsx:33:22)
 
     console.log
       {
@@ -2122,12 +2122,12 @@ FAIL src/list-components/UserList.test.tsx
         time: 1345
       }
 
-      at UserList (src/list-components/UserList.tsx:35:22)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
     console.log
       userList
 
-      at UserList (src/list-components/UserList.tsx:34:22)
+      at UserList (src/list-components/UserList.tsx:33:22)
 
     console.log
       {
@@ -2159,12 +2159,12 @@ FAIL src/list-components/UserList.test.tsx
         time: 1345
       }
 
-      at UserList (src/list-components/UserList.tsx:35:22)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
     console.log
       userList
 
-      at UserList (src/list-components/UserList.tsx:34:22)
+      at UserList (src/list-components/UserList.tsx:33:22)
 
     console.log
       {
@@ -2196,12 +2196,12 @@ FAIL src/list-components/UserList.test.tsx
         time: 1345
       }
 
-      at UserList (src/list-components/UserList.tsx:35:22)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
     console.log
       userList
 
-      at UserList (src/list-components/UserList.tsx:34:22)
+      at UserList (src/list-components/UserList.tsx:33:22)
 
     console.log
       {
@@ -2233,12 +2233,12 @@ FAIL src/list-components/UserList.test.tsx
         time: 1345
       }
 
-      at UserList (src/list-components/UserList.tsx:35:22)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
     console.log
       userList
 
-      at UserList (src/list-components/UserList.tsx:34:22)
+      at UserList (src/list-components/UserList.tsx:33:22)
 
     console.log
       {
@@ -2270,7 +2270,7 @@ FAIL src/list-components/UserList.test.tsx
         time: 1345
       }
 
-      at UserList (src/list-components/UserList.tsx:35:22)
+      at UserList (src/list-components/UserList.tsx:34:22)
 
   ● Testing that user list is not displayed if role is super › test for empty DOM element
 
@@ -2532,7 +2532,7 @@ FAIL src/list-components/AddUser.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   23.65 |    26.92 |    27.9 |   24.04 |                   
+All files                  |   23.24 |    26.92 |    27.9 |   23.62 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 15-38             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -2546,7 +2546,7 @@ All files                  |   23.65 |    26.92 |    27.9 |   24.04 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   16.84 |    38.23 |    20.4 |   16.84 |                   
+ src/list-components       |   15.95 |    38.23 |    20.4 |   15.95 |                   
   CentralItemList.tsx      |     100 |      100 |     100 |     100 |                   
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |      75 |       75 |   66.66 |      75 | 43                
@@ -2560,5 +2560,5 @@ All files                  |   23.65 |    26.92 |    27.9 |   24.04 |
 Test Suites: 3 failed, 2 passed, 5 total
 Tests:       7 failed, 26 passed, 33 total
 Snapshots:   0 total
-Time:        10.613 s
+Time:        10.541 s
 Ran all test suites.

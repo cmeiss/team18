@@ -11,20 +11,17 @@ interface CentralItemProps {
 }
 
 export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
-    const [Tasks] = useState<Task[]>(tasks);
-    const [Role] = useState<string>(role);
-
     return (
         <div className="List">
             <div className="central">
                 <span> Central List </span>
-                {Tasks.map((TASK: Task, index: number) => (
+                {tasks.map((TASK: Task, index: number) => (
                     <DisplayTask
                         key={index}
                         task={TASK}
                         tasks={tasks}
                         updateTasks={setTasks}
-                        role={Role}
+                        role={role}
                     ></DisplayTask>
                 ))}
             </div>

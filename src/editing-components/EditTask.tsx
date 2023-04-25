@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import { Button } from "react-bootstrap";
-import { makeTask, setDifficulty } from "../TaskFunctions";
+import { makeTask } from "../TaskFunctions";
 import { EditTime } from "./EditTime";
-import { editDifficulty } from "./edit-difficulty";
+//import { editDifficulty } from "./edit-difficulty";
 
 interface editProps {
     tasks: Task[];
@@ -22,7 +22,7 @@ export function EditTask(edit: editProps): JSX.Element {
     const [status] = useState<boolean>(edit.task.status);
     const [img] = useState<string>(edit.task.image);
     const [steps] = useState<string[]>(edit.task.steps);
-    const [diff, setDifficulty] = useState<number>(edit.task.difficulty);
+    const [diff] = useState<number>(edit.task.difficulty);
     const [numUsers] = useState<number>(edit.task.numUsers);
     const [time, setTime] = useState<number>(edit.task.time);
     const [visible, setVisible] = useState<boolean>(false);
@@ -74,10 +74,10 @@ export function EditTask(edit: editProps): JSX.Element {
             {!visible ? null : (
                 <div>
                     <EditTime time={time} setTime={setTime}></EditTime>
-                    <editDifficulty
+                    {/*<editDifficulty
                         diff={diff}
                         setDifficulty={setDifficulty}
-                    ></editDifficulty>
+            ></editDifficulty> */}
                     <div>
                         <Button
                             onClick={() =>

@@ -15,6 +15,7 @@ export function App(): JSX.Element {
         <div className="difficulty-edit">
             <Form.Check
                 inline
+                label="star-1"
                 type="radio"
                 name="difficulty"
                 onChange={updateDifficulty}
@@ -23,6 +24,7 @@ export function App(): JSX.Element {
             />
             <Form.Check
                 inline
+                label="star-2"
                 type="radio"
                 name="difficulty"
                 onChange={updateDifficulty}
@@ -31,6 +33,7 @@ export function App(): JSX.Element {
             />
             <Form.Check
                 inline
+                label="star-3"
                 type="radio"
                 name="difficulty"
                 onChange={updateDifficulty}
@@ -39,6 +42,7 @@ export function App(): JSX.Element {
             />
             <Form.Check
                 inline
+                label="star-4"
                 type="radio"
                 name="difficulty"
                 onChange={updateDifficulty}
@@ -47,6 +51,7 @@ export function App(): JSX.Element {
             />
             <Form.Check
                 inline
+                label="star-5"
                 type="radio"
                 name="difficulty"
                 onChange={updateDifficulty}

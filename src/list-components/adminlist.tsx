@@ -12,10 +12,8 @@ interface AdminItemProps {
 }
 
 export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
-
     const NewTasks = tasks.filter((task: Task): boolean =>
         task.numUsers < 2 ? true : false
-
     );
     if (role === "Admin") {
         return (

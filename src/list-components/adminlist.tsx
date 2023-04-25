@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //import { Button } from "react-bootstrap";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
@@ -12,13 +12,10 @@ interface AdminItemProps {
 }
 
 export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
-    const [Tasks] = useState<Task[]>(tasks);
-    const [Role] = useState<string>(role);
 
-    const [NewTasks] = useState<Task[]>(
-        Tasks.filter((task: Task): boolean =>
-            task.numUsers < 2 ? true : false
-        )
+    const NewTasks = tasks.filter((task: Task): boolean =>
+        task.numUsers < 2 ? true : false
+
     );
     if (role === "Admin") {
         return (
@@ -31,7 +28,7 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
                             task={TASK}
                             tasks={tasks}
                             updateTasks={setTasks}
-                            role={Role}
+                            role={role}
                         ></DisplayTask>
                     ))}
                 </div>

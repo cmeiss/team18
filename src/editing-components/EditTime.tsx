@@ -14,6 +14,20 @@ export function EditTime({ time, setTime }: TimeProps) {
         const newT = Number(event.target.value);
         setTime(newT);
     }
+    function printTime(time: number) {
+        let display = "time";
+        if (time < 100) {
+            display = "00:" + time.toString();
+        } else if (time < 1000 && time % 100 === 0) {
+            display = "0" + Math.trunc(time / 100) + ":00";
+        } else if (time < 1000) {
+            "0" + Math.trunc(time / 100) + ":" + (time % 100).toString();
+        } else {
+            display = Math.trunc(time / 100) + ":" + (time % 100).toString();
+        }
+        return display;
+    }
+
     return (
         <div>
             <Form.Group controlId="editTime">
@@ -26,7 +40,7 @@ export function EditTime({ time, setTime }: TimeProps) {
                     ))}
                 </Form.Select>
             </Form.Group>
-            Current Time: {time}
+            Current Time: {printTime(time)}
         </div>
     );
 }

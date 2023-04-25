@@ -12,7 +12,6 @@ interface UserProps {
 }
 
 export function UserList(user: UserProps): JSX.Element {
-    const list = user.user.userList;
     return (
         <div>
             {user.user.name === "Super" || user.user.name === "Admin" ? (
@@ -20,7 +19,7 @@ export function UserList(user: UserProps): JSX.Element {
             ) : (
                 <div className="userList">
                     <h3>{user.user.name}s List:</h3>
-                    {list.map((TASK: Task, index: number) => (
+                    {user.tasks.map((TASK: Task, index: number) => (
                         <DisplayTask
                             key={index}
                             task={TASK}

@@ -1,7 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { EditTime } from "./EditTime";
-import { Task } from "../interfaces/task";
 
 const time = 1000;
 

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 
-export function App(): JSX.Element {
+export function editDifficulty(): JSX.Element {
     //setting state
     const [difficulty, setDifficulty] = useState<number>(0);
 
@@ -58,6 +58,7 @@ export function App(): JSX.Element {
                 id="great"
                 checked={difficulty === 5}
             />
+            Current Difficulty: {difficulty}
         </div>
     );
 }

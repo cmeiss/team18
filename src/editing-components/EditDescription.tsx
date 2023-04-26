@@ -11,4 +11,16 @@ export function EditTime({ description, setDescription }: descriptionProps) {
         const newDesc = String(event.target.value);
         setDescription(newDesc);
     }
+    return (
+        <div>
+            <Form.Group controlId="formDescriptionName">
+                <Form.Label>Name:</Form.Label>
+                <Form.Control
+                    value={description}
+                    onChange={updateDescription}
+                />
+            </Form.Group>
+            <div>The movie is "{description}".</div>
+        </div>
+    );
 }

@@ -5,7 +5,7 @@ interface diffProps {
     diff: number;
     setDifficulty: (newDiff: number) => void;
 }
-export function editDifficulty({ diff, setDifficulty }: diffProps) {
+export function EditDifficulty({ diff, setDifficulty }: diffProps) {
     //update functions
     function updateDifficulty(event: React.ChangeEvent<HTMLInputElement>) {
         setDifficulty(parseInt(event.target.value));

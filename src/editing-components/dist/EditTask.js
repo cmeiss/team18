@@ -23,6 +23,7 @@ var react_1 = require("react");
 var react_bootstrap_1 = require("react-bootstrap");
 var TaskFunctions_1 = require("../TaskFunctions");
 var EditTime_1 = require("./EditTime");
+var edit_difficulty_1 = require("./edit-difficulty");
 function EditTask(edit) {
     {
         /* all attribute state needs a setter function too, but it gave me linting errors to do so in  advance
@@ -33,10 +34,10 @@ function EditTask(edit) {
     var status = react_1.useState(edit.task.status)[0];
     var img = react_1.useState(edit.task.image)[0];
     var steps = react_1.useState(edit.task.steps)[0];
-    var diff = react_1.useState(edit.task.difficulty)[0];
+    var _a = react_1.useState(edit.task.difficulty), diff = _a[0], setDifficulty = _a[1];
     var numUsers = react_1.useState(edit.task.numUsers)[0];
-    var _a = react_1.useState(edit.task.time), time = _a[0], setTime = _a[1];
-    var _b = react_1.useState(false), visible = _b[0], setVisible = _b[1];
+    var _b = react_1.useState(edit.task.time), time = _b[0], setTime = _b[1];
+    var _c = react_1.useState(false), visible = _c[0], setVisible = _c[1];
     function updateVisibility() {
         setVisible(!visible);
     }
@@ -64,6 +65,7 @@ function EditTask(edit) {
             }, onClick: updateVisibility }, "Edit Task"),
         !visible ? null : (react_1["default"].createElement("div", null,
             react_1["default"].createElement(EditTime_1.EditTime, { time: time, setTime: setTime }),
+            react_1["default"].createElement(edit_difficulty_1.EditDifficulty, { diff: diff, setDifficulty: setDifficulty }),
             react_1["default"].createElement("div", null,
                 react_1["default"].createElement(react_bootstrap_1.Button, { onClick: function () {
                         return changeTasks(edit.tasks, name, desc, status, img, steps, diff, numUsers, time);

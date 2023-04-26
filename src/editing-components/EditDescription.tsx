@@ -6,8 +6,11 @@ interface descriptionProps {
     setDescription: (newDescription: string) => void;
 }
 
-export function EditTime({ description, setDescription }: descriptionProps) {
-    function updateDescription(event: React.ChangeEvent<HTMLSelectElement>) {
+export function EditDescription({
+    description,
+    setDescription
+}: descriptionProps) {
+    function updateDescription(event: React.ChangeEvent<HTMLInputElement>) {
         const newDesc = String(event.target.value);
         setDescription(newDesc);
     }
@@ -20,7 +23,7 @@ export function EditTime({ description, setDescription }: descriptionProps) {
                     onChange={updateDescription}
                 />
             </Form.Group>
-            <div>The movie is "{description}".</div>
+            <div>Description: {description}.</div>
         </div>
     );
 }

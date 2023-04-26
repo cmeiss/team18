@@ -3,6 +3,7 @@ import { Task } from "../interfaces/task";
 import { Button } from "react-bootstrap";
 import { makeTask } from "../TaskFunctions";
 import { EditTime } from "./EditTime";
+import { EditDescription } from "./EditDescription";
 
 interface editProps {
     tasks: Task[];
@@ -17,7 +18,7 @@ export function EditTask(edit: editProps): JSX.Element {
         we need to add the functions whenever we connect a new editing component*/
     }
     const [name] = useState<string>(edit.task.name);
-    const [desc] = useState<string>(edit.task.description);
+    const [desc, setDesc] = useState<string>(edit.task.description);
     const [status] = useState<boolean>(edit.task.status);
     const [img] = useState<string>(edit.task.image);
     const [steps] = useState<string[]>(edit.task.steps);
@@ -72,6 +73,10 @@ export function EditTask(edit: editProps): JSX.Element {
             </Button>
             {!visible ? null : (
                 <div>
+                    <EditDescription
+                        description={desc}
+                        setDescription={setDesc}
+                    ></EditDescription>
                     <EditTime time={time} setTime={setTime}></EditTime>
                     <div>
                         <Button

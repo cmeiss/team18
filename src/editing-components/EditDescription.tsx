@@ -17,7 +17,7 @@ export function EditDescription({
     return (
         <div>
             <Form.Group controlId="formDescriptionName">
-                <Form.Label>Name:</Form.Label>
+                <Form.Label>Change Description:</Form.Label>
                 <Form.Control
                     value={description}
                     onChange={updateDescription}

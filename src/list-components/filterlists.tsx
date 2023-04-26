@@ -33,3 +33,4 @@ function filter_by_time_needed(list_of_tasks: Task[]): void {
     list_of_tasks.sort(mycomparator);
 }
 */
+export {}; //Nothing else to export for now

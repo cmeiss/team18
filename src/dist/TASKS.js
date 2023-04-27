@@ -1,6 +1,7 @@
-import { Task } from "./interfaces/task";
-
-export const TASKS: Task[] = [
+"use strict";
+exports.__esModule = true;
+exports.TASKS = void 0;
+exports.TASKS = [
     {
         name: "do Homework",
         description: "description",
@@ -73,8 +74,7 @@ export const TASKS: Task[] = [
     },
     {
         name: "Time for your Metaverse Double Life",
-        description:
-            "The real world not cutting it? Let the Metaverse fuel your wildest desires!",
+        description: "The real world not cutting it? Let the Metaverse fuel your wildest desires!",
         status: false,
         image: "picture",
         steps: [],
@@ -84,8 +84,7 @@ export const TASKS: Task[] = [
     },
     {
         name: "Research",
-        description:
-            "Whether your deep into the furthest reaches of AI tech, or discovering how much ketchup is the perfect amount for every fry, make time for your undiscovered knowledge!.",
+        description: "Whether your deep into the furthest reaches of AI tech, or discovering how much ketchup is the perfect amount for every fry, make time for your undiscovered knowledge!.",
         status: false,
         image: "picture",
         steps: [],

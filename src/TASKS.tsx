@@ -50,5 +50,67 @@ export const TASKS: Task[] = [
         difficulty: 3,
         numUsers: 2,
         time: 1130
+    },
+    {
+        name: "Birthday Party!",
+        description: "Celebrate a friend's or familiy member's big day!!",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1130
+    },
+    {
+        name: "Favorite Hobby Time",
+        description: "Make time for what you love!",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1130
+    },
+    {
+        name: "Time for your Metaverse Double Life",
+        description:
+            "The real world not cutting it? Let the Metaverse fuel your wildest desires!",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1130
+    },
+    {
+        name: "Research",
+        description:
+            "Whether your deep into the furthest reaches of AI tech, or discovering how much ketchup is the perfect amount for every fry, make time for your undiscovered knowledge!.",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1130
+    },
+    {
+        name: "Gardening",
+        description: "Tend those taters!",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1130
+    },
+    {
+        name: "Dance Recital",
+        description: "I like to tango.",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 2,
+        time: 1130
     }
 ];

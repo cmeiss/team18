@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import { Button } from "react-bootstrap";
@@ -18,6 +19,7 @@ export function EditTask(edit: editProps): JSX.Element {
         /* all attribute state needs a setter function too, but it gave me linting errors to do so in  advance
         we need to add the functions whenever we connect a new editing component*/
     }
+    const [id] = useState<number>(edit.task.id);
     const [name] = useState<string>(edit.task.name);
     const [desc, setDesc] = useState<string>(edit.task.description);
     const [status] = useState<boolean>(edit.task.status);
@@ -33,6 +35,7 @@ export function EditTask(edit: editProps): JSX.Element {
     //function to change the tasks, produces a copy of the old array, then changes the edited task
     function changeTasks(
         tasks: Task[],
+        id: number,
         name: string,
         desc: string,
         stat: boolean,
@@ -45,15 +48,35 @@ export function EditTask(edit: editProps): JSX.Element {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(
             copy.map((TASK: Task) =>
-                TASK.name === name
-                    ? makeTask(name, desc, stat, img, steps, diff, num, time)
+                TASK.id === id
+                    ? makeTask(
+                          id,
+                          name,
+                          desc,
+                          stat,
+                          img,
+                          steps,
+                          diff,
+                          num,
+                          time
+                      )
                     : { ...TASK, steps: [...TASK.steps] }
             )
         );
         console.log(
             tasks.map((TASK: Task) =>
-                TASK.name === name
-                    ? makeTask(name, desc, stat, img, steps, diff, num, time)
+                TASK.id === id
+                    ? makeTask(
+                          id,
+                          name,
+                          desc,
+                          stat,
+                          img,
+                          steps,
+                          diff,
+                          num,
+                          time
+                      )
                     : { ...TASK, steps: [...TASK.steps] }
             )
         );
@@ -88,6 +111,7 @@ export function EditTask(edit: editProps): JSX.Element {
                             onClick={() =>
                                 changeTasks(
                                     edit.tasks,
+                                    id,
                                     name,
                                     desc,
                                     status,

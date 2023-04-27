@@ -3,6 +3,7 @@ import { Col, Form, Row } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
+import { useDrag } from "react-dnd";
 
 //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
 // export interface displayProps {
@@ -27,8 +28,20 @@ export interface displayProps {
 
 export function DisplayTask(display: displayProps): JSX.Element {
     const [done, setDone] = useState<boolean>(display.task.status);
+    const [{ isDragging }, drag] = useDrag({
+        type: "task",
+        item: { id: display.task.time },
+        collect: (monitor) => ({
+            isDragging: !!monitor.isDragging()
+        })
+    });
     return (
-        <div>
+        <div
+            ref={drag}
+            style={{
+                border: isDragging ? "5px solid Violet" : "0px"
+            }}
+        >
             <h3>Task: {display.task.name}</h3>
             <div>{display.task.description}</div>
             <Row>

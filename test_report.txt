@@ -584,49 +584,6 @@ FAIL src/list-components/UserList.test.tsx
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
 
-FAIL src/list-components/dist/deleteTak.test.js
-  ● Delete task tests › There is a switch
-
-    TypeError: Cannot read properties of undefined (reading 'createElement')
-
-      42 | describe("Delete task tests", function () {
-      43 |     beforeEach(function () {
-    > 44 |         return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Task[]*/) {
-         |                                                  ^
-      45 |                 throw new Error("function not implemented");
-      46 |             } }));
-      47 |     });
-
-      at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:44:50)
-
-  ● Delete task tests › On switch click, there is a textbox and buttons: 
-
-    TypeError: Cannot read properties of undefined (reading 'createElement')
-
-      42 | describe("Delete task tests", function () {
-      43 |     beforeEach(function () {
-    > 44 |         return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Task[]*/) {
-         |                                                  ^
-      45 |                 throw new Error("function not implemented");
-      46 |             } }));
-      47 |     });
-
-      at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:44:50)
-
-  ● Delete task tests › Clicking delete task deletes from the list and leaves edit mode
-
-    TypeError: Cannot read properties of undefined (reading 'createElement')
-
-      42 | describe("Delete task tests", function () {
-      43 |     beforeEach(function () {
-    > 44 |         return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Task[]*/) {
-         |                                                  ^
-      45 |                 throw new Error("function not implemented");
-      46 |             } }));
-      47 |     });
-
-      at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:44:50)
-
 FAIL src/list-components/deleteTak.test.tsx
   ● Console
 
@@ -1865,8 +1822,8 @@ All files                  |   24.22 |    25.86 |   25.26 |    24.6 |
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
   filterlists.tsx          |       0 |        0 |       0 |       0 |                   
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 9 failed, 1 passed, 10 total
-Tests:       15 failed, 17 passed, 32 total
+Test Suites: 8 failed, 1 passed, 9 total
+Tests:       12 failed, 17 passed, 29 total
 Snapshots:   0 total
-Time:        8.489 s
+Time:        11.173 s
 Ran all test suites.

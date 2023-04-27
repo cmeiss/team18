@@ -3,6 +3,8 @@ import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
 import "./UserList.css";
+import { useDrop } from "react-dnd";
+import { addTask } from "../TaskFunctions";
 
 interface UserProps {
     user: User;
@@ -12,8 +14,21 @@ interface UserProps {
 }
 
 export function UserList(user: UserProps): JSX.Element {
+    const [{ isOver }, drop] = useDrop({
+        accept: "task",
+        drop: (item: Task) => user.setTasks(addTask(item, user.tasks)),
+        collect: (monitor) => ({
+            isOver: !!monitor.isOver()
+        })
+    });
     return (
-        <div>
+        <div
+            ref={drop}
+            className="UserList"
+            style={{
+                backgroundColor: isOver ? "MediumSeaGreen" : "white"
+            }}
+        >
             {user.user.name === "Super" || user.user.name === "Admin" ? (
                 <div></div>
             ) : (

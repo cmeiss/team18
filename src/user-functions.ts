@@ -32,7 +32,7 @@ export function deleteTask(user: User, task: Task): Task[] {
 /**
  * addTask function, adds a task fto the userList
  */
-export function makeTask(
+export function addTasktoUserList(
     user: User,
     name: string,
     desc: string,

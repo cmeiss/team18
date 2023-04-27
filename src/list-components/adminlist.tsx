@@ -3,6 +3,8 @@ import React from "react";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
 import "./adminList.css";
+import { useDrop } from "react-dnd";
+import { addTask } from "../TaskFunctions";
 
 interface AdminItemProps {
     tasks: Task[];
@@ -15,9 +17,24 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
     const NewTasks = tasks.filter((task: Task): boolean =>
         task.numUsers < 2 ? true : false
     );
+    const [{ isOver /*, canDrop*/ }, drop] = useDrop({
+        accept: "task",
+        drop: (item: Task) => setTasks(addTask(item, NewTasks)),
+        //canDrop: (item: Task) => (item.numUsers < 2 ? true : false),
+        collect: (monitor) => ({
+            isOver: !!monitor.isOver()
+            //canDrop: !!monitor.canDrop()
+        })
+    });
     if (role === "Admin") {
         return (
-            <div className="AdminList">
+            <div
+                className="AdminList"
+                ref={drop}
+                style={{
+                    backgroundColor: isOver ? "MediumSeaGreen" : "white"
+                }}
+            >
                 <div className="Admin">
                     <span> Admin List </span>
                     {NewTasks.map((TASK: Task, index: number) => (

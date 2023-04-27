@@ -16,6 +16,7 @@ import {
 
 // Creating a test task to use as a immuatable object in all tests
 const TESTTASK: Task = {
+    id: 0,
     name: "test",
     description: "taskfunc test task",
     status: false,
@@ -28,6 +29,7 @@ const TESTTASK: Task = {
 
 // Backup task, to ensure changes are immutable
 const BACKUPTASK: Task = {
+    id: 1,
     name: "test",
     description: "taskfunc test task",
     status: false,
@@ -43,6 +45,7 @@ const BACKUPSTEPS: string[] = ["1", "2", "3"];
 
 // some more tasks
 const TASK2: Task = makeTask(
+    3,
     "test2",
     "taskarr ind 1",
     true,
@@ -53,6 +56,7 @@ const TASK2: Task = makeTask(
     1
 );
 const TASK3: Task = makeTask(
+    4,
     "task3",
     "taskarr ind 2",
     false,
@@ -72,6 +76,7 @@ describe("Testing the task functions", () => {
     test("Testing the makeTask function", () => {
         expect(
             makeTask(
+                0,
                 "test",
                 "taskfunc test task",
                 false,
@@ -92,6 +97,7 @@ describe("Testing the task functions", () => {
     });
     test("Testing the setSteps function", () => {
         expect(setSteps(STEPS, TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -102,6 +108,7 @@ describe("Testing the task functions", () => {
             time: 0
         });
         expect(setSteps(["3", "2", "1"], TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -114,6 +121,7 @@ describe("Testing the task functions", () => {
     });
     test("Testing the setDifficultly function", () => {
         expect(setDifficulty(2, TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -124,6 +132,7 @@ describe("Testing the task functions", () => {
             time: 0
         });
         expect(setDifficulty(10, TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -136,6 +145,7 @@ describe("Testing the task functions", () => {
     });
     test("Testing the setNumUsers function", () => {
         expect(setNumUsers(2, TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -146,6 +156,7 @@ describe("Testing the task functions", () => {
             time: 0
         });
         expect(setNumUsers(10, TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -159,6 +170,7 @@ describe("Testing the task functions", () => {
     test("Testing the setTime function", () => {
         expect(setTime(200, TESTTASK)).toEqual({
             // we may want this to be a string rather than a number so we can do 2:00pm
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -169,6 +181,7 @@ describe("Testing the task functions", () => {
             time: 200
         });
         expect(setTime(500, TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -181,6 +194,7 @@ describe("Testing the task functions", () => {
     });
     test("Testing the setName function", () => {
         expect(setName("Clarkson", TESTTASK)).toEqual({
+            id: 0,
             name: "Clarkson",
             description: "taskfunc test task",
             status: false,
@@ -191,6 +205,7 @@ describe("Testing the task functions", () => {
             time: 0
         });
         expect(setName("Jeremy", TESTTASK)).toEqual({
+            id: 0,
             name: "Jeremy",
             description: "taskfunc test task",
             status: false,
@@ -204,6 +219,7 @@ describe("Testing the task functions", () => {
     test("Testing the setDiscription function", () => {
         expect(setDescription("A wonderfully delicate meal", TESTTASK)).toEqual(
             {
+                id: 0,
                 name: "test",
                 description: "A wonderfully delicate meal",
                 status: false,
@@ -215,6 +231,7 @@ describe("Testing the task functions", () => {
             }
         );
         expect(setDescription("A lovely stew", TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "A lovely stew",
             status: false,
@@ -227,6 +244,7 @@ describe("Testing the task functions", () => {
     });
     test("Testing the setStatus function", () => {
         expect(setStatus(true, TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: true,
@@ -237,6 +255,7 @@ describe("Testing the task functions", () => {
             time: 0
         });
         expect(setStatus(false, TASK2)).toEqual({
+            id: 0,
             name: "test2",
             description: "taskarr ind 1",
             status: false,
@@ -249,6 +268,7 @@ describe("Testing the task functions", () => {
     });
     test("Testing the setImage function", () => {
         expect(setImage("A picture of despair", TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,
@@ -259,6 +279,7 @@ describe("Testing the task functions", () => {
             time: 0
         });
         expect(setImage("A quaint city in the woods", TESTTASK)).toEqual({
+            id: 0,
             name: "test",
             description: "taskfunc test task",
             status: false,

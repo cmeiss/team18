@@ -16,15 +16,15 @@ interface UserProps {
 export function UserList({ user, tasks, setTasks }: UserProps): JSX.Element {
     const [{ isOver }, drop] = useDrop({
         accept: "task",
-        drop: (item: Task) => addTaskToUserList(item.name),
+        drop: (item: Task) => addTaskToUserList(item.id),
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
     });
 
-    function addTaskToUserList(name: string) {
+    function addTaskToUserList(id: number) {
         const droppedTask: Task | undefined = tasks.find(
-            (task: Task) => task.name === name
+            (task: Task) => task.id === id
         );
         console.log({ ...droppedTask });
         console.log("dropping task");

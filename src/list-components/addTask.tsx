@@ -22,7 +22,12 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
     //states needed for editing functions
     const [neweditmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
     const [newTask, setNewTask] = useState<string>("");
+    const [newId, setNewId] = useState<number>(0);
 
+    //change id
+    function updateNewId(event: React.ChangeEvent<HTMLInputElement>) {
+        setNewId(parseInt(event.target.value));
+    }
     //change description function
     function updateDescription(event: React.ChangeEvent<HTMLInputElement>) {
         setDescription(event.target.value);
@@ -65,6 +70,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
         taskProps.setTasks([
             ...taskProps.tasks,
             {
+                id: newId,
                 name: newTask,
                 description: newdescription,
                 status: newstatus,
@@ -89,6 +95,13 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
             />
             {neweditmode ? (
                 <Form.Group controlId="CheckAnswer">
+                    <Form.Label>Enter New Task Id Below:</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newId}
+                        onChange={updateNewId}
+                    />
                     <Form.Label>Enter New Task Name Below:</Form.Label>
                     <Form.Control
                         as="textarea"

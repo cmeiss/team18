@@ -54,6 +54,8 @@ describe("Modify User tests", () => {
         // leaves edit mode: no textbox and no buttons
         expect(screen.getByRole("textbox")).toBeNull();
         expect(screen.getByRole("button")).toBeNull();
+        // may need to render the roll select dropdown. At this moment I dont see how we do that without rendering
+        //all of App. we will come back to this later
     });
     // how are we deleting users? it shouldn't be through textbox entry
     test("Clicking delete user adds a user and leaves edit mode", () => {
@@ -65,11 +67,13 @@ describe("Modify User tests", () => {
         });
         const inputUser = screen.getByRole("textbox");
         userEvent.type(inputUser, "user test");
-        // on add user button click
+        // on delete user button click
         delUser.click();
         // need help figuring out if it actually adds a user
         // leaves edit mode: no textbox and no buttons
         expect(screen.getByRole("textbox")).toBeNull();
         expect(screen.getByRole("button")).toBeNull();
+        // may need to render the roll select dropdown. At this moment I dont see how we do that without rendering
+        //all of App. we will come back to this later
     });
 });

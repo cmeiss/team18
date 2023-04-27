@@ -1,6 +1,7 @@
-import { Task } from "./interfaces/task";
-
-export const TASKS: Task[] = [
+"use strict";
+exports.__esModule = true;
+exports.TASKS = void 0;
+exports.TASKS = [
     {
         name: "do Homework",
         description: "description",

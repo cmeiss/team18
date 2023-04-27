@@ -846,6 +846,268 @@ FAIL src/list-components/deleteTak.test.tsx
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/list-components/deleteTak.test.tsx:75:37)
 
+FAIL src/list-components/dist/addTask.test.js
+  ● Add tasks tests › There is a switch
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      30 | describe("Add tasks tests", function () {
+      31 |     beforeEach(function () {
+    > 32 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
+         |                                                  ^
+      33 |                 throw new Error("Function not implemented.");
+      34 |             } }));
+      35 |     });
+
+      at Object.<anonymous> (src/list-components/dist/addTask.test.js:32:50)
+
+  ● Add tasks tests › On switch click, there is a textbox and buttons: 
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      30 | describe("Add tasks tests", function () {
+      31 |     beforeEach(function () {
+    > 32 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
+         |                                                  ^
+      33 |                 throw new Error("Function not implemented.");
+      34 |             } }));
+      35 |     });
+
+      at Object.<anonymous> (src/list-components/dist/addTask.test.js:32:50)
+
+  ● Add tasks tests › Clicking add task adds a task and leaves edit mode
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      30 | describe("Add tasks tests", function () {
+      31 |     beforeEach(function () {
+    > 32 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
+         |                                                  ^
+      33 |                 throw new Error("Function not implemented.");
+      34 |             } }));
+      35 |     });
+
+      at Object.<anonymous> (src/list-components/dist/addTask.test.js:32:50)
+
+FAIL src/list-components/addTask.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      33 | describe("Add tasks tests", () => {
+      34 |     beforeEach(() =>
+    > 35 |         render(
+         |         ^
+      36 |             <AddTask
+      37 |                 item={TASK1}
+      38 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:35:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      33 | describe("Add tasks tests", () => {
+      34 |     beforeEach(() =>
+    > 35 |         render(
+         |         ^
+      36 |             <AddTask
+      37 |                 item={TASK1}
+      38 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:35:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      33 | describe("Add tasks tests", () => {
+      34 |     beforeEach(() =>
+    > 35 |         render(
+         |         ^
+      36 |             <AddTask
+      37 |                 item={TASK1}
+      38 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:35:9)
+
+  ● Add tasks tests › There is a switch
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
+
+    Here are the accessible roles:
+
+      checkbox:
+
+      Name "":
+      [36m<input[39m
+        [33mclass[39m=[32m"form-check-input"[39m
+        [33mid[39m=[32m"editMode"[39m
+        [33mtype[39m=[32m"checkbox"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"form-check form-switch"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-check-input"[39m
+              [33mid[39m=[32m"editMode"[39m
+              [33mtype[39m=[32m"checkbox"[39m
+            [36m/>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-check-label"[39m
+              [33mfor[39m=[32m"editMode"[39m
+              [33mtitle[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      46 |     );
+      47 |     test("There is a switch", () => {
+    > 48 |         const switchButton = screen.getByRole("switch");
+         |                                     ^
+      49 |         expect(switchButton).toBeInTheDocument();
+      50 |     });
+      51 |     test("On switch click, there is a textbox and buttons: ", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:48:37)
+
+  ● Add tasks tests › On switch click, there is a textbox and buttons: 
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
+
+    Here are the accessible roles:
+
+      checkbox:
+
+      Name "":
+      [36m<input[39m
+        [33mclass[39m=[32m"form-check-input"[39m
+        [33mid[39m=[32m"editMode"[39m
+        [33mtype[39m=[32m"checkbox"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"form-check form-switch"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-check-input"[39m
+              [33mid[39m=[32m"editMode"[39m
+              [33mtype[39m=[32m"checkbox"[39m
+            [36m/>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-check-label"[39m
+              [33mfor[39m=[32m"editMode"[39m
+              [33mtitle[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      50 |     });
+      51 |     test("On switch click, there is a textbox and buttons: ", () => {
+    > 52 |         const switchButton = screen.getByRole("switch");
+         |                                     ^
+      53 |         switchButton.click();
+      54 |         const addTask = screen.getByRole("button", {
+      55 |             name: /Add Task and Leave Edit Mode/i
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:52:37)
+
+  ● Add tasks tests › Clicking add task adds a task and leaves edit mode
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
+
+    Here are the accessible roles:
+
+      checkbox:
+
+      Name "":
+      [36m<input[39m
+        [33mclass[39m=[32m"form-check-input"[39m
+        [33mid[39m=[32m"editMode"[39m
+        [33mtype[39m=[32m"checkbox"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"form-check form-switch"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-check-input"[39m
+              [33mid[39m=[32m"editMode"[39m
+              [33mtype[39m=[32m"checkbox"[39m
+            [36m/>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-check-label"[39m
+              [33mfor[39m=[32m"editMode"[39m
+              [33mtitle[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      60 |     test("Clicking add task adds a task and leaves edit mode", () => {
+      61 |         // setting up the scenario
+    > 62 |         const switchButton = screen.getByRole("switch");
+         |                                     ^
+      63 |         switchButton.click();
+      64 |         const addTask = screen.getByRole("button", {
+      65 |             name: /Add Task and Leave Edit Mode/i
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:62:37)
+
 FAIL src/editing-components/EditTime.test.tsx
   ● Console
 
@@ -1575,7 +1837,7 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   19.07 |    22.41 |   24.21 |   19.37 |                   
+All files                  |   24.22 |    25.86 |   25.26 |    24.6 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 17-40             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -1591,20 +1853,20 @@ All files                  |   19.07 |    22.41 |   24.21 |   19.37 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   11.22 |     22.5 |   12.96 |   11.22 |                   
+ src/list-components       |   21.42 |     27.5 |   14.81 |   21.42 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-72             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
   UserList.tsx             |       0 |        0 |       0 |       0 | 17-38             
-  addTask.tsx              |       0 |        0 |       0 |       0 | 15-81             
+  addTask.tsx              |   47.61 |       50 |    9.09 |   47.61 | 28-78             
   adminListTest.tsx        |       0 |        0 |       0 |       0 | 6-104             
   adminlist.tsx            |       0 |        0 |       0 |       0 | 17-53             
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
   filterlists.tsx          |       0 |        0 |       0 |       0 |                   
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 7 failed, 1 passed, 8 total
-Tests:       9 failed, 17 passed, 26 total
+Test Suites: 9 failed, 1 passed, 10 total
+Tests:       15 failed, 17 passed, 32 total
 Snapshots:   0 total
-Time:        7.757 s
+Time:        8.489 s
 Ran all test suites.

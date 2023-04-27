@@ -10,7 +10,7 @@ interface addTaskProp {
     setTasks: (newTasks: Task[]) => void;
 }
 
-export function editNew(taskProps: addTaskProp): JSX.Element {
+export function AddTask(taskProps: addTaskProp): JSX.Element {
     ///states for each attribute
     const [newdescription, setDescription] = useState<string>("");
     const [newstatus, setStatus] = useState<boolean>(false);
@@ -147,7 +147,7 @@ export function editNew(taskProps: addTaskProp): JSX.Element {
                 </Form.Group>
             ) : null}
             {neweditmode ? (
-                <Button onClick={addTask}>Add User and Leave Edit Mode</Button>
+                <Button onClick={addTask}>Add Task and Leave Edit Mode</Button>
             ) : null}
         </div>
     );

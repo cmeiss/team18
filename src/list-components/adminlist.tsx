@@ -17,15 +17,32 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
     const NewTasks = tasks.filter((task: Task): boolean =>
         task.numUsers < 2 ? true : false
     );
-    const [{ isOver /*, canDrop*/ }, drop] = useDrop({
+    const [{ isOver /*, canDrop */ }, drop] = useDrop({
         accept: "task",
-        drop: (item: Task) => setTasks(addTask(item, NewTasks)),
-        //canDrop: (item: Task) => (item.numUsers < 2 ? true : false),
+        drop: (item: Task) => addTaskToAdminList(item.id),
+        canDrop: (item: Task) => canAddtoAdmin(item.id),
         collect: (monitor) => ({
-            isOver: !!monitor.isOver()
-            //canDrop: !!monitor.canDrop()
+            isOver: !!monitor.isOver(),
+            canDrop: !!monitor.canDrop()
         })
     });
+
+    function addTaskToAdminList(id: number): void {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        if (droppedTask) {
+            setTasks(addTask(droppedTask, tasks));
+        }
+    }
+
+    function canAddtoAdmin(id: number): boolean {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        return droppedTask ? droppedTask.numUsers < 2 : false;
+    }
+
     if (role === "Admin") {
         return (
             <div

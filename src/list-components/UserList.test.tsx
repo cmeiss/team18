@@ -42,19 +42,36 @@ const TaskList = [
 
 const tasks = TaskList;
 
-//this function does nothing and exists only to be able to call the component
+//these functions do nothing and exist only to be able to call the component
 function setTasks(newTasks: Task[]) {
     newTasks;
+}
+
+function setUsers(newUsers: User[]) {
+    newUsers;
+}
+
+function setUser(newUser: User) {
+    newUser;
 }
 
 const User1: User = { name: "user1", userList: TaskList };
 const User2: User = { name: "Super", userList: TaskList };
 const User3: User = { name: "Admin", userList: TaskList };
 
+const users = [User1, User2, User3];
+
 describe("Testing User List", () => {
     beforeEach(() => {
         render(
-            <UserList tasks={tasks} setTasks={setTasks} user={User1}></UserList>
+            <UserList
+                users={users}
+                setUsers={setUsers}
+                tasks={tasks}
+                setTasks={setTasks}
+                user={User1}
+                setUser={setUser}
+            ></UserList>
         );
     });
     test("User name is displayed", () => {
@@ -76,7 +93,14 @@ describe("Testing User List", () => {
 describe("Testing that user list is not displayed if role is super", () => {
     test("test for empty DOM element", () => {
         const { container } = render(
-            <UserList tasks={tasks} setTasks={setTasks} user={User2}></UserList>
+            <UserList
+                users={users}
+                setUsers={setUsers}
+                tasks={tasks}
+                setTasks={setTasks}
+                user={User2}
+                setUser={setUser}
+            ></UserList>
         );
         expect(container).toBeEmptyDOMElement();
     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is super
@@ -85,7 +109,14 @@ describe("Testing that user list is not displayed if role is super", () => {
 describe("Testing that user list is not displayed if role is admin", () => {
     test("test for empty DOM element", () => {
         const { container } = render(
-            <UserList tasks={tasks} setTasks={setTasks} user={User3}></UserList>
+            <UserList
+                users={users}
+                setUsers={setUsers}
+                tasks={tasks}
+                setTasks={setTasks}
+                user={User3}
+                setUser={setUser}
+            ></UserList>
         );
         expect(container).toBeEmptyDOMElement();
     }); //this test is not passing, I need to make a change in userList so that the component returns null if role is admin

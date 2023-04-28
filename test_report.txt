@@ -351,6 +351,48 @@ FAIL src/TaskFunctions.test.ts
 
       at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
 
+FAIL src/list-components/UserList.test.tsx
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      4 | import { EditTask } from "../editing-components/EditTask";
+      5 | import "./DisplayTask.css";
+    > 6 | import { useDrag } from "react-dnd";
+        | ^
+      7 |
+      8 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
+      9 | // export interface displayProps {
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
+      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
+
 FAIL src/list-components/CentralItemList.test.tsx
   ● Test suite failed to run
 
@@ -889,48 +931,6 @@ FAIL src/list-components/ModifyUsers.test.tsx
       77 |         //all of App. we will come back to this later
 
       at Object.<anonymous> (src/list-components/ModifyUsers.test.tsx:74:45)
-
-FAIL src/list-components/UserList.test.tsx
-  ● Test suite failed to run
-
-    Jest encountered an unexpected token
-
-    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
-
-    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
-
-    By default "node_modules" folder is ignored by transformers.
-
-    Here's what you can do:
-     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
-     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
-     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
-     • If you need a custom transformation specify a "transform" option in your config.
-     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
-
-    You'll find more details and examples of these config options in the docs:
-    https://jestjs.io/docs/configuration
-    For information about custom transformations, see:
-    https://jestjs.io/docs/code-transformation
-
-    Details:
-
-    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
-    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
-                                                                                      ^^^^^^
-
-    SyntaxError: Unexpected token 'export'
-
-      4 | import { EditTask } from "../editing-components/EditTask";
-      5 | import "./DisplayTask.css";
-    > 6 | import { useDrag } from "react-dnd";
-        | ^
-      7 |
-      8 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
-      9 | // export interface displayProps {
-
-      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
-      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
 
 FAIL src/list-components/deleteTak.test.tsx
   ● Console
@@ -2142,9 +2142,9 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   22.74 |    23.43 |    23.3 |   23.07 |                   
+All files                  |   21.52 |    22.05 |   22.01 |   21.81 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
-  App.tsx                  |       0 |        0 |       0 |       0 | 17-40             
+  App.tsx                  |       0 |        0 |       0 |       0 | 17-55             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
@@ -2158,12 +2158,12 @@ All files                  |   22.74 |    23.43 |    23.3 |   23.07 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   19.29 |    23.91 |    12.9 |   19.29 |                   
+ src/list-components       |   17.46 |       22 |   11.76 |   17.46 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-73             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
-  UserList.tsx             |       0 |        0 |       0 |       0 | 17-49             
+  UserList.tsx             |       0 |        0 |       0 |       0 | 28-98             
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
   adminListTest.tsx        |       0 |        0 |       0 |       0 | 6-106             
   adminlist.tsx            |       0 |        0 |       0 |       0 | 17-70             
@@ -2173,5 +2173,5 @@ All files                  |   22.74 |    23.43 |    23.3 |   23.07 |
 Test Suites: 9 failed, 9 total
 Tests:       23 failed, 6 passed, 29 total
 Snapshots:   0 total
-Time:        7.652 s
+Time:        7.955 s
 Ran all test suites.

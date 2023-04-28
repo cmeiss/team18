@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 //import { Button } from "react-bootstrap";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
 import "./adminList.css";
+import { Button } from "react-bootstrap";
+import { filter_by_alphabetical_order } from "./filterlists";
+import { filter_by_difficulty } from "./filterlists";
+import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
 import { addTask } from "../TaskFunctions";
 
@@ -17,6 +21,19 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
     const NewTasks = tasks.filter((task: Task): boolean =>
         task.numUsers < 2 ? true : false
     );
+    function sort(
+        type_of_sort: string,
+        tasks: Task[],
+        setTasks: (newTasks: Task[]) => void
+    ): void {
+        if (type_of_sort == "alphabet") {
+            setTasks(filter_by_alphabetical_order(tasks));
+        } else if (type_of_sort == "time") {
+            setTasks(filter_by_time_needed(tasks));
+        } else if (type_of_sort == "difficulty") {
+            setTasks(filter_by_difficulty(tasks));
+        }
+    }
     const [{ isOver /*, canDrop */ }, drop] = useDrop({
         accept: "task",
         drop: (item: Task) => addTaskToAdminList(item.id),
@@ -64,6 +81,16 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
                         ></DisplayTask>
                     ))}
                 </div>
+
+                <Button onClick={() => sort("alphabet", tasks, setTasks)}>
+                    Sort by Alphabetical Order{" "}
+                </Button>
+                <Button onClick={() => sort("difficulty", tasks, setTasks)}>
+                    Sort By Difficulty{" "}
+                </Button>
+                <Button onClick={() => sort("time", tasks, setTasks)}>
+                    Sort By Time Needed{" "}
+                </Button>
             </div>
         );
     } else {

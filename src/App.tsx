@@ -14,7 +14,22 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App(): JSX.Element {
-    const [role, setRole] = useState<User>({ name: "User1", userList: TASKS }); //I set this intial user to make the user list display something
+    const [role, setRole] = useState<User>({
+        name: "User1",
+        userList: [
+            {
+                id: 0,
+                name: "do Homework",
+                description: "description",
+                status: false,
+                image: "picture",
+                steps: ["Class 1", "Class 2"],
+                difficulty: 0,
+                numUsers: 2,
+                time: 1800
+            }
+        ]
+    }); //I set this intial user to make the user list display something
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
@@ -85,8 +100,11 @@ function App(): JSX.Element {
                 <div>
                     <UserList
                         user={role}
+                        setUser={setRole}
+                        users={roles}
                         tasks={tasks}
                         setTasks={updateTasks}
+                        setUsers={setRoles}
                     ></UserList>
                 </div>
                 <div className="central">

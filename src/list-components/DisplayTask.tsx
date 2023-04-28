@@ -30,11 +30,12 @@ export function DisplayTask(display: displayProps): JSX.Element {
     const [done, setDone] = useState<boolean>(display.task.status);
     const [{ isDragging }, drag] = useDrag({
         type: "task",
-        item: { id: display.task.time },
+        item: { id: display.task.id },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
         })
     });
+
     return (
         <div
             ref={drag}

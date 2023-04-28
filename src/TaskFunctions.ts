@@ -4,6 +4,7 @@ import { Task } from "./interfaces/task";
 Create a task
 */
 export function makeTask(
+    id: number,
     name: string,
     desc: string,
     stat: boolean,
@@ -14,6 +15,7 @@ export function makeTask(
     time: number
 ): Task {
     const task: Task = {
+        id: id,
         name: name,
         description: desc,
         status: stat,
@@ -48,9 +50,9 @@ Ids for each task would work better just in case tasks would have the same name.
 So this may need amendment later on.
 */
 export function delTask(task: Task, tasks: Task[]) {
-    const taskToRemove = task.name;
+    const taskToRemove = task.id;
     const newTasks = tasks.filter(
-        (task: Task): boolean => task.name !== taskToRemove
+        (task: Task): boolean => task.id !== taskToRemove
     );
     return newTasks;
 }

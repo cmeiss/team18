@@ -4,6 +4,7 @@ import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
 
 const testTask = {
+    id: 0,
     name: "test",
     description: "this is the description",
     status: false,
@@ -16,6 +17,7 @@ const testTask = {
 
 const TaskList = [
     {
+        id: 1,
         name: "test1",
         description: "description a",
         status: false,
@@ -26,6 +28,7 @@ const TaskList = [
         time: 1345
     },
     {
+        id: 2,
         name: "test2",
         description: "this is the description",
         status: false,
@@ -36,6 +39,7 @@ const TaskList = [
         time: 1345
     },
     {
+        id: 3,
         name: "test3",
         description: "a good description",
         status: false,

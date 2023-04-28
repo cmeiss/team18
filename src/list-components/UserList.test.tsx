@@ -6,6 +6,7 @@ import { Task } from "../interfaces/task";
 
 const TaskList = [
     {
+        id: 0,
         name: "test1",
         description: "description a",
         status: false,
@@ -16,6 +17,7 @@ const TaskList = [
         time: 1345
     },
     {
+        id: 1,
         name: "test2",
         description: "this is the description",
         status: false,
@@ -26,6 +28,7 @@ const TaskList = [
         time: 1345
     },
     {
+        id: 2,
         name: "test3",
         description: "a good description",
         status: false,

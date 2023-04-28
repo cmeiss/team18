@@ -13,14 +13,25 @@ interface UserProps {
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export function UserList(user: UserProps): JSX.Element {
+export function UserList({ user, tasks, setTasks }: UserProps): JSX.Element {
     const [{ isOver }, drop] = useDrop({
         accept: "task",
-        drop: (item: Task) => user.setTasks(addTask(item, user.tasks)),
+        drop: (item: Task) => addTaskToUserList(item.id),
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
     });
+
+    function addTaskToUserList(id: number) {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        console.log({ ...droppedTask });
+        console.log("dropping task");
+        if (droppedTask) {
+            setTasks(addTask(droppedTask, tasks));
+        }
+    }
     return (
         <div
             ref={drop}
@@ -29,24 +40,24 @@ export function UserList(user: UserProps): JSX.Element {
                 backgroundColor: isOver ? "MediumSeaGreen" : "white"
             }}
         >
-            {user.user.name === "Super" || user.user.name === "Admin" ? (
+            {user.name === "Super" || user.name === "Admin" ? (
                 <div></div>
             ) : (
                 <div className="userList">
-                    <h3>{user.user.name}s List:</h3>
-                    {user.tasks.map((TASK: Task, index: number) => (
+                    <h3>{user.name}s List:</h3>
+                    {tasks.map((TASK: Task, index: number) => (
                         <DisplayTask
                             key={index}
                             task={TASK}
-                            tasks={user.tasks}
-                            updateTasks={user.setTasks}
-                            role={user.user.name}
+                            tasks={tasks}
+                            updateTasks={setTasks}
+                            role={user.name}
                         ></DisplayTask>
                     ))}
                 </div>
             )}
             {console.log("userList")}
-            {console.log(...user.tasks)}
+            {console.log(...tasks)}
         </div>
     );
 }

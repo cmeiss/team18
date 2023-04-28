@@ -6,6 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 //basic tasks and task lists to test
 const TASK1: Task = {
+    id: 0,
     name: "task1",
     description: "description",
     status: false,
@@ -17,6 +18,7 @@ const TASK1: Task = {
 };
 
 const TASK2: Task = {
+    id: 1,
     name: "task2",
     description: "description",
     status: false,

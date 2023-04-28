@@ -7,6 +7,8 @@ import { Button } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
+import { useDrop } from "react-dnd";
+import { addTask } from "../TaskFunctions";
 
 interface AdminItemProps {
     tasks: Task[];
@@ -32,9 +34,41 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
             setTasks(filter_by_difficulty(tasks));
         }
     }
+    const [{ isOver /*, canDrop */ }, drop] = useDrop({
+        accept: "task",
+        drop: (item: Task) => addTaskToAdminList(item.id),
+        canDrop: (item: Task) => canAddtoAdmin(item.id),
+        collect: (monitor) => ({
+            isOver: !!monitor.isOver(),
+            canDrop: !!monitor.canDrop()
+        })
+    });
+
+    function addTaskToAdminList(id: number): void {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        if (droppedTask) {
+            setTasks(addTask(droppedTask, tasks));
+        }
+    }
+
+    function canAddtoAdmin(id: number): boolean {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        return droppedTask ? droppedTask.numUsers < 2 : false;
+    }
+
     if (role === "Admin") {
         return (
-            <div className="AdminList">
+            <div
+                className="AdminList"
+                ref={drop}
+                style={{
+                    backgroundColor: isOver ? "MediumSeaGreen" : "white"
+                }}
+            >
                 <div className="Admin">
                     <span> Admin List </span>
                     {NewTasks.map((TASK: Task, index: number) => (

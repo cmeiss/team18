@@ -1,8 +1,11 @@
+/* eslint-disable indent */
 import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import { Button } from "react-bootstrap";
 import { makeTask } from "../TaskFunctions";
 import { EditTime } from "./EditTime";
+import { EditDifficulty } from "./edit-difficulty";
+import { EditDescription } from "./EditDescription";
 
 interface editProps {
     tasks: Task[];
@@ -16,12 +19,13 @@ export function EditTask(edit: editProps): JSX.Element {
         /* all attribute state needs a setter function too, but it gave me linting errors to do so in  advance
         we need to add the functions whenever we connect a new editing component*/
     }
+    const [id] = useState<number>(edit.task.id);
     const [name] = useState<string>(edit.task.name);
-    const [desc] = useState<string>(edit.task.description);
+    const [desc, setDesc] = useState<string>(edit.task.description);
     const [status] = useState<boolean>(edit.task.status);
     const [img] = useState<string>(edit.task.image);
     const [steps] = useState<string[]>(edit.task.steps);
-    const [diff] = useState<number>(edit.task.difficulty);
+    const [diff, setDifficulty] = useState<number>(edit.task.difficulty);
     const [numUsers] = useState<number>(edit.task.numUsers);
     const [time, setTime] = useState<number>(edit.task.time);
     const [visible, setVisible] = useState<boolean>(false);
@@ -31,6 +35,7 @@ export function EditTask(edit: editProps): JSX.Element {
     //function to change the tasks, produces a copy of the old array, then changes the edited task
     function changeTasks(
         tasks: Task[],
+        id: number,
         name: string,
         desc: string,
         stat: boolean,
@@ -43,15 +48,35 @@ export function EditTask(edit: editProps): JSX.Element {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(
             copy.map((TASK: Task) =>
-                TASK.name === name
-                    ? makeTask(name, desc, stat, img, steps, diff, num, time)
+                TASK.id === id
+                    ? makeTask(
+                          id,
+                          name,
+                          desc,
+                          stat,
+                          img,
+                          steps,
+                          diff,
+                          num,
+                          time
+                      )
                     : { ...TASK, steps: [...TASK.steps] }
             )
         );
         console.log(
             tasks.map((TASK: Task) =>
-                TASK.name === name
-                    ? makeTask(name, desc, stat, img, steps, diff, num, time)
+                TASK.id === id
+                    ? makeTask(
+                          id,
+                          name,
+                          desc,
+                          stat,
+                          img,
+                          steps,
+                          diff,
+                          num,
+                          time
+                      )
                     : { ...TASK, steps: [...TASK.steps] }
             )
         );
@@ -72,12 +97,21 @@ export function EditTask(edit: editProps): JSX.Element {
             </Button>
             {!visible ? null : (
                 <div>
+                    <EditDescription
+                        description={desc}
+                        setDescription={setDesc}
+                    ></EditDescription>
                     <EditTime time={time} setTime={setTime}></EditTime>
+                    <EditDifficulty
+                        diff={diff}
+                        setDifficulty={setDifficulty}
+                    ></EditDifficulty>
                     <div>
                         <Button
                             onClick={() =>
                                 changeTasks(
                                     edit.tasks,
+                                    id,
                                     name,
                                     desc,
                                     status,

@@ -2,8 +2,398 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/TaskFunctions.test.ts
+FAIL src/TaskFunctions.test.ts
+  ● Testing the task functions › Testing the makeTask function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the delTask function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setSteps function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setDifficultly function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setNumUsers function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setTime function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setName function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setDiscription function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setStatus function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskarr ind 1",
+        "difficulty": 1,
+    -   "id": 0,
+    +   "id": 3,
+        "image": "dog",
+        "name": "test2",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      255 |             time: 0
+      256 |         });
+    > 257 |         expect(setStatus(false, TASK2)).toEqual({
+          |                                         ^
+      258 |             id: 0,
+      259 |             name: "test2",
+      260 |             description: "taskarr ind 1",
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:257:41)
+
+  ● Testing the task functions › Testing the setStatus function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the setImage function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
+  ● Testing the task functions › Testing the addTask function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "status": false,
+        "steps": Array [
+
+      306 |     });
+      307 |     afterEach(() => {
+    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      311 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+
 FAIL src/list-components/CentralItemList.test.tsx
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      4 | import { EditTask } from "../editing-components/EditTask";
+      5 | import "./DisplayTask.css";
+    > 6 | import { useDrag } from "react-dnd";
+        | ^
+      7 |
+      8 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
+      9 | // export interface displayProps {
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
+      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
+
+FAIL src/list-components/DisplayTask.test.tsx
   ● Test suite failed to run
 
     Jest encountered an unexpected token
@@ -500,48 +890,6 @@ FAIL src/list-components/ModifyUsers.test.tsx
 
       at Object.<anonymous> (src/list-components/ModifyUsers.test.tsx:74:45)
 
-FAIL src/list-components/DisplayTask.test.tsx
-  ● Test suite failed to run
-
-    Jest encountered an unexpected token
-
-    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
-
-    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
-
-    By default "node_modules" folder is ignored by transformers.
-
-    Here's what you can do:
-     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
-     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
-     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
-     • If you need a custom transformation specify a "transform" option in your config.
-     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
-
-    You'll find more details and examples of these config options in the docs:
-    https://jestjs.io/docs/configuration
-    For information about custom transformations, see:
-    https://jestjs.io/docs/code-transformation
-
-    Details:
-
-    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
-    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
-                                                                                      ^^^^^^
-
-    SyntaxError: Unexpected token 'export'
-
-      4 | import { EditTask } from "../editing-components/EditTask";
-      5 | import "./DisplayTask.css";
-    > 6 | import { useDrag } from "react-dnd";
-        | ^
-      7 |
-      8 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
-      9 | // export interface displayProps {
-
-      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
-      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
-
 FAIL src/list-components/UserList.test.tsx
   ● Test suite failed to run
 
@@ -590,13 +938,13 @@ FAIL src/list-components/deleteTak.test.tsx
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      46 | describe("Delete task tests", () => {
-      47 |     beforeEach(() =>
-    > 48 |         render(
+      48 | describe("Delete task tests", () => {
+      49 |     beforeEach(() =>
+    > 50 |         render(
          |         ^
-      49 |             <DeleteTask
-      50 |                 item={TASK1}
-      51 |                 tasks={TASKLIST1}
+      51 |             <DeleteTask
+      52 |                 item={TASK1}
+      53 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -604,18 +952,18 @@ FAIL src/list-components/deleteTak.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:48:9)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:50:9)
 
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      46 | describe("Delete task tests", () => {
-      47 |     beforeEach(() =>
-    > 48 |         render(
+      48 | describe("Delete task tests", () => {
+      49 |     beforeEach(() =>
+    > 50 |         render(
          |         ^
-      49 |             <DeleteTask
-      50 |                 item={TASK1}
-      51 |                 tasks={TASKLIST1}
+      51 |             <DeleteTask
+      52 |                 item={TASK1}
+      53 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -623,18 +971,18 @@ FAIL src/list-components/deleteTak.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:48:9)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:50:9)
 
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      46 | describe("Delete task tests", () => {
-      47 |     beforeEach(() =>
-    > 48 |         render(
+      48 | describe("Delete task tests", () => {
+      49 |     beforeEach(() =>
+    > 50 |         render(
          |         ^
-      49 |             <DeleteTask
-      50 |                 item={TASK1}
-      51 |                 tasks={TASKLIST1}
+      51 |             <DeleteTask
+      52 |                 item={TASK1}
+      53 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -642,7 +990,7 @@ FAIL src/list-components/deleteTak.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:48:9)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:50:9)
 
   ● Delete task tests › There is a switch
 
@@ -683,19 +1031,19 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      59 |     );
-      60 |     test("There is a switch", () => {
-    > 61 |         const switchButton = screen.getByRole("switch");
+      61 |     );
+      62 |     test("There is a switch", () => {
+    > 63 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      62 |         expect(switchButton).toBeInTheDocument();
-      63 |     });
-      64 |     test("On switch click, there is a textbox and buttons: ", () => {
+      64 |         expect(switchButton).toBeInTheDocument();
+      65 |     });
+      66 |     test("On switch click, there is a textbox and buttons: ", () => {
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:61:37)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:63:37)
 
   ● Delete task tests › On switch click, there is a textbox and buttons: 
 
@@ -736,19 +1084,19 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      63 |     });
-      64 |     test("On switch click, there is a textbox and buttons: ", () => {
-    > 65 |         const switchButton = screen.getByRole("switch");
+      65 |     });
+      66 |     test("On switch click, there is a textbox and buttons: ", () => {
+    > 67 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      66 |         switchButton.click();
-      67 |         const deltask1 = screen.getByRole("button", {
-      68 |             name: /Delete Task and Leave Edit Mode/i
+      68 |         switchButton.click();
+      69 |         const deltask1 = screen.getByRole("button", {
+      70 |             name: /Delete Task and Leave Edit Mode/i
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:65:37)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:67:37)
 
   ● Delete task tests › Clicking delete task deletes from the list and leaves edit mode
 
@@ -789,19 +1137,238 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      73 |
-      74 |     test("Clicking delete task deletes from the list and leaves edit mode", () => {
-    > 75 |         const switchButton = screen.getByRole("switch");
+      75 |
+      76 |     test("Clicking delete task deletes from the list and leaves edit mode", () => {
+    > 77 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      76 |         switchButton.click();
-      77 |         const delTask = screen.getByRole("button", {
-      78 |             name: /Delete Task and Leave Edit Mode/i
+      78 |         switchButton.click();
+      79 |         const delTask = screen.getByRole("button", {
+      80 |             name: /Delete Task and Leave Edit Mode/i
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:75:37)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:77:37)
+
+FAIL src/list-components/addTask.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      35 | describe("Add tasks tests", () => {
+      36 |     beforeEach(() =>
+    > 37 |         render(
+         |         ^
+      38 |             <AddTask
+      39 |                 item={TASK1}
+      40 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:37:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      35 | describe("Add tasks tests", () => {
+      36 |     beforeEach(() =>
+    > 37 |         render(
+         |         ^
+      38 |             <AddTask
+      39 |                 item={TASK1}
+      40 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:37:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      35 | describe("Add tasks tests", () => {
+      36 |     beforeEach(() =>
+    > 37 |         render(
+         |         ^
+      38 |             <AddTask
+      39 |                 item={TASK1}
+      40 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:37:9)
+
+  ● Add tasks tests › There is a switch
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
+
+    Here are the accessible roles:
+
+      checkbox:
+
+      Name "":
+      [36m<input[39m
+        [33mclass[39m=[32m"form-check-input"[39m
+        [33mid[39m=[32m"editMode"[39m
+        [33mtype[39m=[32m"checkbox"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"form-check form-switch"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-check-input"[39m
+              [33mid[39m=[32m"editMode"[39m
+              [33mtype[39m=[32m"checkbox"[39m
+            [36m/>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-check-label"[39m
+              [33mfor[39m=[32m"editMode"[39m
+              [33mtitle[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      48 |     );
+      49 |     test("There is a switch", () => {
+    > 50 |         const switchButton = screen.getByRole("switch");
+         |                                     ^
+      51 |         expect(switchButton).toBeInTheDocument();
+      52 |     });
+      53 |     test("On switch click, there is a textbox and buttons: ", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:50:37)
+
+  ● Add tasks tests › On switch click, there is a textbox and buttons: 
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
+
+    Here are the accessible roles:
+
+      checkbox:
+
+      Name "":
+      [36m<input[39m
+        [33mclass[39m=[32m"form-check-input"[39m
+        [33mid[39m=[32m"editMode"[39m
+        [33mtype[39m=[32m"checkbox"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"form-check form-switch"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-check-input"[39m
+              [33mid[39m=[32m"editMode"[39m
+              [33mtype[39m=[32m"checkbox"[39m
+            [36m/>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-check-label"[39m
+              [33mfor[39m=[32m"editMode"[39m
+              [33mtitle[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      52 |     });
+      53 |     test("On switch click, there is a textbox and buttons: ", () => {
+    > 54 |         const switchButton = screen.getByRole("switch");
+         |                                     ^
+      55 |         switchButton.click();
+      56 |         const addTask = screen.getByRole("button", {
+      57 |             name: /Add Task and Leave Edit Mode/i
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:54:37)
+
+  ● Add tasks tests › Clicking add task adds a task and leaves edit mode
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
+
+    Here are the accessible roles:
+
+      checkbox:
+
+      Name "":
+      [36m<input[39m
+        [33mclass[39m=[32m"form-check-input"[39m
+        [33mid[39m=[32m"editMode"[39m
+        [33mtype[39m=[32m"checkbox"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"form-check form-switch"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-check-input"[39m
+              [33mid[39m=[32m"editMode"[39m
+              [33mtype[39m=[32m"checkbox"[39m
+            [36m/>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-check-label"[39m
+              [33mfor[39m=[32m"editMode"[39m
+              [33mtitle[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      62 |     test("Clicking add task adds a task and leaves edit mode", () => {
+      63 |         // setting up the scenario
+    > 64 |         const switchButton = screen.getByRole("switch");
+         |                                     ^
+      65 |         switchButton.click();
+      66 |         const addTask = screen.getByRole("button", {
+      67 |             name: /Add Task and Leave Edit Mode/i
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:64:37)
 
 FAIL src/list-components/dist/addTask.test.js
   ● Add tasks tests › There is a switch
@@ -845,225 +1412,6 @@ FAIL src/list-components/dist/addTask.test.js
       35 |     });
 
       at Object.<anonymous> (src/list-components/dist/addTask.test.js:32:50)
-
-FAIL src/list-components/addTask.test.tsx
-  ● Console
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      33 | describe("Add tasks tests", () => {
-      34 |     beforeEach(() =>
-    > 35 |         render(
-         |         ^
-      36 |             <AddTask
-      37 |                 item={TASK1}
-      38 |                 tasks={TASKLIST1}
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:35:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      33 | describe("Add tasks tests", () => {
-      34 |     beforeEach(() =>
-    > 35 |         render(
-         |         ^
-      36 |             <AddTask
-      37 |                 item={TASK1}
-      38 |                 tasks={TASKLIST1}
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:35:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      33 | describe("Add tasks tests", () => {
-      34 |     beforeEach(() =>
-    > 35 |         render(
-         |         ^
-      36 |             <AddTask
-      37 |                 item={TASK1}
-      38 |                 tasks={TASKLIST1}
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:35:9)
-
-  ● Add tasks tests › There is a switch
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
-
-    Here are the accessible roles:
-
-      checkbox:
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"editMode"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
-          [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
-            [36m/>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      46 |     );
-      47 |     test("There is a switch", () => {
-    > 48 |         const switchButton = screen.getByRole("switch");
-         |                                     ^
-      49 |         expect(switchButton).toBeInTheDocument();
-      50 |     });
-      51 |     test("On switch click, there is a textbox and buttons: ", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:48:37)
-
-  ● Add tasks tests › On switch click, there is a textbox and buttons: 
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
-
-    Here are the accessible roles:
-
-      checkbox:
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"editMode"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
-          [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
-            [36m/>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      50 |     });
-      51 |     test("On switch click, there is a textbox and buttons: ", () => {
-    > 52 |         const switchButton = screen.getByRole("switch");
-         |                                     ^
-      53 |         switchButton.click();
-      54 |         const addTask = screen.getByRole("button", {
-      55 |             name: /Add Task and Leave Edit Mode/i
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:52:37)
-
-  ● Add tasks tests › Clicking add task adds a task and leaves edit mode
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
-
-    Here are the accessible roles:
-
-      checkbox:
-
-      Name "":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"editMode"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
-          [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
-            [36m/>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      60 |     test("Clicking add task adds a task and leaves edit mode", () => {
-      61 |         // setting up the scenario
-    > 62 |         const switchButton = screen.getByRole("switch");
-         |                                     ^
-      63 |         switchButton.click();
-      64 |         const addTask = screen.getByRole("button", {
-      65 |             name: /Add Task and Leave Edit Mode/i
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:62:37)
 
 FAIL src/editing-components/EditTime.test.tsx
   ● Console
@@ -1794,36 +2142,36 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   24.22 |    25.86 |   25.26 |    24.6 |                   
+All files                  |   22.74 |    23.43 |    23.3 |   23.07 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 17-40             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
-  user-functions.ts        |       0 |      100 |       0 |       0 | 7-58              
-  user-tests.tsx           |       0 |      100 |       0 |       0 | 6-57              
- src/editing-components    |   26.31 |    28.57 |      20 |   27.02 |                   
+  user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
+  user-tests.tsx           |       0 |      100 |       0 |       0 | 6-60              
+ src/editing-components    |   25.64 |    28.57 |      20 |   26.31 |                   
   EditDescription.tsx      |       0 |      100 |       0 |       0 | 14-17             
-  EditTask.tsx             |       0 |        0 |       0 |       0 | 21-89             
+  EditTask.tsx             |       0 |        0 |       0 |       0 | 22-112            
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
   Times.tsx                |     100 |      100 |     100 |     100 |                   
   edit-difficulty.tsx      |       0 |      100 |       0 |       0 | 11-14             
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   21.42 |     27.5 |   14.81 |   21.42 |                   
+ src/list-components       |   19.29 |    23.91 |    12.9 |   19.29 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
-  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-72             
+  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-73             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
-  UserList.tsx             |       0 |        0 |       0 |       0 | 17-38             
-  addTask.tsx              |   47.61 |       50 |    9.09 |   47.61 | 28-78             
-  adminListTest.tsx        |       0 |        0 |       0 |       0 | 6-104             
-  adminlist.tsx            |       0 |        0 |       0 |       0 | 17-53             
+  UserList.tsx             |       0 |        0 |       0 |       0 | 17-49             
+  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
+  adminListTest.tsx        |       0 |        0 |       0 |       0 | 6-106             
+  adminlist.tsx            |       0 |        0 |       0 |       0 | 17-70             
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
   filterlists.tsx          |       0 |        0 |       0 |       0 |                   
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 8 failed, 1 passed, 9 total
-Tests:       12 failed, 17 passed, 29 total
+Test Suites: 9 failed, 9 total
+Tests:       23 failed, 6 passed, 29 total
 Snapshots:   0 total
-Time:        11.005 s
+Time:        7.652 s
 Ran all test suites.

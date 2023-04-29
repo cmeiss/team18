@@ -32,8 +32,9 @@ export function deleteTask(user: User, task: Task): Task[] {
 /**
  * addTask function, adds a task fto the userList
  */
-export function makeTask(
+export function addTasktoUserList(
     user: User,
+    id: number,
     name: string,
     desc: string,
     stat: boolean,
@@ -44,6 +45,7 @@ export function makeTask(
     time: number
 ): Task[] {
     const task: Task = {
+        id: id,
         name: name,
         description: desc,
         status: stat,

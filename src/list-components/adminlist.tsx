@@ -54,7 +54,7 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
                 <Button onClick={() => sort("difficulty", tasks, setTasks)}>
                     Sort By Difficulty{" "}
                 </Button>
-                <Button onClick={() => sort("time", tasks, setTasks)}>
+                <Button onClick={() => sort("time", tas)}>
                     Sort By Time Needed{" "}
                 </Button>
             </div>

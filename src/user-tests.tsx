@@ -4,6 +4,7 @@ import { makeUser, deleteUser } from "./user-functions";
 
 //creating basic tasks to use in userList attribute of users
 export const TASK1: Task = {
+    id: 0,
     name: "task1",
     description: "test task",
     status: false,
@@ -14,6 +15,7 @@ export const TASK1: Task = {
     time: 2
 };
 export const TASK2: Task = {
+    id: 1,
     name: "task2",
     description: "test task",
     status: false,
@@ -24,6 +26,7 @@ export const TASK2: Task = {
     time: 0
 };
 export const TASK3: Task = {
+    id: 2,
     name: "task3",
     description: "test task",
     status: false,

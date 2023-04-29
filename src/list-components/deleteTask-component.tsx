@@ -3,13 +3,13 @@ import { Task } from "../interfaces/task";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
-interface delTaskProp {
+export interface delTaskProp {
     tasks: Task[];
     item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 
-export function deleteTask(taskProps: delTaskProp): JSX.Element {
+export function DeleteTask(taskProps: delTaskProp): JSX.Element {
     const [editMode, seteditmode] = useState<boolean>(false);
     const [deltask, setDelTask] = useState<string>("");
 

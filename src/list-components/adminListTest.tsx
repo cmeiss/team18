@@ -4,6 +4,7 @@ import { AdminList } from "./adminlist";
 import { Task } from "../interfaces/task";
 
 const TASK2 = {
+    id: 0,
     name: "task 2",
     description: "description",
     status: false,
@@ -15,6 +16,7 @@ const TASK2 = {
 };
 
 const TASK3 = {
+    id: 1,
     name: "task 3",
     description: "description",
     status: false,

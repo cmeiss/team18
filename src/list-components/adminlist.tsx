@@ -7,6 +7,11 @@ import { Button } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
+<<<<<<< HEAD
+=======
+import { useDrop } from "react-dnd";
+import { addTask } from "../TaskFunctions";
+>>>>>>> fcb2b7965f6af26407232309eccdc56a46366034
 
 interface AdminItemProps {
     tasks: Task[];
@@ -32,6 +37,35 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
             setTasks(filter_by_difficulty(tasks));
         }
     }
+<<<<<<< HEAD
+=======
+    const [{ isOver /*, canDrop */ }, drop] = useDrop({
+        accept: "task",
+        drop: (item: Task) => addTaskToAdminList(item.id),
+        canDrop: (item: Task) => canAddtoAdmin(item.id),
+        collect: (monitor) => ({
+            isOver: !!monitor.isOver(),
+            canDrop: !!monitor.canDrop()
+        })
+    });
+
+    function addTaskToAdminList(id: number): void {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        if (droppedTask) {
+            setTasks(addTask(droppedTask, tasks));
+        }
+    }
+
+    function canAddtoAdmin(id: number): boolean {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        return droppedTask ? droppedTask.numUsers < 2 : false;
+    }
+
+>>>>>>> fcb2b7965f6af26407232309eccdc56a46366034
     if (role === "Admin") {
         return (
             <div className="AdminList">

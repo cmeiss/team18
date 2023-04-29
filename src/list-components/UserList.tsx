@@ -5,22 +5,12 @@ import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
 import "./UserList.css";
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fcb2b7965f6af26407232309eccdc56a46366034
 import { Button } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
-<<<<<<< HEAD
-=======
 import { useDrop } from "react-dnd";
 import { addTask } from "../TaskFunctions";
->>>>>>> 743b011128bfaa3e2211e081da964356c58f5e6e
-=======
-import { useDrop } from "react-dnd";
-import { addTask } from "../TaskFunctions";
->>>>>>> fcb2b7965f6af26407232309eccdc56a46366034
 
 interface UserProps {
     user: User;
@@ -32,10 +22,6 @@ interface UserProps {
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fcb2b7965f6af26407232309eccdc56a46366034
 export function UserList(user: UserProps): JSX.Element {
     function sort(
         type_of_sort: string,
@@ -49,11 +35,7 @@ export function UserList(user: UserProps): JSX.Element {
         } else if (type_of_sort == "difficulty") {
             setTasks(filter_by_difficulty(tasks));
         }
-    }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fcb2b7965f6af26407232309eccdc56a46366034
+
 export function UserList({
     user,
     setUser,
@@ -118,10 +100,7 @@ export function UserList({
         return newRoles;
     }
 
-<<<<<<< HEAD
 >>>>>>> 743b011128bfaa3e2211e081da964356c58f5e6e
-=======
->>>>>>> fcb2b7965f6af26407232309eccdc56a46366034
     return (
         <div
             ref={drop}

@@ -58,11 +58,14 @@ export function UserList({
         console.log({ ...droppedTask });
         console.log("dropping task");
         if (droppedTask) {
+            //updating the Role state and add the new task to the currently displayed user list
             setUser({
                 name: user.name,
                 userList: addTask(droppedTask, user.userList)
             });
+            //updating the UserList in the Roles state to keep the correct user list after role changes
             setUsers(updateUserTasks(addTask(droppedTask, user.userList)));
+            //updating the number of Users of the dropped task in the central item list
             changeTasks(tasks, droppedTask.id);
         }
     }
@@ -100,6 +103,7 @@ export function UserList({
         return newRoles;
     }
 
+    //this function increments the numberOfUsers of the task with the passed in ID
     function changeTasks(tasks: Task[], id: number) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         const currentNumUsers = tasks.find((T: Task) =>
@@ -109,8 +113,6 @@ export function UserList({
         if (currentNumUsers) {
             newNumUsers = currentNumUsers.numUsers + 1;
         }
-        console.log("new Num Users:");
-        console.log(newNumUsers);
         setTasks(
             copy.map((TASK: Task) =>
                 TASK.id === id

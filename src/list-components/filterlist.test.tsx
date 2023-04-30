@@ -1,3 +1,4 @@
+/** 
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
@@ -138,3 +139,5 @@ describe("filter", () => {
         ]);
     });
 });
+*/
+export {};

@@ -21,20 +21,6 @@ interface UserProps {
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export function UserList(user: UserProps): JSX.Element {
-    function sort(
-        type_of_sort: string,
-        tasks: Task[],
-        setTasks: (newTasks: Task[]) => void
-    ): void {
-        if (type_of_sort == "alphabet") {
-            setTasks(filter_by_alphabetical_order(tasks));
-        } else if (type_of_sort == "time") {
-            setTasks(filter_by_time_needed(tasks));
-        } else if (type_of_sort == "difficulty") {
-            setTasks(filter_by_difficulty(tasks));
-        }
-    }
 export function UserList({
     user,
     setUser,
@@ -99,6 +85,20 @@ export function UserList({
         return newRoles;
     }
 
+    function sort(
+        type_of_sort: string,
+        tasks: Task[],
+        setTasks: (newTasks: Task[]) => void
+    ): void {
+        if (type_of_sort == "alphabet") {
+            setTasks(filter_by_alphabetical_order(tasks));
+        } else if (type_of_sort == "time") {
+            setTasks(filter_by_time_needed(tasks));
+        } else if (type_of_sort == "difficulty") {
+            setTasks(filter_by_difficulty(tasks));
+        }
+    }
+
     return (
         <div
             ref={drop}
@@ -123,24 +123,16 @@ export function UserList({
                     ))}
                     <div>
                         <Button
-                            onClick={() =>
-                                sort("alphabet", user.tasks, user.setTasks)
-                            }
+                            onClick={() => sort("alphabet", tasks, setTasks)}
                         >
                             Sort by Alphabetical Order{" "}
                         </Button>
                         <Button
-                            onClick={() =>
-                                sort("difficulty", user.tasks, user.setTasks)
-                            }
+                            onClick={() => sort("difficulty", tasks, setTasks)}
                         >
                             Sort By Difficulty{" "}
                         </Button>
-                        <Button
-                            onClick={() =>
-                                sort("time", user.tasks, user.setTasks)
-                            }
-                        >
+                        <Button onClick={() => sort("time", tasks, setTasks)}>
                             Sort By Time Needed{" "}
                         </Button>
                     </div>

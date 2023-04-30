@@ -3,57 +3,57 @@ import { Task } from "./interfaces/task";
 export const TASKS: Task[] = [
     {
         id: 0,
-        name: "do Homework",
-        description: "description",
+        name: "Do Homework",
+        description: "Get it done before the deadline.",
         status: false,
         image: "picture",
         steps: ["Class 1", "Class 2"],
         difficulty: 0,
-        numUsers: 2,
+        numUsers: 0,
         time: 1800
     },
     {
         id: 1,
-        name: "get gas",
-        description: "description",
+        name: "Get gas",
+        description: "The car needs gas.",
         status: false,
         image: "picture",
         steps: ["a", "b", "c"],
         difficulty: 3,
-        numUsers: 1,
+        numUsers: 0,
         time: 1345
     },
     {
         id: 2,
-        name: "cook dinner",
-        description: "description",
+        name: "Cook dinner",
+        description: "It's time for a great meal!",
         status: false,
         image: "picture",
         steps: ["get ingredients", "find receipe", "cook", "clean"],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1745
     },
     {
         id: 3,
-        name: "get breakfast",
-        description: "description",
+        name: "Get breakfast",
+        description: "Enjoy your morning with your favorite breakfast food!",
         status: false,
         image: "picture",
         steps: ["order online", "pick up"],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 700
     },
     {
         id: 4,
-        name: "go to class",
-        description: "this is the description",
+        name: "Go to class",
+        description: "Attend you lectures to keep up in class.",
         status: false,
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -64,7 +64,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -75,7 +75,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -87,7 +87,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -99,7 +99,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -110,7 +110,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -121,7 +121,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -132,7 +132,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -143,7 +143,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -154,7 +154,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -165,7 +165,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -176,7 +176,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     },
     {
@@ -187,7 +187,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1130
     }
 ];

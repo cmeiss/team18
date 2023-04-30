@@ -78,7 +78,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
             <Row>
                 {/* The content of this row is only visible if role is super */}
                 <div>
-                    {display.role === "super" ? (
+                    {display.role === "Super" ? (
                         <div>Number of Users: {display.task.numUsers}</div>
                     ) : (
                         <div>{""}</div>

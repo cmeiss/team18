@@ -16,25 +16,13 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 function App(): JSX.Element {
     const [role, setRole] = useState<User>({
         name: "User1",
-        userList: [
-            {
-                id: 0,
-                name: "do Homework",
-                description: "description",
-                status: false,
-                image: "picture",
-                steps: ["Class 1", "Class 2"],
-                difficulty: 0,
-                numUsers: 2,
-                time: 1800
-            }
-        ]
+        userList: []
     }); //I set this intial user to make the user list display something
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
         { name: "Admin", userList: [] },
-        { name: "User1", userList: TASKS }
+        { name: "User1", userList: [] }
     ]); // these are original users these can be changed
     const [tasks, setTasks] = useState<Task[]>(TASKS);
 

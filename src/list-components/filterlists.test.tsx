@@ -11,7 +11,8 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 8,
         numUsers: 2,
-        time: 1346
+        time: 1346,
+        id: 1
     },
     {
         name: "test2",
@@ -21,7 +22,8 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 4,
         numUsers: 2,
-        time: 1300
+        time: 1300,
+        id: 1
     },
     {
         name: "test3",
@@ -31,7 +33,8 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 5,
         numUsers: 2,
-        time: 875
+        time: 875,
+        id: 1
     }
 ];
 describe("filter", () => {

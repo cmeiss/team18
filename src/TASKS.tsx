@@ -9,7 +9,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: ["Class 1", "Class 2"],
         difficulty: 0,
-        numUsers: 2,
+        numUsers: 0,
         time: 1800
     },
     {
@@ -20,7 +20,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: ["a", "b", "c"],
         difficulty: 3,
-        numUsers: 1,
+        numUsers: 0,
         time: 1345
     },
     {
@@ -31,7 +31,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: ["get ingredients", "find receipe", "cook", "clean"],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 1745
     },
     {
@@ -42,7 +42,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: ["order online", "pick up"],
         difficulty: 3,
-        numUsers: 2,
+        numUsers: 0,
         time: 700
     },
     {

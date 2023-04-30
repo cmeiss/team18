@@ -4,12 +4,12 @@ import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
 import "./UserList.css";
-import { Button } from "react-bootstrap";
-import { filter_by_alphabetical_order } from "./filterlists";
-import { filter_by_difficulty } from "./filterlists";
-import { filter_by_time_needed } from "./filterlists";
+//import { Button } from "react-bootstrap";
+// import { filter_by_alphabetical_order } from "./filterlists";
+// import { filter_by_difficulty } from "./filterlists";
+// import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
-import { addTask } from "../TaskFunctions";
+import { addTask, makeTask } from "../TaskFunctions";
 
 interface UserProps {
     user: User;
@@ -21,20 +21,20 @@ interface UserProps {
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export function UserList(user: UserProps): JSX.Element {
-    function sort(
-        type_of_sort: string,
-        tasks: Task[],
-        setTasks: (newTasks: Task[]) => void
-    ): void {
-        if (type_of_sort == "alphabet") {
-            setTasks(filter_by_alphabetical_order(tasks));
-        } else if (type_of_sort == "time") {
-            setTasks(filter_by_time_needed(tasks));
-        } else if (type_of_sort == "difficulty") {
-            setTasks(filter_by_difficulty(tasks));
-        }
-    }
+// export function UserList(user: UserProps): JSX.Element {
+//     function sort(
+//         type_of_sort: string,
+//         tasks: Task[],
+//         setTasks: (newTasks: Task[]) => void
+//     ): void {
+//         if (type_of_sort == "alphabet") {
+//             setTasks(filter_by_alphabetical_order(tasks));
+//         } else if (type_of_sort == "time") {
+//             setTasks(filter_by_time_needed(tasks));
+//         } else if (type_of_sort == "difficulty") {
+//             setTasks(filter_by_difficulty(tasks));
+//         }
+//     }
 export function UserList({
     user,
     setUser,
@@ -63,6 +63,7 @@ export function UserList({
                 userList: addTask(droppedTask, user.userList)
             });
             setUsers(updateUserTasks(addTask(droppedTask, user.userList)));
+            changeTasks(tasks, droppedTask.id);
         }
     }
 
@@ -99,6 +100,36 @@ export function UserList({
         return newRoles;
     }
 
+    function changeTasks(tasks: Task[], id: number) {
+        const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
+        const currentNumUsers = tasks.find((T: Task) =>
+            T.id === id ? T : null
+        );
+        let newNumUsers = -1;
+        if (currentNumUsers) {
+            newNumUsers = currentNumUsers.numUsers + 1;
+        }
+        console.log("new Num Users:");
+        console.log(newNumUsers);
+        setTasks(
+            copy.map((TASK: Task) =>
+                TASK.id === id
+                    ? makeTask(
+                          id,
+                          TASK.name,
+                          TASK.description,
+                          TASK.status,
+                          TASK.image,
+                          TASK.steps,
+                          TASK.difficulty,
+                          newNumUsers,
+                          TASK.time
+                      )
+                    : { ...TASK, steps: [...TASK.steps] }
+            )
+        );
+    }
+
     return (
         <div
             ref={drop}
@@ -121,7 +152,7 @@ export function UserList({
                             role={user.name}
                         ></DisplayTask>
                     ))}
-                    <div>
+                    {/* <div>
                         <Button
                             onClick={() =>
                                 sort("alphabet", user.tasks, user.setTasks)
@@ -143,7 +174,7 @@ export function UserList({
                         >
                             Sort By Time Needed{" "}
                         </Button>
-                    </div>
+                    </div> */}
                 </div>
             )}
             {console.log("userList")}

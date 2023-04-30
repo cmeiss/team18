@@ -12,7 +12,7 @@ export function makeTask(
     steps: string[],
     diff: number,
     num: number,
-    time: number
+    time: string
 ): Task {
     const task: Task = {
         id: id,
@@ -109,6 +109,6 @@ export function setNumUsers(newNumUsers: number, task: Task) {
 /**
  * function to modify the time attribute
  */
-export function setTime(newTime: number, task: Task) {
+export function setTime(newTime: string, task: Task) {
     return { ...task, time: newTime };
 }

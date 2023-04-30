@@ -1,3 +1,4 @@
+"use strict";
 // Commented out the entire file because it makes npm run start fail to build the website
 //import { filter_by_alphabetical_order } from "./filterlists";
 // import { filter_by_difficulty } from "./filterlists";
@@ -139,5 +140,4 @@
 //         ]);
 //     });
 // });
-
-export {}; //needs to be deleted later, prevents compiling errors
+exports.__esModule = true;

@@ -10,5 +10,5 @@ export interface Task {
     steps: string[];
     difficulty: number;
     numUsers: number;
-    time: number;
+    time: string;
 }

@@ -351,6 +351,17 @@ FAIL src/TaskFunctions.test.ts
 
       at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
 
+FAIL src/list-components/filterlist.test.tsx
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
+      at node_modules/@jest/core/build/TestScheduler.js:316:17
+      at node_modules/emittery/index.js:260:13
+          at Array.map (<anonymous>)
+      at Emittery.emit (node_modules/emittery/index.js:258:23)
+
 FAIL src/list-components/UserList.test.tsx
   ● Test suite failed to run
 
@@ -2142,7 +2153,7 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   21.52 |    22.05 |   22.01 |   21.81 |                   
+All files                  |   18.75 |    17.85 |   19.51 |   19.04 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 17-55             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -2158,20 +2169,20 @@ All files                  |   21.52 |    22.05 |   22.01 |   21.81 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   17.46 |       22 |   11.76 |   17.46 |                   
+ src/list-components       |   13.83 |    16.66 |    9.75 |   13.92 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-73             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
-  UserList.tsx             |       0 |        0 |       0 |       0 | 28-98             
+  UserList.tsx             |       0 |        0 |       0 |       0 | 32-135            
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
   adminListTest.tsx        |       0 |        0 |       0 |       0 | 6-106             
-  adminlist.tsx            |       0 |        0 |       0 |       0 | 17-70             
+  adminlist.tsx            |       0 |        0 |       0 |       0 | 21-97             
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
-  filterlists.tsx          |       0 |        0 |       0 |       0 |                   
+  filterlists.tsx          |       0 |        0 |       0 |       0 | 9-35              
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 9 failed, 9 total
+Test Suites: 10 failed, 10 total
 Tests:       23 failed, 6 passed, 29 total
 Snapshots:   0 total
-Time:        7.955 s
+Time:        8.272 s
 Ran all test suites.

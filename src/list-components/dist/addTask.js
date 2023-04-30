@@ -18,11 +18,16 @@ function AddTask(taskProps) {
     var _c = react_2.useState(""), newimage = _c[0], setImage = _c[1];
     var _d = react_2.useState([""]), newsteps = _d[0], setSteps = _d[1];
     var _e = react_2.useState(0), newdifficulty = _e[0], setDifficulty = _e[1];
-    var _f = react_2.useState(0), newtime = _f[0], setTime = _f[1];
+    var _f = react_2.useState(""), newtime = _f[0], setTime = _f[1];
     var _g = react_2.useState(0), newnumusers = _g[0], setNumUsers = _g[1];
     //states needed for editing functions
     var _h = react_2.useState(false), neweditmode = _h[0], seteditmode = _h[1]; //whether the textbox will appear boolean
     var _j = react_2.useState(""), newTask = _j[0], setNewTask = _j[1];
+    var _k = react_2.useState(0), newId = _k[0], setNewId = _k[1];
+    //change id
+    function updateNewId(event) {
+        setNewId(parseInt(event.target.value));
+    }
     //change description function
     function updateDescription(event) {
         setDescription(event.target.value);
@@ -45,7 +50,7 @@ function AddTask(taskProps) {
     }
     //change time function
     function updateTime(event) {
-        setTime(parseInt(event.target.value));
+        setTime(event.target.value);
     }
     //change num users function
     function updateNumUsers(event) {
@@ -63,6 +68,7 @@ function AddTask(taskProps) {
     function addTask() {
         taskProps.setTasks(__spreadArrays(taskProps.tasks, [
             {
+                id: newId,
                 name: newTask,
                 description: newdescription,
                 status: newstatus,
@@ -78,6 +84,8 @@ function AddTask(taskProps) {
     return (react_1["default"].createElement("div", null,
         react_1["default"].createElement(react_bootstrap_1.Form.Check, { type: "switch", id: "editMode", label: "", checked: neweditmode, onChange: updateEditMode }),
         neweditmode ? (react_1["default"].createElement(react_bootstrap_1.Form.Group, { controlId: "CheckAnswer" },
+            react_1["default"].createElement(react_bootstrap_1.Form.Label, null, "Enter New Task Id Below:"),
+            react_1["default"].createElement(react_bootstrap_1.Form.Control, { as: "textarea", rows: 3, value: newId, onChange: updateNewId }),
             react_1["default"].createElement(react_bootstrap_1.Form.Label, null, "Enter New Task Name Below:"),
             react_1["default"].createElement(react_bootstrap_1.Form.Control, { as: "textarea", rows: 3, value: newTask, onChange: updateNewTask }),
             react_1["default"].createElement(react_bootstrap_1.Form.Label, null, "Enter New Task Description Below:"),

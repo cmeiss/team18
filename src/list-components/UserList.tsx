@@ -4,10 +4,10 @@ import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
 import "./UserList.css";
-//import { Button } from "react-bootstrap";
-// import { filter_by_alphabetical_order } from "./filterlists";
-// import { filter_by_difficulty } from "./filterlists";
-// import { filter_by_time_needed } from "./filterlists";
+import { Button } from "react-bootstrap";
+import { filter_by_alphabetical_order } from "./filterlists";
+import { filter_by_difficulty } from "./filterlists";
+import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
 import { addTask, makeTask } from "../TaskFunctions";
 
@@ -22,19 +22,19 @@ interface UserProps {
 }
 
 // export function UserList(user: UserProps): JSX.Element {
-//     function sort(
-//         type_of_sort: string,
-//         tasks: Task[],
-//         setTasks: (newTasks: Task[]) => void
-//     ): void {
-//         if (type_of_sort == "alphabet") {
-//             setTasks(filter_by_alphabetical_order(tasks));
-//         } else if (type_of_sort == "time") {
-//             setTasks(filter_by_time_needed(tasks));
-//         } else if (type_of_sort == "difficulty") {
-//             setTasks(filter_by_difficulty(tasks));
-//         }
-//     }
+function sort(
+    type_of_sort: string,
+    tasks: Task[],
+    setTasks: (newTasks: Task[]) => void
+): void {
+    if (type_of_sort == "alphabet") {
+        setTasks(filter_by_alphabetical_order(tasks));
+    } else if (type_of_sort == "time") {
+        setTasks(filter_by_time_needed(tasks));
+    } else if (type_of_sort == "difficulty") {
+        setTasks(filter_by_difficulty(tasks));
+    }
+}
 
 export function UserList({
     user,
@@ -155,7 +155,7 @@ export function UserList({
                             role={user.name}
                         ></DisplayTask>
                     ))}
-                    {/* <div>
+                    <div>
                         <Button
                             onClick={() => sort("alphabet", tasks, setTasks)}
                         >
@@ -169,7 +169,7 @@ export function UserList({
                         <Button onClick={() => sort("time", tasks, setTasks)}>
                             Sort By Time Needed{" "}
                         </Button>
-                    </div> */}
+                    </div>
                 </div>
             )}
             {console.log("userList")}

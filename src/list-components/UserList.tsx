@@ -4,7 +4,6 @@ import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
 import "./UserList.css";
-<<<<<<< HEAD
 import { Button } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
@@ -22,23 +21,6 @@ interface UserProps {
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-<<<<<<< HEAD
-export function UserList(user: UserProps): JSX.Element {
-    function sort(
-        type_of_sort: string,
-        tasks: Task[],
-        setTasks: (newTasks: Task[]) => void
-    ): void {
-        if (type_of_sort == "alphabet") {
-            setTasks(filter_by_alphabetical_order(tasks));
-        } else if (type_of_sort == "time") {
-            setTasks(filter_by_time_needed(tasks));
-        } else if (type_of_sort == "difficulty") {
-            setTasks(filter_by_difficulty(tasks));
-        }
-
-=======
->>>>>>> 5851d3f2227a928749a9efbec68e5176b49c728f
 export function UserList({
     user,
     setUser,
@@ -103,9 +85,6 @@ export function UserList({
         return newRoles;
     }
 
-<<<<<<< HEAD
->>>>>>> 743b011128bfaa3e2211e081da964356c58f5e6e
-=======
     function sort(
         type_of_sort: string,
         tasks: Task[],
@@ -120,7 +99,6 @@ export function UserList({
         }
     }
 
->>>>>>> 5851d3f2227a928749a9efbec68e5176b49c728f
     return (
         <div
             ref={drop}

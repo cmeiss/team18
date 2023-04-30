@@ -21,7 +21,6 @@ interface UserProps {
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-
 // export function UserList(user: UserProps): JSX.Element {
 //     function sort(
 //         type_of_sort: string,
@@ -104,7 +103,6 @@ export function UserList({
         );
         return newRoles;
     }
-
 
     //this function increments the numberOfUsers of the task with the passed in ID
     function changeTasks(tasks: Task[], id: number) {

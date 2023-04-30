@@ -21,6 +21,7 @@ interface UserProps {
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
+
 // export function UserList(user: UserProps): JSX.Element {
 //     function sort(
 //         type_of_sort: string,
@@ -35,6 +36,7 @@ interface UserProps {
 //             setTasks(filter_by_difficulty(tasks));
 //         }
 //     }
+
 export function UserList({
     user,
     setUser,
@@ -103,6 +105,7 @@ export function UserList({
         return newRoles;
     }
 
+
     //this function increments the numberOfUsers of the task with the passed in ID
     function changeTasks(tasks: Task[], id: number) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
@@ -156,24 +159,16 @@ export function UserList({
                     ))}
                     {/* <div>
                         <Button
-                            onClick={() =>
-                                sort("alphabet", user.tasks, user.setTasks)
-                            }
+                            onClick={() => sort("alphabet", tasks, setTasks)}
                         >
                             Sort by Alphabetical Order{" "}
                         </Button>
                         <Button
-                            onClick={() =>
-                                sort("difficulty", user.tasks, user.setTasks)
-                            }
+                            onClick={() => sort("difficulty", tasks, setTasks)}
                         >
                             Sort By Difficulty{" "}
                         </Button>
-                        <Button
-                            onClick={() =>
-                                sort("time", user.tasks, user.setTasks)
-                            }
-                        >
+                        <Button onClick={() => sort("time", tasks, setTasks)}>
                             Sort By Time Needed{" "}
                         </Button>
                     </div> */}

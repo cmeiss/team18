@@ -126,8 +126,8 @@ export const TASKS: Task[] = [
     },
     {
         id: 11,
-        name: "feed the cat",
-        description: "your pet needs food",
+        name: "Feed the cat",
+        description: "Your pet needs food",
         status: false,
         image: "picture",
         steps: [],
@@ -137,8 +137,8 @@ export const TASKS: Task[] = [
     },
     {
         id: 12,
-        name: "wash car",
-        description: "car's looking a little muddy",
+        name: "Wash car",
+        description: "Car's looking a little muddy",
         status: false,
         image: "picture",
         steps: [],
@@ -148,7 +148,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 13,
-        name: "meet with team",
+        name: "Meet with team",
         description: "preparing for delivery to boss",
         status: false,
         image: "picture",
@@ -159,8 +159,8 @@ export const TASKS: Task[] = [
     },
     {
         id: 14,
-        name: "study",
-        description: "get ready for your exams",
+        name: "Study",
+        description: "Get ready for your exams",
         status: false,
         image: "picture",
         steps: [],
@@ -170,8 +170,8 @@ export const TASKS: Task[] = [
     },
     {
         id: 15,
-        name: "practice violin",
-        description: "the school band needs your talent",
+        name: "Practice violin",
+        description: "The school band needs your talent",
         status: false,
         image: "picture",
         steps: [],
@@ -181,12 +181,79 @@ export const TASKS: Task[] = [
     },
     {
         id: 16,
-        name: "clean the kitchen",
-        description: "stains. everywhere.",
+        name: "Clean the kitchen",
+        description: "Stains. everywhere.",
         status: false,
         image: "picture",
         steps: [],
         difficulty: 3,
+        numUsers: 0,
+        time: 1130
+    },
+    {
+        id: 17,
+        name: "Walk the dog",
+        description: "Take the puppy for a walk around the park.",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 2,
+        numUsers: 0,
+        time: 1130
+    },
+    {
+        id: 18,
+        name: "Grocery shopping",
+        description: "Time to refill the pantry and the fridge.",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 0,
+        time: 1130
+    },
+    {
+        id: 19,
+        name: "Water plants",
+        description: "The pothos is looking pretty droopy, give it some love.",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 1,
+        numUsers: 0,
+        time: 1130
+    },
+    {
+        id: 20,
+        name: "Wash dishes",
+        description: "Don't be that roomate, it's time to wash the dishes.",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 2,
+        numUsers: 0,
+        time: 1130
+    },
+    {
+        id: 21,
+        name: "Do laundry",
+        description: "Refresh your closet, wash that dirty laundry!",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 0,
+        time: 1130
+    },
+    {
+        id: 22,
+        name: "Take out the trash",
+        description:
+            "There are flies gathering, take the trash out to the curb",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 1,
         numUsers: 0,
         time: 1130
     }

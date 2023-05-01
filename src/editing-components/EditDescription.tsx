@@ -16,15 +16,14 @@ export function EditDescription({
     }
     return (
         <div>
-            <Form.Check
-                type="checkbox"
-                id="emotion-check-happy"
-                label="Happy"
-                name="emotions"
-                value="happy"
-                checked={emotions.includes("happy")}
-                onChange={updateEmotion}
-            />
+            <Form.Group controlId="formDescriptionName">
+                <Form.Label>Change Description:</Form.Label>
+                <Form.Control
+                    value={description}
+                    onChange={updateDescription}
+                />
+            </Form.Group>
+            <div>Current Description: {description}</div>
         </div>
     );
 }

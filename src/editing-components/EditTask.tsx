@@ -6,8 +6,9 @@ import { makeTask } from "../TaskFunctions";
 import { EditTime } from "./EditTime";
 import { EditDifficulty } from "./edit-difficulty";
 import { EditDescription } from "./EditDescription";
+import { EditStatus } from "./EditStatus";
 
-interface editProps {
+export interface editProps {
     tasks: Task[];
     updateTasks: (newTasks: Task[]) => void;
     //updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
@@ -22,7 +23,7 @@ export function EditTask(edit: editProps): JSX.Element {
     const [id] = useState<number>(edit.task.id);
     const [name] = useState<string>(edit.task.name);
     const [desc, setDesc] = useState<string>(edit.task.description);
-    const [status] = useState<boolean>(edit.task.status);
+    const [status, setStatus] = useState<boolean>(edit.task.status);
     const [img] = useState<string>(edit.task.image);
     const [steps] = useState<string[]>(edit.task.steps);
     const [diff, setDifficulty] = useState<number>(edit.task.difficulty);
@@ -97,6 +98,10 @@ export function EditTask(edit: editProps): JSX.Element {
             </Button>
             {!visible ? null : (
                 <div>
+                    <EditStatus
+                        status={status}
+                        setStatus={setStatus}
+                    ></EditStatus>
                     <EditDescription
                         description={desc}
                         setDescription={setDesc}

@@ -191,7 +191,7 @@ export const TASKS: Task[] = [
         time: 1130
     },
     {
-        id: 8,
+        id: 17,
         name: "meditate",
         description: "relax",
         status: false,
@@ -200,5 +200,38 @@ export const TASKS: Task[] = [
         difficulty: 3,
         numUsers: 0,
         time: 1130
+    },
+    {
+        id: 18,
+        name: "manifest",
+        description: "what you want in life",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 1,
+        time: 680
+    },
+    {
+        id: 19,
+        name: "workout",
+        description: "pump some iron",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 1,
+        time: 645
+    },
+    {
+        id: 20,
+        name: "watch pumping iron documentary",
+        description: "watch arnold win olympia",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 1,
+        numUsers: 1,
+        time: 1045
     }
 ];

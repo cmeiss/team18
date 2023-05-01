@@ -16,24 +16,13 @@ var deleteTask_component_1 = require("./list-components/deleteTask-component");
 function App() {
     // eslint-disable-next-line prettier/prettier
     var _a = react_1.useState({ name: "User1", userList: [] }), role = _a[0], setRole = _a[1]; //I set this intial user to make the user list display something
-    var _b = react_1.useState({
-        id: 0,
-        name: "test",
-        description: "this is the description",
-        status: false,
-        image: "picture",
-        steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
-        numUsers: 2,
-        time: "1345"
-    }), task = _b[0], setTask = _b[1];
-    var _c = react_1.useState([
+    var _b = react_1.useState([
         { name: "Please Select: ", userList: [] },
         { name: "Super", userList: [] },
         { name: "Admin", userList: [] },
         { name: "User1", userList: [] }
-    ]), roles = _c[0], setRoles = _c[1]; // these are original users these can be changed
-    var _d = react_1.useState(TASKS_1.TASKS), tasks = _d[0], setTasks = _d[1];
+    ]), roles = _b[0], setRoles = _b[1]; // these are original users these can be changed
+    var _c = react_1.useState(TASKS_1.TASKS), tasks = _c[0], setTasks = _c[1];
     function updateRole(event) {
         var NewRole = roles.find(function (role) { return role.name === event.target.value; });
         if (NewRole) {
@@ -44,12 +33,14 @@ function App() {
     function updateTasks(tasks) {
         setTasks(tasks);
     }
-    function updateTask(event) {
-        var NewTask = tasks.find(function (task) { return task.name === event.target.value; });
-        if (NewTask) {
-            setTask(NewTask);
-        }
-    }
+    //function updateTask(event: React.ChangeEvent<HTMLSelectElement>) {
+    //  const NewTask = tasks.find(
+    //  (task: Task) => task.name === event.target.value
+    //);
+    //if (NewTask) {
+    //  setTask(NewTask);
+    //}
+    //}
     return (react_1["default"].createElement(react_dnd_1.DndProvider, { backend: react_dnd_html5_backend_1.HTML5Backend },
         react_1["default"].createElement("div", { className: "App" },
             react_1["default"].createElement("header", { className: "App-header" },
@@ -69,8 +60,12 @@ function App() {
             react_1["default"].createElement("div", null,
                 react_1["default"].createElement("div", null, role.name === "Super" ? (react_1["default"].createElement(ModifyUsers_1.ModifyUsers, { Role: role, roles: roles, setRoles: setRoles })) : null)),
             react_1["default"].createElement("div", null,
-                react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(addTask_1.AddTask, { tasks: tasks, item: task, setTasks: setTasks })) : null),
-                react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(deleteTask_component_1.DeleteTask, { tasks: tasks, item: task, setTasks: setTasks })) : null)),
+                react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(addTask_1.AddTask, { tasks: tasks, 
+                    //item={task}
+                    setTasks: setTasks })) : null),
+                react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(deleteTask_component_1.DeleteTask, { tasks: tasks, 
+                    //item={task}
+                    setTasks: setTasks })) : null)),
             react_1["default"].createElement("div", null,
                 react_1["default"].createElement(UserList_1.UserList, { user: role, setUser: setRole, users: roles, tasks: tasks, setTasks: setTasks, setUsers: setRoles })),
             react_1["default"].createElement("div", { className: "central" },

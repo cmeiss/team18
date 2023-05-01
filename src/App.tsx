@@ -14,10 +14,8 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App(): JSX.Element {
-    const [role, setRole] = useState<User>({
-        name: "User1",
-        userList: []
-    }); //I set this intial user to make the user list display something
+    // eslint-disable-next-line prettier/prettier
+    const [role, setRole] = useState<User>({ name: "User1", userList: [] }); //I set this intial user to make the user list display something
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
@@ -91,7 +89,7 @@ function App(): JSX.Element {
                         setUser={setRole}
                         users={roles}
                         tasks={tasks}
-                        setTasks={updateTasks}
+                        setTasks={setTasks}
                         setUsers={setRoles}
                     ></UserList>
                 </div>

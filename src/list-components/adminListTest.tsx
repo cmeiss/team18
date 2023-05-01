@@ -12,7 +12,7 @@ const TASK2 = {
     steps: ["d", "e", "f"],
     difficulty: 1,
     numUsers: 0,
-    time: 2680
+    time: "2680"
 };
 
 const TASK3 = {
@@ -24,7 +24,7 @@ const TASK3 = {
     steps: ["g", "h", "i"],
     difficulty: 4,
     numUsers: 1,
-    time: 3925
+    time: "3925"
 };
 
 //basic tasklists to test

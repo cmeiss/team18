@@ -18,9 +18,6 @@ interface AdminItemProps {
 }
 
 export function AdminList({ user, tasks, setTasks, setUser }: AdminItemProps) {
-    const NewTasks = tasks.filter((task: Task): boolean =>
-        task.numUsers < 2 ? true : false
-    );
     function sort(type_of_sort: string): void {
         if (type_of_sort == "alphabet") {
             setUser({

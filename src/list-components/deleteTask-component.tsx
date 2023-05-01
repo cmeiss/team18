@@ -32,7 +32,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
             <Form.Check
                 type={"switch"}
                 id="editMode"
-                label=""
+                label="Delete Task"
                 checked={editMode}
                 onChange={updateEditMode}
             />

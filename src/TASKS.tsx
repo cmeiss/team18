@@ -253,7 +253,7 @@ export const TASKS: Task[] = [
         image: "picture",
         steps: [],
         difficulty: 23,
-        numUsers: 1,
+        numUsers: 5,
         time: "675"
     }
 ];

@@ -233,5 +233,27 @@ export const TASKS: Task[] = [
         difficulty: 1,
         numUsers: 1,
         time: 1045
+    },
+    {
+        id: 21,
+        name: "run 100 miles",
+        description: "run 100 miles",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 69,
+        numUsers: 1,
+        time: 1445
+    },
+    {
+        id: 22,
+        name: "m20 challenge",
+        description: "do the m20 burger challenge",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 23,
+        numUsers: 1,
+        time: 675
     }
 ];

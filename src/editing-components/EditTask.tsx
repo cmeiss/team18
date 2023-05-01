@@ -27,7 +27,7 @@ export function EditTask(edit: editProps): JSX.Element {
     const [steps] = useState<string[]>(edit.task.steps);
     const [diff, setDifficulty] = useState<number>(edit.task.difficulty);
     const [numUsers] = useState<number>(edit.task.numUsers);
-    const [time, setTime] = useState<number>(edit.task.time);
+    const [time, setTime] = useState<string>(edit.task.time);
     const [visible, setVisible] = useState<boolean>(false);
     function updateVisibility() {
         setVisible(!visible);
@@ -43,7 +43,7 @@ export function EditTask(edit: editProps): JSX.Element {
         steps: string[],
         diff: number,
         num: number,
-        time: number
+        time: string
     ) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(

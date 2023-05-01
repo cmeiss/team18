@@ -3,27 +3,33 @@ import { Form } from "react-bootstrap";
 import { TIMES } from "./Times";
 
 interface TimeProps {
-    time: number;
-    setTime: (newTime: number) => void;
+    time: string;
+    setTime: (newTime: string) => void;
 }
 
 const times: string[] = TIMES;
 
 export function EditTime({ time, setTime }: TimeProps) {
     function updateTime(event: React.ChangeEvent<HTMLSelectElement>) {
-        const newT = Number(event.target.value);
+        const newT = event.target.value;
         setTime(newT);
     }
-    function printTime(time: number) {
+    function printTime(time: string) {
         let display = "time";
-        if (time < 100) {
+        if (parseInt(time) < 100) {
             display = "00:" + time.toString();
-        } else if (time < 1000 && time % 100 === 0) {
-            display = "0" + Math.trunc(time / 100) + ":00";
-        } else if (time < 1000) {
-            "0" + Math.trunc(time / 100) + ":" + (time % 100).toString();
+        } else if (parseInt(time) < 1000 && parseInt(time) % 100 === 0) {
+            display = "0" + Math.trunc(parseInt(time) / 100) + ":00";
+        } else if (parseInt(time) < 1000) {
+            "0" +
+                Math.trunc(parseInt(time) / 100) +
+                ":" +
+                (parseInt(time) % 100).toString();
         } else {
-            display = Math.trunc(time / 100) + ":" + (time % 100).toString();
+            display =
+                Math.trunc(parseInt(time) / 100) +
+                ":" +
+                (parseInt(time) % 100).toString();
         }
         return display;
     }

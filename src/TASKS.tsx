@@ -10,7 +10,7 @@ export const TASKS: Task[] = [
         steps: ["Class 1", "Class 2"],
         difficulty: 0,
         numUsers: 0,
-        time: 1800
+        time: "1800"
     },
     {
         id: 1,
@@ -21,7 +21,7 @@ export const TASKS: Task[] = [
         steps: ["a", "b", "c"],
         difficulty: 3,
         numUsers: 0,
-        time: 1345
+        time: "1345"
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ export const TASKS: Task[] = [
         steps: ["get ingredients", "find receipe", "cook", "clean"],
         difficulty: 3,
         numUsers: 0,
-        time: 1745
+        time: "1745"
     },
     {
         id: 3,
@@ -43,7 +43,7 @@ export const TASKS: Task[] = [
         steps: ["order online", "pick up"],
         difficulty: 3,
         numUsers: 0,
-        time: 700
+        time: "700"
     },
     {
         id: 4,
@@ -54,7 +54,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 5,
@@ -65,7 +65,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 6,
@@ -76,7 +76,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 7,
@@ -88,7 +88,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 8,
@@ -100,7 +100,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 9,
@@ -111,7 +111,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 10,
@@ -122,7 +122,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 11,
@@ -133,7 +133,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 12,
@@ -144,7 +144,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 13,
@@ -155,7 +155,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 14,
@@ -166,7 +166,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 15,
@@ -177,7 +177,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 16,
@@ -188,7 +188,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 17,

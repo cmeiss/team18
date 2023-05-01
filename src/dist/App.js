@@ -72,10 +72,10 @@ function App() {
                 react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(addTask_1.AddTask, { tasks: tasks, item: task, setTasks: setTasks })) : null),
                 react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(deleteTask_component_1.DeleteTask, { tasks: tasks, item: task, setTasks: setTasks })) : null)),
             react_1["default"].createElement("div", null,
-                react_1["default"].createElement(UserList_1.UserList, { user: role, setUser: setRole, users: roles, tasks: tasks, setTasks: setTasks, setUsers: setRoles })),
+                react_1["default"].createElement(UserList_1.UserList, { user: role, setUser: setRole, users: roles, tasks: tasks, setTasks: updateTasks, setUsers: setRoles })),
             react_1["default"].createElement("div", { className: "central" },
                 react_1["default"].createElement(CentralItemList_1.CentralItemList, { tasks: tasks, role: role.name, setTasks: updateTasks }),
                 react_1["default"].createElement("div", null,
-                    react_1["default"].createElement(adminlist_1.AdminList, { tasks: tasks, role: role.name, setTasks: updateTasks }))))));
+                    react_1["default"].createElement(adminlist_1.AdminList, { tasks: tasks, user: role, setTasks: updateTasks, setUser: setRole }))))));
 }
 exports["default"] = App;

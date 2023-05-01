@@ -36,7 +36,7 @@ describe("Add tasks tests", () => {
     beforeEach(() =>
         render(
             <AddTask
-                item={TASK1}
+                //item={TASK1}
                 tasks={TASKLIST1}
                 setTasks={
                     function (/*newTasks: Tasks[]*/): void {

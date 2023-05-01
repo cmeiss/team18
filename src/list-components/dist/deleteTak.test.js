@@ -43,7 +43,11 @@ var TASKLIST1 = [TASK1, TASK2];
 //actual tests
 describe("Delete task tests", function () {
     beforeEach(function () {
-        return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Task[]*/) {
+        return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask
+        //item={TASK1}
+        , { 
+            //item={TASK1}
+            tasks: TASKLIST1, setTasks: function ( /*newTasks: Task[]*/) {
                 throw new Error("function not implemented");
             } }));
     });

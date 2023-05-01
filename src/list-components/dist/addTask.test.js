@@ -31,7 +31,11 @@ var TASKLIST1 = [TASK1, TASK2];
 //actual tests
 describe("Add tasks tests", function () {
     beforeEach(function () {
-        return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
+        return react_2.render(react_1["default"].createElement(addTask_1.AddTask
+        //item={TASK1}
+        , { 
+            //item={TASK1}
+            tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
                 throw new Error("Function not implemented.");
             } }));
     });

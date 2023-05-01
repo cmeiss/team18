@@ -147,9 +147,7 @@ export function UserList({
                 backgroundColor: isOver ? "MediumSeaGreen" : "white"
             }}
         >
-            {user.name === "Super" || user.name === "Admin" ? (
-                <div></div>
-            ) : (
+            {user.name === "Super" || user.name === "Admin" ? null : (
                 <div className="userList">
                     <h3>{user.name}s List:</h3>
                     {user.userList.map((TASK: Task, index: number) => (

@@ -41,7 +41,7 @@ export function ModifyUsers(
             <Form.Check
                 type={"switch"}
                 id="editMode"
-                label=""
+                label="Edit Users"
                 checked={editmode}
                 onChange={updateEditMode}
             />

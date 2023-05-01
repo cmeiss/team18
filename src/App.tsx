@@ -40,14 +40,6 @@ function App(): JSX.Element {
     function updateTasks(tasks: Task[]) {
         setTasks(tasks);
     }
-    //function updateTask(event: React.ChangeEvent<HTMLSelectElement>) {
-    //  const NewTask = tasks.find(
-    //  (task: Task) => task.name === event.target.value
-    //);
-    //if (NewTask) {
-    //  setTask(NewTask);
-    //}
-    //}
 
     return (
         <DndProvider backend={HTML5Backend}>

@@ -33,14 +33,6 @@ function App() {
     function updateTasks(tasks) {
         setTasks(tasks);
     }
-    //function updateTask(event: React.ChangeEvent<HTMLSelectElement>) {
-    //  const NewTask = tasks.find(
-    //  (task: Task) => task.name === event.target.value
-    //);
-    //if (NewTask) {
-    //  setTask(NewTask);
-    //}
-    //}
     return (react_1["default"].createElement(react_dnd_1.DndProvider, { backend: react_dnd_html5_backend_1.HTML5Backend },
         react_1["default"].createElement("div", { className: "App" },
             react_1["default"].createElement("header", { className: "App-header" },

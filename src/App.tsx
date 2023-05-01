@@ -18,17 +18,7 @@ import { DeleteTask } from "./list-components/deleteTask-component";
 function App(): JSX.Element {
     // eslint-disable-next-line prettier/prettier
     const [role, setRole] = useState<User>({ name: "User1", userList: [] }); //I set this intial user to make the user list display something
-    const [task, setTask] = useState<Task>({
-        id: 0,
-        name: "test",
-        description: "this is the description",
-        status: false,
-        image: "picture",
-        steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
-        numUsers: 2,
-        time: "1345"
-    });
+
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
@@ -49,14 +39,6 @@ function App(): JSX.Element {
     //the following function is just calling setTasks but is easier to include in test cases than the setTask function alone
     function updateTasks(tasks: Task[]) {
         setTasks(tasks);
-    }
-    function updateTask(event: React.ChangeEvent<HTMLSelectElement>) {
-        const NewTask = tasks.find(
-            (task: Task) => task.name === event.target.value
-        );
-        if (NewTask) {
-            setTask(NewTask);
-        }
     }
 
     return (
@@ -109,7 +91,7 @@ function App(): JSX.Element {
                         {role.name === "Super" || role.name === "Admin" ? (
                             <AddTask
                                 tasks={tasks}
-                                item={task}
+                                //item={task}
                                 setTasks={setTasks}
                             ></AddTask>
                         ) : null}
@@ -119,7 +101,7 @@ function App(): JSX.Element {
                         {role.name === "Super" || role.name === "Admin" ? (
                             <DeleteTask
                                 tasks={tasks}
-                                item={task}
+                                //item={task}
                                 setTasks={setTasks}
                             ></DeleteTask>
                         ) : null}

@@ -6,7 +6,7 @@ import { useState } from "react";
 
 interface addTaskProp {
     tasks: Task[];
-    item: Task;
+    //item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 

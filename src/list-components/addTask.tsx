@@ -89,7 +89,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
             <Form.Check
                 type={"switch"}
                 id="editMode"
-                label=""
+                label="Add Task"
                 checked={neweditmode}
                 onChange={updateEditMode}
             />

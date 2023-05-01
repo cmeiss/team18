@@ -16,6 +16,24 @@ interface AdminItemProps {
 }
 
 export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
+    const MyArray = ({ tasks }: AdminItemProps) => {
+        const NewTasks = tasks.filter((task: Task): boolean =>
+            task.numUsers < 2 ? true : false
+        );
+        return (
+            <>
+                {NewTasks.map((TASK: Task, index: number) => (
+                    <DisplayTask
+                        key={index}
+                        task={TASK}
+                        tasks={tasks}
+                        updateTasks={setTasks}
+                        role={role}
+                    ></DisplayTask>
+                ))}
+            </>
+        );
+    };
     const NewTasks = tasks.filter((task: Task): boolean =>
         task.numUsers < 2 ? true : false
     );
@@ -37,7 +55,7 @@ export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
             <div className="AdminList">
                 <div className="Admin">
                     <span> Admin List </span>
-                    {NewTasks.map((TASK: Task, index: number) => (
+                    {tasks.map((TASK: Task, index: number) => (
                         <DisplayTask
                             key={index}
                             task={TASK}

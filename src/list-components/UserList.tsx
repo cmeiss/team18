@@ -31,17 +31,22 @@ export function UserList({
     setTasks,
     setUsers
 }: UserProps): JSX.Element {
-    function sort(
-        type_of_sort: string,
-        tasks: Task[],
-        setTasks: (newTasks: Task[]) => void
-    ): void {
+    function sort(type_of_sort: string): void {
         if (type_of_sort == "alphabet") {
-            setTasks(filter_by_alphabetical_order(tasks));
+            setUser({
+                name: user.name,
+                userList: filter_by_alphabetical_order(user.userList)
+            });
         } else if (type_of_sort == "time") {
-            setTasks(filter_by_time_needed(tasks));
+            setUser({
+                name: user.name,
+                userList: filter_by_time_needed(user.userList)
+            });
         } else if (type_of_sort == "difficulty") {
-            setTasks(filter_by_difficulty(tasks));
+            setUser({
+                name: user.name,
+                userList: filter_by_difficulty(user.userList)
+            });
         }
     }
 
@@ -157,17 +162,13 @@ export function UserList({
                         ></DisplayTask>
                     ))}
                     <div>
-                        <Button
-                            onClick={() => sort("alphabet", tasks, setTasks)}
-                        >
+                        <Button onClick={() => sort("alphabet")}>
                             Sort by Alphabetical Order{" "}
                         </Button>
-                        <Button
-                            onClick={() => sort("difficulty", tasks, setTasks)}
-                        >
+                        <Button onClick={() => sort("difficulty")}>
                             Sort By Difficulty{" "}
                         </Button>
-                        <Button onClick={() => sort("time", tasks, setTasks)}>
+                        <Button onClick={() => sort("time")}>
                             Sort By Time Needed{" "}
                         </Button>
                     </div>

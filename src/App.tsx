@@ -115,7 +115,7 @@ function App(): JSX.Element {
                         setUser={setRole}
                         users={roles}
                         tasks={tasks}
-                        setTasks={setTasks}
+                        setTasks={updateTasks}
                         setUsers={setRoles}
                     ></UserList>
                 </div>
@@ -128,8 +128,9 @@ function App(): JSX.Element {
                     <div>
                         <AdminList
                             tasks={tasks}
-                            role={role.name}
+                            user={role}
                             setTasks={updateTasks}
+                            setUser={setRole}
                         ></AdminList>
                     </div>
                 </div>

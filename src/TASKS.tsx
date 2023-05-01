@@ -189,5 +189,16 @@ export const TASKS: Task[] = [
         difficulty: 3,
         numUsers: 0,
         time: 1130
+    },
+    {
+        id: 8,
+        name: "meditate",
+        description: "relax",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 0,
+        time: 1130
     }
 ];

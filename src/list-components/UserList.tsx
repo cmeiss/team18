@@ -22,19 +22,6 @@ interface UserProps {
 }
 
 // export function UserList(user: UserProps): JSX.Element {
-function sort(
-    type_of_sort: string,
-    tasks: Task[],
-    setTasks: (newTasks: Task[]) => void
-): void {
-    if (type_of_sort == "alphabet") {
-        setTasks(filter_by_alphabetical_order(tasks));
-    } else if (type_of_sort == "time") {
-        setTasks(filter_by_time_needed(tasks));
-    } else if (type_of_sort == "difficulty") {
-        setTasks(filter_by_difficulty(tasks));
-    }
-}
 
 export function UserList({
     user,
@@ -44,6 +31,20 @@ export function UserList({
     setTasks,
     setUsers
 }: UserProps): JSX.Element {
+    function sort(
+        type_of_sort: string,
+        tasks: Task[],
+        setTasks: (newTasks: Task[]) => void
+    ): void {
+        if (type_of_sort == "alphabet") {
+            setTasks(filter_by_alphabetical_order(tasks));
+        } else if (type_of_sort == "time") {
+            setTasks(filter_by_time_needed(tasks));
+        } else if (type_of_sort == "difficulty") {
+            setTasks(filter_by_difficulty(tasks));
+        }
+    }
+
     const [{ isOver }, drop] = useDrop({
         accept: "task",
         drop: (item: Task) => addTaskUserList(item.id),

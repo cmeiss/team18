@@ -199,7 +199,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 18,
@@ -210,7 +210,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 1,
-        time: 680
+        time: "680"
     },
     {
         id: 19,
@@ -221,7 +221,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 1,
-        time: 645
+        time: "645"
     },
     {
         id: 20,
@@ -232,7 +232,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 1,
-        time: 1045
+        time: "1045"
     },
     {
         id: 21,
@@ -243,7 +243,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 69,
         numUsers: 1,
-        time: 1445
+        time: "1445"
     },
     {
         id: 22,
@@ -254,6 +254,6 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 23,
         numUsers: 1,
-        time: 675
+        time: "675"
     }
 ];

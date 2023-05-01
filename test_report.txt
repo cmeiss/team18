@@ -711,17 +711,6 @@ FAIL src/list-components/filterlist.test.tsx
           at Array.map (<anonymous>)
       at Emittery.emit (node_modules/emittery/index.js:258:23)
 
-FAIL src/list-components/dist/filterlist.test.js
-  ● Test suite failed to run
-
-    Your test suite must contain at least one test.
-
-      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
-      at node_modules/@jest/core/build/TestScheduler.js:316:17
-      at node_modules/emittery/index.js:260:13
-          at Array.map (<anonymous>)
-      at Emittery.emit (node_modules/emittery/index.js:258:23)
-
 FAIL src/list-components/filterlists.test.tsx
   ● filter › Testing the filter by time needed function
 
@@ -948,29 +937,6 @@ FAIL src/list-components/filterlists.test.tsx
 
       at Object.<anonymous> (src/list-components/filterlists.test.tsx:110:48)
 
-FAIL src/list-components/dist/CentralItemList.test.js
-  ● Test suite failed to run
-
-    Cannot find module './CentralItemList' from 'src/list-components/dist/CentralItemList.test.js'
-
-    However, Jest was able to find:
-    	'./CentralItemList.test.js'
-
-    You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
-
-    See https://jestjs.io/docs/configuration#modulefileextensions-arraystring
-
-      3 | var react_1 = require("react");
-      4 | var react_2 = require("@testing-library/react");
-    > 5 | var CentralItemList_1 = require("./CentralItemList");
-        |                         ^
-      6 | var TaskList = [
-      7 |     {
-      8 |         id: 0,
-
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/list-components/dist/CentralItemList.test.js:5:25)
-
 FAIL src/list-components/UserList.test.tsx
   ● Test suite failed to run
 
@@ -1054,57 +1020,6 @@ FAIL src/list-components/CentralItemList.test.tsx
 
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
-
-FAIL src/list-components/dist/UserList.test.js
-  ● Test suite failed to run
-
-    Cannot find module './DisplayTask' from 'src/list-components/dist/UserList.js'
-
-    Require stack:
-      src/list-components/dist/UserList.js
-      src/list-components/dist/UserList.test.js
-
-
-    However, Jest was able to find:
-    	'./DisplayTask.test.js'
-
-    You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
-
-    See https://jestjs.io/docs/configuration#modulefileextensions-arraystring
-
-      22 | /* eslint-disable indent */
-      23 | var react_1 = require("react");
-    > 24 | var DisplayTask_1 = require("./DisplayTask");
-         |                     ^
-      25 | require("./UserList.css");
-      26 | var react_bootstrap_1 = require("react-bootstrap");
-      27 | var filterlists_1 = require("./filterlists");
-
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/list-components/dist/UserList.js:24:21)
-
-FAIL src/list-components/dist/DisplayTask.test.js
-  ● Test suite failed to run
-
-    Cannot find module './DisplayTask' from 'src/list-components/dist/DisplayTask.test.js'
-
-    However, Jest was able to find:
-    	'./DisplayTask.test.js'
-
-    You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
-
-    See https://jestjs.io/docs/configuration#modulefileextensions-arraystring
-
-      3 | var react_1 = require("react");
-      4 | var react_2 = require("@testing-library/react");
-    > 5 | var DisplayTask_1 = require("./DisplayTask");
-        |                     ^
-      6 | var testTask = {
-      7 |     id: 0,
-      8 |     name: "test",
-
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/list-components/dist/DisplayTask.test.js:5:21)
 
 FAIL src/list-components/DisplayTask.test.tsx
   ● Test suite failed to run
@@ -1603,6 +1518,1660 @@ FAIL src/list-components/ModifyUsers.test.tsx
 
       at Object.<anonymous> (src/list-components/ModifyUsers.test.tsx:74:45)
 
+FAIL src/editing-components/EditTask.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      59 | describe("Testing EditTask", () => {
+      60 |     beforeEach(() => {
+    > 61 |         render(
+         |         ^
+      62 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      63 |         );
+      64 |     });
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:61:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      72 | describe("Testing EditTask", () => {
+      73 |     beforeEach(() => {
+    > 74 |         render(
+         |         ^
+      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      76 |         );
+      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      72 | describe("Testing EditTask", () => {
+      73 |     beforeEach(() => {
+    > 74 |         render(
+         |         ^
+      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      76 |         );
+      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      72 | describe("Testing EditTask", () => {
+      73 |     beforeEach(() => {
+    > 74 |         render(
+         |         ^
+      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      76 |         );
+      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      72 | describe("Testing EditTask", () => {
+      73 |     beforeEach(() => {
+    > 74 |         render(
+         |         ^
+      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      76 |         );
+      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      72 | describe("Testing EditTask", () => {
+      73 |     beforeEach(() => {
+    > 74 |         render(
+         |         ^
+      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      76 |         );
+      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      72 | describe("Testing EditTask", () => {
+      73 |     beforeEach(() => {
+    > 74 |         render(
+         |         ^
+      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      76 |         );
+      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
+
+  ● Testing EditTask › The edit name component is displayed
+
+    TestingLibraryElementError: Unable to find an element with the text: /Change Name:/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit Task[0m
+          [36m</button>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"formDescriptionName"[39m
+                [36m>[39m
+                  [0mChange Description:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mid[39m=[32m"formDescriptionName"[39m
+                  [33mvalue[39m=[32m"description a"[39m
+                [36m/>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [0mCurrent Description: [0m
+                [0mdescription a[0m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"editTime"[39m
+                [36m>[39m
+                  [0mChoose Time[0m
+                [36m</label>[39m
+                [36m<select[39m
+                  [33mclass[39m=[32m"form-select"[39m
+                  [33mid[39m=[32m"editTime"[39m
+                  [33mrole[39m=[32m"select"[39m
+                [36m>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"Choose Time"[39m
+                  [36m>[39m
+                    [0mChoose Time[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0000"[39m
+                  [36m>[39m
+                    [0m0000[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0015"[39m
+                  [36m>[39m
+                    [0m0015[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0030"[39m
+                  [36m>[39m
+                    [0m0030[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0045"[39m
+                  [36m>[39m
+                    [0m0045[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0100"[39m
+                  [36m>[39m
+                    [0m0100[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0115"[39m
+                  [36m>[39m
+                    [0m0115[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0130"[39m
+                  [36m>[39m
+                    [0m0130[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0145"[39m
+                  [36m>[39m
+                    [0m0145[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0200"[39m
+                  [36m>[39m
+                    [0m0200[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0215"[39m
+                  [36m>[39m
+                    [0m0215[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0230"[39m
+                  [36m>[39m
+                    [0m0230[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0245"[39m
+                  [36m>[39m
+                    [0m0245[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0300"[39m
+                  [36m>[39m
+                    [0m0300[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0315"[39m
+                  [36m>[39m
+                    [0m0315[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0330"[39m
+                  [36m>[39m
+                    [0m0330[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0345"[39m
+                  [36m>[39m
+                    [0m0345[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0400"[39m
+                  [36m>[39m
+                    [0m0400[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0415"[39m
+                  [36m>[39m
+                    [0m0415[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0430"[39m
+                  [36m>[39m
+                    [0m0430[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0445"[39m
+                  [36m>[39m
+                    [0m0445[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0500"[39m
+                  [36m>[39m
+                    [0m0500[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0515"[39m
+                  [36m>[39m
+                    [0m0515[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0530"[39m
+                  [36m>[39m
+                    [0m0530[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0545"[39m
+                  [36m>[39m
+                    [0m0545[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0600"[39m
+                  [36m>[39m
+                    [0m0600[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0615"[39m
+                  [36m>[39m
+                    [0m0615[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0630"[39m
+                  [36m>[39m
+                    [0m0630[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0645"[39m
+                  [36m>[39m
+                    [0m0645[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0700"[39m
+                  [36m>[39m
+                    [0m0700[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0715"[39m
+                  [36m>[39m
+                    [0m0715[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0730"[39m
+                  [36m>[39m
+                    [0m0730[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0745"[39m
+                  [36m>[39m
+                    [0m0745[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0800"[39m
+                  [36m>[39m
+                    [0m0800[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0815"[39m
+                  [36m>[39m
+                    [0m0815[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0830"[39m
+                  [36m>[39m
+                    [0m0830[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0845"[39m
+                  [36m>[39m
+                    [0m0845[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0900"[39m
+                  [36m>[39m
+                    [0m0900[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0915"[39m
+                  [36m>[39m
+                    [0m0915[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0930"[39m
+                  [36m>[39m
+                    [0m0930[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0945"[39m
+                  [36m>[39m
+                    [0m0945[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1000"[39m
+                  [36m>[39m
+                    [0m1000[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1015"[39m
+                  [36m>[39m
+                    [0m1015[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1030"[39m
+                  [36m>[39m
+                    [0m1030[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1045"[39m
+                  [36m>[39m
+                    [0m1045[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1100"[39m
+                  [36m>[39m
+                    [0m1100[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1115"[39m
+                  [36m>[39m
+                    [0m1115[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1130"[39m
+                  [36m>[39m
+                    [0m1130[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1145"[39m
+                  [36m>[39m
+                    [0m1145[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1200"[39m
+                  [36m>[39m
+                    [0m1200[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1215"[39m
+                  [36m>[39m
+                    [0m1215[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1230"[39m
+                  [36m>[39m
+                    [0m1230[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1245"[39m
+                  [36m>[39m
+                    [0m1245[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1300"[39m
+                  [36m>[39m
+                    [0m1300[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1315"[39m
+                  [36m>[39m
+                    [0m1315[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1330"[39m
+                  [36m>[39m
+                    [0m1330[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1345"[39m
+                  [36m>[39m
+                    [0m1345[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1400"[39m
+                  [36m>[39m
+                    [0m1400[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1415"[39m
+                  [36m>[39m
+                    [0m1415[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1430"[39m
+                  [36m>[39m
+                    [0m1430[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1445"[39m
+                  [36m>[39m
+                    [0m1445[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1500"[39m
+                  [36m>[39m
+                    [0m1500[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1515"[39m
+                  [36m>[39m
+                    [0m1515[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1530"[39m
+                  [36m>[39m
+                    [0m1530[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1545"[39m
+                  [36m>[39m
+                    [0m1545[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1600"[39m
+                  [36m>[39m
+                    [0m1600[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1615"[39m
+                  [36m>[39m
+                    [0m1615[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1630"[39m
+                  [36m>[39m
+                    [0m1630[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1645"[39m
+                  [36m>[39m
+                    [0m1645[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1700"[39m
+                  [36m>[39m
+                    [0m1700[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1715"[39m
+                  [36m>[39m
+                    [0m1715[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1730"[39m
+                  [36m>[39m
+                    [0m1730[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1745"[39m
+                  [36m>[39m
+                    [0m1745[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1800"[39m
+                  [36m>[39m
+                    [0m1800[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1815"[39m
+                  [36m>[39m
+                    [0m1815[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1830"[39m
+                  [36m>[39m
+                    [0m1830[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1845"[39m
+                  [36m>[39m
+                    [0m1845[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1900"[39m
+                  [36m>[39m
+                    [0m1900[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1915"[39m
+                  [36m>[39m
+                    [0m1915[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1930"[39m
+                  [36m>[39m
+                    [0m1930[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1945"[39m
+                  [36m>[39m
+                    [0m1945[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2000"[39m
+                  [36m>[39m
+                    [0m2000[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2015"[39m
+                  [36m>[39m
+                    [0m2015[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2030"[39m
+                  [36m>[39m
+                    [0m2030[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2045"[39m
+                  [36m>[39m
+                    [0m2045[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2100"[39m
+                  [36m>[39m
+                    [0m2100[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2115"[39m
+                  [36m>[39m
+                    [0m2115[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2130"[39m
+                  [36m>[39m
+                    [0m2130[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2145"[39m
+                  [36m>[39m
+                    [0m2145[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2200"[39m
+                  [36m>[39m
+                    [0m2200[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2215"[39m
+                  [36m>[39m
+                    [0m2215[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2230"[39m
+                  [36m>[39m
+                    [0m2230[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2245"[39m
+                  [36m>[39m
+                    [0m2245[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2300"[39m
+                  [36m>[39m
+                    [0m2300[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2315"[39m
+                  [36m>[39m
+                    [0m2315[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2330"[39m
+                  [36m>[39m
+                    [0m2330[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2345"[39m
+                  [36m>[39m
+                    [0m2345[0m
+                  [36m</option>[39m
+                [36m</select>[39m
+              [36m</div>[39m
+              [0mSelected Time: [0m
+              [0m13:45[0m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"difficulty-edit"[39m
+            [36m>[39m
+              [0mTask Difficulty: [0m
+              [0m3[0m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"poor"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"1"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"poor"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-1[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"not good"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"2"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"not good"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-2[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mchecked[39m=[32m""[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"neutral"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"3"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"neutral"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-3[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"pretty good"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"4"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"pretty good"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-4[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"great"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"5"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"great"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-5[0m
+                [36m</label>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSave Changes[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+       95 |     });
+       96 |     test("The edit name component is displayed", () => {
+    >  97 |         const editName = screen.getByText(/Change Name:/i);
+          |                                 ^
+       98 |         expect(editName).toBeInTheDocument();
+       99 |     });
+      100 |     test("the edit steps component is displayed", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:97:33)
+
+  ● Testing EditTask › the edit steps component is displayed
+
+    TestingLibraryElementError: Unable to find an element with the text: /Add Steps:/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit Task[0m
+          [36m</button>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"formDescriptionName"[39m
+                [36m>[39m
+                  [0mChange Description:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mid[39m=[32m"formDescriptionName"[39m
+                  [33mvalue[39m=[32m"description a"[39m
+                [36m/>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [0mCurrent Description: [0m
+                [0mdescription a[0m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"editTime"[39m
+                [36m>[39m
+                  [0mChoose Time[0m
+                [36m</label>[39m
+                [36m<select[39m
+                  [33mclass[39m=[32m"form-select"[39m
+                  [33mid[39m=[32m"editTime"[39m
+                  [33mrole[39m=[32m"select"[39m
+                [36m>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"Choose Time"[39m
+                  [36m>[39m
+                    [0mChoose Time[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0000"[39m
+                  [36m>[39m
+                    [0m0000[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0015"[39m
+                  [36m>[39m
+                    [0m0015[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0030"[39m
+                  [36m>[39m
+                    [0m0030[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0045"[39m
+                  [36m>[39m
+                    [0m0045[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0100"[39m
+                  [36m>[39m
+                    [0m0100[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0115"[39m
+                  [36m>[39m
+                    [0m0115[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0130"[39m
+                  [36m>[39m
+                    [0m0130[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0145"[39m
+                  [36m>[39m
+                    [0m0145[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0200"[39m
+                  [36m>[39m
+                    [0m0200[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0215"[39m
+                  [36m>[39m
+                    [0m0215[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0230"[39m
+                  [36m>[39m
+                    [0m0230[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0245"[39m
+                  [36m>[39m
+                    [0m0245[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0300"[39m
+                  [36m>[39m
+                    [0m0300[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0315"[39m
+                  [36m>[39m
+                    [0m0315[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0330"[39m
+                  [36m>[39m
+                    [0m0330[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0345"[39m
+                  [36m>[39m
+                    [0m0345[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0400"[39m
+                  [36m>[39m
+                    [0m0400[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0415"[39m
+                  [36m>[39m
+                    [0m0415[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0430"[39m
+                  [36m>[39m
+                    [0m0430[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0445"[39m
+                  [36m>[39m
+                    [0m0445[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0500"[39m
+                  [36m>[39m
+                    [0m0500[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0515"[39m
+                  [36m>[39m
+                    [0m0515[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0530"[39m
+                  [36m>[39m
+                    [0m0530[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0545"[39m
+                  [36m>[39m
+                    [0m0545[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0600"[39m
+                  [36m>[39m
+                    [0m0600[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0615"[39m
+                  [36m>[39m
+                    [0m0615[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0630"[39m
+                  [36m>[39m
+                    [0m0630[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0645"[39m
+                  [36m>[39m
+                    [0m0645[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0700"[39m
+                  [36m>[39m
+                    [0m0700[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0715"[39m
+                  [36m>[39m
+                    [0m0715[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0730"[39m
+                  [36m>[39m
+                    [0m0730[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0745"[39m
+                  [36m>[39m
+                    [0m0745[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0800"[39m
+                  [36m>[39m
+                    [0m0800[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0815"[39m
+                  [36m>[39m
+                    [0m0815[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0830"[39m
+                  [36m>[39m
+                    [0m0830[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0845"[39m
+                  [36m>[39m
+                    [0m0845[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0900"[39m
+                  [36m>[39m
+                    [0m0900[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0915"[39m
+                  [36m>[39m
+                    [0m0915[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0930"[39m
+                  [36m>[39m
+                    [0m0930[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"0945"[39m
+                  [36m>[39m
+                    [0m0945[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1000"[39m
+                  [36m>[39m
+                    [0m1000[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1015"[39m
+                  [36m>[39m
+                    [0m1015[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1030"[39m
+                  [36m>[39m
+                    [0m1030[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1045"[39m
+                  [36m>[39m
+                    [0m1045[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1100"[39m
+                  [36m>[39m
+                    [0m1100[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1115"[39m
+                  [36m>[39m
+                    [0m1115[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1130"[39m
+                  [36m>[39m
+                    [0m1130[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1145"[39m
+                  [36m>[39m
+                    [0m1145[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1200"[39m
+                  [36m>[39m
+                    [0m1200[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1215"[39m
+                  [36m>[39m
+                    [0m1215[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1230"[39m
+                  [36m>[39m
+                    [0m1230[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1245"[39m
+                  [36m>[39m
+                    [0m1245[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1300"[39m
+                  [36m>[39m
+                    [0m1300[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1315"[39m
+                  [36m>[39m
+                    [0m1315[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1330"[39m
+                  [36m>[39m
+                    [0m1330[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1345"[39m
+                  [36m>[39m
+                    [0m1345[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1400"[39m
+                  [36m>[39m
+                    [0m1400[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1415"[39m
+                  [36m>[39m
+                    [0m1415[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1430"[39m
+                  [36m>[39m
+                    [0m1430[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1445"[39m
+                  [36m>[39m
+                    [0m1445[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1500"[39m
+                  [36m>[39m
+                    [0m1500[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1515"[39m
+                  [36m>[39m
+                    [0m1515[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1530"[39m
+                  [36m>[39m
+                    [0m1530[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1545"[39m
+                  [36m>[39m
+                    [0m1545[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1600"[39m
+                  [36m>[39m
+                    [0m1600[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1615"[39m
+                  [36m>[39m
+                    [0m1615[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1630"[39m
+                  [36m>[39m
+                    [0m1630[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1645"[39m
+                  [36m>[39m
+                    [0m1645[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1700"[39m
+                  [36m>[39m
+                    [0m1700[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1715"[39m
+                  [36m>[39m
+                    [0m1715[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1730"[39m
+                  [36m>[39m
+                    [0m1730[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1745"[39m
+                  [36m>[39m
+                    [0m1745[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1800"[39m
+                  [36m>[39m
+                    [0m1800[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1815"[39m
+                  [36m>[39m
+                    [0m1815[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1830"[39m
+                  [36m>[39m
+                    [0m1830[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1845"[39m
+                  [36m>[39m
+                    [0m1845[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1900"[39m
+                  [36m>[39m
+                    [0m1900[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1915"[39m
+                  [36m>[39m
+                    [0m1915[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1930"[39m
+                  [36m>[39m
+                    [0m1930[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"1945"[39m
+                  [36m>[39m
+                    [0m1945[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2000"[39m
+                  [36m>[39m
+                    [0m2000[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2015"[39m
+                  [36m>[39m
+                    [0m2015[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2030"[39m
+                  [36m>[39m
+                    [0m2030[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2045"[39m
+                  [36m>[39m
+                    [0m2045[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2100"[39m
+                  [36m>[39m
+                    [0m2100[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2115"[39m
+                  [36m>[39m
+                    [0m2115[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2130"[39m
+                  [36m>[39m
+                    [0m2130[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2145"[39m
+                  [36m>[39m
+                    [0m2145[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2200"[39m
+                  [36m>[39m
+                    [0m2200[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2215"[39m
+                  [36m>[39m
+                    [0m2215[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2230"[39m
+                  [36m>[39m
+                    [0m2230[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2245"[39m
+                  [36m>[39m
+                    [0m2245[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2300"[39m
+                  [36m>[39m
+                    [0m2300[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2315"[39m
+                  [36m>[39m
+                    [0m2315[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2330"[39m
+                  [36m>[39m
+                    [0m2330[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"2345"[39m
+                  [36m>[39m
+                    [0m2345[0m
+                  [36m</option>[39m
+                [36m</select>[39m
+              [36m</div>[39m
+              [0mSelected Time: [0m
+              [0m13:45[0m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"difficulty-edit"[39m
+            [36m>[39m
+              [0mTask Difficulty: [0m
+              [0m3[0m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"poor"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"1"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"poor"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-1[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"not good"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"2"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"not good"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-2[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mchecked[39m=[32m""[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"neutral"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"3"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"neutral"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-3[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"pretty good"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"4"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"pretty good"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-4[0m
+                [36m</label>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"form-check form-check-inline"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-check-input"[39m
+                  [33mid[39m=[32m"great"[39m
+                  [33mname[39m=[32m"difficulty"[39m
+                  [33mtype[39m=[32m"radio"[39m
+                  [33mvalue[39m=[32m"5"[39m
+                [36m/>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-check-label"[39m
+                  [33mfor[39m=[32m"great"[39m
+                  [33mtitle[39m=[32m""[39m
+                [36m>[39m
+                  [0mstar-5[0m
+                [36m</label>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSave Changes[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+       99 |     });
+      100 |     test("the edit steps component is displayed", () => {
+    > 101 |         const editSteps = screen.getByText(/Add Steps:/i);
+          |                                  ^
+      102 |         expect(editSteps).toBeInTheDocument();
+      103 |     });
+      104 | });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:101:34)
+
 FAIL src/list-components/dist/deleteTak.test.js
   ● Test suite failed to run
 
@@ -1630,7 +3199,7 @@ FAIL src/list-components/deleteTak.test.tsx
     > 50 |         render(
          |         ^
       51 |             <DeleteTask
-      52 |                 item={TASK1}
+      52 |                 //item={TASK1}
       53 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1649,7 +3218,7 @@ FAIL src/list-components/deleteTak.test.tsx
     > 50 |         render(
          |         ^
       51 |             <DeleteTask
-      52 |                 item={TASK1}
+      52 |                 //item={TASK1}
       53 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1668,7 +3237,7 @@ FAIL src/list-components/deleteTak.test.tsx
     > 50 |         render(
          |         ^
       51 |             <DeleteTask
-      52 |                 item={TASK1}
+      52 |                 //item={TASK1}
       53 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1687,7 +3256,7 @@ FAIL src/list-components/deleteTak.test.tsx
 
       checkbox:
 
-      Name "":
+      Name "Delete Task":
       [36m<input[39m
         [33mclass[39m=[32m"form-check-input"[39m
         [33mid[39m=[32m"editMode"[39m
@@ -1712,7 +3281,9 @@ FAIL src/list-components/deleteTak.test.tsx
               [33mclass[39m=[32m"form-check-label"[39m
               [33mfor[39m=[32m"editMode"[39m
               [33mtitle[39m=[32m""[39m
-            [36m/>[39m
+            [36m>[39m
+              [0mDelete Task[0m
+            [36m</label>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -1740,7 +3311,7 @@ FAIL src/list-components/deleteTak.test.tsx
 
       checkbox:
 
-      Name "":
+      Name "Delete Task":
       [36m<input[39m
         [33mclass[39m=[32m"form-check-input"[39m
         [33mid[39m=[32m"editMode"[39m
@@ -1765,7 +3336,9 @@ FAIL src/list-components/deleteTak.test.tsx
               [33mclass[39m=[32m"form-check-label"[39m
               [33mfor[39m=[32m"editMode"[39m
               [33mtitle[39m=[32m""[39m
-            [36m/>[39m
+            [36m>[39m
+              [0mDelete Task[0m
+            [36m</label>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -1793,7 +3366,7 @@ FAIL src/list-components/deleteTak.test.tsx
 
       checkbox:
 
-      Name "":
+      Name "Delete Task":
       [36m<input[39m
         [33mclass[39m=[32m"form-check-input"[39m
         [33mid[39m=[32m"editMode"[39m
@@ -1818,7 +3391,9 @@ FAIL src/list-components/deleteTak.test.tsx
               [33mclass[39m=[32m"form-check-label"[39m
               [33mfor[39m=[32m"editMode"[39m
               [33mtitle[39m=[32m""[39m
-            [36m/>[39m
+            [36m>[39m
+              [0mDelete Task[0m
+            [36m</label>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -1838,49 +3413,6 @@ FAIL src/list-components/deleteTak.test.tsx
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/list-components/deleteTak.test.tsx:77:37)
 
-FAIL src/list-components/dist/addTask.test.js
-  ● Add tasks tests › There is a switch
-
-    TypeError: Cannot read properties of undefined (reading 'createElement')
-
-      32 | describe("Add tasks tests", function () {
-      33 |     beforeEach(function () {
-    > 34 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
-         |                                                  ^
-      35 |                 throw new Error("Function not implemented.");
-      36 |             } }));
-      37 |     });
-
-      at Object.<anonymous> (src/list-components/dist/addTask.test.js:34:50)
-
-  ● Add tasks tests › On switch click, there is a textbox and buttons: 
-
-    TypeError: Cannot read properties of undefined (reading 'createElement')
-
-      32 | describe("Add tasks tests", function () {
-      33 |     beforeEach(function () {
-    > 34 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
-         |                                                  ^
-      35 |                 throw new Error("Function not implemented.");
-      36 |             } }));
-      37 |     });
-
-      at Object.<anonymous> (src/list-components/dist/addTask.test.js:34:50)
-
-  ● Add tasks tests › Clicking add task adds a task and leaves edit mode
-
-    TypeError: Cannot read properties of undefined (reading 'createElement')
-
-      32 | describe("Add tasks tests", function () {
-      33 |     beforeEach(function () {
-    > 34 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { item: TASK1, tasks: TASKLIST1, setTasks: function ( /*newTasks: Tasks[]*/) {
-         |                                                  ^
-      35 |                 throw new Error("Function not implemented.");
-      36 |             } }));
-      37 |     });
-
-      at Object.<anonymous> (src/list-components/dist/addTask.test.js:34:50)
-
 FAIL src/list-components/addTask.test.tsx
   ● Console
 
@@ -1892,7 +3424,7 @@ FAIL src/list-components/addTask.test.tsx
     > 37 |         render(
          |         ^
       38 |             <AddTask
-      39 |                 item={TASK1}
+      39 |                 //item={TASK1}
       40 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1911,7 +3443,7 @@ FAIL src/list-components/addTask.test.tsx
     > 37 |         render(
          |         ^
       38 |             <AddTask
-      39 |                 item={TASK1}
+      39 |                 //item={TASK1}
       40 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1930,7 +3462,7 @@ FAIL src/list-components/addTask.test.tsx
     > 37 |         render(
          |         ^
       38 |             <AddTask
-      39 |                 item={TASK1}
+      39 |                 //item={TASK1}
       40 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1949,7 +3481,7 @@ FAIL src/list-components/addTask.test.tsx
 
       checkbox:
 
-      Name "":
+      Name "Add Task":
       [36m<input[39m
         [33mclass[39m=[32m"form-check-input"[39m
         [33mid[39m=[32m"editMode"[39m
@@ -1974,7 +3506,9 @@ FAIL src/list-components/addTask.test.tsx
               [33mclass[39m=[32m"form-check-label"[39m
               [33mfor[39m=[32m"editMode"[39m
               [33mtitle[39m=[32m""[39m
-            [36m/>[39m
+            [36m>[39m
+              [0mAdd Task[0m
+            [36m</label>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -2002,7 +3536,7 @@ FAIL src/list-components/addTask.test.tsx
 
       checkbox:
 
-      Name "":
+      Name "Add Task":
       [36m<input[39m
         [33mclass[39m=[32m"form-check-input"[39m
         [33mid[39m=[32m"editMode"[39m
@@ -2027,7 +3561,9 @@ FAIL src/list-components/addTask.test.tsx
               [33mclass[39m=[32m"form-check-label"[39m
               [33mfor[39m=[32m"editMode"[39m
               [33mtitle[39m=[32m""[39m
-            [36m/>[39m
+            [36m>[39m
+              [0mAdd Task[0m
+            [36m</label>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -2055,7 +3591,7 @@ FAIL src/list-components/addTask.test.tsx
 
       checkbox:
 
-      Name "":
+      Name "Add Task":
       [36m<input[39m
         [33mclass[39m=[32m"form-check-input"[39m
         [33mid[39m=[32m"editMode"[39m
@@ -2080,7 +3616,9 @@ FAIL src/list-components/addTask.test.tsx
               [33mclass[39m=[32m"form-check-label"[39m
               [33mfor[39m=[32m"editMode"[39m
               [33mtitle[39m=[32m""[39m
-            [36m/>[39m
+            [36m>[39m
+              [0mAdd Task[0m
+            [36m</label>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -2099,26 +3637,6 @@ FAIL src/list-components/addTask.test.tsx
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/list-components/addTask.test.tsx:64:37)
-
-FAIL src/editing-components/dist/EditTime.test.js
-  ● Test suite failed to run
-
-    Cannot find module './Times' from 'src/editing-components/dist/EditTime.js'
-
-    Require stack:
-      src/editing-components/dist/EditTime.js
-      src/editing-components/dist/EditTime.test.js
-
-      4 | var react_1 = require("react");
-      5 | var react_bootstrap_1 = require("react-bootstrap");
-    > 6 | var Times_1 = require("./Times");
-        |               ^
-      7 | var times = Times_1.TIMES;
-      8 | function EditTime(_a) {
-      9 |     var time = _a.time, setTime = _a.setTime;
-
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/editing-components/dist/EditTime.js:6:15)
 
 FAIL src/editing-components/EditTime.test.tsx
   ● Console
@@ -2849,36 +4367,35 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   24.12 |    19.04 |      25 |    24.6 |                   
+All files                  |   34.54 |    20.93 |   32.69 |   35.34 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
-  App.tsx                  |       0 |        0 |       0 |       0 | 18-41             
+  App.tsx                  |       0 |        0 |       0 |       0 | 20-44             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-60              
- src/editing-components    |   25.64 |    28.57 |      20 |   26.31 |                   
-  EditDescription.tsx      |       0 |      100 |       0 |       0 | 14-17             
-  EditTask.tsx             |       0 |        0 |       0 |       0 | 22-112            
+ src/editing-components    |   61.53 |    42.85 |   46.66 |   63.15 |                   
+  EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15             
+  EditTask.tsx             |   63.15 |    33.33 |   28.57 |   66.66 | 48-68,112         
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
   Times.tsx                |     100 |      100 |     100 |     100 |                   
-  edit-difficulty.tsx      |       0 |      100 |       0 |       0 | 11-14             
+  edit-difficulty.tsx      |      50 |      100 |      50 |      50 | 11                
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |    22.5 |    18.18 |   17.72 |   22.78 |                   
+ src/list-components       |   29.26 |       20 |   22.22 |   29.75 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-73             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
-  UserList.tsx             |       0 |        0 |       0 |       0 | 39-170            
+  UserList.tsx             |       0 |        0 |       0 |       0 | 35-169            
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
-  adminListTest.tsx        |       0 |        0 |       0 |       0 | 6-106             
-  adminlist.tsx            |       0 |        0 |       0 |       0 | 19-63             
+  adminlist.tsx            |       0 |        0 |       0 |       0 | 22-67             
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
   filterlists.tsx          |   82.35 |       25 |     100 |    87.5 | 24-25             
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 18 failed, 18 total
-Tests:       37 failed, 6 passed, 43 total
+Test Suites: 13 failed, 13 total
+Tests:       36 failed, 11 passed, 47 total
 Snapshots:   0 total
-Time:        14.027 s
+Time:        8.783 s
 Ran all test suites.

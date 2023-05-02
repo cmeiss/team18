@@ -322,5 +322,27 @@ export const TASKS: Task[] = [
         difficulty: 23,
         numUsers: 5,
         time: "675"
+    },
+    {
+        id: 29,
+        name: "Nap",
+        description: "Take a rest, you deserve it.",
+        status: false,
+        image: require("./task-images/nap.jpg"),
+        steps: [],
+        difficulty: 23,
+        numUsers: 5,
+        time: "675"
+    },
+    {
+        id: 30,
+        name: "Soccer practice",
+        description: "Don't be late! Time to practice before the big game.",
+        status: false,
+        image: require("./task-images/soccer.jpg"),
+        steps: [],
+        difficulty: 23,
+        numUsers: 5,
+        time: "675"
     }
 ];

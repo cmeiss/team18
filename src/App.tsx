@@ -22,7 +22,10 @@ function App(): JSX.Element {
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
-        { name: "Admin", userList: [] },
+        {
+            name: "Admin",
+            userList: []
+        },
         { name: "User1", userList: [] }
     ]); // these are original users these can be changed
     const [tasks, setTasks] = useState<Task[]>(TASKS);
@@ -125,12 +128,11 @@ function App(): JSX.Element {
                         role={role.name}
                         setTasks={updateTasks}
                     ></CentralItemList>
-                    <div>
+                    <div className="admin">
                         <AdminList
                             tasks={tasks}
                             user={role}
                             setTasks={updateTasks}
-                            setUser={setRole}
                         ></AdminList>
                     </div>
                 </div>

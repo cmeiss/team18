@@ -12,9 +12,9 @@ interface CentralItemProps {
 
 export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
     return (
-        <div className="List">
-            <h2> Central List </h2>
-            <div className="central">
+        <div className="central-list">
+            <h2> Sample Tasks </h2>
+            <div className="central-tasks">
                 {tasks.map((TASK: Task, index: number) => (
                     <DisplayTask
                         key={index}

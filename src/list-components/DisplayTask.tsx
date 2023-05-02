@@ -57,7 +57,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                                 onChange={() => setDone(!done)}
                             />
                         </li>
-                        <li>{display.task.image}</li>
+                        <img src={display.task.image} width="100px" alt="" />
                     </ul>
                 </Col>
                 <Col>

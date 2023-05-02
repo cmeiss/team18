@@ -127,6 +127,8 @@ function App(): JSX.Element {
                     ></CentralItemList>
                     <div>
                         <AdminList
+                            users={roles}
+                            setUsers={setRoles}
                             tasks={tasks}
                             user={role}
                             setTasks={updateTasks}

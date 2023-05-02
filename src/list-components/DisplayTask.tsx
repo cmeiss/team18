@@ -62,7 +62,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
             <div
                 className="Task-Desc"
                 hidden={hideDetails}
-                style={{ border: "5px solid rgb(248, 209, 231)" }}
+                style={{ border: "5px solid rgb(255, 239, 195)" }}
             >
                 <p>
                     <strong>Task: {display.task.name}</strong>

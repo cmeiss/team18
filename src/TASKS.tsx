@@ -14,7 +14,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 1,
-        name: "Gas",
+        name: "Get gas",
         description: "The car needs gas refil your tank.",
         status: false,
         image: require("./task-images/gas.jpg"),
@@ -126,7 +126,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 11,
-        name: "Feed the cat",
+        name: "Feed cat",
         description: "Your pet needs food",
         status: false,
         image: require("./task-images/feedcat.jpg"),
@@ -148,7 +148,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 13,
-        name: "Meet with team",
+        name: "Team meeting",
         description: "preparing for delivery to boss",
         status: false,
         image: require("./task-images/team-meeting.png"),
@@ -181,7 +181,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 16,
-        name: "Clean the kitchen",
+        name: "Clean kitchen",
         description: "Stains. everywhere.",
         status: false,
         image: require("./task-images/clean-kitchen.png"),
@@ -192,7 +192,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 17,
-        name: "Walk the dog",
+        name: "Walk dog",
         description: "Take the puppy for a walk around the park.",
         status: false,
         image: require("./task-images/walk-dog.jpg"),
@@ -247,7 +247,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 22,
-        name: "Take out the trash",
+        name: "Take out trash",
         description:
             "There are flies gathering, take the trash out to the curb",
         status: false,

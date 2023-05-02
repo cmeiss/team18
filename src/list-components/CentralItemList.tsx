@@ -15,18 +15,15 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         <div className="List">
             <h2> Central List </h2>
             <div className="central">
-                {tasks.map((task: Task) => {
-                    return (
-                        <div key={task.id}>
-                            <DisplayTask
-                                task={task}
-                                tasks={tasks}
-                                updateTasks={setTasks}
-                                role={role}
-                            ></DisplayTask>
-                        </div>
-                    );
-                })}
+                {tasks.map((TASK: Task, index: number) => (
+                    <DisplayTask
+                        key={index}
+                        task={TASK}
+                        tasks={tasks}
+                        updateTasks={setTasks}
+                        role={role}
+                    ></DisplayTask>
+                ))}
             </div>
             {console.log("Central Item List")}
             {console.log(...tasks)}

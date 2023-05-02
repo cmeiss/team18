@@ -52,7 +52,9 @@ export function EditStatus(edit: editProps): JSX.Element {
             <Form.Check
                 type="checkbox"
                 id="is-done-check"
-                label={"Completion Status:" + status ? "✔️" : "❌"}
+                label={
+                    status ? "Completion Status: ✔️" : "Completion Status: ❌"
+                }
                 checked={status}
                 onChange={updateStatus}
             />

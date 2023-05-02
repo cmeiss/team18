@@ -82,6 +82,14 @@
     text-align: center;
     float: left;
     width: 500px;
+    height: 5250px;
+    outline: 2px solid black;
+}
+
+.admin {
+    text-align: center;
+    float: right;
+    width: 500px;
     height: 1250px;
     outline: 2px solid black;
 }

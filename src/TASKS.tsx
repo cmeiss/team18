@@ -3,92 +3,92 @@ import { Task } from "./interfaces/task";
 export const TASKS: Task[] = [
     {
         id: 0,
-        name: "Do Homework",
+        name: "Homework",
         description: "Get it done before the deadline.",
         status: false,
-        image: "picture",
+        image: require("./task-images/homework.jpg"),
         steps: ["Class 1", "Class 2"],
         difficulty: 0,
         numUsers: 0,
-        time: 1800
+        time: "1800"
     },
     {
         id: 1,
         name: "Get gas",
-        description: "The car needs gas.",
+        description: "The car needs gas refil your tank.",
         status: false,
-        image: "picture",
+        image: require("./task-images/gas.jpg"),
         steps: ["a", "b", "c"],
         difficulty: 3,
         numUsers: 0,
-        time: 1345
+        time: "1345"
     },
     {
         id: 2,
         name: "Cook dinner",
         description: "It's time for a great meal!",
         status: false,
-        image: "picture",
+        image: require("./task-images/cook-dinner.jpg"),
         steps: ["get ingredients", "find receipe", "cook", "clean"],
         difficulty: 3,
         numUsers: 0,
-        time: 1745
+        time: "1745"
     },
     {
         id: 3,
-        name: "Get breakfast",
+        name: "Breakfast",
         description: "Enjoy your morning with your favorite breakfast food!",
         status: false,
-        image: "picture",
+        image: require("./task-images/make-breakfast.jpg"),
         steps: ["order online", "pick up"],
         difficulty: 3,
         numUsers: 0,
-        time: 700
+        time: "700"
     },
     {
         id: 4,
         name: "Go to class",
         description: "Attend you lectures to keep up in class.",
         status: false,
-        image: "picture",
+        image: require("./task-images/to-class.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 5,
         name: "Birthday Party!",
         description: "Celebrate a friend's or familiy member's big day!!",
         status: false,
-        image: "picture",
+        image: require("./task-images/birthday.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 6,
-        name: "Favorite Hobby Time",
+        name: "Favorite Hobby",
         description: "Make time for what you love!",
         status: false,
-        image: "picture",
+        image: require("./task-images/hobby.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 7,
-        name: "Time for your Metaverse Double Life",
+        name: "Metaverse Double Life",
         description:
             "The real world not cutting it? Let the Metaverse fuel your wildest desires!",
         status: false,
-        image: "picture",
+        image: require("./task-images/metaverse.png"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 8,
@@ -96,98 +96,254 @@ export const TASKS: Task[] = [
         description:
             "Whether your deep into the furthest reaches of AI tech, or discovering how much ketchup is the perfect amount for every fry, make time for your undiscovered knowledge!.",
         status: false,
-        image: "picture",
+        image: require("./task-images/research.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 9,
         name: "Gardening",
         description: "Tend those taters!",
         status: false,
-        image: "picture",
+        image: require("./task-images/gardening.png"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 10,
         name: "Dance Recital",
         description: "I like to tango.",
         status: false,
-        image: "picture",
+        image: require("./task-images/dance.png"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 11,
-        name: "feed the cat",
-        description: "your pet needs food",
+        name: "Feed cat",
+        description: "Your pet needs food",
         status: false,
-        image: "picture",
+        image: require("./task-images/feedcat.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 12,
-        name: "wash car",
-        description: "car's looking a little muddy",
+        name: "Wash car",
+        description: "Car's looking a little muddy",
         status: false,
-        image: "picture",
+        image: require("./task-images/carwash.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 13,
-        name: "meet with team",
+        name: "Team meeting",
         description: "preparing for delivery to boss",
         status: false,
-        image: "picture",
+        image: require("./task-images/team-meeting.png"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 14,
-        name: "study",
-        description: "get ready for your exams",
+        name: "Study",
+        description: "Get ready for your exams",
         status: false,
-        image: "picture",
+        image: require("./task-images/study.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 15,
-        name: "practice violin",
-        description: "the school band needs your talent",
+        name: "Violin practice",
+        description: "The school band needs your talent",
         status: false,
-        image: "picture",
+        image: require("./task-images/violin.jpg"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 16,
-        name: "clean the kitchen",
-        description: "stains. everywhere.",
+        name: "Clean kitchen",
+        description: "Stains. everywhere.",
         status: false,
-        image: "picture",
+        image: require("./task-images/clean-kitchen.png"),
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
+    },
+    {
+        id: 17,
+        name: "Walk dog",
+        description: "Take the puppy for a walk around the park.",
+        status: false,
+        image: require("./task-images/walk-dog.jpg"),
+        steps: [],
+        difficulty: 2,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 18,
+        name: "Grocery shopping",
+        description: "Time to refill the pantry and the fridge.",
+        status: false,
+        image: require("./task-images/grocery-shopping.jpg"),
+        steps: [],
+        difficulty: 3,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 19,
+        name: "Water plants",
+        description: "The pothos is looking pretty droopy, give it some love.",
+        status: false,
+        image: require("./task-images/water-plants.png"),
+        steps: [],
+        difficulty: 1,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 20,
+        name: "Wash dishes",
+        description: "Don't be that roomate, it's time to wash the dishes.",
+        status: false,
+        image: require("./task-images/wash-dishes.png"),
+        steps: [],
+        difficulty: 2,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 21,
+        name: "Laundry",
+        description: "Refresh your closet, wash that dirty laundry!",
+        status: false,
+        image: require("./task-images/laundry.png"),
+        steps: [],
+        difficulty: 3,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 22,
+        name: "Take out trash",
+        description:
+            "There are flies gathering, take the trash out to the curb",
+        status: false,
+        image: require("./task-images/trash.jpg"),
+        steps: [],
+        difficulty: 1,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 23,
+        name: "Meditate",
+        description: "relax",
+        status: false,
+        image: require("./task-images/meditate.jpg"),
+        steps: [],
+        difficulty: 3,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 24,
+        name: "Manifest",
+        description: "what you want in life",
+        status: false,
+        image: require("./task-images/manifest.png"),
+        steps: [],
+        difficulty: 3,
+        numUsers: 1,
+        time: "680"
+    },
+    {
+        id: 25,
+        name: "Workout",
+        description: "pump some iron",
+        status: false,
+        image: require("./task-images/workout.jpg"),
+        steps: [],
+        difficulty: 3,
+        numUsers: 1,
+        time: "645"
+    },
+    {
+        id: 26,
+        name: "Watch movie",
+        description: "Make some popcorn and put your feet up.",
+        status: false,
+        image: require("./task-images/movie.png"),
+        steps: [],
+        difficulty: 1,
+        numUsers: 1,
+        time: "1045"
+    },
+    {
+        id: 27,
+        name: "Go for a run",
+        description: "Test you limits and run 100 miles!",
+        status: false,
+        image: require("./task-images/run.png"),
+        steps: [],
+        difficulty: 69,
+        numUsers: 1,
+        time: "1445"
+    },
+    {
+        id: 28,
+        name: "M2O challenge",
+        description:
+            "Get your picture up on that wall! Do the m2o burger challenge.",
+        status: false,
+        image: require("./task-images/m20.png"),
+        steps: [],
+        difficulty: 23,
+        numUsers: 5,
+        time: "675"
+    },
+    {
+        id: 29,
+        name: "Nap",
+        description: "Take a rest, you deserve it.",
+        status: false,
+        image: require("./task-images/nap.jpg"),
+        steps: [],
+        difficulty: 23,
+        numUsers: 5,
+        time: "675"
+    },
+    {
+        id: 30,
+        name: "Soccer practice",
+        description: "Don't be late! Time to practice before the big game.",
+        status: false,
+        image: require("./task-images/soccer.jpg"),
+        steps: [],
+        difficulty: 23,
+        numUsers: 5,
+        time: "675"
     }
 ];

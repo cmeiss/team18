@@ -12,7 +12,7 @@
 //         steps: ["a", "b", "c", "GutenTag", "469476"],
 //         difficulty: 8,
 //         numUsers: 2,
-//         time: 1346
+//         time: "1346"
 //     },
 //     {
 //         name: "test2",
@@ -22,7 +22,7 @@
 //         steps: ["a", "b", "c", "GutenTag", "469476"],
 //         difficulty: 4,
 //         numUsers: 2,
-//         time: 1300
+//         time: "1300"
 //     },
 //     {
 //         name: "test3",
@@ -32,7 +32,7 @@
 //         steps: ["a", "b", "c", "GutenTag", "469476"],
 //         difficulty: 5,
 //         numUsers: 2,
-//         time: 875
+//         time: "875"
 //     }
 // ];
 // describe("filter", () => {
@@ -46,7 +46,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 5,
 //                 numUsers: 2,
-//                 time: 875
+//                 time: "875"
 //             },
 //             {
 //                 name: "test2",
@@ -56,7 +56,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 4,
 //                 numUsers: 2,
-//                 time: 1300
+//                 time: "1300"
 //             },
 //             {
 //                 name: "test1",
@@ -66,7 +66,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 8,
 //                 numUsers: 2,
-//                 time: 1346
+//                 time: "1346"
 //             }
 //         ]);
 //     });
@@ -80,7 +80,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 8,
 //                 numUsers: 2,
-//                 time: 1346
+//                 time: "1346"
 //             },
 //             {
 //                 name: "test2",
@@ -90,7 +90,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 4,
 //                 numUsers: 2,
-//                 time: 1300
+//                 time: "1300"
 //             },
 //             {
 //                 name: "test3",
@@ -100,7 +100,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 5,
 //                 numUsers: 2,
-//                 time: 875
+//                 time: "875"
 //             }
 //         ]);
 //     });
@@ -114,7 +114,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 4,
 //                 numUsers: 2,
-//                 time: 1300
+//                 time: "1300"
 //             },
 //             {
 //                 name: "test3",
@@ -124,7 +124,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 5,
 //                 numUsers: 2,
-//                 time: 875
+//                 time: "875"
 //             },
 //             {
 //                 name: "test1",
@@ -134,7 +134,7 @@
 //                 steps: ["a", "b", "c", "GutenTag", "469476"],
 //                 difficulty: 8,
 //                 numUsers: 2,
-//                 time: 1346
+//                 time: "1346"
 //             }
 //         ]);
 //     });

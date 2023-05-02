@@ -3,7 +3,6 @@ import React from "react";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
-import "./UserList.css";
 import { Button } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
@@ -22,19 +21,6 @@ interface UserProps {
 }
 
 // export function UserList(user: UserProps): JSX.Element {
-function sort(
-    type_of_sort: string,
-    tasks: Task[],
-    setTasks: (newTasks: Task[]) => void
-): void {
-    if (type_of_sort == "alphabet") {
-        setTasks(filter_by_alphabetical_order(tasks));
-    } else if (type_of_sort == "time") {
-        setTasks(filter_by_time_needed(tasks));
-    } else if (type_of_sort == "difficulty") {
-        setTasks(filter_by_difficulty(tasks));
-    }
-}
 
 export function UserList({
     user,
@@ -44,6 +30,25 @@ export function UserList({
     setTasks,
     setUsers
 }: UserProps): JSX.Element {
+    function sort(type_of_sort: string): void {
+        if (type_of_sort == "alphabet") {
+            setUser({
+                name: user.name,
+                userList: filter_by_alphabetical_order(user.userList)
+            });
+        } else if (type_of_sort == "time") {
+            setUser({
+                name: user.name,
+                userList: filter_by_time_needed(user.userList)
+            });
+        } else if (type_of_sort == "difficulty") {
+            setUser({
+                name: user.name,
+                userList: filter_by_difficulty(user.userList)
+            });
+        }
+    }
+
     const [{ isOver }, drop] = useDrop({
         accept: "task",
         drop: (item: Task) => addTaskUserList(item.id),
@@ -133,19 +138,18 @@ export function UserList({
         );
     }
 
-    return (
-        <div
-            ref={drop}
-            className="UserList"
-            style={{
-                backgroundColor: isOver ? "MediumSeaGreen" : "white"
-            }}
-        >
-            {user.name === "Super" || user.name === "Admin" ? (
-                <div></div>
-            ) : (
-                <div className="userList">
-                    <h3>{user.name}s List:</h3>
+    if (user.name !== "Super" && user.name !== "Admin") {
+        return (
+            <div className="UserList">
+                {/*eslint-disable-next-line react/no-unescaped-entities*/}
+                <h3>{user.name}'s Schedule:</h3>
+                <div
+                    className="userTaskList"
+                    ref={drop}
+                    style={{
+                        backgroundColor: isOver ? "SageGreen" : "white"
+                    }}
+                >
                     {user.userList.map((TASK: Task, index: number) => (
                         <DisplayTask
                             key={index}
@@ -156,25 +160,23 @@ export function UserList({
                         ></DisplayTask>
                     ))}
                     <div>
-                        <Button
-                            onClick={() => sort("alphabet", tasks, setTasks)}
-                        >
+                        <Button onClick={() => sort("alphabet")}>
                             Sort by Alphabetical Order{" "}
                         </Button>
-                        <Button
-                            onClick={() => sort("difficulty", tasks, setTasks)}
-                        >
+                        <Button onClick={() => sort("difficulty")}>
                             Sort By Difficulty{" "}
                         </Button>
-                        <Button onClick={() => sort("time", tasks, setTasks)}>
+                        <Button onClick={() => sort("time")}>
                             Sort By Time Needed{" "}
                         </Button>
                     </div>
                 </div>
-            )}
-            {console.log("userList")}
-            {console.log(...user.userList)}
-            {console.log(setTasks)}
-        </div>
-    );
+            </div>
+        );
+        // {console.log("userList")}
+        // {console.log(...user.userList)}
+        // {console.log(setTasks)}
+    } else {
+        return <></>;
+    }
 }

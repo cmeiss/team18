@@ -14,7 +14,7 @@ const TASK1: Task = {
     steps: ["one", "two", "three"],
     difficulty: 0,
     numUsers: 0,
-    time: 1010
+    time: "1010"
 };
 
 const TASK2: Task = {
@@ -26,7 +26,7 @@ const TASK2: Task = {
     steps: ["four", "five", "six"],
     difficulty: 1,
     numUsers: 1,
-    time: 1100
+    time: "1100"
 };
 
 const TASKLIST1 = [TASK1, TASK2];
@@ -36,7 +36,7 @@ describe("Add tasks tests", () => {
     beforeEach(() =>
         render(
             <AddTask
-                item={TASK1}
+                //item={TASK1}
                 tasks={TASKLIST1}
                 setTasks={
                     function (/*newTasks: Tasks[]*/): void {

@@ -12,7 +12,7 @@ export const TASK1: Task = {
     steps: ["one", "two", "three"],
     difficulty: 1,
     numUsers: 0,
-    time: 2
+    time: "2"
 };
 export const TASK2: Task = {
     id: 1,
@@ -23,7 +23,7 @@ export const TASK2: Task = {
     steps: ["four", "five", "six"],
     difficulty: 0,
     numUsers: 3,
-    time: 0
+    time: "0"
 };
 export const TASK3: Task = {
     id: 2,
@@ -34,7 +34,7 @@ export const TASK3: Task = {
     steps: ["seven", "eight", "nine"],
     difficulty: 1,
     numUsers: 2,
-    time: 3
+    time: "3"
 };
 
 //basic user constants to test

@@ -29,7 +29,9 @@ export function filter_by_alphabetical_order(list_of_tasks: Task[]): Task[] {
 
 export function filter_by_time_needed(list_of_tasks: Task[]): Task[] {
     function mycomparator(a: Task, b: Task) {
-        return a.time - b.time;
+        const aTime = parseInt(a.time);
+        const bTime = parseInt(b.time);
+        return aTime - bTime;
     }
     list_of_tasks.sort(mycomparator);
     return list_of_tasks;

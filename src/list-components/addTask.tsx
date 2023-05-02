@@ -6,7 +6,7 @@ import { useState } from "react";
 
 interface addTaskProp {
     tasks: Task[];
-    item: Task;
+    //item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 
@@ -17,7 +17,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
     const [newimage, setImage] = useState<string>("");
     const [newsteps, setSteps] = useState<string[]>([""]);
     const [newdifficulty, setDifficulty] = useState<number>(0);
-    const [newtime, setTime] = useState<number>(0);
+    const [newtime, setTime] = useState<string>("");
     const [newnumusers, setNumUsers] = useState<number>(0);
     //states needed for editing functions
     const [neweditmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
@@ -50,7 +50,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
     }
     //change time function
     function updateTime(event: React.ChangeEvent<HTMLInputElement>) {
-        setTime(parseInt(event.target.value));
+        setTime(event.target.value);
     }
     //change num users function
     function updateNumUsers(event: React.ChangeEvent<HTMLInputElement>) {
@@ -89,7 +89,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
             <Form.Check
                 type={"switch"}
                 id="editMode"
-                label=""
+                label="Add Task"
                 checked={neweditmode}
                 onChange={updateEditMode}
             />

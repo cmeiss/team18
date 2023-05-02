@@ -10,7 +10,7 @@ export const TASKS: Task[] = [
         steps: ["Class 1", "Class 2"],
         difficulty: 0,
         numUsers: 0,
-        time: 1800
+        time: "1800"
     },
     {
         id: 1,
@@ -21,7 +21,7 @@ export const TASKS: Task[] = [
         steps: ["a", "b", "c"],
         difficulty: 3,
         numUsers: 0,
-        time: 1345
+        time: "1345"
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ export const TASKS: Task[] = [
         steps: ["get ingredients", "find receipe", "cook", "clean"],
         difficulty: 3,
         numUsers: 0,
-        time: 1745
+        time: "1745"
     },
     {
         id: 3,
@@ -43,7 +43,7 @@ export const TASKS: Task[] = [
         steps: ["order online", "pick up"],
         difficulty: 3,
         numUsers: 0,
-        time: 700
+        time: "700"
     },
     {
         id: 4,
@@ -54,7 +54,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 5,
@@ -65,7 +65,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 6,
@@ -76,7 +76,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 7,
@@ -88,7 +88,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 8,
@@ -100,7 +100,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 9,
@@ -111,7 +111,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 10,
@@ -122,7 +122,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 11,
@@ -133,7 +133,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 12,
@@ -144,7 +144,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 13,
@@ -155,7 +155,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 14,
@@ -166,7 +166,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 15,
@@ -177,7 +177,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 16,
@@ -188,7 +188,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 17,
@@ -199,7 +199,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 2,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 18,
@@ -210,7 +210,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 19,
@@ -221,7 +221,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 20,
@@ -232,7 +232,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 2,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 21,
@@ -243,7 +243,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: 1130
+        time: "1130"
     },
     {
         id: 22,
@@ -255,6 +255,72 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 0,
-        time: 1130
+        time: "1130"
+    },
+    {
+        id: 23,
+        name: "meditate",
+        description: "relax",
+        status: false,
+        image: require("./task-images/laundry.png"),
+        steps: [],
+        difficulty: 3,
+        numUsers: 0,
+        time: "1130"
+    },
+    {
+        id: 24,
+        name: "manifest",
+        description: "what you want in life",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 1,
+        time: "680"
+    },
+    {
+        id: 25,
+        name: "workout",
+        description: "pump some iron",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 3,
+        numUsers: 1,
+        time: "645"
+    },
+    {
+        id: 26,
+        name: "watch pumping iron documentary",
+        description: "watch arnold win olympia",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 1,
+        numUsers: 1,
+        time: "1045"
+    },
+    {
+        id: 27,
+        name: "run 100 miles",
+        description: "run 100 miles",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 69,
+        numUsers: 1,
+        time: "1445"
+    },
+    {
+        id: 28,
+        name: "m20 challenge",
+        description: "do the m20 burger challenge",
+        status: false,
+        image: "picture",
+        steps: [],
+        difficulty: 23,
+        numUsers: 5,
+        time: "675"
     }
 ];

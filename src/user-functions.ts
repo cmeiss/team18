@@ -42,7 +42,7 @@ export function addTasktoUserList(
     step: string[],
     diff: number,
     num: number,
-    time: number
+    time: string
 ): Task[] {
     const task: Task = {
         id: id,

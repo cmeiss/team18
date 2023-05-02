@@ -7,93 +7,63 @@ import { Button } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
-import { useDrop } from "react-dnd";
-import { addTask } from "../TaskFunctions";
+import { User } from "../interfaces/user";
 
 interface AdminItemProps {
     tasks: Task[];
-    role: string;
+    user: User;
     setTasks: (newTasks: Task[]) => void;
+    setUser: (newUser: User) => void;
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-export function AdminList({ role, tasks, setTasks }: AdminItemProps) {
-    const NewTasks = tasks.filter((task: Task): boolean =>
-        task.numUsers < 2 ? true : false
-    );
-    function sort(
-        type_of_sort: string,
-        tasks: Task[],
-        setTasks: (newTasks: Task[]) => void
-    ): void {
+export function AdminList({ user, tasks, setTasks, setUser }: AdminItemProps) {
+    function sort(type_of_sort: string): void {
         if (type_of_sort == "alphabet") {
-            setTasks(filter_by_alphabetical_order(tasks));
+            setUser({
+                name: user.name,
+                userList: filter_by_alphabetical_order(user.userList)
+            });
         } else if (type_of_sort == "time") {
-            setTasks(filter_by_time_needed(tasks));
+            setUser({
+                name: user.name,
+                userList: filter_by_time_needed(user.userList)
+            });
         } else if (type_of_sort == "difficulty") {
-            setTasks(filter_by_difficulty(tasks));
+            setUser({
+                name: user.name,
+                userList: filter_by_difficulty(user.userList)
+            });
         }
     }
-    const [{ isOver /*, canDrop */ }, drop] = useDrop({
-        accept: "task",
-        drop: (item: Task) => addTaskToAdminList(item.id),
-        canDrop: (item: Task) => canAddtoAdmin(item.id),
-        collect: (monitor) => ({
-            isOver: !!monitor.isOver(),
-            canDrop: !!monitor.canDrop()
-        })
-    });
-
-    function addTaskToAdminList(id: number): void {
-        const droppedTask: Task | undefined = tasks.find(
-            (task: Task) => task.id === id
-        );
-        if (droppedTask) {
-            setTasks(addTask(droppedTask, tasks));
-        }
-    }
-
-    function canAddtoAdmin(id: number): boolean {
-        const droppedTask: Task | undefined = tasks.find(
-            (task: Task) => task.id === id
-        );
-        return droppedTask ? droppedTask.numUsers < 2 : false;
-    }
-
-    if (role === "Admin") {
+    if (user.name === "Admin") {
         return (
-            <div
-                className="AdminList"
-                ref={drop}
-                style={{
-                    backgroundColor: isOver ? "MediumSeaGreen" : "white"
-                }}
-            >
+            <div className="AdminList">
                 <div className="Admin">
                     <span> Admin List </span>
-                    {NewTasks.map((TASK: Task, index: number) => (
+                    {user.userList.map((TASK: Task, index: number) => (
                         <DisplayTask
                             key={index}
                             task={TASK}
                             tasks={tasks}
                             updateTasks={setTasks}
-                            role={role}
+                            role={user.name}
                         ></DisplayTask>
                     ))}
                 </div>
 
-                <Button onClick={() => sort("alphabet", tasks, setTasks)}>
+                <Button onClick={() => sort("alphabet")}>
                     Sort by Alphabetical Order{" "}
                 </Button>
-                <Button onClick={() => sort("difficulty", tasks, setTasks)}>
+                <Button onClick={() => sort("difficulty")}>
                     Sort By Difficulty{" "}
                 </Button>
-                <Button onClick={() => sort("time", tasks, setTasks)}>
+                <Button onClick={() => sort("time")}>
                     Sort By Time Needed{" "}
                 </Button>
             </div>
         );
     } else {
-        return <span></span>;
+        return null;
     }
 }

@@ -5,7 +5,7 @@ import { Button, Form } from "react-bootstrap";
 
 export interface delTaskProp {
     tasks: Task[];
-    item: Task;
+    //item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 
@@ -32,7 +32,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
             <Form.Check
                 type={"switch"}
                 id="editMode"
-                label=""
+                label="Delete Task"
                 checked={editMode}
                 onChange={updateEditMode}
             />

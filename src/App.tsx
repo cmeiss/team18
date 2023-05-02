@@ -12,12 +12,13 @@ import { AdminList } from "./list-components/adminlist";
 import { TASKS } from "./TASKS";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { AddTask } from "./list-components/addTask";
+import { DeleteTask } from "./list-components/deleteTask-component";
 
 function App(): JSX.Element {
-    const [role, setRole] = useState<User>({
-        name: "User1",
-        userList: []
-    }); //I set this intial user to make the user list display something
+    // eslint-disable-next-line prettier/prettier
+    const [role, setRole] = useState<User>({ name: "User1", userList: [] }); //I set this intial user to make the user list display something
+
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
@@ -84,6 +85,29 @@ function App(): JSX.Element {
                     </div>
                 </div>
 
+                {/*Adding and Deleting Tasks: */}
+                <div>
+                    <div>
+                        {role.name === "Super" || role.name === "Admin" ? (
+                            <AddTask
+                                tasks={tasks}
+                                //item={task}
+                                setTasks={setTasks}
+                            ></AddTask>
+                        ) : null}
+                    </div>
+
+                    <div>
+                        {role.name === "Super" || role.name === "Admin" ? (
+                            <DeleteTask
+                                tasks={tasks}
+                                //item={task}
+                                setTasks={setTasks}
+                            ></DeleteTask>
+                        ) : null}
+                    </div>
+                </div>
+
                 {/* Displaying the Lists: */}
                 <div>
                     <UserList
@@ -104,8 +128,9 @@ function App(): JSX.Element {
                     <div>
                         <AdminList
                             tasks={tasks}
-                            role={role.name}
+                            user={role}
                             setTasks={updateTasks}
+                            setUser={setRole}
                         ></AdminList>
                     </div>
                 </div>

@@ -2,9 +2,9 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { EditTime } from "./EditTime";
 
-const time = 1000;
+const time = "1000";
 
-function setTime(newTime: number) {
+function setTime(newTime: string) {
     newTime;
 }
 

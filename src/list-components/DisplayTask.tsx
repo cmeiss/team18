@@ -38,7 +38,15 @@ export function DisplayTask(display: displayProps): JSX.Element {
     });
 
     return (
-        <div ref={drag}>
+        <div
+            ref={drag}
+            className="Task"
+            style={
+                hideDetails
+                    ? { border: "" }
+                    : { border: "5px solid rgb(180, 102, 38)" }
+            }
+        >
             <Button
                 className="Task-Button"
                 onClick={() => setHideDetails(!hideDetails)}
@@ -47,14 +55,14 @@ export function DisplayTask(display: displayProps): JSX.Element {
                 }}
             >
                 <div>
-                    <strong>{display.task.name}</strong>
+                    <h4>{display.task.name}</h4>
+                    <img src={display.task.image} width="100px" alt="" />
                 </div>
-                <img src={display.task.image} width="100px" alt="" />
             </Button>
             <div
-                className="Food-Desc"
+                className="Task-Desc"
                 hidden={hideDetails}
-                style={{ border: "5px solid Black" }}
+                style={{ border: "5px solid rgb(248, 209, 231)" }}
             >
                 <p>
                     <strong>Task: {display.task.name}</strong>

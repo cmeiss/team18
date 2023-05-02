@@ -14,6 +14,7 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { AddTask } from "./list-components/addTask";
 import { DeleteTask } from "./list-components/deleteTask-component";
+import { Col, Row } from "react-bootstrap";
 
 function App(): JSX.Element {
     // eslint-disable-next-line prettier/prettier
@@ -109,31 +110,38 @@ function App(): JSX.Element {
                 </div>
 
                 {/* Displaying the Lists: */}
-                <div>
-                    <UserList
-                        user={role}
-                        setUser={setRole}
-                        users={roles}
-                        tasks={tasks}
-                        setTasks={updateTasks}
-                        setUsers={setRoles}
-                    ></UserList>
-                </div>
-                <div className="central">
-                    <CentralItemList
-                        tasks={tasks}
-                        role={role.name}
-                        setTasks={updateTasks}
-                    ></CentralItemList>
-                    <div>
-                        <AdminList
-                            tasks={tasks}
-                            user={role}
-                            setTasks={updateTasks}
-                            setUser={setRole}
-                        ></AdminList>
-                    </div>
-                </div>
+
+                <Row>
+                    <Col>
+                        <div className="central">
+                            <CentralItemList
+                                tasks={tasks}
+                                role={role.name}
+                                setTasks={updateTasks}
+                            ></CentralItemList>
+                            <div>
+                                <AdminList
+                                    tasks={tasks}
+                                    user={role}
+                                    setTasks={updateTasks}
+                                    setUser={setRole}
+                                ></AdminList>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div>
+                            <UserList
+                                user={role}
+                                setUser={setRole}
+                                users={roles}
+                                tasks={tasks}
+                                setTasks={updateTasks}
+                                setUsers={setRoles}
+                            ></UserList>
+                        </div>
+                    </Col>
+                </Row>
             </div>
         </DndProvider>
     );

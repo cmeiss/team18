@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
@@ -38,12 +38,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
     });
 
     return (
-        <div
-            ref={drag}
-            // style={{
-            //     border: isDragging ? "5px solid Violet" : "0px"
-            // }}
-        >
+        <div ref={drag}>
             <Button
                 className="Task-Button"
                 onClick={() => setIsDescHidden(!isDescHidden)}
@@ -98,60 +93,6 @@ export function DisplayTask(display: displayProps): JSX.Element {
                             task={display.task}
                         ></EditTask>
                     </div>
-                    {/* <Row>
-                        <Col>
-                            <ul>
-                                <li>
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="is-done-check"
-                                        label={done ? "✔️" : "❌"}
-                                        checked={done}
-                                        onChange={() => setDone(!done)}
-                                    />
-                                </li>
-                                <img
-                                    src={display.task.image}
-                                    width="100px"
-                                    alt=""
-                                />
-                            </ul>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li>Difficulty: {display.task.difficulty}</li>
-                                <li>Time: {display.task.time}</li>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <div>Necessary Steps:</div>
-                            <ul>
-                                {display.task.steps.map((step: string) => (
-                                    <li key={step}>{step}</li>
-                                ))}
-                            </ul>
-                        </Col>
-                    </Row>
-                    <Row>
-                        {/* The content of this row is only visible if role is super
-                        <div>
-                            {display.role === "Super" ? (
-                                <div>
-                                    Number of Users: {display.task.numUsers}
-                                </div>
-                            ) : (
-                                <div>{""}</div>
-                            )}
-                        </div>
-                        <div>
-                            <EditTask
-                                tasks={display.tasks}
-                                updateTasks={display.updateTasks}
-                                task={display.task}
-                            ></EditTask>
-                        </div>
-                        {/*The Edit Task function is producing the button to open the editing field
-                    </Row> */}
                 </p>
             </div>
         </div>

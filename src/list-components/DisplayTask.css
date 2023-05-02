@@ -1,3 +1,8 @@
-h3 {
-    background-color: lightblue;
+.Task-Button {
+    background-color: rgb(248, 209, 231);
+    color: rgb(180, 102, 38);
+    display: inline;
+    margin: 5px;
+    /*display: flex;*/
+    float: left;
 }

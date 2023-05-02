@@ -27,7 +27,7 @@ export interface displayProps {
 }
 
 export function DisplayTask(display: displayProps): JSX.Element {
-    const [isDescHidden, setIsDescHidden] = useState<boolean>(true);
+    const [hideDetails, setHideDetails] = useState<boolean>(true);
     const [done, setDone] = useState<boolean>(display.task.status);
     const [{ isDragging }, drag] = useDrag({
         type: "task",
@@ -41,17 +41,19 @@ export function DisplayTask(display: displayProps): JSX.Element {
         <div ref={drag}>
             <Button
                 className="Task-Button"
-                onClick={() => setIsDescHidden(!isDescHidden)}
+                onClick={() => setHideDetails(!hideDetails)}
                 style={{
                     border: isDragging ? "0px" : "0px"
                 }}
             >
-                <p>{display.task.name}</p>
+                <div>
+                    <strong>{display.task.name}</strong>
+                </div>
                 <img src={display.task.image} width="100px" alt="" />
             </Button>
             <div
                 className="Food-Desc"
-                hidden={isDescHidden}
+                hidden={hideDetails}
                 style={{ border: "5px solid Black" }}
             >
                 <p>

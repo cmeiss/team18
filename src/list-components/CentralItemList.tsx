@@ -13,17 +13,20 @@ interface CentralItemProps {
 export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
     return (
         <div className="List">
+            <h2> Central List </h2>
             <div className="central">
-                <span> Central List </span>
-                {tasks.map((TASK: Task, index: number) => (
-                    <DisplayTask
-                        key={index}
-                        task={TASK}
-                        tasks={tasks}
-                        updateTasks={setTasks}
-                        role={role}
-                    ></DisplayTask>
-                ))}
+                {tasks.map((task: Task) => {
+                    return (
+                        <div key={task.id}>
+                            <DisplayTask
+                                task={task}
+                                tasks={tasks}
+                                updateTasks={setTasks}
+                                role={role}
+                            ></DisplayTask>
+                        </div>
+                    );
+                })}
             </div>
             {console.log("Central Item List")}
             {console.log(...tasks)}

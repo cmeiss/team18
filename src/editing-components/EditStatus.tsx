@@ -1,5 +1,6 @@
+/* eslint-disable indent */
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { makeTask } from "../TaskFunctions";
 import { editProps } from "./EditTask";
@@ -10,9 +11,9 @@ interface statusProps {
 }
 */
 export function EditStatus(edit: editProps): JSX.Element {
-    //function updateStatus(event: React.ChangeEvent<HTMLInputElement>) {
-    //setStatus(event.target.checked);
-    //}
+    function updateStatus(event: React.ChangeEvent<HTMLInputElement>) {
+        setStatus(event.target.checked);
+    }
     const [status, setStatus] = useState<boolean>(edit.task.status);
 
     function changeTasks(
@@ -25,7 +26,7 @@ export function EditStatus(edit: editProps): JSX.Element {
         steps: string[],
         diff: number,
         num: number,
-        time: number
+        time: string
     ) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(
@@ -51,23 +52,31 @@ export function EditStatus(edit: editProps): JSX.Element {
             <Form.Check
                 type="checkbox"
                 id="is-done-check"
-                label={status ? "✔️" : "❌"}
+                label={"Completion Status:" + status ? "✔️" : "❌"}
                 checked={status}
-                onChange={() =>
-                    changeTasks(
-                        edit.tasks,
-                        edit.task.id,
-                        edit.task.name,
-                        edit.task.description,
-                        !status,
-                        edit.task.image,
-                        edit.task.steps,
-                        edit.task.difficulty,
-                        edit.task.numUsers,
-                        edit.task.time
-                    )
-                }
+                onChange={updateStatus}
             />
+            <div>
+                <Button
+                    onClick={() =>
+                        changeTasks(
+                            edit.tasks,
+                            edit.task.id,
+                            edit.task.name,
+                            edit.task.description,
+                            status,
+                            edit.task.image,
+                            edit.task.steps,
+                            edit.task.difficulty,
+                            edit.task.numUsers,
+                            edit.task.time
+                        )
+                    }
+                    hidden={!status}
+                >
+                    Confirm Task is Complete
+                </Button>
+            </div>
         </div>
     );
 }

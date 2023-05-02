@@ -15,16 +15,24 @@ var addTask_1 = require("./list-components/addTask");
 var deleteTask_component_1 = require("./list-components/deleteTask-component");
 function App() {
     // eslint-disable-next-line prettier/prettier
-    var _a = react_1.useState({ name: "User1", userList: [] }), role = _a[0], setRole = _a[1]; //I set this intial user to make the user list display something
+    var _a = react_1.useState({ name: "User1", userList: [] }),
+        role = _a[0],
+        setRole = _a[1]; //I set this intial user to make the user list display something
     var _b = react_1.useState([
-        { name: "Please Select: ", userList: [] },
-        { name: "Super", userList: [] },
-        { name: "Admin", userList: [] },
-        { name: "User1", userList: [] }
-    ]), roles = _b[0], setRoles = _b[1]; // these are original users these can be changed
-    var _c = react_1.useState(TASKS_1.TASKS), tasks = _c[0], setTasks = _c[1];
+            { name: "Please Select: ", userList: [] },
+            { name: "Super", userList: [] },
+            { name: "Admin", userList: [] },
+            { name: "User1", userList: [] }
+        ]),
+        roles = _b[0],
+        setRoles = _b[1]; // these are original users these can be changed
+    var _c = react_1.useState(TASKS_1.TASKS),
+        tasks = _c[0],
+        setTasks = _c[1];
     function updateRole(event) {
-        var NewRole = roles.find(function (role) { return role.name === event.target.value; });
+        var NewRole = roles.find(function (role) {
+            return role.name === event.target.value;
+        });
         if (NewRole) {
             setRole(NewRole);
         }
@@ -33,36 +41,136 @@ function App() {
     function updateTasks(tasks) {
         setTasks(tasks);
     }
-    return (react_1["default"].createElement(react_dnd_1.DndProvider, { backend: react_dnd_html5_backend_1.HTML5Backend },
-        react_1["default"].createElement("div", { className: "App" },
-            react_1["default"].createElement("header", { className: "App-header" },
-                react_1["default"].createElement("hgroup", null,
+    return react_1["default"].createElement(
+        react_dnd_1.DndProvider,
+        { backend: react_dnd_html5_backend_1.HTML5Backend },
+        react_1["default"].createElement(
+            "div",
+            { className: "App" },
+            react_1["default"].createElement(
+                "header",
+                { className: "App-header" },
+                react_1["default"].createElement(
+                    "hgroup",
+                    null,
                     react_1["default"].createElement("h1", null, "TimeWise"),
-                    react_1["default"].createElement("i", null, "Never waste another second")),
-                react_1["default"].createElement("div", { className: "dropdown" },
-                    react_1["default"].createElement("span", null, "Role select"),
-                    react_1["default"].createElement("div", { className: "dropdown-content" },
-                        react_1["default"].createElement("div", null,
-                            react_1["default"].createElement(ChangeRole_1.ChangeRole, { Role: role, roles: roles, setRole: updateRole }))))),
-            react_1["default"].createElement("div", { className: "welcome" },
+                    react_1["default"].createElement(
+                        "i",
+                        null,
+                        "Never waste another second"
+                    )
+                ),
+                react_1["default"].createElement(
+                    "div",
+                    { className: "dropdown" },
+                    react_1["default"].createElement(
+                        "span",
+                        null,
+                        "Role select"
+                    ),
+                    react_1["default"].createElement(
+                        "div",
+                        { className: "dropdown-content" },
+                        react_1["default"].createElement(
+                            "div",
+                            null,
+                            react_1["default"].createElement(
+                                ChangeRole_1.ChangeRole,
+                                {
+                                    Role: role,
+                                    roles: roles,
+                                    setRole: updateRole
+                                }
+                            )
+                        )
+                    )
+                )
+            ),
+            react_1["default"].createElement(
+                "div",
+                { className: "welcome" },
                 "Welcome ",
                 role.name,
-                ", lets reclaim the day!"),
-            react_1["default"].createElement("div", null, "Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster, William Sharp, Sydni Wright"),
-            react_1["default"].createElement("div", null,
-                react_1["default"].createElement("div", null, role.name === "Super" ? (react_1["default"].createElement(ModifyUsers_1.ModifyUsers, { Role: role, roles: roles, setRoles: setRoles })) : null)),
-            react_1["default"].createElement("div", null,
-                react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(addTask_1.AddTask, { tasks: tasks, 
-                    //item={task}
-                    setTasks: setTasks })) : null),
-                react_1["default"].createElement("div", null, role.name === "Super" || role.name === "Admin" ? (react_1["default"].createElement(deleteTask_component_1.DeleteTask, { tasks: tasks, 
-                    //item={task}
-                    setTasks: setTasks })) : null)),
-            react_1["default"].createElement("div", null,
-                react_1["default"].createElement(UserList_1.UserList, { user: role, setUser: setRole, users: roles, tasks: tasks, setTasks: setTasks, setUsers: setRoles })),
-            react_1["default"].createElement("div", { className: "central" },
-                react_1["default"].createElement(CentralItemList_1.CentralItemList, { tasks: tasks, role: role.name, setTasks: updateTasks }),
-                react_1["default"].createElement("div", null,
-                    react_1["default"].createElement(adminlist_1.AdminList, { tasks: tasks, role: role.name, setTasks: updateTasks }))))));
+                ", lets reclaim the day!"
+            ),
+            react_1["default"].createElement(
+                "div",
+                null,
+                "Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster, William Sharp, Sydni Wright"
+            ),
+            react_1["default"].createElement(
+                "div",
+                null,
+                react_1["default"].createElement(
+                    "div",
+                    null,
+                    role.name === "Super"
+                        ? react_1["default"].createElement(
+                              ModifyUsers_1.ModifyUsers,
+                              { Role: role, roles: roles, setRoles: setRoles }
+                          )
+                        : null
+                )
+            ),
+            react_1["default"].createElement(
+                "div",
+                null,
+                react_1["default"].createElement(
+                    "div",
+                    null,
+                    role.name === "Super" || role.name === "Admin"
+                        ? react_1["default"].createElement(addTask_1.AddTask, {
+                              tasks: tasks,
+                              //item={task}
+                              setTasks: setTasks
+                          })
+                        : null
+                ),
+                react_1["default"].createElement(
+                    "div",
+                    null,
+                    role.name === "Super" || role.name === "Admin"
+                        ? react_1["default"].createElement(
+                              deleteTask_component_1.DeleteTask,
+                              {
+                                  tasks: tasks,
+                                  //item={task}
+                                  setTasks: setTasks
+                              }
+                          )
+                        : null
+                )
+            ),
+            react_1["default"].createElement(
+                "div",
+                null,
+                react_1["default"].createElement(UserList_1.UserList, {
+                    user: role,
+                    setUser: setRole,
+                    users: roles,
+                    tasks: tasks,
+                    setTasks: setTasks,
+                    setUsers: setRoles
+                })
+            ),
+            react_1["default"].createElement(
+                "div",
+                { className: "central" },
+                react_1["default"].createElement(
+                    CentralItemList_1.CentralItemList,
+                    { tasks: tasks, role: role.name, setTasks: updateTasks }
+                ),
+                react_1["default"].createElement(
+                    "div",
+                    null,
+                    react_1["default"].createElement(adminlist_1.AdminList, {
+                        tasks: tasks,
+                        role: role.name,
+                        setTasks: updateTasks
+                    })
+                )
+            )
+        )
+    );
 }
 exports["default"] = App;

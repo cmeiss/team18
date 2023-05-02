@@ -4367,7 +4367,7 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   34.54 |    20.93 |   32.69 |   35.34 |                   
+All files                  |   34.23 |    20.45 |   32.38 |   35.02 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 20-44             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -4383,10 +4383,10 @@ All files                  |   34.54 |    20.93 |   32.69 |   35.34 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   29.26 |       20 |   22.22 |   29.75 |                   
+ src/list-components       |    28.8 |    19.35 |   21.87 |   29.26 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
-  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-73             
+  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-90             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
   UserList.tsx             |       0 |        0 |       0 |       0 | 35-169            
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
@@ -4397,5 +4397,5 @@ All files                  |   34.54 |    20.93 |   32.69 |   35.34 |
 Test Suites: 13 failed, 13 total
 Tests:       36 failed, 11 passed, 47 total
 Snapshots:   0 total
-Time:        12.69 s
+Time:        10.851 s
 Ran all test suites.

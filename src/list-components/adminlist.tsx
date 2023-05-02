@@ -17,28 +17,38 @@ interface AdminItemProps {
 }
 
 export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
-    const [sortedList, setSortedList] = useState<Task[]>(makeAdmin(tasks)); //holds the sortedList, unsorted list comes directly from tasks state
     const [sorted, setSorted] = useState<boolean>(false); //indicated whether the adminList is sorted right now
+    const [alphabetic, setAlphabetic] = useState<boolean>(false);
+    const [byTime, setByTime] = useState<boolean>(false);
+    const [byDifficulty, setByDifficulty] = useState<boolean>(false);
 
     function makeAdmin(tasks: Task[]) {
         //this function takes the tasks state (our centralItemList) and returns a list of all elements with less than
         //two users, i.e. our AdminList
         return tasks.filter((TASK: Task) => TASK.numUsers < 2);
     }
-    function sort(type_of_sort: string): void {
-        setSorted(true); //sets sorted to true whenever we are sorting
-        if (type_of_sort == "alphabet") {
-            setSortedList(filter_by_alphabetical_order(makeAdmin(tasks))); //we are setting the sorted list state to the sorted version of the most recent version of the adminList
-        } else if (type_of_sort == "time") {
-            setSortedList(filter_by_time_needed(makeAdmin(tasks)));
-        } else if (type_of_sort == "difficulty") {
-            setSortedList(filter_by_difficulty(makeAdmin(tasks)));
-        }
+    function updateAlphabetic() {
+        setSorted(true);
+        setAlphabetic(true);
+        setByTime(false);
+        setByDifficulty(false);
+    }
+    function updateByTime() {
+        setSorted(true);
+        setAlphabetic(false);
+        setByTime(true);
+        setByDifficulty(false);
+    }
+    function updateByDifficulty() {
+        setSorted(true);
+        setAlphabetic(false);
+        setByTime(false);
+        setByDifficulty(true);
     }
     function DisplayCorrectList(): JSX.Element {
         //this function checks if we are displaying the adminList sorted or unsorted.
         //If we display it unsorted, we directly pull it out of the central item list.
-        //If we display it sorted, we pull it out of the sortedList state
+        //If we display it sorted, we create a new sorted temporary list and display that.
         if (!sorted) {
             return (
                 <div className="Admin">
@@ -54,11 +64,12 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
                     ))}
                 </div>
             );
-        } else {
+        } else if (alphabetic) {
+            const SortedList = filter_by_alphabetical_order(makeAdmin(tasks));
             return (
                 <div className="Admin">
                     <span> Admin List </span>
-                    {sortedList.map((TASK: Task, index: number) => (
+                    {SortedList.map((TASK: Task, index: number) => (
                         <DisplayTask
                             key={index}
                             task={TASK}
@@ -69,24 +80,57 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
                     ))}
                 </div>
             );
+        } else if (byTime) {
+            const SortedList = filter_by_time_needed(makeAdmin(tasks));
+            return (
+                <div className="Admin">
+                    <span> Admin List </span>
+                    {SortedList.map((TASK: Task, index: number) => (
+                        <DisplayTask
+                            key={index}
+                            task={TASK}
+                            tasks={tasks}
+                            updateTasks={setTasks}
+                            role={user.name}
+                        ></DisplayTask>
+                    ))}
+                </div>
+            );
+        } else if (byDifficulty) {
+            const SortedList = filter_by_difficulty(makeAdmin(tasks));
+            return (
+                <div className="Admin">
+                    <span> Admin List </span>
+                    {SortedList.map((TASK: Task, index: number) => (
+                        <DisplayTask
+                            key={index}
+                            task={TASK}
+                            tasks={tasks}
+                            updateTasks={setTasks}
+                            role={user.name}
+                        ></DisplayTask>
+                    ))}
+                </div>
+            );
+        } else {
+            return <div>AdminList failed to load.</div>;
         }
     }
     if (user.name === "Admin") {
         return (
             <div className="AdminList">
-                <Button onClick={() => sort("alphabet")}>
+                <Button onClick={updateAlphabetic}>
                     Sort by Alphabetical Order{" "}
                 </Button>
-                <Button onClick={() => sort("difficulty")}>
+                <Button onClick={updateByDifficulty}>
                     Sort By Difficulty{" "}
                 </Button>
-                <Button onClick={() => sort("time")}>Sort By Time </Button>
+                <Button onClick={updateByTime}>Sort By Time </Button>
                 <Button onClick={() => setSorted(false)}>Reset Sorting</Button>
                 <DisplayCorrectList></DisplayCorrectList>
             </div>
         );
     } else {
-        console.log("entered the else in adminList");
         return null;
     }
 }

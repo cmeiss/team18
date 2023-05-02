@@ -1,3 +1,28 @@
-h3 {
-    background-color: lightblue;
+.Task-Button {
+    background-color: rgb(255, 239, 195);
+    color: rgb(180, 102, 38);
+    margin: 5px;
+    display: flex;
+    float: left;
+}
+
+.Task-Button:hover,
+.Task-Button:focus,
+.Task-Button:active {
+    background-color: rgb(247, 197, 140);
+    color: rgb(255, 251, 248);
+    box-shadow: none !important;
+}
+
+.Task-Desc {
+    margin: 5px;
+    display: right;
+    float: right;
+    width: fit-content;
+    text-align: left;
+}
+
+.Task {
+    display: flex;
+    float: left;
 }

@@ -3,7 +3,7 @@ import { Task } from "./interfaces/task";
 export const TASKS: Task[] = [
     {
         id: 0,
-        name: "Do Homework",
+        name: "Homework",
         description: "Get it done before the deadline.",
         status: false,
         image: require("./task-images/homework.jpg"),
@@ -14,8 +14,8 @@ export const TASKS: Task[] = [
     },
     {
         id: 1,
-        name: "Get gas",
-        description: "The car needs gas.",
+        name: "Gas",
+        description: "The car needs gas refil your tank.",
         status: false,
         image: require("./task-images/gas.jpg"),
         steps: ["a", "b", "c"],
@@ -36,7 +36,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 3,
-        name: "Get breakfast",
+        name: "Breakfast",
         description: "Enjoy your morning with your favorite breakfast food!",
         status: false,
         image: require("./task-images/make-breakfast.jpg"),
@@ -69,7 +69,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 6,
-        name: "Favorite Hobby Time",
+        name: "Favorite Hobby",
         description: "Make time for what you love!",
         status: false,
         image: require("./task-images/hobby.jpg"),
@@ -80,7 +80,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 7,
-        name: "Time for your Metaverse Double Life",
+        name: "Metaverse Double Life",
         description:
             "The real world not cutting it? Let the Metaverse fuel your wildest desires!",
         status: false,
@@ -170,7 +170,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 15,
-        name: "Practice violin",
+        name: "Violin practice",
         description: "The school band needs your talent",
         status: false,
         image: require("./task-images/violin.jpg"),
@@ -236,7 +236,7 @@ export const TASKS: Task[] = [
     },
     {
         id: 21,
-        name: "Do laundry",
+        name: "Laundry",
         description: "Refresh your closet, wash that dirty laundry!",
         status: false,
         image: require("./task-images/laundry.png"),
@@ -293,7 +293,7 @@ export const TASKS: Task[] = [
     {
         id: 26,
         name: "Watch movie",
-        description: "Make some popcorn and put your feet up!",
+        description: "Make some popcorn and put your feet up.",
         status: false,
         image: require("./task-images/movie.png"),
         steps: [],
@@ -304,7 +304,7 @@ export const TASKS: Task[] = [
     {
         id: 27,
         name: "Go for a run",
-        description: "Run 100 miles",
+        description: "Test you limits and run 100 miles!",
         status: false,
         image: require("./task-images/run.png"),
         steps: [],
@@ -314,8 +314,9 @@ export const TASKS: Task[] = [
     },
     {
         id: 28,
-        name: "m20 challenge",
-        description: "do the m20 burger challenge",
+        name: "M2O challenge",
+        description:
+            "Get your picture up on that wall! Do the m2o burger challenge.",
         status: false,
         image: require("./task-images/m20.png"),
         steps: [],

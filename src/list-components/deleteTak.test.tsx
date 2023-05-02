@@ -49,7 +49,7 @@ describe("Delete task tests", () => {
     beforeEach(() =>
         render(
             <DeleteTask
-                item={TASK1}
+                //item={TASK1}
                 tasks={TASKLIST1}
                 setTasks={
                     function (/*newTasks: Task[]*/): void {

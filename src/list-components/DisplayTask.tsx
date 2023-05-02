@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Form, Row } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
@@ -27,6 +27,7 @@ export interface displayProps {
 }
 
 export function DisplayTask(display: displayProps): JSX.Element {
+    const [hideDetails, setHideDetails] = useState<boolean>(true);
     const [done, setDone] = useState<boolean>(display.task.status);
     const [{ isDragging }, drag] = useDrag({
         type: "task",
@@ -39,60 +40,71 @@ export function DisplayTask(display: displayProps): JSX.Element {
     return (
         <div
             ref={drag}
-            style={{
-                border: isDragging ? "5px solid Violet" : "0px"
-            }}
+            className="Task"
+            style={
+                hideDetails
+                    ? { border: "" }
+                    : { border: "5px solid rgb(180, 102, 38)" }
+            }
         >
-            <h3>Task: {display.task.name}</h3>
-            <div>{display.task.description}</div>
-            <Row>
-                <Col>
-                    <ul>
-                        <li>
-                            <Form.Check
-                                type="checkbox"
-                                id="is-done-check"
-                                label={done ? "✔️" : "❌"}
-                                checked={done}
-                                onChange={() => setDone(!done)}
-                            />
-                        </li>
-                        <li>{display.task.image}</li>
-                    </ul>
-                </Col>
-                <Col>
-                    <ul>
-                        <li>Difficulty: {display.task.difficulty}</li>
-                        <li>Time: {display.task.time}</li>
-                    </ul>
-                </Col>
-                <Col>
-                    <div>Necessary Steps:</div>
-                    <ul>
-                        {display.task.steps.map((step: string) => (
-                            <li key={step}>{step}</li>
-                        ))}
-                    </ul>
-                </Col>
-            </Row>
-            <Row>
-                {/* The content of this row is only visible if role is super */}
+            <Button
+                className="Task-Button"
+                onClick={() => setHideDetails(!hideDetails)}
+                style={{
+                    border: isDragging ? "0px" : "0px"
+                }}
+            >
                 <div>
-                    {display.role === "Super" ? (
-                        <div>Number of Users: {display.task.numUsers}</div>
-                    ) : (
-                        <div>{""}</div>
-                    )}
+                    <h4>{display.task.name}</h4>
+                    <img src={display.task.image} width="100px" alt="" />
                 </div>
-                <div>
-                    <EditTask
-                        tasks={display.tasks}
-                        updateTasks={display.updateTasks}
-                        task={display.task}
-                    ></EditTask>
-                </div>
-                {/*The Edit Task function is producing the button to open the editing field*/}
-            </Row>
+            </Button>
+            <div
+                className="Task-Desc"
+                hidden={hideDetails}
+                style={{ border: "5px solid rgb(255, 239, 195)" }}
+            >
+                <p>
+                    <strong>Task: {display.task.name}</strong>
+                    <br />
+                    {display.task.description}
+                    <br />
+                    <Form.Check
+                        type="checkbox"
+                        id="is-done-check"
+                        label={
+                            done
+                                ? "Completion status: ✔️"
+                                : "Completion status: ❌"
+                        }
+                        checked={done}
+                        onChange={() => setDone(!done)}
+                    />
+                    <br />
+                    Difficulty: {display.task.difficulty}
+                    <br />
+                    Time: {display.task.time}
+                    <br />
+                    Steps:{" "}
+                    {display.task.steps.map((step: string) => (
+                        <li key={step}>{step}</li>
+                    ))}
+                    <div>
+                        {display.role === "Super" ? (
+                            <div>Number of Users: {display.task.numUsers}</div>
+                        ) : (
+                            <div>{""}</div>
+                        )}
+                    </div>
+                    <div>
+                        <EditTask
+                            tasks={display.tasks}
+                            updateTasks={display.updateTasks}
+                            task={display.task}
+                        ></EditTask>
+                    </div>
+                </p>
+            </div>
         </div>
     );
 }

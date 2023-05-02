@@ -5,7 +5,7 @@ import { Button, Form } from "react-bootstrap";
 
 export interface delTaskProp {
     tasks: Task[];
-    item: Task;
+    //item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 

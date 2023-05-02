@@ -3,7 +3,6 @@ import React from "react";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
-import "./UserList.css";
 import { Button } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
@@ -139,17 +138,18 @@ export function UserList({
         );
     }
 
-    return (
-        <div
-            ref={drop}
-            className="UserList"
-            style={{
-                backgroundColor: isOver ? "MediumSeaGreen" : "white"
-            }}
-        >
-            {user.name === "Super" || user.name === "Admin" ? null : (
-                <div className="userList">
-                    <h3>{user.name}s List:</h3>
+    if (user.name !== "Super" && user.name !== "Admin") {
+        return (
+            <div className="UserList">
+                {/*eslint-disable-next-line react/no-unescaped-entities*/}
+                <h3>{user.name}'s Schedule:</h3>
+                <div
+                    className="userTaskList"
+                    ref={drop}
+                    style={{
+                        backgroundColor: isOver ? "SageGreen" : "white"
+                    }}
+                >
                     {user.userList.map((TASK: Task, index: number) => (
                         <DisplayTask
                             key={index}
@@ -171,10 +171,12 @@ export function UserList({
                         </Button>
                     </div>
                 </div>
-            )}
-            {console.log("userList")}
-            {console.log(...user.userList)}
-            {console.log(setTasks)}
-        </div>
-    );
+            </div>
+        );
+        // {console.log("userList")}
+        // {console.log(...user.userList)}
+        // {console.log(setTasks)}
+    } else {
+        return <></>;
+    }
 }

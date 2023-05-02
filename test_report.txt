@@ -4367,7 +4367,7 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   32.34 |       20 |    30.9 |   33.18 |                   
+All files                  |    32.2 |       20 |   30.63 |   33.04 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -4393,9 +4393,11 @@ All files                  |   32.34 |       20 |    30.9 |   33.18 |
   adminlist.tsx            |       0 |        0 |       0 |       0 | 20-90             
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
   filterlists.tsx          |   82.35 |       25 |     100 |    87.5 | 24-25             
+ src/pages                 |       0 |      100 |       0 |       0 |                   
+  about.tsx                |       0 |      100 |       0 |       0 | 5                 
 ---------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 13 failed, 13 total
 Tests:       36 failed, 11 passed, 47 total
 Snapshots:   0 total
-Time:        13.54 s
+Time:        11.441 s
 Ran all test suites.

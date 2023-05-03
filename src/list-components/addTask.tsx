@@ -95,19 +95,18 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
             />
             {neweditmode ? (
                 <Form.Group controlId="CheckAnswer">
-                    <Form.Label>Enter New Task Id Below:</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={newId}
-                        onChange={updateNewId}
-                    />
                     <Form.Label>Enter New Task Name Below:</Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={3}
                         value={newTask}
                         onChange={updateNewTask}
+                    />
+                    <Form.Label>Enter New Task Id Below:</Form.Label>
+                    <Form.Control
+                        type="number"
+                        value={newId}
+                        onChange={updateNewId}
                     />
                     <Form.Label>Enter New Task Description Below:</Form.Label>
                     <Form.Control
@@ -138,8 +137,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                     />
                     <Form.Label>Enter New Task Difficulty Below:</Form.Label>
                     <Form.Control
-                        as="textarea"
-                        rows={3}
+                        type="number"
                         value={newdifficulty}
                         onChange={updateDifficulty}
                     />
@@ -152,8 +150,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                     />
                     <Form.Label>Enter New Task Num Users Below:</Form.Label>
                     <Form.Control
-                        as="textarea"
-                        rows={3}
+                        type="number"
                         value={newnumusers}
                         onChange={updateNumUsers}
                     />

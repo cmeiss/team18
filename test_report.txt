@@ -3173,20 +3173,47 @@ FAIL src/editing-components/EditTask.test.tsx
       at Object.<anonymous> (src/editing-components/EditTask.test.tsx:101:34)
 
 FAIL src/list-components/dist/deleteTak.test.js
-  ● Test suite failed to run
+  ● Delete task tests › There is a switch
 
-    Cannot find module './deleteTask-component' from 'src/list-components/dist/deleteTak.test.js'
+    TypeError: Cannot read properties of undefined (reading 'createElement')
 
-      2 | exports.__esModule = true;
-      3 | var react_1 = require("react");
-    > 4 | var deleteTask_component_1 = require("./deleteTask-component");
-        |                              ^
-      5 | var react_2 = require("@testing-library/react");
-      6 | var user_event_1 = require("@testing-library/user-event");
-      7 | //basic tasks and task lists to test
+      44 | describe("Delete task tests", function () {
+      45 |     beforeEach(function () {
+    > 46 |         return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask
+         |                                                  ^
+      47 |         //item={TASK1}
+      48 |         , { 
+      49 |             //item={TASK1}
 
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:4:30)
+      at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:46:50)
+
+  ● Delete task tests › On switch click, there is a textbox and buttons: 
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      44 | describe("Delete task tests", function () {
+      45 |     beforeEach(function () {
+    > 46 |         return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask
+         |                                                  ^
+      47 |         //item={TASK1}
+      48 |         , { 
+      49 |             //item={TASK1}
+
+      at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:46:50)
+
+  ● Delete task tests › Clicking delete task deletes from the list and leaves edit mode
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      44 | describe("Delete task tests", function () {
+      45 |     beforeEach(function () {
+    > 46 |         return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask
+         |                                                  ^
+      47 |         //item={TASK1}
+      48 |         , { 
+      49 |             //item={TASK1}
+
+      at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:46:50)
 
 FAIL src/list-components/deleteTak.test.tsx
   ● Console
@@ -3270,7 +3297,8 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m<div>[39m
         [36m<div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
+            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+            [33mstyle[39m=[32m"width: 150px;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -3325,7 +3353,8 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m<div>[39m
         [36m<div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
+            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+            [33mstyle[39m=[32m"width: 150px;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -3380,7 +3409,8 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m<div>[39m
         [36m<div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
+            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+            [33mstyle[39m=[32m"width: 150px;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -3495,7 +3525,8 @@ FAIL src/list-components/addTask.test.tsx
       [36m<div>[39m
         [36m<div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
+            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+            [33mstyle[39m=[32m"width: 150px;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -3550,7 +3581,8 @@ FAIL src/list-components/addTask.test.tsx
       [36m<div>[39m
         [36m<div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
+            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+            [33mstyle[39m=[32m"width: 150px;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -3605,7 +3637,8 @@ FAIL src/list-components/addTask.test.tsx
       [36m<div>[39m
         [36m<div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"form-check form-switch"[39m
+            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+            [33mstyle[39m=[32m"width: 150px;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -4397,7 +4430,7 @@ All files                  |    30.4 |       20 |   30.35 |   31.14 |
   about.tsx                |       0 |      100 |       0 |       0 | 5                 
 ---------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 13 failed, 13 total
-Tests:       36 failed, 11 passed, 47 total
+Tests:       39 failed, 11 passed, 50 total
 Snapshots:   0 total
-Time:        8.531 s
+Time:        8.716 s
 Ran all test suites.

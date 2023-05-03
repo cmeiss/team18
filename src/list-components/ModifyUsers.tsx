@@ -42,6 +42,8 @@ export function ModifyUsers(
                 type={"switch"}
                 id="editMode"
                 label="Edit Users"
+                className="mx-auto"
+                style={{ width: "150px" }}
                 checked={editmode}
                 onChange={updateEditMode}
             />

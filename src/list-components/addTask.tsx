@@ -88,6 +88,8 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
         <div>
             <Form.Check
                 type={"switch"}
+                className="mx-auto"
+                style={{ width: "150px" }}
                 id="editMode"
                 label="Add Task"
                 checked={neweditmode}

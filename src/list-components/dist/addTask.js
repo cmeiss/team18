@@ -82,7 +82,7 @@ function AddTask(taskProps) {
         seteditmode(false);
     }
     return (react_1["default"].createElement("div", null,
-        react_1["default"].createElement(react_bootstrap_1.Form.Check, { type: "switch", id: "editMode", label: "Add Task", checked: neweditmode, onChange: updateEditMode }),
+        react_1["default"].createElement(react_bootstrap_1.Form.Check, { type: "switch", className: "mx-auto", style: { width: "150px" }, id: "editMode", label: "Add Task", checked: neweditmode, onChange: updateEditMode }),
         neweditmode ? (react_1["default"].createElement(react_bootstrap_1.Form.Group, { controlId: "CheckAnswer" },
             react_1["default"].createElement(react_bootstrap_1.Form.Label, null, "Enter New Task Name Below:"),
             react_1["default"].createElement(react_bootstrap_1.Form.Control, { as: "textarea", rows: 3, value: newTask, onChange: updateNewTask }),

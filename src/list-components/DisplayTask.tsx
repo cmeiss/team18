@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
 import { useDrag } from "react-dnd";
+import { EditStatus } from "../editing-components/EditStatus";
 
 //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
 // export interface displayProps {
@@ -28,7 +29,6 @@ export interface displayProps {
 
 export function DisplayTask(display: displayProps): JSX.Element {
     const [hideDetails, setHideDetails] = useState<boolean>(true);
-    const [done, setDone] = useState<boolean>(display.task.status);
     const [{ isDragging }, drag] = useDrag({
         type: "task",
         item: { id: display.task.id },
@@ -69,17 +69,11 @@ export function DisplayTask(display: displayProps): JSX.Element {
                     <br />
                     {display.task.description}
                     <br />
-                    <Form.Check
-                        type="checkbox"
-                        id="is-done-check"
-                        label={
-                            done
-                                ? "Completion status: ✔️"
-                                : "Completion status: ❌"
-                        }
-                        checked={done}
-                        onChange={() => setDone(!done)}
-                    />
+                    <EditStatus
+                        tasks={display.tasks}
+                        updateTasks={display.updateTasks}
+                        task={display.task}
+                    ></EditStatus>
                     <br />
                     Difficulty: {display.task.difficulty}
                     <br />

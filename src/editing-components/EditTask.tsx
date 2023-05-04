@@ -6,8 +6,9 @@ import { makeTask } from "../TaskFunctions";
 import { EditTime } from "./EditTime";
 import { EditDifficulty } from "./edit-difficulty";
 import { EditDescription } from "./EditDescription";
+//import { EditStatus } from "./EditStatus";
 
-interface editProps {
+export interface editProps {
     tasks: Task[];
     updateTasks: (newTasks: Task[]) => void;
     //updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;

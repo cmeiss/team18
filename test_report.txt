@@ -972,9 +972,9 @@ FAIL src/list-components/UserList.test.tsx
       5 | import "./DisplayTask.css";
     > 6 | import { useDrag } from "react-dnd";
         | ^
-      7 |
-      8 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
-      9 | // export interface displayProps {
+      7 | import { EditStatus } from "../editing-components/EditStatus";
+      8 |
+      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
 
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
@@ -1014,9 +1014,9 @@ FAIL src/list-components/CentralItemList.test.tsx
       5 | import "./DisplayTask.css";
     > 6 | import { useDrag } from "react-dnd";
         | ^
-      7 |
-      8 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
-      9 | // export interface displayProps {
+      7 | import { EditStatus } from "../editing-components/EditStatus";
+      8 |
+      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
 
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
@@ -1056,9 +1056,9 @@ FAIL src/list-components/DisplayTask.test.tsx
       5 | import "./DisplayTask.css";
     > 6 | import { useDrag } from "react-dnd";
         | ^
-      7 |
-      8 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
-      9 | // export interface displayProps {
+      7 | import { EditStatus } from "../editing-components/EditStatus";
+      8 |
+      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
 
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
@@ -4400,26 +4400,27 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |    30.4 |       20 |   30.35 |   31.14 |                   
+All files                  |   29.68 |    19.56 |   29.05 |   30.52 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-60              
- src/editing-components    |   61.53 |    42.85 |   46.66 |   63.15 |                   
+ src/editing-components    |   51.06 |    33.33 |   33.33 |   53.33 |                   
   EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15             
-  EditTask.tsx             |   63.15 |    33.33 |   28.57 |   66.66 | 48-68,112         
+  EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-64             
+  EditTask.tsx             |   63.15 |    33.33 |   28.57 |   66.66 | 49-69,113         
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
   Times.tsx                |     100 |      100 |     100 |     100 |                   
   edit-difficulty.tsx      |      50 |      100 |      50 |      50 | 11                
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   23.68 |    18.75 |      20 |   24.16 |                   
+ src/list-components       |      24 |    19.35 |   20.28 |   24.48 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
-  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 30-90             
+  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-84             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
   UserList.tsx             |       0 |        0 |       0 |       0 | 34-180            
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
@@ -4432,5 +4433,5 @@ All files                  |    30.4 |       20 |   30.35 |   31.14 |
 Test Suites: 13 failed, 13 total
 Tests:       39 failed, 11 passed, 50 total
 Snapshots:   0 total
-Time:        8.716 s
+Time:        10.079 s
 Ran all test suites.

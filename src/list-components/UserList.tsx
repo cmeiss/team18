@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
 import { addTask, makeTask } from "../TaskFunctions";
+import { search } from "./search";
 
 interface UserProps {
     user: User;
@@ -36,6 +37,7 @@ export function UserList({
     const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
     function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {
         setTaskSearched(event.target.value);
+        setSearchedTasks(search(TaskSearched, user.userList));
     }
     function sort(type_of_sort: string): void {
         if (type_of_sort == "alphabet") {

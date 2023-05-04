@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import React from "react";
+import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
@@ -30,6 +30,13 @@ export function UserList({
     setTasks,
     setUsers
 }: UserProps): JSX.Element {
+    const [TaskSearched, setTaskSearched] = useState<string>(
+        user.userList[0].name
+    );
+    const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
+    function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {
+        setTaskSearched(event.target.value);
+    }
     function sort(type_of_sort: string): void {
         if (type_of_sort == "alphabet") {
             setUser({
@@ -169,6 +176,17 @@ export function UserList({
                         <Button onClick={() => sort("time")}>
                             Sort By Time Needed{" "}
                         </Button>
+                        {editmode ? (
+                            <Form.Group controlId="ChecKAnswer">
+                                <Form.Label>Search Task By Name</Form.Label>
+                                <Form.Control
+                                    as="textarea"
+                                    rows={3}
+                                    value={TaskSearched}
+                                    onChange={UpdateTaskSearched}
+                                />
+                            </Form.Group>
+                        ) : null}
                     </div>
                 </div>
             </div>

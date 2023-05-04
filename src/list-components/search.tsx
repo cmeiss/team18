@@ -5,7 +5,7 @@ import { Task } from "../interfaces/task";
 //tasks and outputs the list of tasks with this name
 export function search(name: string, tasks: Task[]): Task[] {
     const tasks_with_word = tasks.filter((task: Task) =>
-        task.name.includes(name)
+        task.name.toLowerCase().includes(name.toLowerCase())
     );
     return tasks_with_word;
 }

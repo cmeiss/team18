@@ -1,14 +1,15 @@
 /* eslint-disable indent */
-import React from "react";
+import React, { useState } from "react";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 import { DisplayTask } from "./DisplayTask";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
 import { addTask, makeTask } from "../TaskFunctions";
+import { search } from "./search";
 
 interface UserProps {
     user: User;
@@ -30,6 +31,18 @@ export function UserList({
     setTasks,
     setUsers
 }: UserProps): JSX.Element {
+    const [TaskSearched, setTaskSearched] = useState<string>(
+        "hfaodfhqui3q47r543777777777777777777777777777777"
+    );
+    const [SearchMode, SetSearchMode] = useState<boolean>(false);
+    const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
+    function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {
+        setTaskSearched(event.target.value);
+        setSearchedTasks(search(TaskSearched, user.userList));
+    }
+    function setSearchMode() {
+        SetSearchMode(!SearchMode);
+    }
     function sort(type_of_sort: string): void {
         if (type_of_sort == "alphabet") {
             setUser({
@@ -169,6 +182,29 @@ export function UserList({
                         <Button onClick={() => sort("time")}>
                             Sort By Time Needed{" "}
                         </Button>
+                        <Button onClick={setSearchMode}>SearchTasks</Button>
+                        {SearchMode ? (
+                            <Form.Group controlId="ChecKAnswer">
+                                <Form.Label>Search Task By Name</Form.Label>
+                                <Form.Control
+                                    as="textarea"
+                                    rows={3}
+                                    value={TaskSearched}
+                                    onChange={UpdateTaskSearched}
+                                />
+                            </Form.Group>
+                        ) : null}
+                        {SearchMode
+                            ? SearchedTasks.map((TASK: Task, index: number) => (
+                                  <DisplayTask
+                                      key={index}
+                                      task={TASK}
+                                      tasks={user.userList}
+                                      updateTasks={editUserList}
+                                      role={user.name}
+                                  ></DisplayTask>
+                              ))
+                            : null}
                     </div>
                 </div>
             </div>

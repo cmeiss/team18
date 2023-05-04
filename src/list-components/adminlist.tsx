@@ -11,6 +11,8 @@ import { User } from "../interfaces/user";
 
 interface AdminItemProps {
     tasks: Task[];
+    users: User[];
+    setUsers: (newUsers: User[]) => void;
     user: User;
     setTasks: (newTasks: Task[]) => void;
     //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;

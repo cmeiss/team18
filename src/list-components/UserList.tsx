@@ -32,12 +32,16 @@ export function UserList({
     setUsers
 }: UserProps): JSX.Element {
     const [TaskSearched, setTaskSearched] = useState<string>(
-        user.userList[0].name
+        "hfaodfhqui3q47r543777777777777777777777777777777"
     );
+    const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
     function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {
         setTaskSearched(event.target.value);
         setSearchedTasks(search(TaskSearched, user.userList));
+    }
+    function setSearchMode() {
+        SetSearchMode(!SearchMode);
     }
     function sort(type_of_sort: string): void {
         if (type_of_sort == "alphabet") {
@@ -178,7 +182,8 @@ export function UserList({
                         <Button onClick={() => sort("time")}>
                             Sort By Time Needed{" "}
                         </Button>
-                        {editmode ? (
+                        <Button onClick={setSearchMode}>SearchTasks</Button>
+                        {SearchMode ? (
                             <Form.Group controlId="ChecKAnswer">
                                 <Form.Label>Search Task By Name</Form.Label>
                                 <Form.Control

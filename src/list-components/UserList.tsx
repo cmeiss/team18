@@ -194,6 +194,17 @@ export function UserList({
                                 />
                             </Form.Group>
                         ) : null}
+                        {SearchMode
+                            ? SearchedTasks.map((TASK: Task, index: number) => (
+                                  <DisplayTask
+                                      key={index}
+                                      task={TASK}
+                                      tasks={user.userList}
+                                      updateTasks={editUserList}
+                                      role={user.name}
+                                  ></DisplayTask>
+                              ))
+                            : null}
                     </div>
                 </div>
             </div>

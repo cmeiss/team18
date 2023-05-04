@@ -33,6 +33,8 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                 type={"switch"}
                 id="editMode"
                 label="Delete Task"
+                className="mx-auto"
+                style={{ width: "150px" }}
                 checked={editMode}
                 onChange={updateEditMode}
             />

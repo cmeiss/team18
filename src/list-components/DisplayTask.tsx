@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { EditTask } from "../editing-components/EditTask";
 import "./DisplayTask.css";
@@ -29,7 +29,6 @@ export interface displayProps {
 
 export function DisplayTask(display: displayProps): JSX.Element {
     const [hideDetails, setHideDetails] = useState<boolean>(true);
-    const [done, setDone] = useState<boolean>(display.task.status);
     const [{ isDragging }, drag] = useDrag({
         type: "task",
         item: { id: display.task.id },

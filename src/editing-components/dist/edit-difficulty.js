@@ -9,8 +9,8 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 exports.__esModule = true;
 exports.EditDifficulty = void 0;
 var react_1 = require("react");
-function EditDifficulty() {
-    var _a = react_1.useState(0), difficulty = _a[0], setDifficulty = _a[1];
+function EditDifficulty(_a) {
+    var diff = _a.diff, setDifficulty = _a.setDifficulty;
     //update functions
     function updateDifficulty(newDiff) {
         setDifficulty(newDiff);
@@ -21,7 +21,7 @@ function EditDifficulty() {
         __spreadArrays(Array(5)).map(function (star, index) {
             index += 1;
             return (react_1["default"].createElement("span", { key: index, style: {
-                    color: index <= difficulty ? "orange" : "gray",
+                    color: index <= diff ? "orange" : "gray",
                     cursor: "pointer"
                 }, onClick: function () { return updateDifficulty(index); } }, "\u2605"));
         })));

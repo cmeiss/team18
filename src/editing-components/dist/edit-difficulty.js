@@ -1,34 +1,29 @@
 "use strict";
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 exports.__esModule = true;
 exports.EditDifficulty = void 0;
 var react_1 = require("react");
-var react_bootstrap_1 = require("react-bootstrap");
-var react_fontawesome_1 = require("@fortawesome/react-fontawesome");
-var free_solid_svg_icons_1 = require("@fortawesome/free-solid-svg-icons");
-var element = react_1["default"].createElement(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faStar });
-function EditDifficulty(_a) {
-    var diff = _a.diff, setDifficulty = _a.setDifficulty;
+function EditDifficulty() {
+    var _a = react_1.useState(0), difficulty = _a[0], setDifficulty = _a[1];
     //update functions
-    function updateDifficulty(event) {
-        setDifficulty(parseInt(event.target.value));
+    function updateDifficulty(newDiff) {
+        setDifficulty(newDiff);
     }
-    return (react_1["default"].createElement("div", { className: "difficulty-edit" },
-        "Task Difficulty: ",
-        diff,
-        react_1["default"].createElement(react_bootstrap_1.Form.Check, { inline: true, 
-            //label="star-1"
-            type: "radio", name: "difficulty", value: "1", onChange: updateDifficulty, id: "star1", checked: diff === 1 }),
-        react_1["default"].createElement(react_bootstrap_1.Form.Check, { inline: true, 
-            //label="star-2"
-            type: "radio", name: "difficulty", value: "2", onChange: updateDifficulty, id: "star2", checked: diff === 2 }),
-        react_1["default"].createElement(react_bootstrap_1.Form.Check, { inline: true, 
-            //label="star-3"
-            type: "radio", name: "difficulty", value: "3", onChange: updateDifficulty, id: "star3", checked: diff === 3 }),
-        react_1["default"].createElement(react_bootstrap_1.Form.Check, { inline: true, 
-            //label="star-4"
-            type: "radio", name: "difficulty", value: "4", onChange: updateDifficulty, id: "star4", checked: diff === 4 }),
-        react_1["default"].createElement(react_bootstrap_1.Form.Check, { inline: true, 
-            //label="star-5"
-            type: "radio", name: "difficulty", value: "5", onChange: updateDifficulty, id: "star5", checked: diff === 5 })));
+    return (react_1["default"].createElement("span", { className: "fs-8" },
+        "Difficulty: ",
+        react_1["default"].createElement("br", null),
+        __spreadArrays(Array(5)).map(function (star, index) {
+            index += 1;
+            return (react_1["default"].createElement("span", { key: index, style: {
+                    color: index <= difficulty ? "orange" : "gray",
+                    cursor: "pointer"
+                }, onClick: function () { return updateDifficulty(index); } }, "\u2605"));
+        })));
 }
 exports.EditDifficulty = EditDifficulty;

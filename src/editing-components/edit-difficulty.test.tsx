@@ -17,10 +17,11 @@ describe("testing edit difficulty component", () => {
         expect(compDisplayed).toBeInTheDocument();
     });
     test("difficulty is updating", () => {
-        const chooseDifficulty = screen.getByLabelText("Change Difficulty");
+        const chooseDifficulty = screen.getByLabelText("Change Difficulty:");
         fireEvent.click(chooseDifficulty);
-        const newDifficulty = screen.getByRole("option", { difficulty: 0 });
+        const newDifficulty = screen.getByText("Difficulty: ");
         fireEvent.click(newDifficulty);
         expect(newDifficulty).toBeInTheDocument();
     });
+    //not sure how to test for the value as of right now, placeholder for now
 });

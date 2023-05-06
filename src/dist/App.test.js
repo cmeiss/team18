@@ -42,12 +42,28 @@ function setUsers(newUsers) {
 //user: central item list, user list, edit task
 describe("Tesing Central Item List in App", function () {
     beforeEach(function () {
-        react_2.render(react_1["default"].createElement(CentralItemList_1.CentralItemList, { tasks: TASKS_1.TASKS, role: role3, setTasks: setTasks }));
+        react_2.render(react_1["default"].createElement(CentralItemList_1.CentralItemList, { tasks: TASKS_1.TASKS, role: role1, setTasks: setTasks }));
+    });
+    test("list is displayed", function () {
+        var listDisplayed = react_2.screen.getByText("Sample Tasks");
+        expect(listDisplayed).toBeInTheDocument();
     });
 });
 describe("Tesing User List in App", function () {
     beforeEach(function () {
-        react_2.render(react_1["default"].createElement(UserList_1.UserList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, setTasks: setTasks, user: User3, setUser: setUser }));
+        react_2.render(react_1["default"].createElement(UserList_1.UserList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, setTasks: setTasks, user: User1, setUser: setUser }));
+    });
+    test("list is displayed", function () {
+        var listDisplayed = react_2.screen.getByText(User1.name + "'s Schedule");
+        expect(listDisplayed).toBeInTheDocument();
+    });
+    test("list not seen by super", function () {
+        var container = react_2.render(react_1["default"].createElement(UserList_1.UserList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, setTasks: setTasks, user: User2, setUser: setUser })).container;
+        expect(container).toBeEmptyDOMElement();
+    });
+    test("list not seen by admin", function () {
+        var container = react_2.render(react_1["default"].createElement(UserList_1.UserList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, setTasks: setTasks, user: User3, setUser: setUser })).container;
+        expect(container).toBeEmptyDOMElement();
     });
 });
 describe("Tesing Admin List in App", function () {

@@ -52,10 +52,14 @@ describe("Tesing Central Item List in App", () => {
         render(
             <CentralItemList
                 tasks={TASKS}
-                role={role3}
+                role={role1}
                 setTasks={setTasks}
             ></CentralItemList>
         );
+    });
+    test("list is displayed", () => {
+        const listDisplayed = screen.getByText("Sample Tasks");
+        expect(listDisplayed).toBeInTheDocument();
     });
 });
 
@@ -67,10 +71,40 @@ describe("Tesing User List in App", () => {
                 setUsers={setUsers}
                 tasks={TASKS}
                 setTasks={setTasks}
+                user={User1}
+                setUser={setUser}
+            ></UserList>
+        );
+    });
+    test("list is displayed", () => {
+        const listDisplayed = screen.getByText(User1.name + "'s Schedule");
+        expect(listDisplayed).toBeInTheDocument();
+    });
+    test("list not seen by super", () => {
+        const { container } = render(
+            <UserList
+                users={users}
+                setUsers={setUsers}
+                tasks={TASKS}
+                setTasks={setTasks}
+                user={User2}
+                setUser={setUser}
+            ></UserList>
+        );
+        expect(container).toBeEmptyDOMElement();
+    });
+    test("list not seen by admin", () => {
+        const { container } = render(
+            <UserList
+                users={users}
+                setUsers={setUsers}
+                tasks={TASKS}
+                setTasks={setTasks}
                 user={User3}
                 setUser={setUser}
             ></UserList>
         );
+        expect(container).toBeEmptyDOMElement();
     });
 });
 

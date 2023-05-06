@@ -700,6 +700,64 @@ FAIL src/TaskFunctions.test.ts
 
       at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
 
+FAIL src/App.test.tsx
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
+                                                                                      ^^^^^^
+
+    SyntaxError: Unexpected token 'export'
+
+      4 | import { EditTask } from "../editing-components/EditTask";
+      5 | import "./DisplayTask.css";
+    > 6 | import { useDrag } from "react-dnd";
+        | ^
+      7 | import { EditStatus } from "../editing-components/EditStatus";
+      8 |
+      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
+      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
+
+FAIL src/dist/App.test.js
+  ● Test suite failed to run
+
+    Cannot find module './list-components/CentralItemList' from 'src/dist/App.test.js'
+
+       5 | var react_2 = require("@testing-library/react");
+       6 | var TASKS_1 = require("./TASKS");
+    >  7 | var CentralItemList_1 = require("./list-components/CentralItemList");
+         |                         ^
+       8 | var UserList_1 = require("./list-components/UserList");
+       9 | var adminlist_1 = require("./list-components/adminlist");
+      10 | var deleteTask_component_1 = require("./list-components/deleteTask-component");
+
+      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
+      at Object.<anonymous> (src/dist/App.test.js:7:25)
+
 FAIL src/list-components/filterlists.test.tsx
   ● filter › Testing the filter by time needed function
 
@@ -4981,8 +5039,8 @@ All files                  |   29.25 |    19.38 |   28.22 |   30.03 |
  src/pages                 |       0 |      100 |       0 |       0 |                   
   about.tsx                |       0 |      100 |       0 |       0 | 5                 
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 12 failed, 12 total
+Test Suites: 14 failed, 14 total
 Tests:       40 failed, 10 passed, 50 total
 Snapshots:   0 total
-Time:        12.308 s
+Time:        9.468 s
 Ran all test suites.

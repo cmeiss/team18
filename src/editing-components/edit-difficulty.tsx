@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-export function EditDifficulty(): JSX.Element {
-    const [difficulty, setDifficulty] = useState(0);
+interface diffProp {
+    diff: number;
+    setDifficulty: (newDiff: number) => void;
+}
+export function EditDifficulty({ diff, setDifficulty }: diffProp) {
     //update functions
     function updateDifficulty(newDiff: number) {
         setDifficulty(newDiff);
@@ -16,7 +19,7 @@ export function EditDifficulty(): JSX.Element {
                     <span
                         key={index}
                         style={{
-                            color: index <= difficulty ? "orange" : "gray",
+                            color: index <= diff ? "orange" : "gray",
                             cursor: "pointer"
                         }}
                         onClick={() => updateDifficulty(index)}

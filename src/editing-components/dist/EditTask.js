@@ -37,10 +37,10 @@ function EditTask(edit) {
     var status = react_1.useState(edit.task.status)[0];
     var img = react_1.useState(edit.task.image)[0];
     var steps = react_1.useState(edit.task.steps)[0];
-    var diff = react_1.useState(edit.task.difficulty)[0];
+    var _b = react_1.useState(edit.task.difficulty), diff = _b[0], setDifficulty = _b[1];
     var numUsers = react_1.useState(edit.task.numUsers)[0];
-    var _b = react_1.useState(edit.task.time), time = _b[0], setTime = _b[1];
-    var _c = react_1.useState(false), visible = _c[0], setVisible = _c[1];
+    var _c = react_1.useState(edit.task.time), time = _c[0], setTime = _c[1];
+    var _d = react_1.useState(false), visible = _d[0], setVisible = _d[1];
     function updateVisibility() {
         setVisible(!visible);
     }
@@ -69,7 +69,7 @@ function EditTask(edit) {
         !visible ? null : (react_1["default"].createElement("div", null,
             react_1["default"].createElement(EditDescription_1.EditDescription, { description: desc, setDescription: setDesc }),
             react_1["default"].createElement(EditTime_1.EditTime, { time: time, setTime: setTime }),
-            react_1["default"].createElement(edit_difficulty_1.EditDifficulty, null),
+            react_1["default"].createElement(edit_difficulty_1.EditDifficulty, { diff: diff, setDifficulty: setDifficulty }),
             react_1["default"].createElement("div", null,
                 react_1["default"].createElement(react_bootstrap_1.Button, { onClick: function () {
                         return changeTasks(edit.tasks, id, name, desc, status, img, steps, diff, numUsers, time);

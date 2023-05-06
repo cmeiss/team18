@@ -90,12 +90,20 @@ describe("Testing Delete task in App", function () {
                 throw new Error("function not implemented");
             } }));
     });
+    test("delete task is displayed", function () {
+        var compDisplayed = react_2.screen.getByText("Delete Task");
+        expect(compDisplayed).toBeInTheDocument();
+    });
 });
 describe("Add tasks tests", function () {
     beforeEach(function () {
         return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { tasks: TASKS_1.TASKS, setTasks: function ( /*newTasks: Tasks[]*/) {
                 throw new Error("Function not implemented.");
             } }));
+    });
+    test("add task is displayed", function () {
+        var compDisplayed = react_2.screen.getByText("Add Task");
+        expect(compDisplayed).toBeInTheDocument();
     });
 });
 describe("Testing EditTask", function () {

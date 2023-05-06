@@ -160,6 +160,10 @@ describe("Testing Delete task in App", () => {
             />
         )
     );
+    test("delete task is displayed", () => {
+        const compDisplayed = screen.getByText("Delete Task");
+        expect(compDisplayed).toBeInTheDocument();
+    });
 });
 
 describe("Add tasks tests", () => {
@@ -175,6 +179,10 @@ describe("Add tasks tests", () => {
             />
         )
     );
+    test("add task is displayed", () => {
+        const compDisplayed = screen.getByText("Add Task");
+        expect(compDisplayed).toBeInTheDocument();
+    });
 });
 
 describe("Testing EditTask", () => {

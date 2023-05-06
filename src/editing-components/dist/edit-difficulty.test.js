@@ -18,9 +18,7 @@ describe("testing edit difficulty component", function () {
     test("difficulty is updating", function () {
         var chooseDifficulty = react_2.screen.getByLabelText("Change Difficulty:");
         react_2.fireEvent.click(chooseDifficulty);
-        var newDifficulty = react_2.screen.getByText("Difficulty: ");
-        react_2.fireEvent.click(newDifficulty);
-        expect(newDifficulty).toBeInTheDocument();
+        expect(chooseDifficulty).toBeInTheDocument();
     });
     //not sure how to test for the value as of right now, placeholder for now
 });

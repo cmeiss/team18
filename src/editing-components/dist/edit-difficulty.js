@@ -16,7 +16,7 @@ function EditDifficulty() {
         setDifficulty(newDiff);
     }
     return (react_1["default"].createElement("span", { className: "fs-8" },
-        "Difficulty: ",
+        "Change Difficulty: ",
         react_1["default"].createElement("br", null),
         __spreadArrays(Array(5)).map(function (star, index) {
             index += 1;

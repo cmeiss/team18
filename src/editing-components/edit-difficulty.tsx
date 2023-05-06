@@ -9,7 +9,7 @@ export function EditDifficulty(): JSX.Element {
 
     return (
         <span className="fs-8">
-            Difficulty: <br></br>
+            Change Difficulty: <br></br>
             {[...Array(5)].map((star, index) => {
                 index += 1;
                 return (

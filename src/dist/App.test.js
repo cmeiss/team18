@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+//import App from "./App";
 var react_1 = require("react");
 var react_2 = require("@testing-library/react");
 var TASKS_1 = require("./TASKS");
@@ -21,8 +22,8 @@ var testTask = {
     time: "1345"
 };
 var role1 = "Super";
-var role2 = "Admin";
-var role3 = "User1";
+//const role2 = "Admin";
+//const role3 = "User1";
 var User1 = { name: "user1", userList: TASKS_1.TASKS };
 var User2 = { name: "Super", userList: TASKS_1.TASKS };
 var User3 = { name: "Admin", userList: TASKS_1.TASKS };
@@ -68,7 +69,19 @@ describe("Tesing User List in App", function () {
 });
 describe("Tesing Admin List in App", function () {
     beforeEach(function () {
-        react_2.render(react_1["default"].createElement(adminlist_1.AdminList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, user: User2, setTasks: setTasks }));
+        react_2.render(react_1["default"].createElement(adminlist_1.AdminList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, user: User3, setTasks: setTasks }));
+    });
+    test("list is displayed", function () {
+        var listDisplayed = react_2.screen.getByText("Admin List");
+        expect(listDisplayed).toBeInTheDocument();
+    });
+    test("list not seen by super", function () {
+        var container = react_2.render(react_1["default"].createElement(adminlist_1.AdminList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, user: User3, setTasks: setTasks })).container;
+        expect(container).toBeEmptyDOMElement();
+    });
+    test("list not seen by user", function () {
+        var container = react_2.render(react_1["default"].createElement(adminlist_1.AdminList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, user: User3, setTasks: setTasks })).container;
+        expect(container).toBeEmptyDOMElement();
     });
 });
 describe("Testing Delete task in App", function () {

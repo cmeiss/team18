@@ -1,4 +1,4 @@
-import App from "./App";
+//import App from "./App";
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { TASKS } from "./TASKS";
@@ -24,8 +24,8 @@ const testTask = {
 };
 
 const role1 = "Super";
-const role2 = "Admin";
-const role3 = "User1";
+//const role2 = "Admin";
+//const role3 = "User1";
 
 const User1: User = { name: "user1", userList: TASKS };
 const User2: User = { name: "Super", userList: TASKS };
@@ -115,10 +115,38 @@ describe("Tesing Admin List in App", () => {
                 users={users}
                 setUsers={setUsers}
                 tasks={TASKS}
-                user={User2}
+                user={User3}
                 setTasks={setTasks}
             ></AdminList>
         );
+    });
+    test("list is displayed", () => {
+        const listDisplayed = screen.getByText("Admin List");
+        expect(listDisplayed).toBeInTheDocument();
+    });
+    test("list not seen by super", () => {
+        const { container } = render(
+            <AdminList
+                users={users}
+                setUsers={setUsers}
+                tasks={TASKS}
+                user={User3}
+                setTasks={setTasks}
+            ></AdminList>
+        );
+        expect(container).toBeEmptyDOMElement();
+    });
+    test("list not seen by user", () => {
+        const { container } = render(
+            <AdminList
+                users={users}
+                setUsers={setUsers}
+                tasks={TASKS}
+                user={User3}
+                setTasks={setTasks}
+            ></AdminList>
+        );
+        expect(container).toBeEmptyDOMElement();
     });
 });
 describe("Testing Delete task in App", () => {

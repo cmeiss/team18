@@ -2,11 +2,11 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { EditDifficulty } from "./edit-difficulty";
 
-const difficulty = 100;
+//const difficulty = 100;
 
-function setDifficulty(newDiff: number) {
-    newDiff;
-}
+//function setDifficulty(newDiff: number) {
+//newDiff;
+//}
 
 describe("testing edit difficulty component", () => {
     beforeEach(() => {

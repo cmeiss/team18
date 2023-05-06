@@ -70,11 +70,8 @@ describe("Add tasks tests", () => {
         userEvent.type(inputUser, "task test");
         // on add user button click
         addTask.click();
-        // need help figuring out if it actually adds a user
-        // leaves edit mode: no textbox and no buttons
+
         expect(screen.getByRole("textarea")).toBeNull();
         expect(screen.getByRole("button")).toBeNull();
-        // may need to render the roll select dropdown. At this moment I dont see how we do that without rendering
-        //all of App. we will come back to this later
     });
 });

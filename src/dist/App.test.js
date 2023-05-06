@@ -110,4 +110,8 @@ describe("Testing EditTask", function () {
     beforeEach(function () {
         react_2.render(react_1["default"].createElement(EditTask_1.EditTask, { tasks: TASKS_1.TASKS, updateTasks: setTasks, task: testTask }));
     });
+    test("edit Task button appears", function () {
+        var editButton = react_2.screen.getByRole("button", { name: "Edit Task" });
+        expect(editButton).toBeInTheDocument();
+    });
 });

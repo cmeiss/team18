@@ -191,4 +191,8 @@ describe("Testing EditTask", () => {
             <EditTask tasks={TASKS} updateTasks={setTasks} task={testTask} />
         );
     });
+    test("edit Task button appears", () => {
+        const editButton = screen.getByRole("button", { name: "Edit Task" });
+        expect(editButton).toBeInTheDocument();
+    });
 });

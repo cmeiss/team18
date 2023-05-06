@@ -2339,20 +2339,20 @@ FAIL src/editing-components/EditTask.test.tsx
             [36m<span[39m
               [33mclass[39m=[32m"fs-8"[39m
             [36m>[39m
-              [0mDifficulty: [0m
+              [0mChange Difficulty: [0m
               [36m<br />[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
@@ -3032,20 +3032,20 @@ FAIL src/editing-components/EditTask.test.tsx
             [36m<span[39m
               [33mclass[39m=[32m"fs-8"[39m
             [36m>[39m
-              [0mDifficulty: [0m
+              [0mChange Difficulty: [0m
               [36m<br />[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
@@ -3725,20 +3725,20 @@ FAIL src/editing-components/EditTask.test.tsx
             [36m<span[39m
               [33mclass[39m=[32m"fs-8"[39m
             [36m>[39m
-              [0mDifficulty: [0m
+              [0mChange Difficulty: [0m
               [36m<br />[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
               [36m<span[39m
-                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
               [36m>[39m
                 [0m★[0m
               [36m</span>[39m
@@ -4050,6 +4050,49 @@ FAIL src/list-components/deleteTak.test.tsx
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/list-components/deleteTak.test.tsx:77:37)
+
+FAIL src/list-components/dist/addTask.test.js
+  ● Add tasks tests › There is a switch
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      32 | describe("Add tasks tests", function () {
+      33 |     beforeEach(function () {
+    > 34 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask
+         |                                                  ^
+      35 |         //item={TASK1}
+      36 |         , { 
+      37 |             //item={TASK1}
+
+      at Object.<anonymous> (src/list-components/dist/addTask.test.js:34:50)
+
+  ● Add tasks tests › On switch click, there is a textbox and buttons: 
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      32 | describe("Add tasks tests", function () {
+      33 |     beforeEach(function () {
+    > 34 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask
+         |                                                  ^
+      35 |         //item={TASK1}
+      36 |         , { 
+      37 |             //item={TASK1}
+
+      at Object.<anonymous> (src/list-components/dist/addTask.test.js:34:50)
+
+  ● Add tasks tests › Clicking add task adds a task and leaves edit mode
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      32 | describe("Add tasks tests", function () {
+      33 |     beforeEach(function () {
+    > 34 |         return react_2.render(react_1["default"].createElement(addTask_1.AddTask
+         |                                                  ^
+      35 |         //item={TASK1}
+      36 |         , { 
+      37 |             //item={TASK1}
+
+      at Object.<anonymous> (src/list-components/dist/addTask.test.js:34:50)
 
 FAIL src/list-components/addTask.test.tsx
   ● Console
@@ -5000,6 +5043,190 @@ FAIL src/editing-components/EditTime.test.tsx
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/editing-components/EditTime.test.tsx:20:38)
+
+FAIL src/editing-components/dist/edit-difficulty.test.js
+  ● testing edit difficulty component › component displays
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      10 | describe("testing edit difficulty component", function () {
+      11 |     beforeEach(function () {
+    > 12 |         react_2.render(react_1["default"].createElement(edit_difficulty_1.EditDifficulty, { diff: difficulty, setDifficulty: setDifficulty }));
+         |                                           ^
+      13 |     });
+      14 |     test("component displays", function () {
+      15 |         var compDisplayed = react_2.screen.getByText("Change Difficulty: ");
+
+      at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
+
+  ● testing edit difficulty component › difficulty is updating
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      10 | describe("testing edit difficulty component", function () {
+      11 |     beforeEach(function () {
+    > 12 |         react_2.render(react_1["default"].createElement(edit_difficulty_1.EditDifficulty, { diff: difficulty, setDifficulty: setDifficulty }));
+         |                                           ^
+      13 |     });
+      14 |     test("component displays", function () {
+      15 |         var compDisplayed = react_2.screen.getByText("Change Difficulty: ");
+
+      at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
+
+FAIL src/editing-components/edit-difficulty.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      11 | describe("testing edit difficulty component", () => {
+      12 |     beforeEach(() => {
+    > 13 |         render(
+         |         ^
+      14 |             <EditDifficulty
+      15 |                 diff={difficulty}
+      16 |                 setDifficulty={setDifficulty}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:13:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      11 | describe("testing edit difficulty component", () => {
+      12 |     beforeEach(() => {
+    > 13 |         render(
+         |         ^
+      14 |             <EditDifficulty
+      15 |                 diff={difficulty}
+      16 |                 setDifficulty={setDifficulty}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:13:9)
+
+  ● testing edit difficulty component › component displays
+
+    TestingLibraryElementError: Unable to find an element with the text: Change Difficulty: . This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"fs-8"[39m
+        [36m>[39m
+          [0mChange Difficulty: [0m
+          [36m<br />[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+        [36m</span>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      19 |     });
+      20 |     test("component displays", () => {
+    > 21 |         const compDisplayed = screen.getByText("Change Difficulty: ");
+         |                                      ^
+      22 |         expect(compDisplayed).toBeInTheDocument();
+      23 |     });
+      24 |     test("difficulty is updating", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:21:38)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● testing edit difficulty component › difficulty is updating
+
+    TestingLibraryElementError: Unable to find a label with the text of: Change Difficulty:
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"fs-8"[39m
+        [36m>[39m
+          [0mChange Difficulty: [0m
+          [36m<br />[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+        [36m</span>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      23 |     });
+      24 |     test("difficulty is updating", () => {
+    > 25 |         const chooseDifficulty = screen.getByLabelText("Change Difficulty:");
+         |                                         ^
+      26 |         fireEvent.click(chooseDifficulty);
+      27 |         expect(chooseDifficulty).toBeInTheDocument();
+      28 |     });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at getAllByLabelText (node_modules/@testing-library/dom/dist/queries/label-text.js:116:38)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByLabelText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:25:41)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -5008,20 +5235,20 @@ FAIL src/editing-components/EditTime.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   29.25 |    19.38 |   28.22 |   30.03 |                   
+All files                  |   28.99 |     20.4 |   28.22 |   29.77 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-60              
- src/editing-components    |   52.94 |       35 |   34.78 |    55.1 |                   
+ src/editing-components    |      52 |       40 |   34.78 |   54.16 |                   
   EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15             
   EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-64             
-  EditTask.tsx             |   63.15 |    33.33 |   28.57 |   66.66 | 49-69,110         
+  EditTask.tsx             |   63.15 |    33.33 |   28.57 |   66.66 | 49-69,113         
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
   Times.tsx                |     100 |      100 |     100 |     100 |                   
-  edit-difficulty.tsx      |   66.66 |       50 |      50 |   66.66 | 7,22              
+  edit-difficulty.tsx      |      60 |      100 |      50 |      60 | 10,25             
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
@@ -5039,8 +5266,8 @@ All files                  |   29.25 |    19.38 |   28.22 |   30.03 |
  src/pages                 |       0 |      100 |       0 |       0 |                   
   about.tsx                |       0 |      100 |       0 |       0 | 5                 
 ---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 14 failed, 14 total
-Tests:       40 failed, 10 passed, 50 total
+Test Suites: 17 failed, 17 total
+Tests:       47 failed, 10 passed, 57 total
 Snapshots:   0 total
-Time:        9.468 s
+Time:        11.286 s
 Ran all test suites.

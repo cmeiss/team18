@@ -94,10 +94,17 @@ export function UserList({
             //updating the UserList in the Roles state to keep the correct user list after role changes
             //updating the number of Users of the dropped task in the central item list if the user doesnt have
             // the task already
-            const firstTask = user.userList.every(
-                (task: Task): boolean => task.id !== droppedTask.id
+            const repeats = user.userList.reduce(
+                (currentTotal: number, task: Task) =>
+                    task.id === droppedTask.id
+                        ? currentTotal + 1
+                        : currentTotal + 0,
+                0
             );
-            if (firstTask) changeTasks(tasks, droppedTask.id);
+            if (repeats === 0 && addOrDel)
+                changeTasks(tasks, droppedTask.id, addOrDel);
+            if (repeats === 1 && !addOrDel)
+                changeTasks(tasks, droppedTask.id, addOrDel);
         }
     }
 
@@ -135,14 +142,17 @@ export function UserList({
     }
 
     //this function increments the numberOfUsers of the task with the passed in ID
-    function changeTasks(tasks: Task[], id: number) {
+    function changeTasks(tasks: Task[], id: number, incrOrDec: boolean) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         const currentNumUsers = tasks.find((T: Task) =>
             T.id === id ? T : null
         );
         let newNumUsers = -1;
-        if (currentNumUsers) {
+        if (currentNumUsers && incrOrDec) {
             newNumUsers = currentNumUsers.numUsers + 1;
+        }
+        if (currentNumUsers && !incrOrDec) {
+            newNumUsers = currentNumUsers.numUsers - 1;
         }
         setTasks(
             copy.map((TASK: Task) =>
@@ -163,23 +173,48 @@ export function UserList({
         );
     }
 
-    // function trashCan(): JSX.Element {
-    //     const [{ isOverTrash, canDropTrash }, dropTrash] = useDrop({
-    //         accept: "task",
-    //         drop: (item: Task) => addTaskToAdminList(item.id),
-    //         canDrop: (item: Task) => canAddtoAdmin(item.id),
-    //         collect: (monitor) => ({
-    //             isOver: !!monitor.isOver(),
-    //             canDrop: !!monitor.canDrop()
-    //         })
-    //     });
+    function TrashCan(): JSX.Element {
+        const [{ isOver, canDrop }, drop] = useDrop({
+            accept: "task",
+            drop: (item: Task) => addorDelTaskUserList(item.id, false),
+            canDrop: (item: Task) => canDel(item),
+            collect: (monitor) => ({
+                isOver: !!monitor.isOver(),
+                canDrop: !!monitor.canDrop()
+            })
+        });
+        if (isOver && canDrop) {
+            return (
+                <div ref={drop} className="trashOpen">
+                    <img src={require("../trashCanOpen.jpg")} width="100px" />
+                </div>
+            );
+        } else {
+            return (
+                <div ref={drop} className="trashClosed">
+                    <img src={require("../trashCanClosed.jpg")} width="100px" />
+                </div>
+            );
+        }
+    }
 
-    // }
+    function canDel(dropTask: Task): boolean {
+        const droppedTask: Task | undefined = user.userList.find(
+            (task: Task) => task.id === dropTask.id //&&
+            //task.description === dropTask.description
+            //task.time === dropTask.time
+            //         &&task.difficulty === dropTask.difficulty
+        );
+        return droppedTask ? true : false;
+    }
 
     if (user.name !== "Super" && user.name !== "Admin") {
         return (
             <div className="UserList">
                 <Row>
+                    <Col>
+                        <TrashCan></TrashCan>
+                    </Col>
                     <Col>
                         {/*eslint-disable-next-line react/no-unescaped-entities*/}
                         <h2>{user.name}'s Schedule</h2>

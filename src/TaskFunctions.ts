@@ -62,10 +62,10 @@ export function delTask(task: Task, tasks: Task[]) {
         task.time
     );
     const newTasks = tasks.filter(
-        (task: Task): boolean =>
+        (task: Task): boolean => task.id !== taskToRemove.id /*&&
             task.description !== taskToRemove.description &&
             task.time !== taskToRemove.time &&
-            task.difficulty !== taskToRemove.difficulty
+            task.difficulty !== taskToRemove.difficulty*/
     );
     return newTasks;
 }

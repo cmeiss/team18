@@ -5235,7 +5235,7 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   28.99 |     20.4 |   28.22 |   29.77 |                   
+All files                  |   27.85 |    17.85 |   26.71 |   28.57 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -5252,14 +5252,14 @@ All files                  |   28.99 |     20.4 |   28.22 |   29.77 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |    22.5 |    18.18 |   18.91 |   22.92 |                   
+ src/list-components       |   21.05 |       15 |   17.28 |   21.42 |                   
   CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-84             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
   UserList.tsx             |       0 |        0 |       0 |       0 | 34-230            
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
-  adminlist.tsx            |       0 |        0 |       0 |       0 | 22-136            
+  adminlist.tsx            |       0 |        0 |       0 |       0 | 24-193            
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
   filterlists.tsx          |   82.35 |       25 |     100 |    87.5 | 24-25             
   search.tsx               |       0 |      100 |       0 |       0 | 7-10              
@@ -5269,5 +5269,5 @@ All files                  |   28.99 |     20.4 |   28.22 |   29.77 |
 Test Suites: 17 failed, 17 total
 Tests:       47 failed, 10 passed, 57 total
 Snapshots:   0 total
-Time:        11.647 s
+Time:        13.02 s
 Ran all test suites.

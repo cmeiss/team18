@@ -122,13 +122,6 @@ function App(): JSX.Element {
                                 role={role.name}
                                 setTasks={updateTasks}
                             ></CentralItemList>
-                            <div>
-                                <AdminList
-                                    tasks={tasks}
-                                    user={role}
-                                    setTasks={updateTasks}
-                                ></AdminList>
-                            </div>
                         </div>
                     </Col>
                     <Col>
@@ -141,6 +134,15 @@ function App(): JSX.Element {
                                 setTasks={updateTasks}
                                 setUsers={setRoles}
                             ></UserList>
+                        </div>
+                        <div>
+                            <AdminList
+                                users={roles}
+                                setUsers={setRoles}
+                                tasks={tasks}
+                                user={role}
+                                setTasks={updateTasks}
+                            ></AdminList>
                         </div>
                     </Col>
                 </Row>

@@ -74,11 +74,14 @@
 }
 
 .welcome {
-    font-size: larger;
-    margin: 20px;
+    font-size: x-large;
+    margin: 50px;
+    color: rgb(71, 28, 3);
 }
 
-.central-list {
+.central-list,
+.UserList,
+.admin-list {
     text-align: center;
     color: rgb(71, 28, 3);
     margin: 50px;
@@ -86,25 +89,66 @@
     outline: 4px solid rgb(71, 28, 3);
 }
 
-.UserList {
-    text-align: center;
-    color: rgb(71, 28, 3);
-    margin: 50px;
-    border-radius: 25px;
-    outline: 4px solid rgb(71, 28, 3);
+.Adminsort-dropdown,
+.Usersort-dropdown {
+    margin: auto;
+    align-items: center;
+    width: 75%;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
 }
+
+.Adminsort-dropbtn,
+.Usersort-dropbtn {
+    background-color: rgb(121, 73, 45);
+    color: white;
+    margin: 5px;
+    display: flex;
+}
+
+.Adminsort-options,
+.Usersort-options {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.Adminsort-options Button,
+.Usersort-options Button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.Adminsort-options Button:hover,
+.Usersort-options Button:hover {
+    background-color: #f1f1f1;
+}
+
+.Adminsort-dropdown:hover .Adminsort-options,
+.Usersort-dropdown:hover .Usersort-options {
+    display: block;
+}
+
+.Adminsort-dropdown:hover .Adminsort-dropbtn,
+.Usersort-dropdown:hover .Usersort-dropbtn {
+    background-color: rgb(185, 132, 101);
+}
+
+.scheduleName h2 {
+    text-align: center;
+}
+
 .central-tasks,
-.userTaskList {
+.userTaskList,
+.admin-tasks {
     border-top: 4px solid rgb(71, 28, 3);
-    height: 650px;
+    height: 550px;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-.admin {
-    text-align: center;
-    float: right;
-    width: 500px;
-    height: 1250px;
-    outline: 2px solid black;
 }

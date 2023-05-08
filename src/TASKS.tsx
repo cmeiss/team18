@@ -7,7 +7,7 @@ export const TASKS: Task[] = [
         description: "Get it done before the deadline.",
         status: false,
         image: require("./task-images/homework.jpg"),
-        steps: ["Class 1", "Class 2"],
+        steps: [],
         difficulty: 0,
         numUsers: 0,
         time: "1800"
@@ -18,7 +18,7 @@ export const TASKS: Task[] = [
         description: "The car needs gas refil your tank.",
         status: false,
         image: require("./task-images/gas.jpg"),
-        steps: ["a", "b", "c"],
+        steps: [],
         difficulty: 3,
         numUsers: 0,
         time: "1345"
@@ -29,7 +29,7 @@ export const TASKS: Task[] = [
         description: "It's time for a great meal!",
         status: false,
         image: require("./task-images/cook-dinner.jpg"),
-        steps: ["get ingredients", "find receipe", "cook", "clean"],
+        steps: [],
         difficulty: 3,
         numUsers: 0,
         time: "1745"
@@ -40,7 +40,7 @@ export const TASKS: Task[] = [
         description: "Enjoy your morning with your favorite breakfast food!",
         status: false,
         image: require("./task-images/make-breakfast.jpg"),
-        steps: ["order online", "pick up"],
+        steps: [],
         difficulty: 3,
         numUsers: 0,
         time: "700"
@@ -65,7 +65,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1730"
     },
     {
         id: 6,
@@ -76,7 +76,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1930"
     },
     {
         id: 7,
@@ -100,7 +100,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1200"
     },
     {
         id: 9,
@@ -111,7 +111,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "800"
     },
     {
         id: 10,
@@ -122,7 +122,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1530"
     },
     {
         id: 11,
@@ -133,7 +133,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "815"
     },
     {
         id: 12,
@@ -144,7 +144,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "800"
     },
     {
         id: 13,
@@ -155,7 +155,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1115"
     },
     {
         id: 14,
@@ -166,7 +166,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1730"
     },
     {
         id: 15,
@@ -177,7 +177,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1230"
     },
     {
         id: 16,
@@ -199,7 +199,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 2,
         numUsers: 0,
-        time: "1130"
+        time: "1800"
     },
     {
         id: 18,
@@ -210,7 +210,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1630"
     },
     {
         id: 19,
@@ -221,7 +221,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 0,
-        time: "1130"
+        time: "830"
     },
     {
         id: 20,
@@ -232,7 +232,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 2,
         numUsers: 0,
-        time: "1130"
+        time: "930"
     },
     {
         id: 21,
@@ -243,7 +243,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1115"
     },
     {
         id: 22,
@@ -255,7 +255,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 0,
-        time: "1130"
+        time: "1230"
     },
     {
         id: 23,
@@ -276,8 +276,8 @@ export const TASKS: Task[] = [
         image: require("./task-images/manifest.png"),
         steps: [],
         difficulty: 3,
-        numUsers: 1,
-        time: "680"
+        numUsers: 0,
+        time: "630"
     },
     {
         id: 25,
@@ -287,7 +287,7 @@ export const TASKS: Task[] = [
         image: require("./task-images/workout.jpg"),
         steps: [],
         difficulty: 3,
-        numUsers: 1,
+        numUsers: 0,
         time: "645"
     },
     {
@@ -298,7 +298,7 @@ export const TASKS: Task[] = [
         image: require("./task-images/movie.png"),
         steps: [],
         difficulty: 1,
-        numUsers: 1,
+        numUsers: 0,
         time: "1045"
     },
     {
@@ -309,7 +309,7 @@ export const TASKS: Task[] = [
         image: require("./task-images/run.png"),
         steps: [],
         difficulty: 69,
-        numUsers: 1,
+        numUsers: 0,
         time: "1445"
     },
     {
@@ -321,8 +321,8 @@ export const TASKS: Task[] = [
         image: require("./task-images/m20.png"),
         steps: [],
         difficulty: 23,
-        numUsers: 5,
-        time: "675"
+        numUsers: 0,
+        time: "700"
     },
     {
         id: 29,
@@ -332,8 +332,8 @@ export const TASKS: Task[] = [
         image: require("./task-images/nap.jpg"),
         steps: [],
         difficulty: 23,
-        numUsers: 5,
-        time: "675"
+        numUsers: 0,
+        time: "645"
     },
     {
         id: 30,
@@ -343,7 +343,7 @@ export const TASKS: Task[] = [
         image: require("./task-images/soccer.jpg"),
         steps: [],
         difficulty: 23,
-        numUsers: 5,
-        time: "675"
+        numUsers: 0,
+        time: "630"
     }
 ];

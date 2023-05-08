@@ -2,8 +2,7 @@ import React, { useState } from "react";
 //import { Button } from "react-bootstrap";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
-import "./adminList.css";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
@@ -120,15 +119,31 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
     if (user.name === "Admin") {
         return (
             <div className="admin-list">
-                <h2> Admin List </h2>
-                <Button onClick={updateAlphabetic}>
-                    Sort by Alphabetical Order{" "}
-                </Button>
-                <Button onClick={updateByDifficulty}>
-                    Sort By Difficulty{" "}
-                </Button>
-                <Button onClick={updateByTime}>Sort By Time </Button>
-                <Button onClick={() => setSorted(false)}>Reset Sorting</Button>
+                <Row>
+                    <Col>
+                        <h2> Admin List </h2>
+                    </Col>
+                    <Col>
+                        <div className="Adminsort-dropdown">
+                            <button className="Adminsort-dropbtn">
+                                {/*eslint-disable-next-line prettier/prettier*/}
+                                Sort by ▾
+                            </button>
+                            <div className="Adminsort-options">
+                                <Button onClick={updateAlphabetic}>
+                                    Alphabetical{" "}
+                                </Button>
+                                <Button onClick={updateByDifficulty}>
+                                    Difficulty{" "}
+                                </Button>
+                                <Button onClick={updateByTime}>Time </Button>
+                                <Button onClick={() => setSorted(false)}>
+                                    Reset
+                                </Button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
                 <DisplayCorrectList></DisplayCorrectList>
             </div>
         );

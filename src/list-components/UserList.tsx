@@ -160,12 +160,12 @@ export function UserList({
                         <h2>{user.name}'s Schedule</h2>
                     </Col>
                     <Col>
-                        <div className="sort-dropdown">
-                            <button className="sort-dropbtn">
+                        <div className="Usersort-dropdown">
+                            <button className="Usersort-dropbtn">
                                 {/*eslint-disable-next-line prettier/prettier*/}
                                 Sort by ▾
                             </button>
-                            <div className="sort-options">
+                            <div className="Usersort-options">
                                 <Button onClick={() => sort("alphabet")}>
                                     Alphabetical{" "}
                                 </Button>

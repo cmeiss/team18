@@ -5257,7 +5257,7 @@ All files                  |   28.99 |     20.4 |   28.22 |   29.77 |
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-84             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
-  UserList.tsx             |       0 |        0 |       0 |       0 | 34-216            
+  UserList.tsx             |       0 |        0 |       0 |       0 | 34-230            
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
   adminlist.tsx            |       0 |        0 |       0 |       0 | 22-136            
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
@@ -5269,5 +5269,5 @@ All files                  |   28.99 |     20.4 |   28.22 |   29.77 |
 Test Suites: 17 failed, 17 total
 Tests:       47 failed, 10 passed, 57 total
 Snapshots:   0 total
-Time:        11.286 s
+Time:        11.647 s
 Ran all test suites.

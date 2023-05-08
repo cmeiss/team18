@@ -2,8 +2,7 @@ import React, { useState } from "react";
 //import { Button } from "react-bootstrap";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
-import "./adminList.css";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
@@ -74,118 +73,77 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         setByTime(false);
         setByDifficulty(true);
     }
-    function DisplayCorrectList(): JSX.Element {
-        //this function checks if we are displaying the adminList sorted or unsorted.
-        //If we display it unsorted, we directly pull it out of the central item list.
-        //If we display it sorted, we create a new sorted temporary list and display that.
-        if (!sorted) {
-            return (
-                <div
-                    className="Admin"
-                    ref={drop}
-                    style={{
-                        backgroundColor: isOver ? "SageGreen" : "white"
-                    }}
-                >
-                    <span> Admin List </span>
-                    {makeAdmin(tasks).map((TASK: Task, index: number) => (
-                        <DisplayTask
-                            key={index}
-                            task={TASK}
-                            tasks={tasks}
-                            updateTasks={setTasks}
-                            role={user.name}
-                        ></DisplayTask>
-                    ))}
-                </div>
-            );
-        } else if (alphabetic) {
-            const SortedList = filter_by_alphabetical_order(makeAdmin(tasks));
-            return (
-                <div
-                    className="Admin"
-                    ref={drop}
-                    style={{
-                        backgroundColor: isOver ? "SageGreen" : "white"
-                    }}
-                >
-                    <span> Admin List </span>
-                    {SortedList.map((TASK: Task, index: number) => (
-                        <DisplayTask
-                            key={index}
-                            task={TASK}
-                            tasks={tasks}
-                            updateTasks={setTasks}
-                            role={user.name}
-                        ></DisplayTask>
-                    ))}
-                </div>
-            );
-        } else if (byTime) {
-            const SortedList = filter_by_time_needed(makeAdmin(tasks));
-            return (
-                <div
-                    className="Admin"
-                    ref={drop}
-                    style={{
-                        backgroundColor: isOver ? "SageGreen" : "white"
-                    }}
-                >
-                    <span> Admin List </span>
-                    {SortedList.map((TASK: Task, index: number) => (
-                        <DisplayTask
-                            key={index}
-                            task={TASK}
-                            tasks={tasks}
-                            updateTasks={setTasks}
-                            role={user.name}
-                        ></DisplayTask>
-                    ))}
-                </div>
-            );
-        } else if (byDifficulty) {
-            const SortedList = filter_by_difficulty(makeAdmin(tasks));
-            return (
-                <div
-                    className="Admin"
-                    ref={drop}
-                    style={{
-                        backgroundColor: isOver ? "SageGreen" : "white"
-                    }}
-                >
-                    <span> Admin List </span>
-                    {SortedList.map((TASK: Task, index: number) => (
-                        <DisplayTask
-                            key={index}
-                            task={TASK}
-                            tasks={tasks}
-                            updateTasks={setTasks}
-                            role={user.name}
-                        ></DisplayTask>
-                    ))}
-                </div>
-            );
-        } else {
-            return <div>AdminList failed to load.</div>;
-        }
-    }
-    if (user.name === "Admin") {
+
+    function displayList(taskList: Task[]): JSX.Element {
         return (
             <div
-                className="AdminList"
+                className="admin-tasks"
                 ref={drop}
                 style={{
                     backgroundColor: isOver ? "SageGreen" : "white"
                 }}
             >
-                <Button onClick={updateAlphabetic}>
-                    Sort by Alphabetical Order{" "}
-                </Button>
-                <Button onClick={updateByDifficulty}>
-                    Sort By Difficulty{" "}
-                </Button>
-                <Button onClick={updateByTime}>Sort By Time </Button>
-                <Button onClick={() => setSorted(false)}>Reset Sorting</Button>
+                {makeAdmin(taskList).map((TASK: Task, index: number) => (
+                    <DisplayTask
+                        key={index}
+                        task={TASK}
+                        tasks={tasks}
+                        updateTasks={setTasks}
+                        role={user.name}
+                    ></DisplayTask>
+                ))}
+            </div>
+        );
+    }
+
+    function DisplayCorrectList(): JSX.Element {
+        //this function checks if we are displaying the adminList sorted or unsorted.
+        //If we display it unsorted, we directly pull it out of the central item list.
+        //If we display it sorted, we create a new sorted temporary list and display that.
+        if (!sorted) {
+            return displayList(tasks);
+        } else if (alphabetic) {
+            const SortedList = filter_by_alphabetical_order(makeAdmin(tasks));
+            return displayList(SortedList);
+        } else if (byTime) {
+            const SortedList = filter_by_time_needed(makeAdmin(tasks));
+            return displayList(SortedList);
+        } else if (byDifficulty) {
+            const SortedList = filter_by_difficulty(makeAdmin(tasks));
+            return displayList(SortedList);
+        } else {
+            return <div>AdminList failed to load.</div>;
+        }
+    }
+
+    if (user.name === "Admin") {
+        return (
+            <div className="admin-list">
+                <Row>
+                    <Col>
+                        <h2> Admin List </h2>
+                    </Col>
+                    <Col>
+                        <div className="Adminsort-dropdown">
+                            <button className="Adminsort-dropbtn">
+                                {/*eslint-disable-next-line prettier/prettier*/}
+                                Sort by ▾
+                            </button>
+                            <div className="Adminsort-options">
+                                <Button onClick={updateAlphabetic}>
+                                    Alphabetical{" "}
+                                </Button>
+                                <Button onClick={updateByDifficulty}>
+                                    Difficulty{" "}
+                                </Button>
+                                <Button onClick={updateByTime}>Time </Button>
+                                <Button onClick={() => setSorted(false)}>
+                                    Reset
+                                </Button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
                 <DisplayCorrectList></DisplayCorrectList>
             </div>
         );

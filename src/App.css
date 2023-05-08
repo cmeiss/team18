@@ -79,7 +79,9 @@
     color: rgb(71, 28, 3);
 }
 
-.central-list {
+.central-list,
+.UserList,
+.admin-list {
     text-align: center;
     color: rgb(71, 28, 3);
     margin: 50px;
@@ -87,15 +89,8 @@
     outline: 4px solid rgb(71, 28, 3);
 }
 
-.UserList {
-    text-align: center;
-    color: rgb(71, 28, 3);
-    margin: 50px;
-    border-radius: 25px;
-    outline: 4px solid rgb(71, 28, 3);
-}
-
-.sort-dropdown {
+.Adminsort-dropdown,
+.Usersort-dropdown {
     margin: auto;
     align-items: center;
     width: 75%;
@@ -104,14 +99,16 @@
     display: inline-block;
 }
 
-.sort-dropbtn {
+.Adminsort-dropbtn,
+.Usersort-dropbtn {
     background-color: rgb(121, 73, 45);
     color: white;
     margin: 5px;
     display: flex;
 }
 
-.sort-options {
+.Adminsort-options,
+.Usersort-options {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -120,22 +117,26 @@
     z-index: 1;
 }
 
-.sort-options Button {
+.Adminsort-options Button,
+.Usersort-options Button {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.sort-options Button:hover {
+.Adminsort-options Button:hover,
+.Usersort-options Button:hover {
     background-color: #f1f1f1;
 }
 
-.sort-dropdown:hover .sort-options {
+.Adminsort-dropdown:hover .Adminsort-options,
+.Usersort-dropdown:hover .Usersort-options {
     display: block;
 }
 
-.sort-dropdown:hover .sort-dropbtn {
+.Adminsort-dropdown:hover .Adminsort-dropbtn,
+.Usersort-dropdown:hover .Usersort-dropbtn {
     background-color: rgb(185, 132, 101);
 }
 
@@ -144,17 +145,10 @@
 }
 
 .central-tasks,
-.userTaskList {
+.userTaskList,
+.admin-tasks {
     border-top: 4px solid rgb(71, 28, 3);
     height: 550px;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-.admin {
-    text-align: center;
-    float: right;
-    width: 500px;
-    height: 1250px;
-    outline: 2px solid black;
 }

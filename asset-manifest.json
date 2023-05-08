@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/team18/static/css/main.29420289.css",
-    "main.js": "/team18/static/js/main.38a4752c.js",
+    "main.js": "/team18/static/js/main.32ca06c1.js",
     "static/js/787.4ef7427d.chunk.js": "/team18/static/js/787.4ef7427d.chunk.js",
     "static/media/desktopview.jpg": "/team18/static/media/desktopview.b3dff19e68d585b69564.jpg",
     "static/media/walk-dog.jpg": "/team18/static/media/walk-dog.20b854904d660284f544.jpg",
@@ -27,6 +27,8 @@
     "static/media/hobby.jpg": "/team18/static/media/hobby.8cf684a0043ac75a2d9d.jpg",
     "static/media/trash.jpg": "/team18/static/media/trash.ffbc56d0aee5adb147fc.jpg",
     "static/media/run.png": "/team18/static/media/run.a46a796716482f8c3525.png",
+    "static/media/trashCanOpen.jpg": "/team18/static/media/trashCanOpen.9cb67f66d94fbbd702a2.jpg",
+    "static/media/trashCanClosed.jpg": "/team18/static/media/trashCanClosed.df2558b18590a45f3256.jpg",
     "static/media/homework.jpg": "/team18/static/media/homework.c17320cde09d20b90dcf.jpg",
     "static/media/to-class.jpg": "/team18/static/media/to-class.c495c2fc36e3b3cedc6a.jpg",
     "static/media/m20.png": "/team18/static/media/m20.cd15f065f5c17101d4bf.png",
@@ -37,11 +39,11 @@
     "static/media/gas.jpg": "/team18/static/media/gas.b249674e34d465552fe5.jpg",
     "index.html": "/team18/index.html",
     "main.29420289.css.map": "/team18/static/css/main.29420289.css.map",
-    "main.38a4752c.js.map": "/team18/static/js/main.38a4752c.js.map",
+    "main.32ca06c1.js.map": "/team18/static/js/main.32ca06c1.js.map",
     "787.4ef7427d.chunk.js.map": "/team18/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.29420289.css",
-    "static/js/main.38a4752c.js"
+    "static/js/main.32ca06c1.js"
   ]
 }

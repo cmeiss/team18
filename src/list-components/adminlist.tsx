@@ -8,6 +8,8 @@ import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
 import { User } from "../interfaces/user";
+import { useDrop } from "react-dnd";
+import { addTask } from "../TaskFunctions";
 
 interface AdminItemProps {
     tasks: Task[];
@@ -23,6 +25,31 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
     const [alphabetic, setAlphabetic] = useState<boolean>(false);
     const [byTime, setByTime] = useState<boolean>(false);
     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
+    const [{ isOver /*, canDrop */ }, drop] = useDrop({
+        accept: "task",
+        drop: (item: Task) => addTaskToAdminList(item.id),
+        canDrop: (item: Task) => canAddtoAdmin(item.id),
+        collect: (monitor) => ({
+            isOver: !!monitor.isOver(),
+            canDrop: !!monitor.canDrop()
+        })
+    });
+
+    function addTaskToAdminList(id: number): void {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        if (droppedTask) {
+            setTasks(addTask(droppedTask, tasks));
+        }
+    }
+
+    function canAddtoAdmin(id: number): boolean {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        return droppedTask ? droppedTask.numUsers < 2 : false;
+    }
 
     function makeAdmin(tasks: Task[]) {
         //this function takes the tasks state (our centralItemList) and returns a list of all elements with less than
@@ -53,7 +80,13 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         //If we display it sorted, we create a new sorted temporary list and display that.
         if (!sorted) {
             return (
-                <div className="Admin">
+                <div
+                    className="Admin"
+                    ref={drop}
+                    style={{
+                        backgroundColor: isOver ? "SageGreen" : "white"
+                    }}
+                >
                     <span> Admin List </span>
                     {makeAdmin(tasks).map((TASK: Task, index: number) => (
                         <DisplayTask
@@ -69,7 +102,13 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         } else if (alphabetic) {
             const SortedList = filter_by_alphabetical_order(makeAdmin(tasks));
             return (
-                <div className="Admin">
+                <div
+                    className="Admin"
+                    ref={drop}
+                    style={{
+                        backgroundColor: isOver ? "SageGreen" : "white"
+                    }}
+                >
                     <span> Admin List </span>
                     {SortedList.map((TASK: Task, index: number) => (
                         <DisplayTask
@@ -85,7 +124,13 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         } else if (byTime) {
             const SortedList = filter_by_time_needed(makeAdmin(tasks));
             return (
-                <div className="Admin">
+                <div
+                    className="Admin"
+                    ref={drop}
+                    style={{
+                        backgroundColor: isOver ? "SageGreen" : "white"
+                    }}
+                >
                     <span> Admin List </span>
                     {SortedList.map((TASK: Task, index: number) => (
                         <DisplayTask
@@ -101,7 +146,13 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         } else if (byDifficulty) {
             const SortedList = filter_by_difficulty(makeAdmin(tasks));
             return (
-                <div className="Admin">
+                <div
+                    className="Admin"
+                    ref={drop}
+                    style={{
+                        backgroundColor: isOver ? "SageGreen" : "white"
+                    }}
+                >
                     <span> Admin List </span>
                     {SortedList.map((TASK: Task, index: number) => (
                         <DisplayTask
@@ -120,7 +171,13 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
     }
     if (user.name === "Admin") {
         return (
-            <div className="AdminList">
+            <div
+                className="AdminList"
+                ref={drop}
+                style={{
+                    backgroundColor: isOver ? "SageGreen" : "white"
+                }}
+            >
                 <Button onClick={updateAlphabetic}>
                     Sort by Alphabetical Order{" "}
                 </Button>

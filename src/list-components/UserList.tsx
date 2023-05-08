@@ -8,7 +8,7 @@ import { filter_by_alphabetical_order } from "./filterlists";
 import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
-import { addTask, makeTask } from "../TaskFunctions";
+import { addTask, delTask, makeTask } from "../TaskFunctions";
 import { search } from "./search";
 
 interface UserProps {
@@ -64,13 +64,13 @@ export function UserList({
 
     const [{ isOver }, drop] = useDrop({
         accept: "task",
-        drop: (item: Task) => addTaskUserList(item.id),
+        drop: (item: Task) => addorDelTaskUserList(item.id, true),
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
     });
 
-    function addTaskUserList(id: number) {
+    function addorDelTaskUserList(id: number, addOrDel: boolean) {
         const droppedTask: Task | undefined = tasks.find(
             (task: Task) => task.id === id
         );
@@ -78,14 +78,26 @@ export function UserList({
         console.log("dropping task");
         if (droppedTask) {
             //updating the Role state and add the new task to the currently displayed user list
-            setUser({
-                name: user.name,
-                userList: addTask(droppedTask, user.userList)
-            });
+            if (addOrDel) {
+                setUser({
+                    name: user.name,
+                    userList: addTask(droppedTask, user.userList)
+                });
+                setUsers(updateUserTasks(addTask(droppedTask, user.userList)));
+            } else {
+                setUser({
+                    name: user.name,
+                    userList: delTask(droppedTask, user.userList)
+                });
+                setUsers(updateUserTasks(delTask(droppedTask, user.userList)));
+            }
             //updating the UserList in the Roles state to keep the correct user list after role changes
-            setUsers(updateUserTasks(addTask(droppedTask, user.userList)));
-            //updating the number of Users of the dropped task in the central item list
-            changeTasks(tasks, droppedTask.id);
+            //updating the number of Users of the dropped task in the central item list if the user doesnt have
+            // the task already
+            const firstTask = user.userList.every(
+                (task: Task): boolean => task.id !== droppedTask.id
+            );
+            if (firstTask) changeTasks(tasks, droppedTask.id);
         }
     }
 
@@ -150,6 +162,19 @@ export function UserList({
             )
         );
     }
+
+    // function trashCan(): JSX.Element {
+    //     const [{ isOverTrash, canDropTrash }, dropTrash] = useDrop({
+    //         accept: "task",
+    //         drop: (item: Task) => addTaskToAdminList(item.id),
+    //         canDrop: (item: Task) => canAddtoAdmin(item.id),
+    //         collect: (monitor) => ({
+    //             isOver: !!monitor.isOver(),
+    //             canDrop: !!monitor.canDrop()
+    //         })
+    //     });
+
+    // }
 
     if (user.name !== "Super" && user.name !== "Admin") {
         return (

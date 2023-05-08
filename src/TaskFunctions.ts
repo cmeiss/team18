@@ -50,9 +50,22 @@ Ids for each task would work better just in case tasks would have the same name.
 So this may need amendment later on.
 */
 export function delTask(task: Task, tasks: Task[]) {
-    const taskToRemove = task.id;
+    const taskToRemove = makeTask(
+        task.id,
+        task.name,
+        task.description,
+        task.status,
+        task.image,
+        task.steps,
+        task.difficulty,
+        task.numUsers,
+        task.time
+    );
     const newTasks = tasks.filter(
-        (task: Task): boolean => task.id !== taskToRemove
+        (task: Task): boolean =>
+            task.description !== taskToRemove.description &&
+            task.time !== taskToRemove.time &&
+            task.difficulty !== taskToRemove.difficulty
     );
     return newTasks;
 }

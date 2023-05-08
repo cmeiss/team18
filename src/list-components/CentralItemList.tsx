@@ -5,6 +5,7 @@ import { Task } from "../interfaces/task";
 import {
     filter_by_alphabetical_order,
     filter_by_difficulty,
+    filter_by_numUsers,
     filter_by_time_needed
 } from "./filterlists";
 import { Button, Col, Row } from "react-bootstrap";
@@ -21,6 +22,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
     const [alphabetic, setAlphabetic] = useState<boolean>(false);
     const [byTime, setByTime] = useState<boolean>(false);
     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
+    const [byNumUsers, setByNumUsers] = useState<boolean>(false);
 
     function newCentralList(taskList: Task[]) {
         return taskList.map((TASK: Task) => TASK);
@@ -31,18 +33,28 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         setAlphabetic(true);
         setByTime(false);
         setByDifficulty(false);
+        setByNumUsers(false);
     }
     function updateByTime() {
         setSorted(true);
         setAlphabetic(false);
         setByTime(true);
         setByDifficulty(false);
+        setByNumUsers(false);
     }
     function updateByDifficulty() {
         setSorted(true);
         setAlphabetic(false);
         setByTime(false);
         setByDifficulty(true);
+        setByNumUsers(false);
+    }
+    function updateByNumUsers() {
+        setSorted(true);
+        setAlphabetic(false);
+        setByTime(false);
+        setByDifficulty(false);
+        setByNumUsers(true);
     }
 
     function displayList(taskList: Task[]): JSX.Element {
@@ -77,6 +89,9 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
             return displayList(SortedList);
         } else if (byDifficulty) {
             const SortedList = filter_by_difficulty(newCentralList(tasks));
+            return displayList(SortedList);
+        } else if (byNumUsers) {
+            const SortedList = filter_by_numUsers(newCentralList(tasks));
             return displayList(SortedList);
         } else {
             return <div>AdminList failed to load.</div>;
@@ -123,6 +138,9 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
                                     Difficulty{" "}
                                 </Button>
                                 <Button onClick={updateByTime}>Time </Button>
+                                <Button onClick={updateByNumUsers}>
+                                    Number of Users{" "}
+                                </Button>
                                 <Button onClick={() => setSorted(false)}>
                                     Reset
                                 </Button>

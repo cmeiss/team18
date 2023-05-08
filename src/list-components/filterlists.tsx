@@ -37,4 +37,12 @@ export function filter_by_time_needed(list_of_tasks: Task[]): Task[] {
     return list_of_tasks;
 }
 
+export function filter_by_numUsers(list_of_tasks: Task[]): Task[] {
+    function myComparator(a: Task, b: Task) {
+        return a.numUsers - b.numUsers;
+    }
+    list_of_tasks.sort(myComparator);
+    return list_of_tasks;
+}
+
 //export {}; //Nothing else to export for now

@@ -74,8 +74,9 @@
 }
 
 .welcome {
-    font-size: larger;
-    margin: 20px;
+    font-size: x-large;
+    margin: 50px;
+    color: rgb(71, 28, 3);
 }
 
 .central-list {
@@ -93,10 +94,59 @@
     border-radius: 25px;
     outline: 4px solid rgb(71, 28, 3);
 }
+
+.sort-dropdown {
+    margin: auto;
+    align-items: center;
+    width: 75%;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.sort-dropbtn {
+    background-color: rgb(121, 73, 45);
+    color: white;
+    margin: 5px;
+    display: flex;
+}
+
+.sort-options {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.sort-options Button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sort-options Button:hover {
+    background-color: #f1f1f1;
+}
+
+.sort-dropdown:hover .sort-options {
+    display: block;
+}
+
+.sort-dropdown:hover .sort-dropbtn {
+    background-color: rgb(185, 132, 101);
+}
+
+.scheduleName h2 {
+    text-align: center;
+}
+
 .central-tasks,
 .userTaskList {
     border-top: 4px solid rgb(71, 28, 3);
-    height: 650px;
+    height: 550px;
     overflow-y: scroll;
     overflow-x: hidden;
 }

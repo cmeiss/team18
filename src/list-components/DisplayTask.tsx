@@ -79,10 +79,14 @@ export function DisplayTask(display: displayProps): JSX.Element {
                     <br />
                     Time: {display.task.time}
                     <br />
-                    Steps:{" "}
-                    {display.task.steps.map((step: string) => (
-                        <li key={step}>{step}</li>
-                    ))}
+                    Steps:
+                    <ol style={{ listStyleType: "decimal" }}>
+                        {display.task.steps.map(
+                            (step: string, index: number) => (
+                                <li key={index}>{step}</li>
+                            )
+                        )}
+                    </ol>
                     <div>
                         {display.role === "Super" ? (
                             <div>Number of Users: {display.task.numUsers}</div>

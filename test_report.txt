@@ -742,22 +742,6 @@ FAIL src/App.test.tsx
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
 
-FAIL src/dist/App.test.js
-  ● Test suite failed to run
-
-    Cannot find module './list-components/CentralItemList' from 'src/dist/App.test.js'
-
-       5 | var react_2 = require("@testing-library/react");
-       6 | var TASKS_1 = require("./TASKS");
-    >  7 | var CentralItemList_1 = require("./list-components/CentralItemList");
-         |                         ^
-       8 | var UserList_1 = require("./list-components/UserList");
-       9 | var adminlist_1 = require("./list-components/adminlist");
-      10 | var deleteTask_component_1 = require("./list-components/deleteTask-component");
-
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/dist/App.test.js:7:25)
-
 FAIL src/list-components/filterlists.test.tsx
   ● filter › Testing the filter by time needed function
 
@@ -774,7 +758,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 12,
           "image": "picture",
           "name": "test3",
-          "numUsers": 2,
+          "numUsers": 1,
           "status": false,
           "steps": Array [
     @@ -11,15 +12,16 @@
@@ -792,7 +776,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 1,
           "image": "picture",
           "name": "test2",
-          "numUsers": 2,
+          "numUsers": 0,
           "status": false,
           "steps": Array [
     @@ -27,15 +29,16 @@
@@ -810,7 +794,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 1,
           "image": "picture",
           "name": "test1",
-          "numUsers": 2,
+          "numUsers": 3,
           "status": false,
           "steps": Array [
     @@ -43,8 +46,8 @@
@@ -824,15 +808,15 @@ FAIL src/list-components/filterlists.test.tsx
         },
       ]
 
-      40 | describe("filter", () => {
-      41 |     test("Testing the filter by time needed function", () => {
-    > 42 |         expect(filter_by_time_needed(TaskList)).toEqual([
+      43 | describe("filter", () => {
+      44 |     test("Testing the filter by time needed function", () => {
+    > 45 |         expect(filter_by_time_needed(TaskList)).toEqual([
          |                                                 ^
-      43 |             {
-      44 |                 name: "test3",
-      45 |                 description: "a good description",
+      46 |             {
+      47 |                 name: "test3",
+      48 |                 description: "a good description",
 
-      at Object.<anonymous> (src/list-components/filterlists.test.tsx:42:49)
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:45:49)
 
   ● filter › Testing the filter by alphabetical order function
 
@@ -849,7 +833,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 1,
           "image": "picture",
           "name": "test1",
-          "numUsers": 2,
+          "numUsers": 3,
           "status": false,
           "steps": Array [
     @@ -11,15 +12,16 @@
@@ -867,7 +851,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 1,
           "image": "picture",
           "name": "test2",
-          "numUsers": 2,
+          "numUsers": 0,
           "status": false,
           "steps": Array [
     @@ -27,15 +29,16 @@
@@ -885,7 +869,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 12,
           "image": "picture",
           "name": "test3",
-          "numUsers": 2,
+          "numUsers": 1,
           "status": false,
           "steps": Array [
     @@ -43,8 +46,8 @@
@@ -899,15 +883,15 @@ FAIL src/list-components/filterlists.test.tsx
         },
       ]
 
-      74 |     });
-      75 |     test("Testing the filter by alphabetical order function", () => {
-    > 76 |         expect(filter_by_alphabetical_order(TaskList)).toEqual([
+      77 |     });
+      78 |     test("Testing the filter by alphabetical order function", () => {
+    > 79 |         expect(filter_by_alphabetical_order(TaskList)).toEqual([
          |                                                        ^
-      77 |             {
-      78 |                 name: "test1",
-      79 |                 description: "description a",
+      80 |             {
+      81 |                 name: "test1",
+      82 |                 description: "description a",
 
-      at Object.<anonymous> (src/list-components/filterlists.test.tsx:76:56)
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:79:56)
 
   ● filter › Testing the filter by dificulty function
 
@@ -924,7 +908,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 1,
           "image": "picture",
           "name": "test2",
-          "numUsers": 2,
+          "numUsers": 0,
           "status": false,
           "steps": Array [
     @@ -11,15 +12,16 @@
@@ -942,7 +926,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 12,
           "image": "picture",
           "name": "test3",
-          "numUsers": 2,
+          "numUsers": 1,
           "status": false,
           "steps": Array [
     @@ -27,15 +29,16 @@
@@ -960,7 +944,7 @@ FAIL src/list-components/filterlists.test.tsx
     +     "id": 1,
           "image": "picture",
           "name": "test1",
-          "numUsers": 2,
+          "numUsers": 3,
           "status": false,
           "steps": Array [
     @@ -43,8 +46,8 @@
@@ -974,15 +958,106 @@ FAIL src/list-components/filterlists.test.tsx
         },
       ]
 
-      108 |     });
-      109 |     test("Testing the filter by dificulty function", () => {
-    > 110 |         expect(filter_by_difficulty(TaskList)).toEqual([
+      111 |     });
+      112 |     test("Testing the filter by dificulty function", () => {
+    > 113 |         expect(filter_by_difficulty(TaskList)).toEqual([
           |                                                ^
-      111 |             {
-      112 |                 name: "test2",
-      113 |                 description: "this is the description",
+      114 |             {
+      115 |                 name: "test2",
+      116 |                 description: "this is the description",
 
-      at Object.<anonymous> (src/list-components/filterlists.test.tsx:110:48)
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:113:48)
+
+  ● filter › Testing the filter by NumUser function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 6
+
+    @@ -1,9 +1,10 @@
+      Array [
+        Object {
+          "description": "this is the description",
+          "difficulty": 4,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test2",
+          "numUsers": 0,
+          "status": false,
+          "steps": Array [
+    @@ -11,15 +12,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1300,
+    +     "time": "1300",
+        },
+        Object {
+          "description": "a good description",
+          "difficulty": 5,
+    +     "id": 12,
+          "image": "picture",
+          "name": "test3",
+          "numUsers": 1,
+          "status": false,
+          "steps": Array [
+    @@ -27,15 +29,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 875,
+    +     "time": "875",
+        },
+        Object {
+          "description": "description a",
+          "difficulty": 8,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test1",
+          "numUsers": 3,
+          "status": false,
+          "steps": Array [
+    @@ -43,8 +46,8 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1346,
+    +     "time": "1346",
+        },
+      ]
+
+      145 |     });
+      146 |     test("Testing the filter by NumUser function", () => {
+    > 147 |         expect(filter_by_numUsers(TaskList)).toEqual([
+          |                                              ^
+      148 |             {
+      149 |                 name: "test2",
+      150 |                 description: "this is the description",
+
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:147:46)
+
+FAIL src/dist/App.test.js
+  ● Test suite failed to run
+
+    Cannot find module './list-components/CentralItemList' from 'src/dist/App.test.js'
+
+       5 | var react_2 = require("@testing-library/react");
+       6 | var TASKS_1 = require("./TASKS");
+    >  7 | var CentralItemList_1 = require("./list-components/CentralItemList");
+         |                         ^
+       8 | var UserList_1 = require("./list-components/UserList");
+       9 | var adminlist_1 = require("./list-components/adminlist");
+      10 | var deleteTask_component_1 = require("./list-components/deleteTask-component");
+
+      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
+      at Object.<anonymous> (src/dist/App.test.js:7:25)
 
 FAIL src/list-components/UserList.test.tsx
   ● Test suite failed to run
@@ -5235,7 +5310,7 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   26.17 |    15.62 |   25.73 |    26.8 |                   
+All files                  |   23.27 |    14.28 |      25 |   23.82 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -5252,8 +5327,8 @@ All files                  |   26.17 |    15.62 |   25.73 |    26.8 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   19.04 |     12.5 |   16.27 |   19.35 |                   
-  CentralItemList.tsx      |       0 |      100 |       0 |       0 | 14-19             
+ src/list-components       |   16.31 |    11.11 |   16.32 |   16.59 |                   
+  CentralItemList.tsx      |       0 |        0 |       0 |       0 | 21-144            
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-84             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
@@ -5261,13 +5336,13 @@ All files                  |   26.17 |    15.62 |   25.73 |    26.8 |
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
   adminlist.tsx            |       0 |        0 |       0 |       0 | 23-151            
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
-  filterlists.tsx          |   82.35 |       25 |     100 |    87.5 | 24-25             
+  filterlists.tsx          |      85 |       25 |     100 |   89.47 | 24-25             
   search.tsx               |       0 |      100 |       0 |       0 | 7-10              
  src/pages                 |       0 |      100 |       0 |       0 |                   
   about.tsx                |       0 |      100 |       0 |       0 | 5                 
 ---------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 17 failed, 17 total
-Tests:       47 failed, 10 passed, 57 total
+Tests:       48 failed, 10 passed, 58 total
 Snapshots:   0 total
-Time:        16.804 s
+Time:        14.31 s
 Ran all test suites.

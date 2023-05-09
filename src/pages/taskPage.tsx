@@ -63,6 +63,9 @@ function TaskPage(): JSX.Element {
                                 <li>
                                     <Link to="/about">About</Link>
                                 </li>
+                                <li>
+                                    <Link to="/taskpage">Schedule Builder</Link>
+                                </li>
                             </ul>
                         </nav>
                         <Routes>

@@ -7,27 +7,31 @@ import { AboutPage } from "./pages/AboutPage";
 import TaskPage from "./pages/taskPage";
 
 function App(): JSX.Element {
-    return (
-        <hgroup>
-            <nav
-                className="navbar
+    if (window.location.href.endsWith("homepage")) {
+        return (
+            <hgroup>
+                <nav
+                    className="navbar
                         "
-            >
-                <ul>
-                    <li>
-                        <Link to="/about">About</Link>
+                >
+                    <ul>
                         <li>
-                            <Link to="/taskpage">Schedule Builder</Link>
+                            <Link to="/about">About</Link>
+                            <li>
+                                <Link to="/taskpage">Schedule Builder</Link>
+                            </li>
                         </li>
-                    </li>
-                </ul>
-            </nav>
-            <Routes>
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/taskpage" element={<TaskPage />}></Route>
-            </Routes>
-        </hgroup>
-    );
+                    </ul>
+                </nav>
+                <Routes>
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/taskpage" element={<TaskPage />}></Route>
+                </Routes>
+            </hgroup>
+        );
+    } else {
+        return <span></span>;
+    }
 }
 
 export default App;

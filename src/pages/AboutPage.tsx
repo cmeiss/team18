@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Link, Route, Routes } from "react-router-dom";
 
 export function AboutPage() {
     return (
@@ -20,19 +19,6 @@ export function AboutPage() {
                 daily tasks and allow users to keep track of their daily
                 responsibilites and stay on track fro the day.{" "}
             </p>
-            <nav className="navbar">
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                </ul>
-            </nav>
-            <Routes>
-                <Route path="/about" element={<AboutPage />} />
-            </Routes>
         </Container>
     );
 }

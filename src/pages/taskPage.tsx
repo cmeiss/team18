@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "../App.css";
 import { CentralItemList } from "../list-components/CentralItemList";
 import { Task } from "../interfaces/task";
 //import { ChangeRole } from "./list-components/selectuser";
@@ -19,7 +19,7 @@ import { Link, Route, Routes } from "react-router-dom";
 
 import { AboutPage } from "../pages/AboutPage";
 
-function App(): JSX.Element {
+function TaskPage(): JSX.Element {
     // eslint-disable-next-line prettier/prettier
     const [role, setRole] = useState<User>({ name: "User1", userList: [] }); //I set this intial user to make the user list display something
 
@@ -169,4 +169,4 @@ function App(): JSX.Element {
     );
 }
 
-export default App;
+export default TaskPage;

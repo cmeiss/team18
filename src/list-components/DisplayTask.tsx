@@ -95,11 +95,23 @@ export function DisplayTask(display: displayProps): JSX.Element {
                         )}
                     </div>
                     <div>
-                        <EditTask
-                            tasks={display.tasks}
-                            updateTasks={display.updateTasks}
-                            task={display.task}
-                        ></EditTask>
+                        {display.role === "user-central" ? (
+                            <div hidden={true}>
+                                <EditTask
+                                    tasks={display.tasks}
+                                    updateTasks={display.updateTasks}
+                                    task={display.task}
+                                ></EditTask>
+                            </div>
+                        ) : (
+                            <div hidden={false}>
+                                <EditTask
+                                    tasks={display.tasks}
+                                    updateTasks={display.updateTasks}
+                                    task={display.task}
+                                ></EditTask>
+                            </div>
+                        )}
                     </div>
                 </p>
             </div>

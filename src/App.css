@@ -90,7 +90,8 @@
 }
 
 .Adminsort-dropdown,
-.Usersort-dropdown {
+.Usersort-dropdown,
+.Centralsort-dropdown {
     margin: auto;
     align-items: center;
     width: 75%;
@@ -100,7 +101,8 @@
 }
 
 .Adminsort-dropbtn,
-.Usersort-dropbtn {
+.Usersort-dropbtn,
+.Centralsort-dropbtn {
     background-color: rgb(121, 73, 45);
     color: white;
     margin: 5px;
@@ -108,7 +110,8 @@
 }
 
 .Adminsort-options,
-.Usersort-options {
+.Usersort-options,
+.Centralsort-options {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -118,7 +121,8 @@
 }
 
 .Adminsort-options Button,
-.Usersort-options Button {
+.Usersort-options Button,
+.Centralsort-options Button {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -126,17 +130,20 @@
 }
 
 .Adminsort-options Button:hover,
-.Usersort-options Button:hover {
+.Usersort-options Button:hover,
+.Centralsort-options Button:hover {
     background-color: #f1f1f1;
 }
 
 .Adminsort-dropdown:hover .Adminsort-options,
-.Usersort-dropdown:hover .Usersort-options {
+.Usersort-dropdown:hover .Usersort-options,
+.Centralsort-dropdown:hover .Centralsort-options {
     display: block;
 }
 
 .Adminsort-dropdown:hover .Adminsort-dropbtn,
-.Usersort-dropdown:hover .Usersort-dropbtn {
+.Usersort-dropdown:hover .Usersort-dropbtn,
+.Centralsort-dropdown:hover .Centralsort-dropbtn {
     background-color: rgb(185, 132, 101);
 }
 

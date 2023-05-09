@@ -2,6 +2,386 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
+FAIL src/TaskFunctions.test.ts
+  ● Testing the task functions › Testing the makeTask function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the delTask function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setSteps function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setDifficultly function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setNumUsers function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -3,11 +3,11 @@
+        "difficulty": 0,
+        "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 10,
+    -   "pendingMore": false,
+    +   "pendingMode": false,
+        "status": false,
+        "steps": Array [
+          "i",
+          "am",
+          "immutable",
+
+      166 |             pendingMode: false
+      167 |         });
+    > 168 |         expect(setNumUsers(10, TESTTASK)).toEqual({
+          |                                           ^
+      169 |             id: 0,
+      170 |             name: "test",
+      171 |             description: "taskfunc test task",
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:168:43)
+
+  ● Testing the task functions › Testing the setNumUsers function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setTime function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setName function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setDiscription function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setStatus function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskarr ind 1",
+        "difficulty": 1,
+    -   "id": 0,
+    +   "id": 3,
+        "image": "dog",
+        "name": "test2",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      273 |             pendingMode: false
+      274 |         });
+    > 275 |         expect(setStatus(false, TASK2)).toEqual({
+          |                                         ^
+      276 |             id: 0,
+      277 |             name: "test2",
+      278 |             description: "taskarr ind 1",
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:275:41)
+
+  ● Testing the task functions › Testing the setStatus function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the setImage function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
+  ● Testing the task functions › Testing the addTask function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+    @@ -1,9 +1,9 @@
+      Object {
+        "description": "taskfunc test task",
+        "difficulty": 0,
+    -   "id": 1,
+    +   "id": 0,
+        "image": "blank",
+        "name": "test",
+        "numUsers": 0,
+        "pendingMode": false,
+        "status": false,
+
+      327 |     });
+      328 |     afterEach(() => {
+    > 329 |         expect(TESTTASK).toEqual(BACKUPTASK);
+          |                          ^
+      330 |         expect(TASKARR).toEqual(BACKUPTASKARR);
+      331 |         expect(STEPS).toEqual(BACKUPSTEPS);
+      332 |     });
+
+      at Object.<anonymous> (src/TaskFunctions.test.ts:329:26)
+
 FAIL src/dist/TaskFunctions.test.js
   ● Testing the task functions › Testing the makeTask function
 
@@ -351,354 +731,306 @@ FAIL src/dist/TaskFunctions.test.js
 
       at Object.<anonymous> (src/dist/TaskFunctions.test.js:265:26)
 
-FAIL src/TaskFunctions.test.ts
-  ● Testing the task functions › Testing the makeTask function
+FAIL src/list-components/filterlists.test.tsx
+  ● filter › Testing the filter by time needed function
 
     expect(received).toEqual(expected) // deep equality
 
-    - Expected  - 1
-    + Received  + 1
+    - Expected  - 3
+    + Received  + 6
 
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
+    @@ -1,9 +1,10 @@
+      Array [
+        Object {
+          "description": "a good description",
+          "difficulty": 5,
+    +     "id": 12,
+          "image": "picture",
+          "name": "test3",
+          "numUsers": 1,
+          "pendingMode": false,
+          "status": false,
+    @@ -12,15 +13,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 875,
+    +     "time": "875",
+        },
+        Object {
+          "description": "this is the description",
+          "difficulty": 4,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test2",
+          "numUsers": 0,
+          "pendingMode": false,
+          "status": false,
+    @@ -29,15 +31,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1300,
+    +     "time": "1300",
+        },
+        Object {
+          "description": "description a",
+          "difficulty": 8,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test1",
+          "numUsers": 3,
+          "pendingMode": false,
+          "status": false,
+    @@ -46,8 +49,8 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1346,
+    +     "time": "1346",
+        },
+      ]
 
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
+      46 | describe("filter", () => {
+      47 |     test("Testing the filter by time needed function", () => {
+    > 48 |         expect(filter_by_time_needed(TaskList)).toEqual([
+         |                                                 ^
+      49 |             {
+      50 |                 name: "test3",
+      51 |                 description: "a good description",
 
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:48:49)
 
-  ● Testing the task functions › Testing the delTask function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
-
-  ● Testing the task functions › Testing the setSteps function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
-
-  ● Testing the task functions › Testing the setDifficultly function
+  ● filter › Testing the filter by alphabetical order function
 
     expect(received).toEqual(expected) // deep equality
 
-    - Expected  - 1
-    + Received  + 1
+    - Expected  - 3
+    + Received  + 6
 
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
+    @@ -1,9 +1,10 @@
+      Array [
+        Object {
+          "description": "description a",
+          "difficulty": 8,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test1",
+          "numUsers": 3,
+          "pendingMode": false,
+          "status": false,
+    @@ -12,15 +13,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1346,
+    +     "time": "1346",
+        },
+        Object {
+          "description": "this is the description",
+          "difficulty": 4,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test2",
+          "numUsers": 0,
+          "pendingMode": false,
+          "status": false,
+    @@ -29,15 +31,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1300,
+    +     "time": "1300",
+        },
+        Object {
+          "description": "a good description",
+          "difficulty": 5,
+    +     "id": 12,
+          "image": "picture",
+          "name": "test3",
+          "numUsers": 1,
+          "pendingMode": false,
+          "status": false,
+    @@ -46,8 +49,8 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 875,
+    +     "time": "875",
+        },
+      ]
 
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
+      83 |     });
+      84 |     test("Testing the filter by alphabetical order function", () => {
+    > 85 |         expect(filter_by_alphabetical_order(TaskList)).toEqual([
+         |                                                        ^
+      86 |             {
+      87 |                 name: "test1",
+      88 |                 description: "description a",
 
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:85:56)
 
-  ● Testing the task functions › Testing the setNumUsers function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
-
-  ● Testing the task functions › Testing the setTime function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
-
-  ● Testing the task functions › Testing the setName function
+  ● filter › Testing the filter by dificulty function
 
     expect(received).toEqual(expected) // deep equality
 
-    - Expected  - 1
-    + Received  + 1
+    - Expected  - 3
+    + Received  + 6
 
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
+    @@ -1,9 +1,10 @@
+      Array [
+        Object {
+          "description": "this is the description",
+          "difficulty": 4,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test2",
+          "numUsers": 0,
+          "pendingMode": false,
+          "status": false,
+    @@ -12,15 +13,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1300,
+    +     "time": "1300",
+        },
+        Object {
+          "description": "a good description",
+          "difficulty": 5,
+    +     "id": 12,
+          "image": "picture",
+          "name": "test3",
+          "numUsers": 1,
+          "pendingMode": false,
+          "status": false,
+    @@ -29,15 +31,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 875,
+    +     "time": "875",
+        },
+        Object {
+          "description": "description a",
+          "difficulty": 8,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test1",
+          "numUsers": 3,
+          "pendingMode": false,
+          "status": false,
+    @@ -46,8 +49,8 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1346,
+    +     "time": "1346",
+        },
+      ]
 
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
+      120 |     });
+      121 |     test("Testing the filter by dificulty function", () => {
+    > 122 |         expect(filter_by_difficulty(TaskList)).toEqual([
+          |                                                ^
+      123 |             {
+      124 |                 name: "test2",
+      125 |                 description: "this is the description",
 
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:122:48)
 
-  ● Testing the task functions › Testing the setDiscription function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
-
-  ● Testing the task functions › Testing the setStatus function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskarr ind 1",
-        "difficulty": 1,
-    -   "id": 0,
-    +   "id": 3,
-        "image": "dog",
-        "name": "test2",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      255 |             time: "0"
-      256 |         });
-    > 257 |         expect(setStatus(false, TASK2)).toEqual({
-          |                                         ^
-      258 |             id: 0,
-      259 |             name: "test2",
-      260 |             description: "taskarr ind 1",
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:257:41)
-
-  ● Testing the task functions › Testing the setStatus function
+  ● filter › Testing the filter by NumUser function
 
     expect(received).toEqual(expected) // deep equality
 
-    - Expected  - 1
-    + Received  + 1
+    - Expected  - 3
+    + Received  + 6
 
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
+    @@ -1,9 +1,10 @@
+      Array [
+        Object {
+          "description": "this is the description",
+          "difficulty": 4,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test2",
+          "numUsers": 0,
+          "pendingMode": false,
+          "status": false,
+    @@ -12,15 +13,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1300,
+    +     "time": "1300",
+        },
+        Object {
+          "description": "a good description",
+          "difficulty": 5,
+    +     "id": 12,
+          "image": "picture",
+          "name": "test3",
+          "numUsers": 1,
+          "pendingMode": false,
+          "status": false,
+    @@ -29,15 +31,16 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 875,
+    +     "time": "875",
+        },
+        Object {
+          "description": "description a",
+          "difficulty": 8,
+    +     "id": 1,
+          "image": "picture",
+          "name": "test1",
+          "numUsers": 3,
+          "pendingMode": false,
+          "status": false,
+    @@ -46,8 +49,8 @@
+            "b",
+            "c",
+            "GutenTag",
+            "469476",
+          ],
+    -     "time": 1346,
+    +     "time": "1346",
+        },
+      ]
 
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
+      157 |     });
+      158 |     test("Testing the filter by NumUser function", () => {
+    > 159 |         expect(filter_by_numUsers(TaskList)).toEqual([
+          |                                              ^
+      160 |             {
+      161 |                 name: "test2",
+      162 |                 description: "this is the description",
 
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
-
-  ● Testing the task functions › Testing the setImage function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
-
-  ● Testing the task functions › Testing the addTask function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 1
-    + Received  + 1
-
-    @@ -1,9 +1,9 @@
-      Object {
-        "description": "taskfunc test task",
-        "difficulty": 0,
-    -   "id": 1,
-    +   "id": 0,
-        "image": "blank",
-        "name": "test",
-        "numUsers": 0,
-        "status": false,
-        "steps": Array [
-
-      306 |     });
-      307 |     afterEach(() => {
-    > 308 |         expect(TESTTASK).toEqual(BACKUPTASK);
-          |                          ^
-      309 |         expect(TASKARR).toEqual(BACKUPTASKARR);
-      310 |         expect(STEPS).toEqual(BACKUPSTEPS);
-      311 |     });
-
-      at Object.<anonymous> (src/TaskFunctions.test.ts:308:26)
+      at Object.<anonymous> (src/list-components/filterlists.test.tsx:159:46)
 
 FAIL src/App.test.tsx
   ● Test suite failed to run
@@ -741,307 +1073,6 @@ FAIL src/App.test.tsx
 
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
-
-FAIL src/list-components/filterlists.test.tsx
-  ● filter › Testing the filter by time needed function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 3
-    + Received  + 6
-
-    @@ -1,9 +1,10 @@
-      Array [
-        Object {
-          "description": "a good description",
-          "difficulty": 5,
-    +     "id": 12,
-          "image": "picture",
-          "name": "test3",
-          "numUsers": 1,
-          "status": false,
-          "steps": Array [
-    @@ -11,15 +12,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 875,
-    +     "time": "875",
-        },
-        Object {
-          "description": "this is the description",
-          "difficulty": 4,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test2",
-          "numUsers": 0,
-          "status": false,
-          "steps": Array [
-    @@ -27,15 +29,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1300,
-    +     "time": "1300",
-        },
-        Object {
-          "description": "description a",
-          "difficulty": 8,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test1",
-          "numUsers": 3,
-          "status": false,
-          "steps": Array [
-    @@ -43,8 +46,8 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1346,
-    +     "time": "1346",
-        },
-      ]
-
-      43 | describe("filter", () => {
-      44 |     test("Testing the filter by time needed function", () => {
-    > 45 |         expect(filter_by_time_needed(TaskList)).toEqual([
-         |                                                 ^
-      46 |             {
-      47 |                 name: "test3",
-      48 |                 description: "a good description",
-
-      at Object.<anonymous> (src/list-components/filterlists.test.tsx:45:49)
-
-  ● filter › Testing the filter by alphabetical order function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 3
-    + Received  + 6
-
-    @@ -1,9 +1,10 @@
-      Array [
-        Object {
-          "description": "description a",
-          "difficulty": 8,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test1",
-          "numUsers": 3,
-          "status": false,
-          "steps": Array [
-    @@ -11,15 +12,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1346,
-    +     "time": "1346",
-        },
-        Object {
-          "description": "this is the description",
-          "difficulty": 4,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test2",
-          "numUsers": 0,
-          "status": false,
-          "steps": Array [
-    @@ -27,15 +29,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1300,
-    +     "time": "1300",
-        },
-        Object {
-          "description": "a good description",
-          "difficulty": 5,
-    +     "id": 12,
-          "image": "picture",
-          "name": "test3",
-          "numUsers": 1,
-          "status": false,
-          "steps": Array [
-    @@ -43,8 +46,8 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 875,
-    +     "time": "875",
-        },
-      ]
-
-      77 |     });
-      78 |     test("Testing the filter by alphabetical order function", () => {
-    > 79 |         expect(filter_by_alphabetical_order(TaskList)).toEqual([
-         |                                                        ^
-      80 |             {
-      81 |                 name: "test1",
-      82 |                 description: "description a",
-
-      at Object.<anonymous> (src/list-components/filterlists.test.tsx:79:56)
-
-  ● filter › Testing the filter by dificulty function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 3
-    + Received  + 6
-
-    @@ -1,9 +1,10 @@
-      Array [
-        Object {
-          "description": "this is the description",
-          "difficulty": 4,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test2",
-          "numUsers": 0,
-          "status": false,
-          "steps": Array [
-    @@ -11,15 +12,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1300,
-    +     "time": "1300",
-        },
-        Object {
-          "description": "a good description",
-          "difficulty": 5,
-    +     "id": 12,
-          "image": "picture",
-          "name": "test3",
-          "numUsers": 1,
-          "status": false,
-          "steps": Array [
-    @@ -27,15 +29,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 875,
-    +     "time": "875",
-        },
-        Object {
-          "description": "description a",
-          "difficulty": 8,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test1",
-          "numUsers": 3,
-          "status": false,
-          "steps": Array [
-    @@ -43,8 +46,8 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1346,
-    +     "time": "1346",
-        },
-      ]
-
-      111 |     });
-      112 |     test("Testing the filter by dificulty function", () => {
-    > 113 |         expect(filter_by_difficulty(TaskList)).toEqual([
-          |                                                ^
-      114 |             {
-      115 |                 name: "test2",
-      116 |                 description: "this is the description",
-
-      at Object.<anonymous> (src/list-components/filterlists.test.tsx:113:48)
-
-  ● filter › Testing the filter by NumUser function
-
-    expect(received).toEqual(expected) // deep equality
-
-    - Expected  - 3
-    + Received  + 6
-
-    @@ -1,9 +1,10 @@
-      Array [
-        Object {
-          "description": "this is the description",
-          "difficulty": 4,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test2",
-          "numUsers": 0,
-          "status": false,
-          "steps": Array [
-    @@ -11,15 +12,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1300,
-    +     "time": "1300",
-        },
-        Object {
-          "description": "a good description",
-          "difficulty": 5,
-    +     "id": 12,
-          "image": "picture",
-          "name": "test3",
-          "numUsers": 1,
-          "status": false,
-          "steps": Array [
-    @@ -27,15 +29,16 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 875,
-    +     "time": "875",
-        },
-        Object {
-          "description": "description a",
-          "difficulty": 8,
-    +     "id": 1,
-          "image": "picture",
-          "name": "test1",
-          "numUsers": 3,
-          "status": false,
-          "steps": Array [
-    @@ -43,8 +46,8 @@
-            "b",
-            "c",
-            "GutenTag",
-            "469476",
-          ],
-    -     "time": 1346,
-    +     "time": "1346",
-        },
-      ]
-
-      145 |     });
-      146 |     test("Testing the filter by NumUser function", () => {
-    > 147 |         expect(filter_by_numUsers(TaskList)).toEqual([
-          |                                              ^
-      148 |             {
-      149 |                 name: "test2",
-      150 |                 description: "this is the description",
-
-      at Object.<anonymous> (src/list-components/filterlists.test.tsx:147:46)
 
 FAIL src/dist/App.test.js
   ● Test suite failed to run
@@ -1184,6 +1215,464 @@ FAIL src/list-components/DisplayTask.test.tsx
 
       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
       at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
+
+FAIL src/editing-components/EditTask.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      63 | describe("Testing EditTask", () => {
+      64 |     beforeEach(() => {
+    > 65 |         render(
+         |         ^
+      66 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      67 |         );
+      68 |     });
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:65:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+  ● Testing EditTask › There is an edit Task button
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      68 |     });
+      69 |     test("There is an edit Task button", () => {
+    > 70 |         const editButton = screen.getByRole("button", { name: "Edit Task" });
+         |                                   ^
+      71 |         expect(editButton).toBeInTheDocument();
+      72 |     });
+      73 | });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:70:35)
+
+  ● Testing EditTask › There is a button to save changes
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+         |                                ^
+      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
+      83 |     });
+      84 |     test("There is a button to save changes", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
+
+  ● Testing EditTask › There is a textbox to change the description
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+         |                                ^
+      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
+      83 |     });
+      84 |     test("There is a button to save changes", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
+
+  ● Testing EditTask › There is a dropdown to edit the time
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+         |                                ^
+      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
+      83 |     });
+      84 |     test("There is a button to save changes", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
+
+  ● Testing EditTask › The edit difficulty component is displayed
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+         |                                ^
+      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
+      83 |     });
+      84 |     test("There is a button to save changes", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
+
+  ● Testing EditTask › The edit name component is displayed
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+         |                                ^
+      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
+      83 |     });
+      84 |     test("There is a button to save changes", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
+
+  ● Testing EditTask › the edit steps component is displayed
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+         |                                ^
+      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
+      83 |     });
+      84 |     test("There is a button to save changes", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
 
 FAIL src/list-components/ModifyUsers.test.tsx
   ● Console
@@ -1640,464 +2129,6 @@ FAIL src/list-components/ModifyUsers.test.tsx
 
       at Object.<anonymous> (src/list-components/ModifyUsers.test.tsx:74:45)
 
-FAIL src/editing-components/EditTask.test.tsx
-  ● Console
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      59 | describe("Testing EditTask", () => {
-      60 |     beforeEach(() => {
-    > 61 |         render(
-         |         ^
-      62 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      63 |         );
-      64 |     });
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:61:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      72 | describe("Testing EditTask", () => {
-      73 |     beforeEach(() => {
-    > 74 |         render(
-         |         ^
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      72 | describe("Testing EditTask", () => {
-      73 |     beforeEach(() => {
-    > 74 |         render(
-         |         ^
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      72 | describe("Testing EditTask", () => {
-      73 |     beforeEach(() => {
-    > 74 |         render(
-         |         ^
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      72 | describe("Testing EditTask", () => {
-      73 |     beforeEach(() => {
-    > 74 |         render(
-         |         ^
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      72 | describe("Testing EditTask", () => {
-      73 |     beforeEach(() => {
-    > 74 |         render(
-         |         ^
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      72 | describe("Testing EditTask", () => {
-      73 |     beforeEach(() => {
-    > 74 |         render(
-         |         ^
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-      77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:74:9)
-
-  ● Testing EditTask › There is an edit Task button
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      64 |     });
-      65 |     test("There is an edit Task button", () => {
-    > 66 |         const editButton = screen.getByRole("button", { name: "Edit Task" });
-         |                                   ^
-      67 |         expect(editButton).toBeInTheDocument();
-      68 |     });
-      69 | });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:66:35)
-
-  ● Testing EditTask › There is a button to save changes
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-    > 77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      78 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      79 |     });
-      80 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:77:32)
-
-  ● Testing EditTask › There is a textbox to change the description
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-    > 77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      78 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      79 |     });
-      80 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:77:32)
-
-  ● Testing EditTask › There is a dropdown to edit the time
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-    > 77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      78 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      79 |     });
-      80 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:77:32)
-
-  ● Testing EditTask › The edit difficulty component is displayed
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-    > 77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      78 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      79 |     });
-      80 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:77:32)
-
-  ● Testing EditTask › The edit name component is displayed
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-    > 77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      78 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      79 |     });
-      80 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:77:32)
-
-  ● Testing EditTask › the edit steps component is displayed
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      75 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      76 |         );
-    > 77 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      78 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      79 |     });
-      80 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:77:32)
-
 FAIL src/list-components/dist/deleteTak.test.js
   ● Delete task tests › There is a switch
 
@@ -2147,13 +2178,13 @@ FAIL src/list-components/deleteTak.test.tsx
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      48 | describe("Delete task tests", () => {
-      49 |     beforeEach(() =>
-    > 50 |         render(
+      50 | describe("Delete task tests", () => {
+      51 |     beforeEach(() =>
+    > 52 |         render(
          |         ^
-      51 |             <DeleteTask
-      52 |                 //item={TASK1}
-      53 |                 tasks={TASKLIST1}
+      53 |             <DeleteTask
+      54 |                 //item={TASK1}
+      55 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -2161,18 +2192,18 @@ FAIL src/list-components/deleteTak.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:50:9)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:52:9)
 
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      48 | describe("Delete task tests", () => {
-      49 |     beforeEach(() =>
-    > 50 |         render(
+      50 | describe("Delete task tests", () => {
+      51 |     beforeEach(() =>
+    > 52 |         render(
          |         ^
-      51 |             <DeleteTask
-      52 |                 //item={TASK1}
-      53 |                 tasks={TASKLIST1}
+      53 |             <DeleteTask
+      54 |                 //item={TASK1}
+      55 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -2180,18 +2211,18 @@ FAIL src/list-components/deleteTak.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:50:9)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:52:9)
 
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      48 | describe("Delete task tests", () => {
-      49 |     beforeEach(() =>
-    > 50 |         render(
+      50 | describe("Delete task tests", () => {
+      51 |     beforeEach(() =>
+    > 52 |         render(
          |         ^
-      51 |             <DeleteTask
-      52 |                 //item={TASK1}
-      53 |                 tasks={TASKLIST1}
+      53 |             <DeleteTask
+      54 |                 //item={TASK1}
+      55 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -2199,7 +2230,7 @@ FAIL src/list-components/deleteTak.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:50:9)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:52:9)
 
   ● Delete task tests › There is a switch
 
@@ -2243,19 +2274,19 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      61 |     );
-      62 |     test("There is a switch", () => {
-    > 63 |         const switchButton = screen.getByRole("switch");
+      63 |     );
+      64 |     test("There is a switch", () => {
+    > 65 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      64 |         expect(switchButton).toBeInTheDocument();
-      65 |     });
-      66 |     test("On switch click, there is a textbox and buttons: ", () => {
+      66 |         expect(switchButton).toBeInTheDocument();
+      67 |     });
+      68 |     test("On switch click, there is a textbox and buttons: ", () => {
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:63:37)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:65:37)
 
   ● Delete task tests › On switch click, there is a textbox and buttons: 
 
@@ -2299,19 +2330,19 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      65 |     });
-      66 |     test("On switch click, there is a textbox and buttons: ", () => {
-    > 67 |         const switchButton = screen.getByRole("switch");
+      67 |     });
+      68 |     test("On switch click, there is a textbox and buttons: ", () => {
+    > 69 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      68 |         switchButton.click();
-      69 |         const deltask1 = screen.getByRole("button", {
-      70 |             name: /Delete Task and Leave Edit Mode/i
+      70 |         switchButton.click();
+      71 |         const deltask1 = screen.getByRole("button", {
+      72 |             name: /Delete Task and Leave Edit Mode/i
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:67:37)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:69:37)
 
   ● Delete task tests › Clicking delete task deletes from the list and leaves edit mode
 
@@ -2355,19 +2386,19 @@ FAIL src/list-components/deleteTak.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      75 |
-      76 |     test("Clicking delete task deletes from the list and leaves edit mode", () => {
-    > 77 |         const switchButton = screen.getByRole("switch");
+      77 |
+      78 |     test("Clicking delete task deletes from the list and leaves edit mode", () => {
+    > 79 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      78 |         switchButton.click();
-      79 |         const delTask = screen.getByRole("button", {
-      80 |             name: /Delete Task and Leave Edit Mode/i
+      80 |         switchButton.click();
+      81 |         const delTask = screen.getByRole("button", {
+      82 |             name: /Delete Task and Leave Edit Mode/i
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:77:37)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:79:37)
 
 FAIL src/list-components/dist/addTask.test.js
   ● Add tasks tests › There is a switch
@@ -2418,13 +2449,13 @@ FAIL src/list-components/addTask.test.tsx
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      35 | describe("Add tasks tests", () => {
-      36 |     beforeEach(() =>
-    > 37 |         render(
+      37 | describe("Add tasks tests", () => {
+      38 |     beforeEach(() =>
+    > 39 |         render(
          |         ^
-      38 |             <AddTask
-      39 |                 //item={TASK1}
-      40 |                 tasks={TASKLIST1}
+      40 |             <AddTask
+      41 |                 //item={TASK1}
+      42 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -2432,18 +2463,18 @@ FAIL src/list-components/addTask.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:37:9)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:39:9)
 
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      35 | describe("Add tasks tests", () => {
-      36 |     beforeEach(() =>
-    > 37 |         render(
+      37 | describe("Add tasks tests", () => {
+      38 |     beforeEach(() =>
+    > 39 |         render(
          |         ^
-      38 |             <AddTask
-      39 |                 //item={TASK1}
-      40 |                 tasks={TASKLIST1}
+      40 |             <AddTask
+      41 |                 //item={TASK1}
+      42 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -2451,18 +2482,18 @@ FAIL src/list-components/addTask.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:37:9)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:39:9)
 
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      35 | describe("Add tasks tests", () => {
-      36 |     beforeEach(() =>
-    > 37 |         render(
+      37 | describe("Add tasks tests", () => {
+      38 |     beforeEach(() =>
+    > 39 |         render(
          |         ^
-      38 |             <AddTask
-      39 |                 //item={TASK1}
-      40 |                 tasks={TASKLIST1}
+      40 |             <AddTask
+      41 |                 //item={TASK1}
+      42 |                 tasks={TASKLIST1}
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
@@ -2470,7 +2501,7 @@ FAIL src/list-components/addTask.test.tsx
       at node_modules/@testing-library/react/dist/pure.js:101:25
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:37:9)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:39:9)
 
   ● Add tasks tests › There is a switch
 
@@ -2514,19 +2545,19 @@ FAIL src/list-components/addTask.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      48 |     );
-      49 |     test("There is a switch", () => {
-    > 50 |         const switchButton = screen.getByRole("switch");
+      50 |     );
+      51 |     test("There is a switch", () => {
+    > 52 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      51 |         expect(switchButton).toBeInTheDocument();
-      52 |     });
-      53 |     test("On switch click, there is a textbox and buttons: ", () => {
+      53 |         expect(switchButton).toBeInTheDocument();
+      54 |     });
+      55 |     test("On switch click, there is a textbox and buttons: ", () => {
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:50:37)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:52:37)
 
   ● Add tasks tests › On switch click, there is a textbox and buttons: 
 
@@ -2570,19 +2601,19 @@ FAIL src/list-components/addTask.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      52 |     });
-      53 |     test("On switch click, there is a textbox and buttons: ", () => {
-    > 54 |         const switchButton = screen.getByRole("switch");
+      54 |     });
+      55 |     test("On switch click, there is a textbox and buttons: ", () => {
+    > 56 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      55 |         switchButton.click();
-      56 |         const addTask = screen.getByRole("button", {
-      57 |             name: /Add Task and Leave Edit Mode/i
+      57 |         switchButton.click();
+      58 |         const addTask = screen.getByRole("button", {
+      59 |             name: /Add Task and Leave Edit Mode/i
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:54:37)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:56:37)
 
   ● Add tasks tests › Clicking add task adds a task and leaves edit mode
 
@@ -2626,19 +2657,19 @@ FAIL src/list-components/addTask.test.tsx
       [36m</div>[39m
     [36m</body>[39m
 
-      62 |     test("Clicking add task adds a task and leaves edit mode", () => {
-      63 |         // setting up the scenario
-    > 64 |         const switchButton = screen.getByRole("switch");
+      64 |     test("Clicking add task adds a task and leaves edit mode", () => {
+      65 |         // setting up the scenario
+    > 66 |         const switchButton = screen.getByRole("switch");
          |                                     ^
-      65 |         switchButton.click();
-      66 |         const addTask = screen.getByRole("button", {
-      67 |             name: /Add Task and Leave Edit Mode/i
+      67 |         switchButton.click();
+      68 |         const addTask = screen.getByRole("button", {
+      69 |             name: /Add Task and Leave Edit Mode/i
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/addTask.test.tsx:64:37)
+      at Object.<anonymous> (src/list-components/addTask.test.tsx:66:37)
 
 FAIL src/editing-components/EditTime.test.tsx
   ● Console
@@ -3556,32 +3587,32 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   22.19 |    12.32 |   23.17 |    22.7 |                   
+All files                  |   21.68 |    11.68 |   22.43 |   22.16 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 24-51             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
-  user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
-  user-tests.tsx           |       0 |      100 |       0 |       0 | 6-60              
- src/editing-components    |   42.85 |       30 |   23.07 |   44.44 |                   
+  user-functions.ts        |       0 |      100 |       0 |       0 | 7-62              
+  user-tests.tsx           |       0 |      100 |       0 |       0 | 6-63              
+ src/editing-components    |   43.85 |       30 |   23.07 |   45.45 |                   
   EditDescription.tsx      |       0 |      100 |       0 |       0 | 14-17             
-  EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-64             
+  EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-66             
   EditSteps.tsx            |       0 |      100 |       0 |       0 | 11-19             
-  EditTask.tsx             |   57.89 |    16.66 |   14.28 |   61.11 | 35-70,115         
+  EditTask.tsx             |      60 |    16.66 |   14.28 |   63.15 | 36-73,119         
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
   Times.tsx                |     100 |      100 |     100 |     100 |                   
   edit-difficulty.tsx      |      60 |       50 |      50 |      60 | 10,25             
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   16.18 |    10.52 |   16.32 |   16.45 |                   
+ src/list-components       |   15.41 |     9.83 |   15.53 |   15.66 |                   
   CentralItemList.tsx      |       0 |        0 |       0 |       0 | 21-147            
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-86             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
-  UserList.tsx             |       0 |        0 |       0 |       0 | 34-290            
-  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
-  adminlist.tsx            |       0 |        0 |       0 |       0 | 23-151            
+  UserList.tsx             |       0 |        0 |       0 |       0 | 34-291            
+  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-85             
+  adminlist.tsx            |       0 |        0 |       0 |       0 | 22-191            
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
   filterlists.tsx          |      85 |       25 |     100 |   89.47 | 24-25             
   search.tsx               |       0 |      100 |       0 |       0 | 7-10              
@@ -3591,5 +3622,5 @@ All files                  |   22.19 |    12.32 |   23.17 |    22.7 |
 Test Suites: 17 failed, 17 total
 Tests:       52 failed, 6 passed, 58 total
 Snapshots:   0 total
-Time:        15.107 s
+Time:        14.687 s
 Ran all test suites.

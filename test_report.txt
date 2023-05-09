@@ -3558,7 +3558,7 @@ File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered 
 ---------------------------|---------|----------|---------|---------|-------------------
 All files                  |   22.19 |    12.32 |   23.17 |    22.7 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
-  App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
+  App.tsx                  |       0 |        0 |       0 |       0 | 24-51             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
@@ -3586,10 +3586,10 @@ All files                  |   22.19 |    12.32 |   23.17 |    22.7 |
   filterlists.tsx          |      85 |       25 |     100 |   89.47 | 24-25             
   search.tsx               |       0 |      100 |       0 |       0 | 7-10              
  src/pages                 |       0 |      100 |       0 |       0 |                   
-  about.tsx                |       0 |      100 |       0 |       0 | 5                 
+  AboutPage.tsx            |       0 |      100 |       0 |       0 | 5                 
 ---------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 17 failed, 17 total
 Tests:       52 failed, 6 passed, 58 total
 Snapshots:   0 total
-Time:        14.414 s
+Time:        15.107 s
 Ran all test suites.

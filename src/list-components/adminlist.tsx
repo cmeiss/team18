@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { useState } from "react";
 //import { Button } from "react-bootstrap";
 import { DisplayTask } from "./DisplayTask";
@@ -8,6 +9,7 @@ import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
 import { User } from "../interfaces/user";
 import { useDrop } from "react-dnd";
+import { makeTask } from "../TaskFunctions";
 
 interface AdminItemProps {
     tasks: Task[];
@@ -37,7 +39,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
             (task: Task) => task.id === id
         );
         if (droppedTask) {
-            droppedTask.pendingMode = true;
+            updatePending(tasks, droppedTask.id, true);
         }
     }
 
@@ -46,7 +48,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
             (task: Task) => task.id === id
         );
         if (droppedTask) {
-            droppedTask.pendingMode = false;
+            updatePending(tasks, droppedTask.id, false);
         }
     }
 
@@ -59,6 +61,28 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         } else {
             return false;
         }
+    }
+
+    function updatePending(tasks: Task[], id: number, pending: boolean) {
+        const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
+        setTasks(
+            copy.map((TASK: Task) =>
+                TASK.id === id
+                    ? makeTask(
+                          id,
+                          TASK.name,
+                          TASK.description,
+                          TASK.status,
+                          TASK.image,
+                          TASK.steps,
+                          TASK.difficulty,
+                          TASK.numUsers,
+                          TASK.time,
+                          pending
+                      )
+                    : { ...TASK, steps: [...TASK.steps] }
+            )
+        );
     }
 
     function makeAdmin(tasks: Task[]) {

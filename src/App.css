@@ -159,3 +159,20 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
+/* App.css */
+/* Navbar.css */
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: none;
+    background-color: bisque;
+}
+
+ul li,
+ol li {
+    font-size: 2.5rem;
+    line-height: 2.5;
+    background-color: bisque;
+}

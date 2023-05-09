@@ -53,7 +53,8 @@ export function addTasktoUserList(
         steps: step,
         difficulty: diff,
         numUsers: num,
-        time: time
+        time: time,
+        pendingMode: false
     };
     const list = [...user.userList];
     list.push(task);

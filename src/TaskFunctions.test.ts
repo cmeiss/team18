@@ -24,7 +24,8 @@ const TESTTASK: Task = {
     steps: ["i", "am", "immutable"],
     difficulty: 0,
     numUsers: 0,
-    time: "0"
+    time: "0",
+    pendingMode: false
 };
 
 // Backup task, to ensure changes are immutable
@@ -37,7 +38,8 @@ const BACKUPTASK: Task = {
     steps: ["i", "am", "immutable"],
     difficulty: 0,
     numUsers: 0,
-    time: "0"
+    time: "0",
+    pendingMode: false
 };
 
 const STEPS: string[] = ["1", "2", "3"];

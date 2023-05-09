@@ -12,7 +12,8 @@ const testTask = {
     steps: ["a", "b", "c", "GutenTag", "469476"],
     difficulty: 3,
     numUsers: 2,
-    time: "1345"
+    time: "1345",
+    pendingMode: false
 };
 
 const TaskList = [
@@ -25,7 +26,8 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 3,
         numUsers: 2,
-        time: "1345"
+        time: "1345",
+        pendingMode: false
     },
     {
         id: 2,
@@ -36,7 +38,8 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 3,
         numUsers: 2,
-        time: "1345"
+        time: "1345",
+        pendingMode: false
     },
     {
         id: 3,
@@ -47,7 +50,8 @@ const TaskList = [
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 3,
         numUsers: 2,
-        time: "1345"
+        time: "1345",
+        pendingMode: false
     }
 ];
 

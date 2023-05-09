@@ -23,7 +23,8 @@ export function makeTask(
         steps: steps,
         difficulty: diff,
         numUsers: num,
-        time: time
+        time: time,
+        pendingMode: false
     };
     return task;
 }

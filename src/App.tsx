@@ -22,13 +22,14 @@ function App(): JSX.Element {
                             <Link to="/taskpage">Schedule Builder</Link>
                         </li>
                         <li>
-                            <Link to="/homepage">Home Page</Link>
+                            <Link to="/">Home Page</Link>
                         </li>
                     </ul>
                 </nav>
                 <Routes>
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/taskpage" element={<TaskPage />}></Route>
+                    <Route path="/" element={App}></Route>
                 </Routes>
             </hgroup>
         );

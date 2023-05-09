@@ -47,8 +47,8 @@ function DisplayTask(display) {
                 react_1["default"].createElement("div", null, display.role === "Super" ? (react_1["default"].createElement("div", null,
                     "Number of Users: ",
                     display.task.numUsers)) : (react_1["default"].createElement("div", null, ""))),
-                react_1["default"].createElement("div", null, display.role === "Super" ||
-                    display.role === "Admin" ? (react_1["default"].createElement(EditTask_1.EditTask, { tasks: display.tasks, updateTasks: display.updateTasks, task: display.task })) : (react_1["default"].createElement(react_1["default"].Fragment, null)))))));
+                react_1["default"].createElement("div", null, display.role === "Super" ? (react_1["default"].createElement(EditTask_1.EditTask, { tasks: display.tasks, updateTasks: display.updateTasks, task: display.task })) : display.role === "Admin" ? (react_1["default"].createElement(EditTask_1.EditTask, { tasks: display.tasks, updateTasks: display.updateTasks, task: display.task })) : (react_1["default"].createElement("div", { hidden: true },
+                    react_1["default"].createElement(EditTask_1.EditTask, { tasks: display.tasks, updateTasks: display.updateTasks, task: display.task }))))))));
 }
 exports.DisplayTask = DisplayTask;
 //To implement the edit mode, we will have to create and import components

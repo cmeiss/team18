@@ -74,6 +74,9 @@ function CentralItemList(_a) {
             return react_1["default"].createElement("div", null, "AdminList failed to load.");
         }
     }
+    if (role !== "Admin" && role !== "Super") {
+        role = "user-central";
+    }
     if (role !== "Super") {
         return (react_1["default"].createElement("div", { className: "central-list" },
             react_1["default"].createElement("h2", null, " Sample Tasks "),

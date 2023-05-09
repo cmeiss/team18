@@ -3587,16 +3587,16 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   21.68 |    11.68 |   22.43 |   22.16 |                   
+All files                  |    21.5 |    11.68 |   22.29 |   21.97 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 24-51             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-62              
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-63              
- src/editing-components    |   43.85 |       30 |   23.07 |   45.45 |                   
+ src/editing-components    |   41.66 |       30 |   22.22 |    43.1 |                   
   EditDescription.tsx      |       0 |      100 |       0 |       0 | 14-17             
-  EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-66             
+  EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-85             
   EditSteps.tsx            |       0 |      100 |       0 |       0 | 11-19             
   EditTask.tsx             |      60 |    16.66 |   14.28 |   63.15 | 36-73,119         
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
@@ -3622,5 +3622,5 @@ All files                  |   21.68 |    11.68 |   22.43 |   22.16 |
 Test Suites: 17 failed, 17 total
 Tests:       52 failed, 6 passed, 58 total
 Snapshots:   0 total
-Time:        14.687 s
+Time:        14.16 s
 Ran all test suites.

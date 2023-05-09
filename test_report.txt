@@ -1797,6 +1797,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m<label[39m
                   [33mclass[39m=[32m"form-label"[39m
                   [33mfor[39m=[32m"formDescriptionName"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
                 [36m>[39m
                   [0mChange Description:[0m
                 [36m</label>[39m
@@ -1806,9 +1807,24 @@ FAIL src/editing-components/EditTask.test.tsx
                   [33mvalue[39m=[32m"description a"[39m
                 [36m/>[39m
               [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
               [36m<div>[39m
-                [0mCurrent Description: [0m
-                [0mdescription a[0m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"form"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
+                [36m>[39m
+                  [0mChange Steps:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mid[39m=[32m"form"[39m
+                  [33mvalue[39m=[32m"a,b,c,GutenTag,469476"[39m
+                [36m/>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [0m-To indicate different steps leave a comma symbol in between the various steps; example: step1,step2[0m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -1816,6 +1832,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m<label[39m
                   [33mclass[39m=[32m"form-label"[39m
                   [33mfor[39m=[32m"editTime"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
                 [36m>[39m
                   [0mChoose Time[0m
                 [36m</label>[39m
@@ -2408,11 +2425,12 @@ FAIL src/editing-components/EditTask.test.tsx
                   [36m</option>[39m
                 [36m</select>[39m
               [36m</div>[39m
-              [0mSelected Time: [0m
+              [0m-Selected Time: [0m
               [0m13:45[0m
             [36m</div>[39m
             [36m<span[39m
               [33mclass[39m=[32m"fs-8"[39m
+              [33mstyle[39m=[32m"font-weight: bold;"[39m
             [36m>[39m
               [0mChange Difficulty: [0m
               [36m<br />[39m
@@ -2490,6 +2508,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m<label[39m
                   [33mclass[39m=[32m"form-label"[39m
                   [33mfor[39m=[32m"formDescriptionName"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
                 [36m>[39m
                   [0mChange Description:[0m
                 [36m</label>[39m
@@ -2499,9 +2518,24 @@ FAIL src/editing-components/EditTask.test.tsx
                   [33mvalue[39m=[32m"description a"[39m
                 [36m/>[39m
               [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
               [36m<div>[39m
-                [0mCurrent Description: [0m
-                [0mdescription a[0m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"form"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
+                [36m>[39m
+                  [0mChange Steps:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mid[39m=[32m"form"[39m
+                  [33mvalue[39m=[32m"a,b,c,GutenTag,469476"[39m
+                [36m/>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [0m-To indicate different steps leave a comma symbol in between the various steps; example: step1,step2[0m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -2509,6 +2543,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m<label[39m
                   [33mclass[39m=[32m"form-label"[39m
                   [33mfor[39m=[32m"editTime"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
                 [36m>[39m
                   [0mChoose Time[0m
                 [36m</label>[39m
@@ -3101,11 +3136,12 @@ FAIL src/editing-components/EditTask.test.tsx
                   [36m</option>[39m
                 [36m</select>[39m
               [36m</div>[39m
-              [0mSelected Time: [0m
+              [0m-Selected Time: [0m
               [0m13:45[0m
             [36m</div>[39m
             [36m<span[39m
               [33mclass[39m=[32m"fs-8"[39m
+              [33mstyle[39m=[32m"font-weight: bold;"[39m
             [36m>[39m
               [0mChange Difficulty: [0m
               [36m<br />[39m
@@ -3183,6 +3219,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m<label[39m
                   [33mclass[39m=[32m"form-label"[39m
                   [33mfor[39m=[32m"formDescriptionName"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
                 [36m>[39m
                   [0mChange Description:[0m
                 [36m</label>[39m
@@ -3192,9 +3229,24 @@ FAIL src/editing-components/EditTask.test.tsx
                   [33mvalue[39m=[32m"description a"[39m
                 [36m/>[39m
               [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
               [36m<div>[39m
-                [0mCurrent Description: [0m
-                [0mdescription a[0m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"form"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
+                [36m>[39m
+                  [0mChange Steps:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mid[39m=[32m"form"[39m
+                  [33mvalue[39m=[32m"a,b,c,GutenTag,469476"[39m
+                [36m/>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [0m-To indicate different steps leave a comma symbol in between the various steps; example: step1,step2[0m
               [36m</div>[39m
             [36m</div>[39m
             [36m<div>[39m
@@ -3202,6 +3254,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m<label[39m
                   [33mclass[39m=[32m"form-label"[39m
                   [33mfor[39m=[32m"editTime"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
                 [36m>[39m
                   [0mChoose Time[0m
                 [36m</label>[39m
@@ -3794,11 +3847,12 @@ FAIL src/editing-components/EditTask.test.tsx
                   [36m</option>[39m
                 [36m</select>[39m
               [36m</div>[39m
-              [0mSelected Time: [0m
+              [0m-Selected Time: [0m
               [0m13:45[0m
             [36m</div>[39m
             [36m<span[39m
               [33mclass[39m=[32m"fs-8"[39m
+              [33mstyle[39m=[32m"font-weight: bold;"[39m
             [36m>[39m
               [0mChange Difficulty: [0m
               [36m<br />[39m
@@ -4507,6 +4561,7 @@ FAIL src/editing-components/EditTime.test.tsx
             [36m<label[39m
               [33mclass[39m=[32m"form-label"[39m
               [33mfor[39m=[32m"editTime"[39m
+              [33mstyle[39m=[32m"font-weight: bold;"[39m
             [36m>[39m
               [0mChoose Time[0m
             [36m</label>[39m
@@ -5099,7 +5154,7 @@ FAIL src/editing-components/EditTime.test.tsx
               [36m</option>[39m
             [36m</select>[39m
           [36m</div>[39m
-          [0mSelected Time: [0m
+          [0m-Selected Time: [0m
           [0m10:0[0m
         [36m</div>[39m
       [36m</div>[39m
@@ -5198,6 +5253,7 @@ FAIL src/editing-components/edit-difficulty.test.tsx
       [36m<div>[39m
         [36m<span[39m
           [33mclass[39m=[32m"fs-8"[39m
+          [33mstyle[39m=[32m"font-weight: bold;"[39m
         [36m>[39m
           [0mChange Difficulty: [0m
           [36m<br />[39m
@@ -5257,6 +5313,7 @@ FAIL src/editing-components/edit-difficulty.test.tsx
       [36m<div>[39m
         [36m<span[39m
           [33mclass[39m=[32m"fs-8"[39m
+          [33mstyle[39m=[32m"font-weight: bold;"[39m
         [36m>[39m
           [0mChange Difficulty: [0m
           [36m<br />[39m
@@ -5310,17 +5367,18 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   23.14 |    13.69 |      25 |   23.68 |                   
+All files                  |   23.03 |    13.69 |   25.16 |   23.56 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-60              
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-60              
- src/editing-components    |      52 |       40 |   34.78 |   54.16 |                   
+ src/editing-components    |   48.21 |       40 |   34.61 |      50 |                   
   EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15             
   EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-64             
-  EditTask.tsx             |   63.15 |    33.33 |   28.57 |   66.66 | 49-69,113         
+  EditSteps.tsx            |   16.66 |      100 |   33.33 |   16.66 | 11-17             
+  EditTask.tsx             |   63.15 |    33.33 |   28.57 |   66.66 | 50-70,115         
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
   Times.tsx                |     100 |      100 |     100 |     100 |                   
   edit-difficulty.tsx      |      60 |      100 |      50 |      60 | 10,25             
@@ -5330,7 +5388,7 @@ All files                  |   23.14 |    13.69 |      25 |   23.68 |
  src/list-components       |   16.18 |    10.52 |   16.32 |   16.45 |                   
   CentralItemList.tsx      |       0 |        0 |       0 |       0 | 21-147            
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
-  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-84             
+  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-86             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
   UserList.tsx             |       0 |        0 |       0 |       0 | 34-290            
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-84             
@@ -5344,5 +5402,5 @@ All files                  |   23.14 |    13.69 |      25 |   23.68 |
 Test Suites: 17 failed, 17 total
 Tests:       48 failed, 10 passed, 58 total
 Snapshots:   0 total
-Time:        11.731 s
+Time:        11.317 s
 Ran all test suites.

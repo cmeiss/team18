@@ -170,8 +170,7 @@
     background-color: bisque;
 }
 
-ul li,
-ol li {
+ul li {
     font-size: 2.5rem;
     line-height: 2.5;
     background-color: bisque;

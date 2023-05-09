@@ -166,7 +166,8 @@ export function UserList({
                           TASK.steps,
                           TASK.difficulty,
                           newNumUsers,
-                          TASK.time
+                          TASK.time,
+                          TASK.pendingMode
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )

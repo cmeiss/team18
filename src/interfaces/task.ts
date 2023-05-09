@@ -11,4 +11,5 @@ export interface Task {
     difficulty: number;
     numUsers: number;
     time: string;
+    pendingMode: boolean;
 }

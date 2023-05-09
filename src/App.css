@@ -81,7 +81,7 @@
 
 .central-list,
 .UserList,
-.admin-list {
+.pending-list {
     text-align: center;
     color: rgb(71, 28, 3);
     margin: 50px;
@@ -89,7 +89,7 @@
     outline: 4px solid rgb(71, 28, 3);
 }
 
-.Adminsort-dropdown,
+.Pendingsort-dropdown,
 .Usersort-dropdown,
 .Centralsort-dropdown {
     margin: auto;
@@ -100,7 +100,7 @@
     display: inline-block;
 }
 
-.Adminsort-dropbtn,
+.Pendingsort-dropbtn,
 .Usersort-dropbtn,
 .Centralsort-dropbtn {
     background-color: rgb(121, 73, 45);
@@ -109,7 +109,7 @@
     display: flex;
 }
 
-.Adminsort-options,
+.Pendingsort-options,
 .Usersort-options,
 .Centralsort-options {
     display: none;
@@ -120,7 +120,7 @@
     z-index: 1;
 }
 
-.Adminsort-options Button,
+.Pendingsort-options Button,
 .Usersort-options Button,
 .Centralsort-options Button {
     color: black;
@@ -129,19 +129,19 @@
     display: block;
 }
 
-.Adminsort-options Button:hover,
+.Pendingsort-options Button:hover,
 .Usersort-options Button:hover,
 .Centralsort-options Button:hover {
     background-color: #f1f1f1;
 }
 
-.Adminsort-dropdown:hover .Adminsort-options,
+.Pendingsort-dropdown:hover .Pendingsort-options,
 .Usersort-dropdown:hover .Usersort-options,
 .Centralsort-dropdown:hover .Centralsort-options {
     display: block;
 }
 
-.Adminsort-dropdown:hover .Adminsort-dropbtn,
+.Pendingsort-dropdown:hover .Pendingsort-dropbtn,
 .Usersort-dropdown:hover .Usersort-dropbtn,
 .Centralsort-dropdown:hover .Centralsort-dropbtn {
     background-color: rgb(185, 132, 101);
@@ -153,7 +153,7 @@
 
 .central-tasks,
 .userTaskList,
-.admin-tasks {
+.pending-tasks {
     border-top: 4px solid rgb(71, 28, 3);
     height: 550px;
     overflow-y: scroll;

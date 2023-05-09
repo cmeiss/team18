@@ -78,7 +78,8 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                 steps: newsteps,
                 difficulty: newdifficulty,
                 time: newtime,
-                numUsers: newnumusers
+                numUsers: newnumusers,
+                pendingMode: false
             }
         ]);
         seteditmode(false);

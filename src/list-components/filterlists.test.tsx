@@ -15,7 +15,8 @@ const TaskList = [
         difficulty: 8,
         numUsers: 3,
         time: "1346",
-        id: 1
+        id: 1,
+        pendingMode: false
     },
     {
         name: "test2",
@@ -26,7 +27,8 @@ const TaskList = [
         difficulty: 4,
         numUsers: 0,
         time: "1300",
-        id: 1
+        id: 1,
+        pendingMode: false
     },
     {
         name: "test3",
@@ -37,7 +39,8 @@ const TaskList = [
         difficulty: 5,
         numUsers: 1,
         time: "875",
-        id: 12
+        id: 12,
+        pendingMode: false
     }
 ];
 describe("filter", () => {
@@ -51,7 +54,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 5,
                 numUsers: 1,
-                time: 875
+                time: 875,
+                pendingMode: false
             },
             {
                 name: "test2",
@@ -61,7 +65,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 4,
                 numUsers: 0,
-                time: 1300
+                time: 1300,
+                pendingMode: false
             },
             {
                 name: "test1",
@@ -71,7 +76,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 8,
                 numUsers: 3,
-                time: 1346
+                time: 1346,
+                pendingMode: false
             }
         ]);
     });
@@ -85,7 +91,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 8,
                 numUsers: 3,
-                time: 1346
+                time: 1346,
+                pendingMode: false
             },
             {
                 name: "test2",
@@ -95,7 +102,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 4,
                 numUsers: 0,
-                time: 1300
+                time: 1300,
+                pendingMode: false
             },
             {
                 name: "test3",
@@ -105,7 +113,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 5,
                 numUsers: 1,
-                time: 875
+                time: 875,
+                pendingMode: false
             }
         ]);
     });
@@ -119,7 +128,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 4,
                 numUsers: 0,
-                time: 1300
+                time: 1300,
+                pendingMode: false
             },
             {
                 name: "test3",
@@ -129,7 +139,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 5,
                 numUsers: 1,
-                time: 875
+                time: 875,
+                pendingMode: false
             },
             {
                 name: "test1",
@@ -139,7 +150,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 8,
                 numUsers: 3,
-                time: 1346
+                time: 1346,
+                pendingMode: false
             }
         ]);
     });
@@ -153,7 +165,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 4,
                 numUsers: 0,
-                time: 1300
+                time: 1300,
+                pendingMode: false
             },
             {
                 name: "test3",
@@ -163,7 +176,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 5,
                 numUsers: 1,
-                time: 875
+                time: 875,
+                pendingMode: false
             },
             {
                 name: "test1",
@@ -173,7 +187,8 @@ describe("filter", () => {
                 steps: ["a", "b", "c", "GutenTag", "469476"],
                 difficulty: 8,
                 numUsers: 3,
-                time: 1346
+                time: 1346,
+                pendingMode: false
             }
         ]);
     });

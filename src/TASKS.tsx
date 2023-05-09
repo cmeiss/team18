@@ -10,7 +10,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 0,
         numUsers: 0,
-        time: "1800"
+        time: "1800",
+        pendingMode: false
     },
     {
         id: 1,
@@ -21,7 +22,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1345"
+        time: "1345",
+        pendingMode: false
     },
     {
         id: 2,
@@ -32,7 +34,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1745"
+        time: "1745",
+        pendingMode: false
     },
     {
         id: 3,
@@ -43,7 +46,8 @@ export const TASKS: Task[] = [
         steps: ["Blend smootie", "Eat eggs", "Devour"],
         difficulty: 3,
         numUsers: 0,
-        time: "700"
+        time: "700",
+        pendingMode: false
     },
     {
         id: 4,
@@ -54,7 +58,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1130",
+        pendingMode: false
     },
     {
         id: 5,
@@ -65,7 +70,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1730"
+        time: "1730",
+        pendingMode: false
     },
     {
         id: 6,
@@ -76,7 +82,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1930"
+        time: "1930",
+        pendingMode: false
     },
     {
         id: 7,
@@ -88,7 +95,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1130",
+        pendingMode: false
     },
     {
         id: 8,
@@ -100,7 +108,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1200"
+        time: "1200",
+        pendingMode: false
     },
     {
         id: 9,
@@ -111,7 +120,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "800"
+        time: "800",
+        pendingMode: false
     },
     {
         id: 10,
@@ -122,7 +132,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1530"
+        time: "1530",
+        pendingMode: false
     },
     {
         id: 11,
@@ -133,7 +144,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "815"
+        time: "815",
+        pendingMode: false
     },
     {
         id: 12,
@@ -144,7 +156,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "800"
+        time: "800",
+        pendingMode: false
     },
     {
         id: 13,
@@ -155,7 +168,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1115"
+        time: "1115",
+        pendingMode: false
     },
     {
         id: 14,
@@ -166,7 +180,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1730"
+        time: "1730",
+        pendingMode: false
     },
     {
         id: 15,
@@ -177,7 +192,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1230"
+        time: "1230",
+        pendingMode: false
     },
     {
         id: 16,
@@ -188,7 +204,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1130",
+        pendingMode: false
     },
     {
         id: 17,
@@ -199,7 +216,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 2,
         numUsers: 0,
-        time: "1800"
+        time: "1800",
+        pendingMode: false
     },
     {
         id: 18,
@@ -210,7 +228,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1630"
+        time: "1630",
+        pendingMode: false
     },
     {
         id: 19,
@@ -221,7 +240,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 0,
-        time: "830"
+        time: "830",
+        pendingMode: false
     },
     {
         id: 20,
@@ -232,7 +252,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 2,
         numUsers: 0,
-        time: "930"
+        time: "930",
+        pendingMode: false
     },
     {
         id: 21,
@@ -243,7 +264,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1115"
+        time: "1115",
+        pendingMode: false
     },
     {
         id: 22,
@@ -255,7 +277,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 0,
-        time: "1230"
+        time: "1230",
+        pendingMode: false
     },
     {
         id: 23,
@@ -266,7 +289,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130"
+        time: "1130",
+        pendingMode: false
     },
     {
         id: 24,
@@ -277,7 +301,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "630"
+        time: "630",
+        pendingMode: false
     },
     {
         id: 25,
@@ -288,7 +313,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "645"
+        time: "645",
+        pendingMode: false
     },
     {
         id: 26,
@@ -299,7 +325,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 1,
         numUsers: 0,
-        time: "1045"
+        time: "1045",
+        pendingMode: false
     },
     {
         id: 27,
@@ -310,7 +337,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 69,
         numUsers: 0,
-        time: "1445"
+        time: "1445",
+        pendingMode: false
     },
     {
         id: 28,
@@ -322,7 +350,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 23,
         numUsers: 0,
-        time: "700"
+        time: "700",
+        pendingMode: false
     },
     {
         id: 29,
@@ -333,7 +362,8 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 23,
         numUsers: 0,
-        time: "645"
+        time: "645",
+        pendingMode: false
     },
     {
         id: 30,
@@ -344,6 +374,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 23,
         numUsers: 0,
-        time: "630"
+        time: "630",
+        pendingMode: false
     }
 ];

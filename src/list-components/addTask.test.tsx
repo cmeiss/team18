@@ -14,7 +14,8 @@ const TASK1: Task = {
     steps: ["one", "two", "three"],
     difficulty: 0,
     numUsers: 0,
-    time: "1010"
+    time: "1010",
+    pendingMode: false
 };
 
 const TASK2: Task = {
@@ -26,7 +27,8 @@ const TASK2: Task = {
     steps: ["four", "five", "six"],
     difficulty: 1,
     numUsers: 1,
-    time: "1100"
+    time: "1100",
+    pendingMode: false
 };
 
 const TASKLIST1 = [TASK1, TASK2];

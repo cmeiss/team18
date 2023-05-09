@@ -31,7 +31,8 @@ export function EditStatus(edit: editProps): JSX.Element {
         steps: string[],
         diff: number,
         num: number,
-        time: string
+        time: string,
+        pend: boolean
     ) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(
@@ -46,7 +47,8 @@ export function EditStatus(edit: editProps): JSX.Element {
                           steps,
                           diff,
                           num,
-                          time
+                          time,
+                          pend
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )
@@ -77,7 +79,8 @@ export function EditStatus(edit: editProps): JSX.Element {
                             edit.task.steps,
                             edit.task.difficulty,
                             edit.task.numUsers,
-                            edit.task.time
+                            edit.task.time,
+                            edit.task.pendingMode
                         );
                         flipSaved();
                     }}

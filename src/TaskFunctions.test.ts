@@ -24,7 +24,8 @@ const TESTTASK: Task = {
     steps: ["i", "am", "immutable"],
     difficulty: 0,
     numUsers: 0,
-    time: "0"
+    time: "0",
+    pendingMode: false
 };
 
 // Backup task, to ensure changes are immutable
@@ -37,7 +38,8 @@ const BACKUPTASK: Task = {
     steps: ["i", "am", "immutable"],
     difficulty: 0,
     numUsers: 0,
-    time: "0"
+    time: "0",
+    pendingMode: false
 };
 
 const STEPS: string[] = ["1", "2", "3"];
@@ -53,7 +55,8 @@ const TASK2: Task = makeTask(
     ["walk", "feed"],
     1,
     0,
-    "1"
+    "1",
+    false
 );
 const TASK3: Task = makeTask(
     4,
@@ -64,7 +67,8 @@ const TASK3: Task = makeTask(
     ["pet", "love", "feed"],
     3,
     1,
-    "2"
+    "2",
+    false
 );
 // Immutable task array
 const TASKARR: Task[] = [TESTTASK, TASK2, TASK3];
@@ -84,7 +88,8 @@ describe("Testing the task functions", () => {
                 ["i", "am", "immutable"],
                 0,
                 0,
-                "0"
+                "0",
+                false
             )
         ).toEqual(TESTTASK);
     });
@@ -105,7 +110,8 @@ describe("Testing the task functions", () => {
             steps: ["1", "2", "3"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
         expect(setSteps(["3", "2", "1"], TESTTASK)).toEqual({
             id: 0,
@@ -116,7 +122,8 @@ describe("Testing the task functions", () => {
             steps: ["3", "2", "1"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
     });
     test("Testing the setDifficultly function", () => {
@@ -129,7 +136,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 2,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
         expect(setDifficulty(10, TESTTASK)).toEqual({
             id: 0,
@@ -140,7 +148,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 10,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
     });
     test("Testing the setNumUsers function", () => {
@@ -153,7 +162,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 2,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
         expect(setNumUsers(10, TESTTASK)).toEqual({
             id: 0,
@@ -164,7 +174,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 10,
-            time: "0"
+            time: "0",
+            pendingMore: false
         });
     });
     test("Testing the setTime function", () => {
@@ -178,7 +189,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "200"
+            time: "200",
+            pendingMode: false
         });
         expect(setTime("500", TESTTASK)).toEqual({
             id: 0,
@@ -189,7 +201,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "500"
+            time: "500",
+            pendingMode: false
         });
     });
     test("Testing the setName function", () => {
@@ -202,7 +215,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
         expect(setName("Jeremy", TESTTASK)).toEqual({
             id: 0,
@@ -213,7 +227,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
     });
     test("Testing the setDiscription function", () => {
@@ -227,7 +242,8 @@ describe("Testing the task functions", () => {
                 steps: ["i", "am", "immutable"],
                 difficulty: 0,
                 numUsers: 0,
-                time: "0"
+                time: "0",
+                pendingMode: false
             }
         );
         expect(setDescription("A lovely stew", TESTTASK)).toEqual({
@@ -239,7 +255,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
     });
     test("Testing the setStatus function", () => {
@@ -252,7 +269,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
         expect(setStatus(false, TASK2)).toEqual({
             id: 0,
@@ -263,7 +281,8 @@ describe("Testing the task functions", () => {
             steps: ["walk", "feed"],
             difficulty: 1,
             numUsers: 0,
-            time: "1"
+            time: "1",
+            pendingMode: false
         });
     });
     test("Testing the setImage function", () => {
@@ -276,7 +295,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
         expect(setImage("A quaint city in the woods", TESTTASK)).toEqual({
             id: 0,
@@ -287,7 +307,8 @@ describe("Testing the task functions", () => {
             steps: ["i", "am", "immutable"],
             difficulty: 0,
             numUsers: 0,
-            time: "0"
+            time: "0",
+            pendingMode: false
         });
     });
     test("Testing the addTask function", () => {

@@ -8,7 +8,6 @@ import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
 import { User } from "../interfaces/user";
 import { useDrop } from "react-dnd";
-import { addTask } from "../TaskFunctions";
 
 interface AdminItemProps {
     tasks: Task[];
@@ -24,13 +23,12 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
     const [alphabetic, setAlphabetic] = useState<boolean>(false);
     const [byTime, setByTime] = useState<boolean>(false);
     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
-    const [{ isOver /*, canDrop */ }, drop] = useDrop({
+
+    const [{ isOver }, drop] = useDrop({
         accept: "task",
         drop: (item: Task) => addTaskToAdminList(item.id),
-        canDrop: (item: Task) => canAddtoAdmin(item.id),
         collect: (monitor) => ({
-            isOver: !!monitor.isOver(),
-            canDrop: !!monitor.canDrop()
+            isOver: !!monitor.isOver()
         })
     });
 
@@ -39,22 +37,61 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
             (task: Task) => task.id === id
         );
         if (droppedTask) {
-            setTasks(addTask(droppedTask, tasks));
+            droppedTask.pendingMode = true;
         }
     }
 
-    function canAddtoAdmin(id: number): boolean {
+    function delTaskToAdminList(id: number): void {
         const droppedTask: Task | undefined = tasks.find(
             (task: Task) => task.id === id
         );
-        return droppedTask ? droppedTask.numUsers < 2 : false;
+        if (droppedTask) {
+            droppedTask.pendingMode = false;
+        }
+    }
+
+    function canDelAdminTask(id: number): boolean {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        if (droppedTask) {
+            return droppedTask.pendingMode;
+        } else {
+            return false;
+        }
     }
 
     function makeAdmin(tasks: Task[]) {
-        //this function takes the tasks state (our centralItemList) and returns a list of all elements with less than
-        //two users, i.e. our AdminList
-        return tasks.filter((TASK: Task) => TASK.numUsers < 2);
+        //this function takes the tasks state (our centralItemList) and returns a list of all elements that have been
+        //dragged by the admin or super to be modified, i.e. our AdminList
+        return tasks.filter((TASK: Task) => TASK.pendingMode === true);
     }
+
+    function TrashCan(): JSX.Element {
+        const [{ isOver, canDrop }, drop] = useDrop({
+            accept: "task",
+            drop: (item: Task) => delTaskToAdminList(item.id),
+            canDrop: (item: Task) => canDelAdminTask(item.id),
+            collect: (monitor) => ({
+                isOver: !!monitor.isOver(),
+                canDrop: !!monitor.canDrop()
+            })
+        });
+        if (isOver && canDrop) {
+            return (
+                <div ref={drop} className="trashOpen">
+                    <img src={require("../trashCanOpen.jpg")} width="100px" />
+                </div>
+            );
+        } else {
+            return (
+                <div ref={drop} className="trashClosed">
+                    <img src={require("../trashCanClosed.jpg")} width="100px" />
+                </div>
+            );
+        }
+    }
+
     function updateAlphabetic() {
         setSorted(true);
         setAlphabetic(true);
@@ -77,7 +114,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
     function displayList(taskList: Task[]): JSX.Element {
         return (
             <div
-                className="admin-tasks"
+                className="pending-tasks"
                 ref={drop}
                 style={{
                     backgroundColor: isOver ? "SageGreen" : "white"
@@ -112,24 +149,27 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
             const SortedList = filter_by_difficulty(makeAdmin(tasks));
             return displayList(SortedList);
         } else {
-            return <div>AdminList failed to load.</div>;
+            return <div>Pending List failed to load.</div>;
         }
     }
 
-    if (user.name === "Admin") {
+    if (user.name === "Admin" || user.name === "Super") {
         return (
-            <div className="admin-list">
+            <div className="pending-list">
                 <Row>
                     <Col>
-                        <h2> Admin List </h2>
+                        <TrashCan></TrashCan>
                     </Col>
                     <Col>
-                        <div className="Adminsort-dropdown">
-                            <button className="Adminsort-dropbtn">
+                        <h2> Pending List </h2>
+                    </Col>
+                    <Col>
+                        <div className="Pendingsort-dropdown">
+                            <button className="Pendingsort-dropbtn">
                                 {/*eslint-disable-next-line prettier/prettier*/}
                                 Sort by ▾
                             </button>
-                            <div className="Adminsort-options">
+                            <div className="Pendingsort-options">
                                 <Button onClick={updateAlphabetic}>
                                     Alphabetical{" "}
                                 </Button>

@@ -12,7 +12,8 @@ export function makeTask(
     steps: string[],
     diff: number,
     num: number,
-    time: string
+    time: string,
+    pending: boolean
 ): Task {
     const task: Task = {
         id: id,
@@ -23,7 +24,8 @@ export function makeTask(
         steps: steps,
         difficulty: diff,
         numUsers: num,
-        time: time
+        time: time,
+        pendingMode: pending
     };
     return task;
 }
@@ -59,7 +61,8 @@ export function delTask(task: Task, tasks: Task[]) {
         task.steps,
         task.difficulty,
         task.numUsers,
-        task.time
+        task.time,
+        task.pendingMode
     );
     const newTasks = tasks.filter(
         (task: Task): boolean => task.id !== taskToRemove.id /*&&

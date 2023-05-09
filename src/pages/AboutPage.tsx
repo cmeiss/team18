@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-export function About() {
+export function AboutPage() {
     return (
         <Container className="about">
             <h1>About Us</h1>

@@ -42,7 +42,8 @@ export function addTasktoUserList(
     step: string[],
     diff: number,
     num: number,
-    time: string
+    time: string,
+    pend: boolean
 ): Task[] {
     const task: Task = {
         id: id,
@@ -53,7 +54,8 @@ export function addTasktoUserList(
         steps: step,
         difficulty: diff,
         numUsers: num,
-        time: time
+        time: time,
+        pendingMode: pend
     };
     const list = [...user.userList];
     list.push(task);

@@ -17,7 +17,9 @@ export function EditDescription({
     return (
         <div>
             <Form.Group controlId="formDescriptionName">
-                <Form.Label>Change Description:</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>
+                    Change Description:
+                </Form.Label>
                 <Form.Control
                     value={description}
                     onChange={updateDescription}

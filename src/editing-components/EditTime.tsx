@@ -37,7 +37,9 @@ export function EditTime({ time, setTime }: TimeProps) {
     return (
         <div>
             <Form.Group controlId="editTime">
-                <Form.Label>Choose Time</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>
+                    Choose Time
+                </Form.Label>
 
                 <Form.Select
                     value={time.toString()}

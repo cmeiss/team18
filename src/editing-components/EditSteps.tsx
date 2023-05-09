@@ -13,18 +13,20 @@ export function EditSteps({ steps, setSteps }: stepsProps) {
         setSteps(newStepArray);
     }
     function createArrayFromString(oneBigStep: string): string[] {
-        const newSteps = oneBigStep.split("$");
+        const newSteps = oneBigStep.split(",");
         return newSteps;
     }
     return (
         <div>
             <Form.Group controlId="form">
-                <Form.Label>Change Description:</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>
+                    Change Steps:
+                </Form.Label>
                 <Form.Control value={steps} onChange={updateSteps} />
             </Form.Group>
             <div>
-                To Indicate Different Steps leave a $ symbol in between the
-                various steps; example: step1$step2
+                To Indicate Different Steps leave a comma symbol in between the
+                various steps; example: step1,step2
             </div>
         </div>
     );

@@ -15,6 +15,11 @@ export function EditStatus(edit: editProps): JSX.Element {
         setStatus(event.target.checked);
     }
     const [status, setStatus] = useState<boolean>(edit.task.status);
+    const [visible, setvisible] = useState<boolean>(false);
+
+    function flipVisible(): void {
+        setvisible(!visible);
+    }
 
     function changeTasks(
         tasks: Task[],
@@ -60,7 +65,7 @@ export function EditStatus(edit: editProps): JSX.Element {
             />
             <div>
                 <Button
-                    onClick={() =>
+                    onClick={() => {
                         changeTasks(
                             edit.tasks,
                             edit.task.id,
@@ -72,12 +77,18 @@ export function EditStatus(edit: editProps): JSX.Element {
                             edit.task.difficulty,
                             edit.task.numUsers,
                             edit.task.time
-                        )
-                    }
+                        );
+                        flipVisible();
+                    }}
                     hidden={!status}
                 >
                     Confirm Task is Complete
                 </Button>
+                {visible && (
+                    <div style={{ fontWeight: "bold", color: "green" }}>
+                        Great Job!
+                    </div>
+                )}
             </div>
         </div>
     );

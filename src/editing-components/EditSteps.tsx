@@ -9,7 +9,8 @@ interface stepsProps {
 export function EditSteps({ steps, setSteps }: stepsProps) {
     function updateSteps(event: React.ChangeEvent<HTMLInputElement>) {
         const newStep = String(event.target.value);
-        setSteps([...steps, newStep]);
+        const newStepArray = createArrayFromString(newStep);
+        setSteps(newStepArray);
     }
     function createArrayFromString(oneBigStep: string): string[] {
         const newSteps = oneBigStep.split("$");

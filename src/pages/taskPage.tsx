@@ -17,7 +17,7 @@ import { DeleteTask } from "../list-components/deleteTask-component";
 import { Col, Row } from "react-bootstrap";
 import { Link, Route, Routes } from "react-router-dom";
 
-import { AboutPage } from "../pages/AboutPage";
+import { AboutPage } from "./AboutPage";
 
 function TaskPage(): JSX.Element {
     // eslint-disable-next-line prettier/prettier
@@ -61,16 +61,12 @@ function TaskPage(): JSX.Element {
                         >
                             <ul>
                                 <li>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
                                     <Link to="/about">About</Link>
                                 </li>
                             </ul>
                         </nav>
                         <Routes>
                             <Route path="/about" element={<AboutPage />} />
-                            <Route path="/home" element={<TaskPage />} />
                         </Routes>
                     </hgroup>
 

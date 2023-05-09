@@ -17,9 +17,12 @@ function App(): JSX.Element {
                     <ul>
                         <li>
                             <Link to="/about">About</Link>
-                            <li>
-                                <Link to="/taskpage">Schedule Builder</Link>
-                            </li>
+                        </li>
+                        <li>
+                            <Link to="/taskpage">Schedule Builder</Link>
+                        </li>
+                        <li>
+                            <Link to="/homepage">Home Page</Link>
                         </li>
                     </ul>
                 </nav>

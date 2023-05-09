@@ -18,6 +18,7 @@ import { Col, Row } from "react-bootstrap";
 import { Link, Route, Routes } from "react-router-dom";
 
 import { AboutPage } from "./AboutPage";
+import App from "../App";
 
 function TaskPage(): JSX.Element {
     // eslint-disable-next-line prettier/prettier
@@ -66,10 +67,14 @@ function TaskPage(): JSX.Element {
                                 <li>
                                     <Link to="/taskpage">Schedule Builder</Link>
                                 </li>
+                                <li>
+                                    <Link to="/homepage">Homepage</Link>
+                                </li>
                             </ul>
                         </nav>
                         <Routes>
                             <Route path="/about" element={<AboutPage />} />
+                            <Route path="/homepage" element={<App />} />
                         </Routes>
                     </hgroup>
 

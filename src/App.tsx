@@ -15,6 +15,9 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { AddTask } from "./list-components/addTask";
 import { DeleteTask } from "./list-components/deleteTask-component";
 import { Col, Row } from "react-bootstrap";
+import { Link, Route, Routes } from "react-router-dom";
+
+import { AboutPage } from "./pages/AboutPage";
 
 function App(): JSX.Element {
     // eslint-disable-next-line prettier/prettier
@@ -52,9 +55,24 @@ function App(): JSX.Element {
                     <hgroup>
                         <h1>TimeWise</h1>
                         <i>Never waste another second</i>
+                        <nav
+                            className="navbar
+                        "
+                        >
+                            <ul>
+                                <li>
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/about">About</Link>
+                                </li>
+                            </ul>
+                        </nav>
+                        <Routes>
+                            <Route path="/about" element={<AboutPage />} />
+                        </Routes>
                     </hgroup>
 
-                    {/*Role Selection, DropDown Menu: */}
                     <div className="dropdown">
                         <span>Role select</span>
                         <div className="dropdown-content">
@@ -75,7 +93,6 @@ function App(): JSX.Element {
                     Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster,
                     William Sharp, Sydni Wright
                 </div>
-
                 {/*Adding and Deleting Users: */}
                 <div>
                     <div>

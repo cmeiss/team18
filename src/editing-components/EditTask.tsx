@@ -6,6 +6,7 @@ import { makeTask } from "../TaskFunctions";
 import { EditTime } from "./EditTime";
 import { EditDifficulty } from "./edit-difficulty";
 import { EditDescription } from "./EditDescription";
+import { EditSteps } from "./EditSteps";
 //import { EditStatus } from "./EditStatus";
 
 export interface editProps {
@@ -25,7 +26,7 @@ export function EditTask(edit: editProps): JSX.Element {
     const [desc, setDesc] = useState<string>(edit.task.description);
     const [status] = useState<boolean>(edit.task.status);
     const [img] = useState<string>(edit.task.image);
-    const [steps] = useState<string[]>(edit.task.steps);
+    const [steps, setSteps] = useState<string[]>(edit.task.steps);
     const [diff, setDifficulty] = useState<number>(edit.task.difficulty);
     const [numUsers] = useState<number>(edit.task.numUsers);
     const [time, setTime] = useState<string>(edit.task.time);
@@ -94,7 +95,7 @@ export function EditTask(edit: editProps): JSX.Element {
                 }}
                 onClick={updateVisibility}
             >
-                Edit Task
+                Edit ✏️
             </Button>
             {!visible ? null : (
                 <div>
@@ -102,6 +103,7 @@ export function EditTask(edit: editProps): JSX.Element {
                         description={desc}
                         setDescription={setDesc}
                     ></EditDescription>
+                    <EditSteps steps={steps} setSteps={setSteps}></EditSteps>
                     <EditTime time={time} setTime={setTime}></EditTime>
                     <EditDifficulty
                         diff={diff}

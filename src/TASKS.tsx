@@ -43,7 +43,7 @@ export const TASKS: Task[] = [
         description: "Enjoy your morning with your favorite breakfast food!",
         status: false,
         image: require("./task-images/make-breakfast.jpg"),
-        steps: [],
+        steps: ["Blend smootie", "Eat eggs", "Devour"],
         difficulty: 3,
         numUsers: 0,
         time: "700",

@@ -160,29 +160,29 @@
     overflow-x: hidden;
 }
 /* App.css */
+/* Navbar.css */
 .navbar {
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
+    background-color: #283b8b;
+    position: relative;
+    padding: 0.5rem;
 }
 
-.navbar-list {
+.nav-list {
     display: flex;
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-.navbar-item {
-    margin: 0 1rem;
+.nav-item {
+    margin-right: 1rem;
 }
 
-.navbar-link {
-    color: white;
+.nav-link {
+    color: #fff;
     text-decoration: none;
 }
 
-.navbar-link:hover {
-    color: #ccc;
+.nav-link:hover {
+    color: #2642af;
 }

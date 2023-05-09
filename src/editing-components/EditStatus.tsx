@@ -15,6 +15,11 @@ export function EditStatus(edit: editProps): JSX.Element {
         setStatus(event.target.checked);
     }
     const [status, setStatus] = useState<boolean>(edit.task.status);
+    const [saved, setSaved] = useState<boolean>(true);
+
+    function flipSaved(): void {
+        setSaved(!saved);
+    }
 
     function changeTasks(
         tasks: Task[],
@@ -59,10 +64,11 @@ export function EditStatus(edit: editProps): JSX.Element {
                 }
                 checked={status}
                 onChange={updateStatus}
+                onClick={flipSaved}
             />
             <div>
                 <Button
-                    onClick={() =>
+                    onClick={() => {
                         changeTasks(
                             edit.tasks,
                             edit.task.id,
@@ -75,11 +81,12 @@ export function EditStatus(edit: editProps): JSX.Element {
                             edit.task.numUsers,
                             edit.task.time,
                             edit.task.pendingMode
-                        )
-                    }
-                    hidden={!status}
+                        );
+                        flipSaved();
+                    }}
+                    hidden={saved}
                 >
-                    Confirm Task is Complete
+                    Confirm
                 </Button>
             </div>
         </div>

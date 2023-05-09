@@ -142,7 +142,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
                                 </Button>
                                 <Button onClick={updateByTime}>Time </Button>
                                 <Button onClick={updateByNumUsers}>
-                                    Number of Users{" "}
+                                    Number Users (Low to High){" "}
                                 </Button>
                                 <Button onClick={() => setSorted(false)}>
                                     Reset

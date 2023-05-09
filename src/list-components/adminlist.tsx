@@ -8,7 +8,6 @@ import { filter_by_difficulty } from "./filterlists";
 import { filter_by_time_needed } from "./filterlists";
 import { User } from "../interfaces/user";
 import { useDrop } from "react-dnd";
-import { addTask } from "../TaskFunctions";
 
 interface AdminItemProps {
     tasks: Task[];
@@ -25,13 +24,11 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
     const [byTime, setByTime] = useState<boolean>(false);
     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
 
-    const [{ isOver /*, canDrop */ }, drop] = useDrop({
+    const [{ isOver }, drop] = useDrop({
         accept: "task",
         drop: (item: Task) => addTaskToAdminList(item.id),
-        //canDrop: (item: Task) => canAddtoAdmin(item.id),
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
-            //canDrop: !!monitor.canDrop()
         })
     });
 
@@ -41,22 +38,60 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         );
         if (droppedTask) {
             droppedTask.pendingMode = true;
-            //setTasks(addTask(droppedTask, tasks));
         }
     }
 
-    // function canAddtoAdmin(id: number): boolean {
-    //     const droppedTask: Task | undefined = tasks.find(
-    //         (task: Task) => task.id === id
-    //     );
-    //     return droppedTask ? droppedTask.numUsers < 2 : false;
-    // }
+    function delTaskToAdminList(id: number): void {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        if (droppedTask) {
+            droppedTask.pendingMode = false;
+        }
+    }
+
+    function canDelAdminTask(id: number): boolean {
+        const droppedTask: Task | undefined = tasks.find(
+            (task: Task) => task.id === id
+        );
+        if (droppedTask) {
+            return droppedTask.pendingMode;
+        } else {
+            return false;
+        }
+    }
 
     function makeAdmin(tasks: Task[]) {
-        //this function takes the tasks state (our centralItemList) and returns a list of all elements with less than
-        //two users, i.e. our AdminList
+        //this function takes the tasks state (our centralItemList) and returns a list of all elements that have been
+        //dragged by the admin or super to be modified, i.e. our AdminList
         return tasks.filter((TASK: Task) => TASK.pendingMode === true);
     }
+
+    function TrashCan(): JSX.Element {
+        const [{ isOver, canDrop }, drop] = useDrop({
+            accept: "task",
+            drop: (item: Task) => delTaskToAdminList(item.id),
+            canDrop: (item: Task) => canDelAdminTask(item.id),
+            collect: (monitor) => ({
+                isOver: !!monitor.isOver(),
+                canDrop: !!monitor.canDrop()
+            })
+        });
+        if (isOver && canDrop) {
+            return (
+                <div ref={drop} className="trashOpen">
+                    <img src={require("../trashCanOpen.jpg")} width="100px" />
+                </div>
+            );
+        } else {
+            return (
+                <div ref={drop} className="trashClosed">
+                    <img src={require("../trashCanClosed.jpg")} width="100px" />
+                </div>
+            );
+        }
+    }
+
     function updateAlphabetic() {
         setSorted(true);
         setAlphabetic(true);
@@ -122,6 +157,9 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         return (
             <div className="pending-list">
                 <Row>
+                    <Col>
+                        <TrashCan></TrashCan>
+                    </Col>
                     <Col>
                         <h2> Pending List </h2>
                     </Col>

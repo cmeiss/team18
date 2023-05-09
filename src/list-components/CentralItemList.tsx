@@ -97,6 +97,9 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
             return <div>AdminList failed to load.</div>;
         }
     }
+    if (role !== "Admin" && role !== "Super") {
+        role = "user-central";
+    }
     if (role !== "Super") {
         return (
             <div className="central-list">

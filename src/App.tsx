@@ -15,7 +15,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { AddTask } from "./list-components/addTask";
 import { DeleteTask } from "./list-components/deleteTask-component";
 import { Col, Row } from "react-bootstrap";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
 import { AboutPage } from "./pages/AboutPage";
 

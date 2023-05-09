@@ -57,7 +57,7 @@ export function EditTime({ time, setTime }: TimeProps) {
                     ))}
                 </Form.Select>
             </Form.Group>
-            Selected Time: {printTime(time)}
+            -Selected Time: {printTime(time)}
         </div>
     );
 }

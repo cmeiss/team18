@@ -25,7 +25,7 @@ export function EditSteps({ steps, setSteps }: stepsProps) {
                 <Form.Control value={steps} onChange={updateSteps} />
             </Form.Group>
             <div>
-                To Indicate Different Steps leave a comma symbol in between the
+                -To indicate different steps leave a comma symbol in between the
                 various steps; example: step1,step2
             </div>
         </div>

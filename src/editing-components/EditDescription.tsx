@@ -25,7 +25,6 @@ export function EditDescription({
                     onChange={updateDescription}
                 />
             </Form.Group>
-            <div>Current Description: {description}</div>
         </div>
     );
 }

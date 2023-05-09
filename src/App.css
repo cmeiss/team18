@@ -159,3 +159,30 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
+/* App.css */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.navbar-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 1rem;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: #ccc;
+}

@@ -95,7 +95,7 @@ export function EditTask(edit: editProps): JSX.Element {
                 }}
                 onClick={updateVisibility}
             >
-                Edit Task
+                Edit ✏️
             </Button>
             {!visible ? null : (
                 <div>

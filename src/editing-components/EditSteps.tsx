@@ -11,6 +11,10 @@ export function EditSteps({ steps, setSteps }: stepsProps) {
         const newStep = String(event.target.value);
         setSteps([...steps, newStep]);
     }
+    function createArrayFromString(oneBigStep: string): string[] {
+        const newSteps = oneBigStep.split("$");
+        return newSteps;
+    }
     return (
         <div>
             <Form.Group controlId="form">

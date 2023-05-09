@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import "./App.css";
-import { CentralItemList } from "./list-components/CentralItemList";
-import { Task } from "./interfaces/task";
+import { CentralItemList } from "../list-components/CentralItemList";
+import { Task } from "../interfaces/task";
 //import { ChangeRole } from "./list-components/selectuser";
-import { User } from "./interfaces/user";
+import { User } from "../interfaces/user";
 //import { Button, Form } from "react-bootstrap";
-import { UserList } from "./list-components/UserList";
-import { ChangeRole } from "./list-components/ChangeRole";
-import { ModifyUsers } from "./list-components/ModifyUsers";
-import { AdminList } from "./list-components/adminlist";
-import { TASKS } from "./TASKS";
+import { UserList } from "../list-components/UserList";
+import { ChangeRole } from "../list-components/ChangeRole";
+import { ModifyUsers } from "../list-components/ModifyUsers";
+import { AdminList } from "../list-components/adminlist";
+import { TASKS } from "../TASKS";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { AddTask } from "./list-components/addTask";
-import { DeleteTask } from "./list-components/deleteTask-component";
+import { AddTask } from "../list-components/addTask";
+import { DeleteTask } from "../list-components/deleteTask-component";
 import { Col, Row } from "react-bootstrap";
 import { Link, Route, Routes } from "react-router-dom";
 
-import { AboutPage } from "./pages/AboutPage";
+import { AboutPage } from "../pages/AboutPage";
 
 function App(): JSX.Element {
     // eslint-disable-next-line prettier/prettier

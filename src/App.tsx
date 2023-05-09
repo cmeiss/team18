@@ -55,7 +55,10 @@ function App(): JSX.Element {
                     <hgroup>
                         <h1>TimeWise</h1>
                         <i>Never waste another second</i>
-                        <nav>
+                        <nav
+                            className="navbar
+                        "
+                        >
                             <ul>
                                 <li>
                                     <Link to="/">Home</Link>

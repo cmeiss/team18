@@ -26,6 +26,7 @@ export function EditTask(edit: editProps): JSX.Element {
     const [desc, setDesc] = useState<string>(edit.task.description);
     const [status] = useState<boolean>(edit.task.status);
     const [img] = useState<string>(edit.task.image);
+    const [pending] = useState<boolean>(edit.task.pendingMode);
     const [steps, setSteps] = useState<string[]>(edit.task.steps);
     const [diff, setDifficulty] = useState<number>(edit.task.difficulty);
     const [numUsers] = useState<number>(edit.task.numUsers);
@@ -45,7 +46,8 @@ export function EditTask(edit: editProps): JSX.Element {
         steps: string[],
         diff: number,
         num: number,
-        time: string
+        time: string,
+        pend: boolean
     ) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(
@@ -60,7 +62,8 @@ export function EditTask(edit: editProps): JSX.Element {
                           steps,
                           diff,
                           num,
-                          time
+                          time,
+                          pend
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )
@@ -77,7 +80,8 @@ export function EditTask(edit: editProps): JSX.Element {
                           steps,
                           diff,
                           num,
-                          time
+                          time,
+                          pend
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )
@@ -122,7 +126,8 @@ export function EditTask(edit: editProps): JSX.Element {
                                     steps,
                                     diff,
                                     numUsers,
-                                    time
+                                    time,
+                                    pending
                                 )
                             }
                         >

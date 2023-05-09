@@ -15,11 +15,35 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { AddTask } from "./list-components/addTask";
 import { DeleteTask } from "./list-components/deleteTask-component";
 import { Col, Row } from "react-bootstrap";
+import Navbar from "./Navbar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import { About } from "./pages/about";
 
 function App(): JSX.Element {
     // eslint-disable-next-line prettier/prettier
     const [role, setRole] = useState<User>({ name: "User1", userList: [] }); //I set this intial user to make the user list display something
-
+    const navigation = {
+        brand: { name: "MyApp", to: "/" },
+        links: [
+            { name: "Home", to: "/" },
+            { name: "About", to: "/about" },
+            { name: "Contact", to: "/contact" }
+        ]
+    };
+    const Bar: React.FC = () => {
+        const { brand, links } = navigation;
+        return (
+            <Router>
+                <div>
+                    <Navbar brand={brand} links={links} />
+                    <Routes>
+                        <Route path="/about" Component={About} />
+                    </Routes>
+                </div>
+            </Router>
+        );
+    };
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
@@ -52,6 +76,7 @@ function App(): JSX.Element {
                     <hgroup>
                         <h1>TimeWise</h1>
                         <i>Never waste another second</i>
+                        {Bar}
                     </hgroup>
 
                     {/*Role Selection, DropDown Menu: */}

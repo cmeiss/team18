@@ -1,9 +1,33 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { Link, Route, Routes } from "react-router-dom";
+import App from "../App";
+import TaskPage from "./taskPage";
 
 export function AboutPage() {
     return (
         <Container className="about">
+            <nav
+                className="navbar
+                        "
+            >
+                <ul>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/taskpage">Schedule Builder</Link>
+                    </li>
+                    <li>
+                        <Link to="/homepage">Homepage</Link>
+                    </li>
+                </ul>
+            </nav>
+            <Routes>
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/taskpage" element={<TaskPage />}></Route>
+                <Route path="/homepage" element={<App />} />
+            </Routes>
             <h1>About Us</h1>
             <br></br>
             <h3>Team Members</h3>

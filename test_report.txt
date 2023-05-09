@@ -5310,7 +5310,7 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   23.27 |    14.28 |      25 |   23.82 |                   
+All files                  |   23.14 |    13.69 |      25 |   23.68 |                   
  src                       |   27.58 |        0 |      50 |   28.57 |                   
   App.tsx                  |       0 |        0 |       0 |       0 | 21-48             
   TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
@@ -5327,8 +5327,8 @@ All files                  |   23.27 |    14.28 |      25 |   23.82 |
  src/interfaces            |       0 |        0 |       0 |       0 |                   
   task.ts                  |       0 |        0 |       0 |       0 |                   
   user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   16.31 |    11.11 |   16.32 |   16.59 |                   
-  CentralItemList.tsx      |       0 |        0 |       0 |       0 | 21-144            
+ src/list-components       |   16.18 |    10.52 |   16.32 |   16.45 |                   
+  CentralItemList.tsx      |       0 |        0 |       0 |       0 | 21-147            
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
   DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-84             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
@@ -5344,5 +5344,5 @@ All files                  |   23.27 |    14.28 |      25 |   23.82 |
 Test Suites: 17 failed, 17 total
 Tests:       48 failed, 10 passed, 58 total
 Snapshots:   0 total
-Time:        14.31 s
+Time:        11.731 s
 Ran all test suites.

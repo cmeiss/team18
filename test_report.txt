@@ -747,7 +747,7 @@ FAIL src/dist/App.test.js
       at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
       at Object.<anonymous> (src/dist/App.test.js:9:25)
 
-FAIL src/App.test.tsx (5.034 s)
+FAIL src/App.test.tsx (5.029 s)
   ● Console
 
     console.error
@@ -7178,5 +7178,5 @@ All files                  |   36.41 |    30.12 |   37.03 |   36.75 |
 Test Suites: 17 failed, 17 total
 Tests:       62 failed, 25 passed, 87 total
 Snapshots:   0 total
-Time:        19.136 s
+Time:        19.404 s
 Ran all test suites.

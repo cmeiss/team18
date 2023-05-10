@@ -18,7 +18,7 @@ describe("testing edit difficulty component", () => {
         );
     });
     test("component displays", () => {
-        const compDisplayed = screen.getByText("Change Difficulty: ");
+        const compDisplayed = screen.queryByText(/Change Difficulty:/i);
         expect(compDisplayed).toBeInTheDocument();
     });
     test("difficulty is updating", () => {

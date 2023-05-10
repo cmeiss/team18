@@ -1,7 +1,8 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { CentralItemList } from "./CentralItemList";
 import { Task } from "../interfaces/task";
+import { renderWithDnd } from "../CustomRender";
 
 const TaskList = [
     {
@@ -56,7 +57,7 @@ const role3 = "user";
 //testing with role being super
 describe("CentralItemList with Role super", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <CentralItemList tasks={tasks} role={role1} setTasks={setTasks} />
         );
     });
@@ -83,7 +84,7 @@ describe("CentralItemList with Role super", () => {
 //testing with role being admin
 describe("CentralItemList with Role admin", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <CentralItemList
                 tasks={TaskList}
                 role={role2}
@@ -106,7 +107,7 @@ describe("CentralItemList with Role admin", () => {
 //testing with role being user
 describe("CentralItemList with Role user", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <CentralItemList
                 tasks={TaskList}
                 role={role3}

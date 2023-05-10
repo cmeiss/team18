@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
 "use strict";
 exports.__esModule = true;
 //import App from "./App";
@@ -43,52 +45,119 @@ function setUsers(newUsers) {
 //user: central item list, user list, edit task
 describe("Tesing Central Item List in App", function () {
     beforeEach(function () {
-        react_2.render(react_1["default"].createElement(CentralItemList_1.CentralItemList, { tasks: TASKS_1.TASKS, role: role1, setTasks: setTasks }));
+        react_2.render(
+            react_1["default"].createElement(
+                CentralItemList_1.CentralItemList,
+                { tasks: TASKS_1.TASKS, role: role1, setTasks: setTasks }
+            )
+        );
     });
     test("list is displayed", function () {
         var listDisplayed = react_2.screen.getByText("Sample Tasks");
         expect(listDisplayed).toBeInTheDocument();
     });
 });
+// eslint-disable-next-line no-undef
 describe("Tesing User List in App", function () {
     beforeEach(function () {
-        react_2.render(react_1["default"].createElement(UserList_1.UserList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, setTasks: setTasks, user: User1, setUser: setUser }));
+        react_2.render(
+            react_1["default"].createElement(UserList_1.UserList, {
+                users: users,
+                setUsers: setUsers,
+                tasks: TASKS_1.TASKS,
+                setTasks: setTasks,
+                user: User1,
+                setUser: setUser
+            })
+        );
     });
     test("list is displayed", function () {
-        var listDisplayed = react_2.screen.getByText(User1.name + "'s Schedule");
+        var listDisplayed = react_2.screen.getByText(
+            User1.name + "'s Schedule"
+        );
         expect(listDisplayed).toBeInTheDocument();
     });
     test("list not seen by super", function () {
-        var container = react_2.render(react_1["default"].createElement(UserList_1.UserList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, setTasks: setTasks, user: User2, setUser: setUser })).container;
+        var container = react_2.render(
+            react_1["default"].createElement(UserList_1.UserList, {
+                users: users,
+                setUsers: setUsers,
+                tasks: TASKS_1.TASKS,
+                setTasks: setTasks,
+                user: User2,
+                setUser: setUser
+            })
+        ).container;
         expect(container).toBeEmptyDOMElement();
     });
     test("list not seen by admin", function () {
-        var container = react_2.render(react_1["default"].createElement(UserList_1.UserList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, setTasks: setTasks, user: User3, setUser: setUser })).container;
+        var container = react_2.render(
+            react_1["default"].createElement(UserList_1.UserList, {
+                users: users,
+                setUsers: setUsers,
+                tasks: TASKS_1.TASKS,
+                setTasks: setTasks,
+                user: User3,
+                setUser: setUser
+            })
+        ).container;
         expect(container).toBeEmptyDOMElement();
     });
 });
 describe("Tesing Admin List in App", function () {
     beforeEach(function () {
-        react_2.render(react_1["default"].createElement(adminlist_1.AdminList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, user: User3, setTasks: setTasks }));
+        react_2.render(
+            react_1["default"].createElement(adminlist_1.AdminList, {
+                users: users,
+                setUsers: setUsers,
+                tasks: TASKS_1.TASKS,
+                user: User3,
+                setTasks: setTasks
+            })
+        );
     });
     test("list is displayed", function () {
         var listDisplayed = react_2.screen.getByText("Admin List");
         expect(listDisplayed).toBeInTheDocument();
     });
     test("list not seen by super", function () {
-        var container = react_2.render(react_1["default"].createElement(adminlist_1.AdminList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, user: User3, setTasks: setTasks })).container;
+        var container = react_2.render(
+            react_1["default"].createElement(adminlist_1.AdminList, {
+                users: users,
+                setUsers: setUsers,
+                tasks: TASKS_1.TASKS,
+                user: User3,
+                setTasks: setTasks
+            })
+        ).container;
         expect(container).toBeEmptyDOMElement();
     });
     test("list not seen by user", function () {
-        var container = react_2.render(react_1["default"].createElement(adminlist_1.AdminList, { users: users, setUsers: setUsers, tasks: TASKS_1.TASKS, user: User3, setTasks: setTasks })).container;
+        var container = react_2.render(
+            react_1["default"].createElement(adminlist_1.AdminList, {
+                users: users,
+                setUsers: setUsers,
+                tasks: TASKS_1.TASKS,
+                user: User3,
+                setTasks: setTasks
+            })
+        ).container;
         expect(container).toBeEmptyDOMElement();
     });
 });
 describe("Testing Delete task in App", function () {
     beforeEach(function () {
-        return react_2.render(react_1["default"].createElement(deleteTask_component_1.DeleteTask, { tasks: TASKS_1.TASKS, setTasks: function () {
-                throw new Error("function not implemented");
-            } }));
+        return react_2.render(
+            react_1["default"].createElement(
+                deleteTask_component_1.DeleteTask,
+                {
+                    tasks: TASKS_1.TASKS,
+                    setTasks: function () {
+                        throw new Error("function not implemented");
+                    }
+                }
+            )
+        );
     });
     test("delete task is displayed", function () {
         var compDisplayed = react_2.screen.getByText("Delete Task");
@@ -97,9 +166,14 @@ describe("Testing Delete task in App", function () {
 });
 describe("Add tasks tests", function () {
     beforeEach(function () {
-        return react_2.render(react_1["default"].createElement(addTask_1.AddTask, { tasks: TASKS_1.TASKS, setTasks: function ( /*newTasks: Tasks[]*/) {
-                throw new Error("Function not implemented.");
-            } }));
+        return react_2.render(
+            react_1["default"].createElement(addTask_1.AddTask, {
+                tasks: TASKS_1.TASKS,
+                setTasks: function (/*newTasks: Tasks[]*/) {
+                    throw new Error("Function not implemented.");
+                }
+            })
+        );
     });
     test("add task is displayed", function () {
         var compDisplayed = react_2.screen.getByText("Add Task");
@@ -108,10 +182,18 @@ describe("Add tasks tests", function () {
 });
 describe("Testing EditTask", function () {
     beforeEach(function () {
-        react_2.render(react_1["default"].createElement(EditTask_1.EditTask, { tasks: TASKS_1.TASKS, updateTasks: setTasks, task: testTask }));
+        react_2.render(
+            react_1["default"].createElement(EditTask_1.EditTask, {
+                tasks: TASKS_1.TASKS,
+                updateTasks: setTasks,
+                task: testTask
+            })
+        );
     });
     test("edit Task button appears", function () {
-        var editButton = react_2.screen.getByRole("button", { name: "Edit Task" });
+        var editButton = react_2.screen.getByRole("button", {
+            name: "Edit Task"
+        });
         expect(editButton).toBeInTheDocument();
     });
 });

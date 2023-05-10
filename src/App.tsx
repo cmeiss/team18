@@ -35,8 +35,8 @@ function App(): JSX.Element {
                     <h1>TimeWise</h1>
                     <i>Never waste another second</i>
                     <p>
-                        Build your dream schedule today by clicking the build
-                        schedule button
+                        Build your dream schedule today by clicking the Schedule
+                        Builder Link in the top right corner
                     </p>
                 </hgroup>
             </header>

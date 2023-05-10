@@ -10,6 +10,7 @@ import { AdminList } from "./list-components/adminlist";
 import { DeleteTask } from "./list-components/deleteTask-component";
 import { AddTask } from "./list-components/addTask";
 import { EditTask } from "./editing-components/EditTask";
+import { renderWithDnd } from "./CustomRender";
 
 const testTask = {
     id: 1,
@@ -50,7 +51,16 @@ function setUsers(newUsers: User[]) {
 
 describe("Tesing Central Item List in App", () => {
     beforeEach(() => {
-        render(
+        // render(
+        //     <DndProvider backend={HTML5Backend}>
+        //         <CentralItemList
+        //             tasks={TASKS}
+        //             role={role1}
+        //             setTasks={setTasks}
+        //         ></CentralItemList>
+        //     </DndProvider>
+        // );
+        renderWithDnd(
             <CentralItemList
                 tasks={TASKS}
                 role={role1}
@@ -66,7 +76,7 @@ describe("Tesing Central Item List in App", () => {
 
 describe("Tesing User List in App", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <UserList
                 users={users}
                 setUsers={setUsers}
@@ -82,7 +92,7 @@ describe("Tesing User List in App", () => {
         expect(listDisplayed).toBeInTheDocument();
     });
     test("list not seen by super", () => {
-        const { container } = render(
+        const { container } = renderWithDnd(
             <UserList
                 users={users}
                 setUsers={setUsers}
@@ -95,7 +105,7 @@ describe("Tesing User List in App", () => {
         expect(container).toBeEmptyDOMElement();
     });
     test("list not seen by admin", () => {
-        const { container } = render(
+        const { container } = renderWithDnd(
             <UserList
                 users={users}
                 setUsers={setUsers}
@@ -111,7 +121,7 @@ describe("Tesing User List in App", () => {
 
 describe("Tesing Admin List in App", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <AdminList
                 users={users}
                 setUsers={setUsers}
@@ -122,7 +132,7 @@ describe("Tesing Admin List in App", () => {
         );
     });
     test("list is displayed", () => {
-        const listDisplayed = screen.getByText("Admin List");
+        const listDisplayed = screen.getByText("Pending List");
         expect(listDisplayed).toBeInTheDocument();
     });
     test("list not seen by super", () => {
@@ -138,7 +148,7 @@ describe("Tesing Admin List in App", () => {
         expect(container).toBeEmptyDOMElement();
     });
     test("list not seen by user", () => {
-        const { container } = render(
+        const { container } = renderWithDnd(
             <AdminList
                 users={users}
                 setUsers={setUsers}
@@ -152,7 +162,7 @@ describe("Tesing Admin List in App", () => {
 });
 describe("Testing Delete task in App", () => {
     beforeEach(() =>
-        render(
+        renderWithDnd(
             <DeleteTask
                 tasks={TASKS}
                 setTasks={function (): void {

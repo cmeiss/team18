@@ -731,6 +731,729 @@ FAIL src/dist/TaskFunctions.test.js
 
       at Object.<anonymous> (src/dist/TaskFunctions.test.js:265:26)
 
+FAIL src/dist/App.test.js
+  ● Test suite failed to run
+
+    Cannot find module './list-components/CentralItemList' from 'src/dist/App.test.js'
+
+       7 | var react_2 = require("@testing-library/react");
+       8 | var TASKS_1 = require("./TASKS");
+    >  9 | var CentralItemList_1 = require("./list-components/CentralItemList");
+         |                         ^
+      10 | var UserList_1 = require("./list-components/UserList");
+      11 | var adminlist_1 = require("./list-components/adminlist");
+      12 | var deleteTask_component_1 = require("./list-components/deleteTask-component");
+
+      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
+      at Object.<anonymous> (src/dist/App.test.js:9:25)
+
+FAIL src/App.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:63:9)
+
+    console.error
+      Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
+          at div
+          at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
+          at div
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at div
+          at DisplayCorrectList
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:20:35)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+
+    console.error
+      Warning: validateDOMNesting(...): <ol> cannot appear as a descendant of <p>.
+          at ol
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at div
+          at DisplayCorrectList
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:20:35)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:79:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:79:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:95:31)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:79:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:108:31)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:124:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:124:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      137 |     });
+      138 |     test("list not seen by super", () => {
+    > 139 |         const { container } = render(
+          |                               ^
+      140 |             <AdminList
+      141 |                 users={users}
+      142 |                 setUsers={setUsers}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/App.test.tsx:139:31)
+
+    console.error
+      Error: Uncaught [Invariant Violation: Expected drag drop context]
+          at reportException (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:27451:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26560:12) Invariant Violation: Expected drag drop context
+          at invariant (/home/runner/work/team18/team18/node_modules/@react-dnd/invariant/src/index.ts:28:12)
+          at useDragDropManager (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDragDropManager.ts:12:2)
+          at useDropTargetMonitor (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDrop/useDropTargetMonitor.ts:8:18)
+          at useDrop (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDrop/useDrop.ts:26:18)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:29:32)
+          at renderWithHooks (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
+          at mountIndeterminateComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
+          at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+          at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+          at invokeGuardedCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+          at beginWork$1 (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:27451:7)
+          at performUnitOfWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26560:12)
+          at workLoopSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+          at renderRootSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+          at performSyncWorkOnRoot (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26085:20)
+          at flushSyncCallbacks (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+          at flushSync (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:26201:7)
+          at legacyCreateRootFromDOMContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:29575:5)
+          at legacyRenderSubtreeIntoContainer (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:29601:12)
+          at Object.render (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:29685:10)
+          at /home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:101:25
+          at act (/home/runner/work/team18/team18/node_modules/react/cjs/react.development.js:2512:16)
+          at render (/home/runner/work/team18/team18/node_modules/@testing-library/react/dist/pure.js:97:26)
+          at Object.<anonymous> (/home/runner/work/team18/team18/src/App.test.tsx:139:31)
+          at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:218:40)
+          at _runTest (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:155:3)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/team18/team18/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/team18/team18/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/team18/team18/node_modules/jest-runner/build/runTest.js:475:34) {
+        framesToPop: 1
+      }
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+
+    console.error
+      The above error occurred in the <AdminList> component:
+      
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:23:29)
+      
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+      at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
+      at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
+      at callCallback (node_modules/react-dom/cjs/react-dom.development.js:13923:12)
+      at commitUpdateQueue (node_modules/react-dom/cjs/react-dom.development.js:13944:9)
+      at commitLayoutEffectOnFiber (node_modules/react-dom/cjs/react-dom.development.js:23391:13)
+      at commitLayoutMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24688:9)
+      at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
+      at commitLayoutEffects (node_modules/react-dom/cjs/react-dom.development.js:24612:3)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:124:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:151:31)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/App.test.tsx:165:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      180 | describe("Add tasks tests", () => {
+      181 |     beforeEach(() =>
+    > 182 |         render(
+          |         ^
+      183 |             <AddTask
+      184 |                 tasks={TASKS}
+      185 |                 setTasks={
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/App.test.tsx:182:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      199 | describe("Testing EditTask", () => {
+      200 |     beforeEach(() => {
+    > 201 |         render(
+          |         ^
+      202 |             <EditTask tasks={TASKS} updateTasks={setTasks} task={testTask} />
+      203 |         );
+      204 |     });
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/App.test.tsx:201:9)
+
+  ● Tesing Central Item List in App › list is displayed
+
+    TestingLibraryElementError: Unable to find an element with the text: Sample Tasks. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"central-list"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"row"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"col"[39m
+            [36m>[39m
+              [36m<h2>[39m
+                [0m Central Item List [0m
+              [36m</h2>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"col"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Centralsort-dropdown"[39m
+              [36m>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"Centralsort-dropbtn"[39m
+                [36m>[39m
+                  [0mSort by ▾[0m
+                [36m</button>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"Centralsort-options"[39m
+                [36m>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mAlphabetical[0m
+                    [0m [0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mDifficulty[0m
+                    [0m [0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mTime [0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mNumber Users (Low to High)[0m
+                    [0m [0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mReset[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"central-tasks"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mHomework[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"homework.jpg"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mHomework[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mGet it done before the deadline.[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m0[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1800[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m/>[39m
+                  [36m<div>[39m
+                    [36m<div>[39m
+                      [0mNumber of Users: [0m
+                      [0m0[0m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mGet gas[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"gas.jpg"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask...
+
+      70 |     });
+      71 |     test("list is displayed", () => {
+    > 72 |         const listDisplayed = screen.getByText("Sample Tasks");
+         |                                      ^
+      73 |         expect(listDisplayed).toBeInTheDocument();
+      74 |     });
+      75 | });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/App.test.tsx:72:38)
+
+  ● Tesing Admin List in App › list not seen by super
+
+    Invariant Violation: Expected drag drop context
+
+      27 |     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
+      28 |
+    > 29 |     const [{ isOver }, drop] = useDrop({
+         |                                ^
+      30 |         accept: "task",
+      31 |         drop: (item: Task) => addTaskToAdminList(item.id),
+      32 |         collect: (monitor) => ({
+
+      at invariant (node_modules/@react-dnd/invariant/src/index.ts:28:12)
+      at useDragDropManager (node_modules/react-dnd/src/hooks/useDragDropManager.ts:12:2)
+      at useDropTargetMonitor (node_modules/react-dnd/src/hooks/useDrop/useDropTargetMonitor.ts:8:18)
+      at useDrop (node_modules/react-dnd/src/hooks/useDrop/useDrop.ts:26:18)
+      at AdminList (src/list-components/adminlist.tsx:29:32)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20074:13)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+      at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27426:14)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26560:12)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:26085:20)
+      at flushSyncCallbacks (node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at flushSync (node_modules/react-dom/cjs/react-dom.development.js:26201:7)
+      at legacyCreateRootFromDOMContainer (node_modules/react-dom/cjs/react-dom.development.js:29575:5)
+      at legacyRenderSubtreeIntoContainer (node_modules/react-dom/cjs/react-dom.development.js:29601:12)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29685:10)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/App.test.tsx:139:31)
+
+  ● Tesing Admin List in App › list not seen by user
+
+    expect(element).toBeEmptyDOMElement()
+
+    Received:
+      "<div class=\"pending-list\"><div class=\"row\"><div class=\"col\"><div class=\"trashClosed\"><img src=\"trashCanClosed.jpg\" width=\"100px\"></div></div><div class=\"col\"><h2> Pending List </h2></div><div class=\"col\"><div class=\"Pendingsort-dropdown\"><button class=\"Pendingsort-dropbtn\">Sort by ▾</button><div class=\"Pendingsort-options\"><button type=\"button\" class=\"btn btn-primary\">Alphabetical </button><button type=\"button\" class=\"btn btn-primary\">Difficulty </button><button type=\"button\" class=\"btn btn-primary\">Time </button><button type=\"button\" class=\"btn btn-primary\">Reset</button></div></div></div></div><div class=\"pending-tasks\" style=\"background-color: white;\"></div></div>"
+
+      158 |             ></AdminList>
+      159 |         );
+    > 160 |         expect(container).toBeEmptyDOMElement();
+          |                           ^
+      161 |     });
+      162 | });
+      163 | describe("Testing Delete task in App", () => {
+
+      at Object.<anonymous> (src/App.test.tsx:160:27)
+
+  ● Testing EditTask › edit Task button appears
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Edit ✏️":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      204 |     });
+      205 |     test("edit Task button appears", () => {
+    > 206 |         const editButton = screen.getByRole("button", { name: "Edit Task" });
+          |                                   ^
+      207 |         expect(editButton).toBeInTheDocument();
+      208 |     });
+      209 | });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/App.test.tsx:206:35)
+
 FAIL src/list-components/filterlists.test.tsx
   ● filter › Testing the filter by time needed function
 
@@ -1032,189 +1755,3126 @@ FAIL src/list-components/filterlists.test.tsx
 
       at Object.<anonymous> (src/list-components/filterlists.test.tsx:159:46)
 
-FAIL src/App.test.tsx
-  ● Test suite failed to run
-
-    Jest encountered an unexpected token
-
-    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
-
-    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
-
-    By default "node_modules" folder is ignored by transformers.
-
-    Here's what you can do:
-     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
-     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
-     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
-     • If you need a custom transformation specify a "transform" option in your config.
-     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
-
-    You'll find more details and examples of these config options in the docs:
-    https://jestjs.io/docs/configuration
-    For information about custom transformations, see:
-    https://jestjs.io/docs/code-transformation
-
-    Details:
-
-    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
-    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
-                                                                                      ^^^^^^
-
-    SyntaxError: Unexpected token 'export'
-
-      4 | import { EditTask } from "../editing-components/EditTask";
-      5 | import "./DisplayTask.css";
-    > 6 | import { useDrag } from "react-dnd";
-        | ^
-      7 | import { EditStatus } from "../editing-components/EditStatus";
-      8 |
-      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
-
-      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
-      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
-
-FAIL src/dist/App.test.js
-  ● Test suite failed to run
-
-    Cannot find module './list-components/CentralItemList' from 'src/dist/App.test.js'
-
-       5 | var react_2 = require("@testing-library/react");
-       6 | var TASKS_1 = require("./TASKS");
-    >  7 | var CentralItemList_1 = require("./list-components/CentralItemList");
-         |                         ^
-       8 | var UserList_1 = require("./list-components/UserList");
-       9 | var adminlist_1 = require("./list-components/adminlist");
-      10 | var deleteTask_component_1 = require("./list-components/deleteTask-component");
-
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/dist/App.test.js:7:25)
-
 FAIL src/list-components/UserList.test.tsx
-  ● Test suite failed to run
+  ● Console
 
-    Jest encountered an unexpected token
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
 
-    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:70:9)
 
-    By default "node_modules" folder is ignored by transformers.
+    console.error
+      Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
+          at div
+          at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
+          at div
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at div
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:27:5)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
-    Here's what you can do:
-     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
-     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
-     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
-     • If you need a custom transformation specify a "transform" option in your config.
-     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
 
-    You'll find more details and examples of these config options in the docs:
-    https://jestjs.io/docs/configuration
-    For information about custom transformations, see:
-    https://jestjs.io/docs/code-transformation
+    console.error
+      Warning: validateDOMNesting(...): <ol> cannot appear as a descendant of <p>.
+          at ol
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at div
+          at div
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:27:5)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
-    Details:
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
 
-    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
-    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
-                                                                                      ^^^^^^
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-    SyntaxError: Unexpected token 'export'
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
 
-      4 | import { EditTask } from "../editing-components/EditTask";
-      5 | import "./DisplayTask.css";
-    > 6 | import { useDrag } from "react-dnd";
-        | ^
-      7 | import { EditStatus } from "../editing-components/EditStatus";
-      8 |
-      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:70:9)
 
-      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
-      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:70:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:99:31)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:115:31)
+
+  ● Testing User List › Check presence of header
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "heading" and name `/List/i`
+
+    Here are the accessible roles:
+
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33msrc[39m=[32m"trashCanClosed.jpg"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      heading:
+
+      Name "user1's Schedule":
+      [36m<h2 />[39m
+
+      Name "test1":
+      [36m<h4 />[39m
+
+      Name "test2":
+      [36m<h4 />[39m
+
+      Name "test3":
+      [36m<h4 />[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "Sort by ▾":
+      [36m<button[39m
+        [33mclass[39m=[32m"Usersort-dropbtn"[39m
+      [36m/>[39m
+
+      Name "Alphabetical":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "Difficulty":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "Time Needed":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "Search:":
+      [36m<button[39m
+        [33mclass[39m=[32m"btn btn-primary"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test1":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test2":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test3":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"UserList"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"row"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"col"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"trashClosed"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33msrc[39m=[32m"trashCanClosed.jpg"[39m
+                  [33mwidth[39m=[32m"100px"[39m
+                [36m/>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"col"[39m
+            [36m>[39m
+              [36m<h2>[39m
+                [0muser1[0m
+                [0m's Schedule[0m
+              [36m</h2>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"col"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Usersort-dropdown"[39m
+              [36m>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"Usersort-dropbtn"[39m
+                [36m>[39m
+                  [0mSort by ▾[0m
+                [36m</button>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"Usersort-options"[39m
+                [36m>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mAlphabetical[0m
+                    [0m [0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mDifficulty[0m
+                    [0m [0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mTime Needed[0m
+                    [0m [0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"row"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mSearch:[0m
+            [36m</button>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"userTaskList"[39m
+            [33mstyle[39m=[32m"background-color: white;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest1[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest1[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mdescription a[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest2[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest2[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mthis is the description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest3[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest3[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0ma good description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      90 |     });
+      91 |     test("Check presence of header", () => {
+    > 92 |         const header = screen.getByRole("heading", { name: /List/i });
+         |                               ^
+      93 |         expect(header).toBeInTheDocument();
+      94 |     });
+      95 | });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/UserList.test.tsx:92:31)
 
 FAIL src/list-components/CentralItemList.test.tsx
-  ● Test suite failed to run
+  ● Console
 
-    Jest encountered an unexpected token
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
 
-    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:60:9)
 
-    By default "node_modules" folder is ignored by transformers.
+    console.log
+      Central Item List
 
-    Here's what you can do:
-     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
-     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
-     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
-     • If you need a custom transformation specify a "transform" option in your config.
-     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
 
-    You'll find more details and examples of these config options in the docs:
-    https://jestjs.io/docs/configuration
-    For information about custom transformations, see:
-    https://jestjs.io/docs/code-transformation
+    console.log
+      {
+        id: 0,
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 0,
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 2,
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      }
 
-    Details:
+      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
 
-    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
-    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
-                                                                                      ^^^^^^
+    console.error
+      Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
+          at div
+          at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
+          at div
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at div
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:20:35)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
-    SyntaxError: Unexpected token 'export'
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
 
-      4 | import { EditTask } from "../editing-components/EditTask";
-      5 | import "./DisplayTask.css";
-    > 6 | import { useDrag } from "react-dnd";
-        | ^
-      7 | import { EditStatus } from "../editing-components/EditStatus";
-      8 |
-      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
+    console.error
+      Warning: validateDOMNesting(...): <ol> cannot appear as a descendant of <p>.
+          at ol
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at div
+          at div
+          at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:20:35)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
-      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
-      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:60:9)
+
+    console.log
+      Central Item List
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+
+    console.log
+      {
+        id: 0,
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 0,
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 2,
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      }
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:60:9)
+
+    console.log
+      Central Item List
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+
+    console.log
+      {
+        id: 0,
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 0,
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 2,
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      }
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:87:9)
+
+    console.log
+      Central Item List
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+
+    console.log
+      {
+        id: 0,
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 0,
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 2,
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      }
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:87:9)
+
+    console.log
+      Central Item List
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+
+    console.log
+      {
+        id: 0,
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 0,
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 2,
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      }
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:110:9)
+
+    console.log
+      Central Item List
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+
+    console.log
+      {
+        id: 0,
+        name: 'test1',
+        description: 'description a',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 0,
+        name: 'test2',
+        description: 'this is the description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      } {
+        id: 2,
+        name: 'test3',
+        description: 'a good description',
+        status: false,
+        image: 'picture',
+        steps: [ 'a', 'b', 'c', 'GutenTag', '469476' ],
+        difficulty: 3,
+        numUsers: 2,
+        time: '1345',
+        pendingMode: false
+      }
+
+      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+
+  ● CentralItemList with Role super › There is a button to add tasks if role is super
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add Task/i`
+
+    Here are the accessible roles:
+
+      heading:
+
+      Name "Sample Tasks":
+      [36m<h2 />[39m
+
+      Name "test1":
+      [36m<h4 />[39m
+
+      Name "test2":
+      [36m<h4 />[39m
+
+      Name "test3":
+      [36m<h4 />[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "test1":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test2":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test3":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"central-list"[39m
+        [36m>[39m
+          [36m<h2>[39m
+            [0m Sample Tasks [0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"central-tasks"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest1[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest1[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mdescription a[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest2[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest2[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mthis is the description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest3[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest3[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0ma good description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      71 |     //test2: check that there is a button to add a task if role is super
+      72 |     test("There is a button to add tasks if role is super", () => {
+    > 73 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
+         |                                   ^
+      74 |         expect(addTButton).toBeInTheDocument();
+      75 |     });
+      76 |     //test3: there is a button to add a user if the role is super
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:73:35)
+
+  ● CentralItemList with Role super › There is a button to add a user
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add User/i`
+
+    Here are the accessible roles:
+
+      heading:
+
+      Name "Sample Tasks":
+      [36m<h2 />[39m
+
+      Name "test1":
+      [36m<h4 />[39m
+
+      Name "test2":
+      [36m<h4 />[39m
+
+      Name "test3":
+      [36m<h4 />[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "test1":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test2":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test3":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"central-list"[39m
+        [36m>[39m
+          [36m<h2>[39m
+            [0m Sample Tasks [0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"central-tasks"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest1[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest1[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mdescription a[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest2[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest2[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mthis is the description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest3[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest3[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0ma good description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      76 |     //test3: there is a button to add a user if the role is super
+      77 |     test("There is a button to add a user", () => {
+    > 78 |         const addUButton = screen.getByRole("button", { name: /Add User/i });
+         |                                   ^
+      79 |         expect(addUButton).toBeInTheDocument();
+      80 |     });
+      81 |     //
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:78:35)
+
+  ● CentralItemList with Role admin › There is a button to addTasks if role is admin
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add Task/i`
+
+    Here are the accessible roles:
+
+      heading:
+
+      Name "Sample Tasks":
+      [36m<h2 />[39m
+
+      Name "test1":
+      [36m<h4 />[39m
+
+      Name "test2":
+      [36m<h4 />[39m
+
+      Name "test3":
+      [36m<h4 />[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "test1":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test2":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      Name "test3":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"central-list"[39m
+        [36m>[39m
+          [36m<h2>[39m
+            [0m Sample Tasks [0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"central-tasks"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest1[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest1[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mdescription a[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest2[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest2[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0mthis is the description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"Task"[39m
+              [33mdraggable[39m=[32m"true"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+                [33mstyle[39m=[32m"border: 0px;"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h4>[39m
+                    [0mtest3[0m
+                  [36m</h4>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m""[39m
+                    [33msrc[39m=[32m"picture"[39m
+                    [33mwidth[39m=[32m"100px"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"Task-Desc"[39m
+                [33mhidden[39m=[32m""[39m
+                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+              [36m>[39m
+                [36m<p>[39m
+                  [36m<strong>[39m
+                    [0mTask: [0m
+                    [0mtest3[0m
+                  [36m</strong>[39m
+                  [36m<br />[39m
+                  [0ma good description[0m
+                  [36m<br />[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"is-done-check"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"is-done-check"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mCompletion Status: ❌[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mhidden[39m=[32m""[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mConfirm[0m
+                      [36m</button>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<br />[39m
+                  [0mDifficulty: [0m
+                  [0m3[0m
+                  [36m<br />[39m
+                  [0mTime: [0m
+                  [0m1345[0m
+                  [36m<br />[39m
+                  [0mSteps:[0m
+                  [36m<ol[39m
+                    [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0ma[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mb[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mc[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mGutenTag[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m469476[0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
+                  [36m<div>[39m
+                    [36m<div />[39m
+                  [36m</div>[39m
+                  [36m<div>[39m
+                    [36m<div[39m
+                      [33mhidden[39m=[32m""[39m
+                    [36m>[39m
+                      [36m<div>[39m
+                        [36m<button[39m
+                          [33mclass[39m=[32m"btn btn-primary"[39m
+                          [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                          [33mtype[39m=[32m"button"[39m
+                        [36m>[39m
+                          [0mEdit ✏️[0m
+                        [36m</button>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</p>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+       95 |     //testing that there is a button to addTasks if role is admin
+       96 |     test("There is a button to addTasks if role is admin", () => {
+    >  97 |         const addTButton = screen.getByRole("button", { name: /Add Task/i });
+          |                                   ^
+       98 |         expect(addTButton).toBeInTheDocument();
+       99 |     });
+      100 |     //testing that there isn't an addUserButton if role is admin
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/CentralItemList.test.tsx:97:35)
 
 FAIL src/list-components/DisplayTask.test.tsx
-  ● Test suite failed to run
+  ● Console
 
-    Jest encountered an unexpected token
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
 
-    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:72:9)
 
-    By default "node_modules" folder is ignored by transformers.
+    console.error
+      Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
+          at div
+          at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
+          at div
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
-    Here's what you can do:
-     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
-     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
-     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
-     • If you need a custom transformation specify a "transform" option in your config.
-     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
 
-    You'll find more details and examples of these config options in the docs:
-    https://jestjs.io/docs/configuration
-    For information about custom transformations, see:
-    https://jestjs.io/docs/code-transformation
+    console.error
+      Warning: validateDOMNesting(...): <ol> cannot appear as a descendant of <p>.
+          at ol
+          at p
+          at div
+          at div
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
-    Details:
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
 
-    /home/runner/work/team18/team18/node_modules/react-dnd/dist/index.js:1
-    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){export * from './core/index.js';
-                                                                                      ^^^^^^
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-    SyntaxError: Unexpected token 'export'
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
 
-      4 | import { EditTask } from "../editing-components/EditTask";
-      5 | import "./DisplayTask.css";
-    > 6 | import { useDrag } from "react-dnd";
-        | ^
-      7 | import { EditStatus } from "../editing-components/EditStatus";
-      8 |
-      9 | //this is the old interface for the display task function, I am keeping it here as a reference if we need it again
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:72:9)
 
-      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1728:14)
-      at Object.<anonymous> (src/list-components/DisplayTask.tsx:6:1)
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:72:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:72:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:72:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:72:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:72:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+       7 | export const renderWithDnd = (ui: {} | null | undefined) => {
+       8 |     // eslint-disable-next-line react/prop-types
+    >  9 |     return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
+         |            ^
+      10 | };
+      11 |
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at renderWithDnd (src/CustomRender.tsx:9:12)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:118:9)
+
+  ● DisplayView Tests › Taskname is displayed
+
+    TestingLibraryElementError: Found multiple elements with the text: /test/i
+
+    Here are the matching elements:
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<h4>[39m
+      [0mtest[0m
+    [36m</h4>[39m
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<strong>[39m
+      [0mTask: [0m
+      [0mtest[0m
+    [36m</strong>[39m
+
+    (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"Task"[39m
+          [33mdraggable[39m=[32m"true"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+            [33mstyle[39m=[32m"border: 0px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<h4>[39m
+                [0mtest[0m
+              [36m</h4>[39m
+              [36m<img[39m
+                [33malt[39m=[32m""[39m
+                [33msrc[39m=[32m"picture"[39m
+                [33mwidth[39m=[32m"100px"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"Task-Desc"[39m
+            [33mhidden[39m=[32m""[39m
+            [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+          [36m>[39m
+            [36m<p>[39m
+              [36m<strong>[39m
+                [0mTask: [0m
+                [0mtest[0m
+              [36m</strong>[39m
+              [36m<br />[39m
+              [0mthis is the description[0m
+              [36m<br />[39m
+              [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"form-check"[39m
+                [36m>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"form-check-input"[39m
+                    [33mid[39m=[32m"is-done-check"[39m
+                    [33mtype[39m=[32m"checkbox"[39m
+                  [36m/>[39m
+                  [36m<label[39m
+                    [33mclass[39m=[32m"form-check-label"[39m
+                    [33mfor[39m=[32m"is-done-check"[39m
+                    [33mtitle[39m=[32m""[39m
+                  [36m>[39m
+                    [0mCompletion Status: ❌[0m
+                  [36m</label>[39m
+                [36m</div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mhidden[39m=[32m""[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mConfirm[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<br />[39m
+              [0mDifficulty: [0m
+              [0m3[0m
+              [36m<br />[39m
+              [0mTime: [0m
+              [0m1345[0m
+              [36m<br />[39m
+              [0mSteps:[0m
+              [36m<ol[39m
+                [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0ma[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mb[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mc[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mGutenTag[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0m469476[0m
+                [36m</li>[39m
+              [36m</ol>[39m
+              [36m<div>[39m
+                [36m<div />[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit ✏️[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      80 |     });
+      81 |     test("Taskname is displayed", () => {
+    > 82 |         const taskName = screen.getByText(/test/i);
+         |                                 ^
+      83 |         expect(taskName).toBeInTheDocument();
+      84 |     });
+      85 |     test("Num of TaskUsers is there if role is super", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at getElementError (node_modules/@testing-library/dom/dist/query-helpers.js:25:35)
+      at getMultipleElementsFoundError (node_modules/@testing-library/dom/dist/query-helpers.js:29:10)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:66:13
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:82:33)
+
+  ● DisplayView Tests › Num of TaskUsers is there if role is super
+
+    TestingLibraryElementError: Unable to find an element with the text: /Number of Users/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"Task"[39m
+          [33mdraggable[39m=[32m"true"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+            [33mstyle[39m=[32m"border: 0px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<h4>[39m
+                [0mtest[0m
+              [36m</h4>[39m
+              [36m<img[39m
+                [33malt[39m=[32m""[39m
+                [33msrc[39m=[32m"picture"[39m
+                [33mwidth[39m=[32m"100px"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"Task-Desc"[39m
+            [33mhidden[39m=[32m""[39m
+            [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+          [36m>[39m
+            [36m<p>[39m
+              [36m<strong>[39m
+                [0mTask: [0m
+                [0mtest[0m
+              [36m</strong>[39m
+              [36m<br />[39m
+              [0mthis is the description[0m
+              [36m<br />[39m
+              [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"form-check"[39m
+                [36m>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"form-check-input"[39m
+                    [33mid[39m=[32m"is-done-check"[39m
+                    [33mtype[39m=[32m"checkbox"[39m
+                  [36m/>[39m
+                  [36m<label[39m
+                    [33mclass[39m=[32m"form-check-label"[39m
+                    [33mfor[39m=[32m"is-done-check"[39m
+                    [33mtitle[39m=[32m""[39m
+                  [36m>[39m
+                    [0mCompletion Status: ❌[0m
+                  [36m</label>[39m
+                [36m</div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mhidden[39m=[32m""[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mConfirm[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<br />[39m
+              [0mDifficulty: [0m
+              [0m3[0m
+              [36m<br />[39m
+              [0mTime: [0m
+              [0m1345[0m
+              [36m<br />[39m
+              [0mSteps:[0m
+              [36m<ol[39m
+                [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0ma[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mb[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mc[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mGutenTag[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0m469476[0m
+                [36m</li>[39m
+              [36m</ol>[39m
+              [36m<div>[39m
+                [36m<div />[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit ✏️[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      84 |     });
+      85 |     test("Num of TaskUsers is there if role is super", () => {
+    > 86 |         const UserNum = screen.getByText(/Number of Users/i);
+         |                                ^
+      87 |         expect(UserNum).toBeInTheDocument();
+      88 |     });
+      89 |     test("There is a checkbox", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:86:32)
+
+  ● DisplayView Tests › There is a checkbox
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "checkbox" and name `/❌/i`
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "test":
+      [36m<button[39m
+        [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+        [33mstyle[39m=[32m"border: 0px;"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      heading:
+
+      Name "test":
+      [36m<h4 />[39m
+
+      --------------------------------------------------
+      img:
+
+      Name "":
+      [36m<img[39m
+        [33malt[39m=[32m""[39m
+        [33msrc[39m=[32m"picture"[39m
+        [33mwidth[39m=[32m"100px"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"Task"[39m
+          [33mdraggable[39m=[32m"true"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+            [33mstyle[39m=[32m"border: 0px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<h4>[39m
+                [0mtest[0m
+              [36m</h4>[39m
+              [36m<img[39m
+                [33malt[39m=[32m""[39m
+                [33msrc[39m=[32m"picture"[39m
+                [33mwidth[39m=[32m"100px"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"Task-Desc"[39m
+            [33mhidden[39m=[32m""[39m
+            [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+          [36m>[39m
+            [36m<p>[39m
+              [36m<strong>[39m
+                [0mTask: [0m
+                [0mtest[0m
+              [36m</strong>[39m
+              [36m<br />[39m
+              [0mthis is the description[0m
+              [36m<br />[39m
+              [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"form-check"[39m
+                [36m>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"form-check-input"[39m
+                    [33mid[39m=[32m"is-done-check"[39m
+                    [33mtype[39m=[32m"checkbox"[39m
+                  [36m/>[39m
+                  [36m<label[39m
+                    [33mclass[39m=[32m"form-check-label"[39m
+                    [33mfor[39m=[32m"is-done-check"[39m
+                    [33mtitle[39m=[32m""[39m
+                  [36m>[39m
+                    [0mCompletion Status: ❌[0m
+                  [36m</label>[39m
+                [36m</div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mhidden[39m=[32m""[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mConfirm[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<br />[39m
+              [0mDifficulty: [0m
+              [0m3[0m
+              [36m<br />[39m
+              [0mTime: [0m
+              [0m1345[0m
+              [36m<br />[39m
+              [0mSteps:[0m
+              [36m<ol[39m
+                [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0ma[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mb[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mc[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mGutenTag[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0m469476[0m
+                [36m</li>[39m
+              [36m</ol>[39m
+              [36m<div>[39m
+                [36m<div />[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit ✏️[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      88 |     });
+      89 |     test("There is a checkbox", () => {
+    > 90 |         const doneCheckbox = screen.getByRole("checkbox", {
+         |                                     ^
+      91 |             name: /❌/i || /✔️/i
+      92 |         });
+      93 |         expect(doneCheckbox).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:90:37)
+
+  ● DisplayView Tests › Description of the task is displayed
+
+    TestingLibraryElementError: Unable to find an element with the text: this is the description. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"Task"[39m
+          [33mdraggable[39m=[32m"true"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
+            [33mstyle[39m=[32m"border: 0px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<h4>[39m
+                [0mtest[0m
+              [36m</h4>[39m
+              [36m<img[39m
+                [33malt[39m=[32m""[39m
+                [33msrc[39m=[32m"picture"[39m
+                [33mwidth[39m=[32m"100px"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"Task-Desc"[39m
+            [33mhidden[39m=[32m""[39m
+            [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
+          [36m>[39m
+            [36m<p>[39m
+              [36m<strong>[39m
+                [0mTask: [0m
+                [0mtest[0m
+              [36m</strong>[39m
+              [36m<br />[39m
+              [0mthis is the description[0m
+              [36m<br />[39m
+              [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"form-check"[39m
+                [36m>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"form-check-input"[39m
+                    [33mid[39m=[32m"is-done-check"[39m
+                    [33mtype[39m=[32m"checkbox"[39m
+                  [36m/>[39m
+                  [36m<label[39m
+                    [33mclass[39m=[32m"form-check-label"[39m
+                    [33mfor[39m=[32m"is-done-check"[39m
+                    [33mtitle[39m=[32m""[39m
+                  [36m>[39m
+                    [0mCompletion Status: ❌[0m
+                  [36m</label>[39m
+                [36m</div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mhidden[39m=[32m""[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mConfirm[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<br />[39m
+              [0mDifficulty: [0m
+              [0m3[0m
+              [36m<br />[39m
+              [0mTime: [0m
+              [0m1345[0m
+              [36m<br />[39m
+              [0mSteps:[0m
+              [36m<ol[39m
+                [33mstyle[39m=[32m"list-style-type: decimal;"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0ma[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mb[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mc[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mGutenTag[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0m469476[0m
+                [36m</li>[39m
+              [36m</ol>[39m
+              [36m<div>[39m
+                [36m<div />[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<div>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mEdit ✏️[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</p>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      94 |     });
+      95 |     test("Description of the task is displayed", () => {
+    > 96 |         const desc = screen.getByText(testTask.description);
+         |                             ^
+      97 |         expect(desc).toBeInTheDocument();
+      98 |     });
+      99 |     test("Steps are displayed", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:96:29)
 
 FAIL src/editing-components/EditTask.test.tsx
   ● Console
@@ -1351,52 +5011,6 @@ FAIL src/editing-components/EditTask.test.tsx
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
-
-  ● Testing EditTask › There is an edit Task button
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      68 |     });
-      69 |     test("There is an edit Task button", () => {
-    > 70 |         const editButton = screen.getByRole("button", { name: "Edit Task" });
-         |                                   ^
-      71 |         expect(editButton).toBeInTheDocument();
-      72 |     });
-      73 | });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:70:35)
 
   ● Testing EditTask › There is a button to save changes
 
@@ -3464,66 +7078,6 @@ FAIL src/editing-components/edit-difficulty.test.tsx
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:13:9)
 
-  ● testing edit difficulty component › component displays
-
-    TestingLibraryElementError: Unable to find an element with the text: Change Difficulty: . This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<span[39m
-          [33mclass[39m=[32m"fs-8"[39m
-          [33mstyle[39m=[32m"font-weight: bold;"[39m
-        [36m>[39m
-          [0mChange Difficulty: [0m
-          [36m<br />[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-        [36m</span>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      19 |     });
-      20 |     test("component displays", () => {
-    > 21 |         const compDisplayed = screen.getByText("Change Difficulty: ");
-         |                                      ^
-      22 |         expect(compDisplayed).toBeInTheDocument();
-      23 |     });
-      24 |     test("difficulty is updating", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:21:38)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
   ● testing edit difficulty component › difficulty is updating
 
     TestingLibraryElementError: Unable to find a label with the text of: Change Difficulty:
@@ -3584,44 +7138,45 @@ FAIL src/editing-components/edit-difficulty.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
----------------------------|---------|----------|---------|---------|-------------------
-File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
----------------------------|---------|----------|---------|---------|-------------------
-All files                  |   21.22 |    11.53 |   21.73 |   21.73 |                   
- src                       |      32 |      100 |   56.52 |   33.33 |                   
-  App.tsx                  |       0 |      100 |       0 |       0 | 10                
-  TASKS.tsx                |       0 |      100 |     100 |       0 | 3                 
-  TaskFunctions.ts         |     100 |      100 |     100 |     100 |                   
-  user-functions.ts        |       0 |      100 |       0 |       0 | 7-62              
-  user-tests.tsx           |       0 |      100 |       0 |       0 | 6-63              
- src/editing-components    |   41.66 |       30 |   22.22 |    43.1 |                   
-  EditDescription.tsx      |       0 |      100 |       0 |       0 | 14-17             
-  EditStatus.tsx           |       0 |        0 |       0 |       0 | 15-85             
-  EditSteps.tsx            |       0 |      100 |       0 |       0 | 11-19             
-  EditTask.tsx             |      60 |    16.66 |   14.28 |   63.15 | 36-73,119         
-  EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24    
-  Times.tsx                |     100 |      100 |     100 |     100 |                   
-  edit-difficulty.tsx      |      60 |       50 |      50 |      60 | 10,25             
- src/interfaces            |       0 |        0 |       0 |       0 |                   
-  task.ts                  |       0 |        0 |       0 |       0 |                   
-  user.ts                  |       0 |        0 |       0 |       0 |                   
- src/list-components       |   15.17 |     9.67 |   15.09 |   15.47 |                   
-  CentralItemList.tsx      |       0 |        0 |       0 |       0 | 21-147            
-  ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18             
-  DisplayTask.tsx          |       0 |        0 |       0 |       0 | 31-86             
-  ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37             
-  UserList.tsx             |       0 |        0 |       0 |       0 | 34-291            
-  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-85             
-  adminlist.tsx            |       0 |        0 |       0 |       0 | 24-215            
-  deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27             
-  filterlists.tsx          |      85 |       25 |     100 |   89.47 | 24-25             
-  search.tsx               |       0 |      100 |       0 |       0 | 7-10              
- src/pages                 |       0 |        0 |       0 |       0 |                   
-  AboutPage.tsx            |       0 |      100 |       0 |       0 | 8                 
-  taskPage.tsx             |       0 |        0 |       0 |       0 | 25-52             
----------------------------|---------|----------|---------|---------|-------------------
+---------------------------|---------|----------|---------|---------|------------------------------------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                              
+---------------------------|---------|----------|---------|---------|------------------------------------------------
+All files                  |   36.41 |    30.12 |   37.03 |   36.75 |                                                
+ src                       |   36.53 |      100 |   58.33 |      38 |                                                
+  App.tsx                  |       0 |      100 |       0 |       0 | 10                                             
+  CustomRender.tsx         |     100 |      100 |     100 |     100 |                                                
+  TASKS.tsx                |     100 |      100 |     100 |     100 |                                                
+  TaskFunctions.ts         |     100 |      100 |     100 |     100 |                                                
+  user-functions.ts        |       0 |      100 |       0 |       0 | 7-62                                           
+  user-tests.tsx           |       0 |      100 |       0 |       0 | 6-63                                           
+ src/editing-components    |   46.66 |       35 |   25.92 |   48.27 |                                                
+  EditDescription.tsx      |       0 |      100 |       0 |       0 | 14-17                                          
+  EditStatus.tsx           |   27.27 |       25 |   14.28 |      30 | 15,21-40,72-85                                 
+  EditSteps.tsx            |       0 |      100 |       0 |       0 | 11-19                                          
+  EditTask.tsx             |      60 |    16.66 |   14.28 |   63.15 | 36-73,119                                      
+  EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24                                 
+  Times.tsx                |     100 |      100 |     100 |     100 |                                                
+  edit-difficulty.tsx      |      60 |       50 |      50 |      60 | 10,25                                          
+ src/interfaces            |       0 |        0 |       0 |       0 |                                                
+  task.ts                  |       0 |        0 |       0 |       0 |                                                
+  user.ts                  |       0 |        0 |       0 |       0 |                                                
+ src/list-components       |    35.4 |    32.25 |   36.79 |   35.31 |                                                
+  CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,147                                
+  ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18                                          
+  DisplayTask.tsx          |   83.33 |       75 |      75 |   83.33 | 52                                             
+  ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37                                          
+  UserList.tsx             |    18.3 |     17.3 |   16.66 |   18.57 | 40-58,67,74-159,180-181,188,203-209,230-257    
+  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-85                                          
+  adminlist.tsx            |   26.98 |    23.07 |      32 |   26.22 | 31,38-70,97-98,105,120-135,148,166-176,204-215 
+  deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27                                          
+  filterlists.tsx          |      85 |       25 |     100 |   89.47 | 24-25                                          
+  search.tsx               |       0 |      100 |       0 |       0 | 7-10                                           
+ src/pages                 |       0 |        0 |       0 |       0 |                                                
+  AboutPage.tsx            |       0 |      100 |       0 |       0 | 8                                              
+  taskPage.tsx             |       0 |        0 |       0 |       0 | 25-52                                          
+---------------------------|---------|----------|---------|---------|------------------------------------------------
 Test Suites: 17 failed, 17 total
-Tests:       52 failed, 6 passed, 58 total
+Tests:       62 failed, 25 passed, 87 total
 Snapshots:   0 total
-Time:        13.626 s
+Time:        15.533 s
 Ran all test suites.

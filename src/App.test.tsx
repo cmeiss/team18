@@ -10,8 +10,6 @@ import { AdminList } from "./list-components/adminlist";
 import { DeleteTask } from "./list-components/deleteTask-component";
 import { AddTask } from "./list-components/addTask";
 import { EditTask } from "./editing-components/EditTask";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
 import { renderWithDnd } from "./CustomRender";
 
 const testTask = {

@@ -1,7 +1,8 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { DisplayTask } from "./DisplayTask";
 import { Task } from "../interfaces/task";
+import { renderWithDnd } from "../CustomRender";
 
 const testTask = {
     id: 0,
@@ -68,7 +69,7 @@ const testRole2 = "admin";
 //testing with role being super
 describe("DisplayView Tests", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <DisplayTask
                 task={testTask}
                 tasks={tasks}
@@ -114,7 +115,7 @@ describe("DisplayView Tests", () => {
 //testing with role being admin
 describe("DisplayView Tests", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <DisplayTask
                 task={testTask}
                 tasks={tasks}

@@ -1,8 +1,9 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { UserList } from "./UserList";
 import { User } from "../interfaces/user";
 import { Task } from "../interfaces/task";
+import { renderWithDnd } from "../CustomRender";
 
 const TaskList = [
     {
@@ -66,7 +67,7 @@ const users = [User1, User2, User3];
 
 describe("Testing User List", () => {
     beforeEach(() => {
-        render(
+        renderWithDnd(
             <UserList
                 users={users}
                 setUsers={setUsers}
@@ -95,7 +96,7 @@ describe("Testing User List", () => {
 
 describe("Testing that user list is not displayed if role is super", () => {
     test("test for empty DOM element", () => {
-        const { container } = render(
+        const { container } = renderWithDnd(
             <UserList
                 users={users}
                 setUsers={setUsers}
@@ -111,7 +112,7 @@ describe("Testing that user list is not displayed if role is super", () => {
 
 describe("Testing that user list is not displayed if role is admin", () => {
     test("test for empty DOM element", () => {
-        const { container } = render(
+        const { container } = renderWithDnd(
             <UserList
                 users={users}
                 setUsers={setUsers}

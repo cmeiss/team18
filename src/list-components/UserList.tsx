@@ -31,9 +31,7 @@ export function UserList({
     setTasks,
     setUsers
 }: UserProps): JSX.Element {
-    const [TaskSearched, setTaskSearched] = useState<string>(
-        "hfaodfhqui3q47r543777777777777777777777777777777"
-    );
+    const [TaskSearched, setTaskSearched] = useState<string>("");
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
     function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {

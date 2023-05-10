@@ -34,6 +34,10 @@ function App(): JSX.Element {
                 <hgroup>
                     <h1>TimeWise</h1>
                     <i>Never waste another second</i>
+                    <p>
+                        Build your dream schedule today by clicking the build
+                        schedule button
+                    </p>
                 </hgroup>
             </header>
         </div>

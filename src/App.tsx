@@ -8,7 +8,7 @@ import TaskPage from "./pages/taskPage";
 
 function App(): JSX.Element {
     return (
-        <hgroup>
+        <div className="App">
             <nav
                 className="navbar
                         "
@@ -21,7 +21,7 @@ function App(): JSX.Element {
                         <Link to="/taskpage">Schedule Builder</Link>
                     </li>
                     <li>
-                        <Link to="/">Home Page</Link>
+                        <Link to="/hompage">Home Page</Link>
                     </li>
                 </ul>
             </nav>
@@ -30,7 +30,13 @@ function App(): JSX.Element {
                 <Route path="/taskpage" element={<TaskPage />}></Route>
                 <Route path="/" element={App}></Route>
             </Routes>
-        </hgroup>
+            <header className="App-header">
+                <hgroup>
+                    <h1>TimeWise</h1>
+                    <i>Never waste another second</i>
+                </hgroup>
+            </header>
+        </div>
     );
 }
 

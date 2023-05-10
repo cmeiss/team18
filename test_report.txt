@@ -747,7 +747,7 @@ FAIL src/dist/App.test.js
       at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
       at Object.<anonymous> (src/dist/App.test.js:9:25)
 
-FAIL src/App.test.tsx
+FAIL src/App.test.tsx (5.034 s)
   ● Console
 
     console.error
@@ -7165,7 +7165,7 @@ All files                  |   36.41 |    30.12 |   37.03 |   36.75 |
   ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18                                          
   DisplayTask.tsx          |   83.33 |       75 |      75 |   83.33 | 52                                             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37                                          
-  UserList.tsx             |    18.3 |     17.3 |   16.66 |   18.57 | 40-58,67,74-159,180-181,188,203-209,230-257    
+  UserList.tsx             |    18.3 |     17.3 |   16.66 |   18.57 | 38-56,65,72-157,178-179,186,201-207,228-255    
   addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-85                                          
   adminlist.tsx            |   26.98 |    23.07 |      32 |   26.22 | 31,38-70,97-98,105,120-135,148,166-176,204-215 
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27                                          
@@ -7178,5 +7178,5 @@ All files                  |   36.41 |    30.12 |   37.03 |   36.75 |
 Test Suites: 17 failed, 17 total
 Tests:       62 failed, 25 passed, 87 total
 Snapshots:   0 total
-Time:        18.815 s
+Time:        19.136 s
 Ran all test suites.

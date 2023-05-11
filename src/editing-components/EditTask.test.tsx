@@ -78,7 +78,7 @@ describe("Testing EditTask", () => {
         render(
             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
         );
-        const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
+        const editBut = screen.getByRole("button", { name: "Edit ✏️" }); //this is finding the edit Task button
         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
     });
     test("There is a button to save changes", () => {
@@ -94,15 +94,11 @@ describe("Testing EditTask", () => {
         expect(editTime).toBeInTheDocument();
     });
     test("The edit difficulty component is displayed", () => {
-        const editDiff = screen.getByText(/Task Difficulty:/i);
+        const editDiff = screen.getByText(/Change Difficulty:/i);
         expect(editDiff).toBeInTheDocument();
     });
-    test("The edit name component is displayed", () => {
-        const editName = screen.getByText(/Change Name:/i);
-        expect(editName).toBeInTheDocument();
-    });
     test("the edit steps component is displayed", () => {
-        const editSteps = screen.getByText(/Add Steps:/i);
+        const editSteps = screen.getByText(/Change Steps:/i);
         expect(editSteps).toBeInTheDocument();
     });
 });

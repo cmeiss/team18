@@ -6,12 +6,12 @@ exports.__esModule = true;
 var react_1 = require("react");
 var react_2 = require("@testing-library/react");
 var TASKS_1 = require("./TASKS");
-var CentralItemList_1 = require("./list-components/CentralItemList");
-var UserList_1 = require("./list-components/UserList");
-var adminlist_1 = require("./list-components/adminlist");
-var deleteTask_component_1 = require("./list-components/deleteTask-component");
-var addTask_1 = require("./list-components/addTask");
-var EditTask_1 = require("./editing-components/EditTask");
+var CentralItemList_1 = require("../list-components/CentralItemList");
+var UserList_1 = require("../list-components/UserList");
+var adminlist_1 = require("../list-components/adminlist");
+var deleteTask_component_1 = require("../list-components/deleteTask-component");
+var addTask_1 = require("../list-components/addTask");
+var EditTask_1 = require("../editing-components/EditTask");
 var testTask = {
     id: 1,
     name: "test1",
@@ -192,7 +192,7 @@ describe("Testing EditTask", function () {
     });
     test("edit Task button appears", function () {
         var editButton = react_2.screen.getByRole("button", {
-            name: "Edit Task"
+            name: "Edit ✏️"
         });
         expect(editButton).toBeInTheDocument();
     });

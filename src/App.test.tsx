@@ -203,7 +203,7 @@ describe("Testing EditTask", () => {
         );
     });
     test("edit Task button appears", () => {
-        const editButton = screen.getByRole("button", { name: "Edit Task" });
+        const editButton = screen.getByRole("button", { name: "Edit ✏️" });
         expect(editButton).toBeInTheDocument();
     });
 });

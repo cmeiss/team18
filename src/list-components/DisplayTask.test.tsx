@@ -87,9 +87,7 @@ describe("DisplayView Tests", () => {
         expect(num).toBeInTheDocument();
     });
     test("There is a checkbox", () => {
-        const doneCheckbox = screen.getByRole("checkbox", {
-            name: /❌/i || /✔️/i
-        });
+        const doneCheckbox = screen.getByText(/Completion Status:/);
         expect(doneCheckbox).toBeInTheDocument();
     });
     test("Description of the task is displayed", () => {

@@ -71,7 +71,7 @@ describe("DisplayView Tests", function () {
         expect(taskName).toBeInTheDocument();
     });
     test("Num of TaskUsers is there if role is super", function () {
-        var num = react_2.screen.getByText(testTask.numUsers);
+        var num = react_2.screen.getByText("Number of Users: 2");
         expect(num).toBeInTheDocument();
     });
     test("There is a checkbox", function () {

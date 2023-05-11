@@ -22,7 +22,7 @@ describe("testing edit difficulty component", () => {
         expect(compDisplayed).toBeInTheDocument();
     });
     test("difficulty is updating", () => {
-        const chooseDifficulty = screen.getByLabelText("Change Difficulty:");
+        const chooseDifficulty = screen.getByText("Change Difficulty:");
         fireEvent.click(chooseDifficulty);
         expect(chooseDifficulty).toBeInTheDocument();
     });

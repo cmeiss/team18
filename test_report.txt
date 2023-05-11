@@ -732,22 +732,147 @@ FAIL src/dist/TaskFunctions.test.js
       at Object.<anonymous> (src/dist/TaskFunctions.test.js:265:26)
 
 FAIL src/dist/App.test.js
-  ● Test suite failed to run
+  ● Tesing Central Item List in App › list is displayed
 
-    Cannot find module './list-components/CentralItemList' from 'src/dist/App.test.js'
+    TypeError: Cannot read properties of undefined (reading 'createElement')
 
-       7 | var react_2 = require("@testing-library/react");
-       8 | var TASKS_1 = require("./TASKS");
-    >  9 | var CentralItemList_1 = require("./list-components/CentralItemList");
-         |                         ^
-      10 | var UserList_1 = require("./list-components/UserList");
-      11 | var adminlist_1 = require("./list-components/adminlist");
-      12 | var deleteTask_component_1 = require("./list-components/deleteTask-component");
+      47 |     beforeEach(function () {
+      48 |         react_2.render(
+    > 49 |             react_1["default"].createElement(
+         |                                ^
+      50 |                 CentralItemList_1.CentralItemList,
+      51 |                 { tasks: TASKS_1.TASKS, role: role1, setTasks: setTasks }
+      52 |             )
 
-      at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
-      at Object.<anonymous> (src/dist/App.test.js:9:25)
+      at Object.<anonymous> (src/dist/App.test.js:49:32)
 
-FAIL src/App.test.tsx (5.029 s)
+  ● Tesing User List in App › list is displayed
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      62 |     beforeEach(function () {
+      63 |         react_2.render(
+    > 64 |             react_1["default"].createElement(UserList_1.UserList, {
+         |                                ^
+      65 |                 users: users,
+      66 |                 setUsers: setUsers,
+      67 |                 tasks: TASKS_1.TASKS,
+
+      at Object.<anonymous> (src/dist/App.test.js:64:32)
+
+  ● Tesing User List in App › list not seen by super
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      62 |     beforeEach(function () {
+      63 |         react_2.render(
+    > 64 |             react_1["default"].createElement(UserList_1.UserList, {
+         |                                ^
+      65 |                 users: users,
+      66 |                 setUsers: setUsers,
+      67 |                 tasks: TASKS_1.TASKS,
+
+      at Object.<anonymous> (src/dist/App.test.js:64:32)
+
+  ● Tesing User List in App › list not seen by admin
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      62 |     beforeEach(function () {
+      63 |         react_2.render(
+    > 64 |             react_1["default"].createElement(UserList_1.UserList, {
+         |                                ^
+      65 |                 users: users,
+      66 |                 setUsers: setUsers,
+      67 |                 tasks: TASKS_1.TASKS,
+
+      at Object.<anonymous> (src/dist/App.test.js:64:32)
+
+  ● Tesing Admin List in App › list is displayed
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      108 |     beforeEach(function () {
+      109 |         react_2.render(
+    > 110 |             react_1["default"].createElement(adminlist_1.AdminList, {
+          |                                ^
+      111 |                 users: users,
+      112 |                 setUsers: setUsers,
+      113 |                 tasks: TASKS_1.TASKS,
+
+      at Object.<anonymous> (src/dist/App.test.js:110:32)
+
+  ● Tesing Admin List in App › list not seen by super
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      108 |     beforeEach(function () {
+      109 |         react_2.render(
+    > 110 |             react_1["default"].createElement(adminlist_1.AdminList, {
+          |                                ^
+      111 |                 users: users,
+      112 |                 setUsers: setUsers,
+      113 |                 tasks: TASKS_1.TASKS,
+
+      at Object.<anonymous> (src/dist/App.test.js:110:32)
+
+  ● Tesing Admin List in App › list not seen by user
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      108 |     beforeEach(function () {
+      109 |         react_2.render(
+    > 110 |             react_1["default"].createElement(adminlist_1.AdminList, {
+          |                                ^
+      111 |                 users: users,
+      112 |                 setUsers: setUsers,
+      113 |                 tasks: TASKS_1.TASKS,
+
+      at Object.<anonymous> (src/dist/App.test.js:110:32)
+
+  ● Testing Delete task in App › delete task is displayed
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      149 |     beforeEach(function () {
+      150 |         return react_2.render(
+    > 151 |             react_1["default"].createElement(
+          |                                ^
+      152 |                 deleteTask_component_1.DeleteTask,
+      153 |                 {
+      154 |                     tasks: TASKS_1.TASKS,
+
+      at Object.<anonymous> (src/dist/App.test.js:151:32)
+
+  ● Add tasks tests › add task is displayed
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      168 |     beforeEach(function () {
+      169 |         return react_2.render(
+    > 170 |             react_1["default"].createElement(addTask_1.AddTask, {
+          |                                ^
+      171 |                 tasks: TASKS_1.TASKS,
+      172 |                 setTasks: function (/*newTasks: Tasks[]*/) {
+      173 |                     throw new Error("Function not implemented.");
+
+      at Object.<anonymous> (src/dist/App.test.js:170:32)
+
+  ● Testing EditTask › edit Task button appears
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      184 |     beforeEach(function () {
+      185 |         react_2.render(
+    > 186 |             react_1["default"].createElement(EditTask_1.EditTask, {
+          |                                ^
+      187 |                 tasks: TASKS_1.TASKS,
+      188 |                 updateTasks: setTasks,
+      189 |                 task: testTask
+
+      at Object.<anonymous> (src/dist/App.test.js:186:32)
+
+FAIL src/App.test.tsx
   ● Console
 
     console.error
@@ -1407,52 +1532,6 @@ FAIL src/App.test.tsx (5.029 s)
       163 | describe("Testing Delete task in App", () => {
 
       at Object.<anonymous> (src/App.test.tsx:160:27)
-
-  ● Testing EditTask › edit Task button appears
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      204 |     });
-      205 |     test("edit Task button appears", () => {
-    > 206 |         const editButton = screen.getByRole("button", { name: "Edit Task" });
-          |                                   ^
-      207 |         expect(editButton).toBeInTheDocument();
-      208 |     });
-      209 | });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:206:35)
 
 FAIL src/list-components/filterlists.test.tsx
   ● filter › Testing the filter by time needed function
@@ -4876,418 +4955,6 @@ FAIL src/list-components/DisplayTask.test.tsx
       at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:96:29)
 
-FAIL src/editing-components/EditTask.test.tsx
-  ● Console
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      63 | describe("Testing EditTask", () => {
-      64 |     beforeEach(() => {
-    > 65 |         render(
-         |         ^
-      66 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      67 |         );
-      68 |     });
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:65:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      76 | describe("Testing EditTask", () => {
-      77 |     beforeEach(() => {
-    > 78 |         render(
-         |         ^
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      76 | describe("Testing EditTask", () => {
-      77 |     beforeEach(() => {
-    > 78 |         render(
-         |         ^
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      76 | describe("Testing EditTask", () => {
-      77 |     beforeEach(() => {
-    > 78 |         render(
-         |         ^
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      76 | describe("Testing EditTask", () => {
-      77 |     beforeEach(() => {
-    > 78 |         render(
-         |         ^
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      76 | describe("Testing EditTask", () => {
-      77 |     beforeEach(() => {
-    > 78 |         render(
-         |         ^
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      76 | describe("Testing EditTask", () => {
-      77 |     beforeEach(() => {
-    > 78 |         render(
-         |         ^
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-      81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
-
-  ● Testing EditTask › There is a button to save changes
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      83 |     });
-      84 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
-
-  ● Testing EditTask › There is a textbox to change the description
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      83 |     });
-      84 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
-
-  ● Testing EditTask › There is a dropdown to edit the time
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      83 |     });
-      84 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
-
-  ● Testing EditTask › The edit difficulty component is displayed
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      83 |     });
-      84 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
-
-  ● Testing EditTask › The edit name component is displayed
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      83 |     });
-      84 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
-
-  ● Testing EditTask › the edit steps component is displayed
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Edit Task"
-
-    Here are the accessible roles:
-
-      button:
-
-      Name "Edit ✏️":
-      [36m<button[39m
-        [33mclass[39m=[32m"btn btn-primary"[39m
-        [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-        [33mtype[39m=[32m"button"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div>[39m
-          [36m<button[39m
-            [33mclass[39m=[32m"btn btn-primary"[39m
-            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
-            [33mtype[39m=[32m"button"[39m
-          [36m>[39m
-            [0mEdit ✏️[0m
-          [36m</button>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
-      80 |         );
-    > 81 |         const editBut = screen.getByRole("button", { name: "Edit Task" }); //this is finding the edit Task button
-         |                                ^
-      82 |         fireEvent.click(editBut); //This is clicking the edit Task button so that the other editing components get displayed
-      83 |     });
-      84 |     test("There is a button to save changes", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:81:32)
-
 FAIL src/list-components/ModifyUsers.test.tsx
   ● Console
 
@@ -5742,6 +5409,123 @@ FAIL src/list-components/ModifyUsers.test.tsx
       77 |         //all of App. we will come back to this later
 
       at Object.<anonymous> (src/list-components/ModifyUsers.test.tsx:74:45)
+
+PASS src/editing-components/EditTask.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      63 | describe("Testing EditTask", () => {
+      64 |     beforeEach(() => {
+    > 65 |         render(
+         |         ^
+      66 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      67 |         );
+      68 |     });
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:65:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit ✏️" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit ✏️" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit ✏️" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit ✏️" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      76 | describe("Testing EditTask", () => {
+      77 |     beforeEach(() => {
+    > 78 |         render(
+         |         ^
+      79 |             <EditTask tasks={TaskList} updateTasks={setTasks} task={testTask} />
+      80 |         );
+      81 |         const editBut = screen.getByRole("button", { name: "Edit ✏️" }); //this is finding the edit Task button
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
 
 FAIL src/list-components/dist/deleteTak.test.js
   ● Delete task tests › There is a switch
@@ -7141,7 +6925,7 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|------------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                              
 ---------------------------|---------|----------|---------|---------|------------------------------------------------
-All files                  |   36.41 |    30.12 |   37.03 |   36.75 |                                                
+All files                  |    37.2 |    31.41 |   38.88 |   37.56 |                                                
  src                       |   36.53 |      100 |   58.33 |      38 |                                                
   App.tsx                  |       0 |      100 |       0 |       0 | 10                                             
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                                
@@ -7149,14 +6933,14 @@ All files                  |   36.41 |    30.12 |   37.03 |   36.75 |
   TaskFunctions.ts         |     100 |      100 |     100 |     100 |                                                
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-62                                           
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-63                                           
- src/editing-components    |   46.66 |       35 |   25.92 |   48.27 |                                                
-  EditDescription.tsx      |       0 |      100 |       0 |       0 | 14-17                                          
+ src/editing-components    |   51.66 |       45 |   37.03 |   53.44 |                                                
+  EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15                                          
   EditStatus.tsx           |   27.27 |       25 |   14.28 |      30 | 15,21-40,72-85                                 
-  EditSteps.tsx            |       0 |      100 |       0 |       0 | 11-19                                          
-  EditTask.tsx             |      60 |    16.66 |   14.28 |   63.15 | 36-73,119                                      
+  EditSteps.tsx            |   16.66 |      100 |   33.33 |   16.66 | 11-17                                          
+  EditTask.tsx             |      65 |    33.33 |   28.57 |   68.42 | 52-73,119                                      
   EditTime.tsx             |   64.28 |       50 |      75 |   64.28 | 14-15,20,22,24                                 
   Times.tsx                |     100 |      100 |     100 |     100 |                                                
-  edit-difficulty.tsx      |      60 |       50 |      50 |      60 | 10,25                                          
+  edit-difficulty.tsx      |      60 |      100 |      50 |      60 | 10,25                                          
  src/interfaces            |       0 |        0 |       0 |       0 |                                                
   task.ts                  |       0 |        0 |       0 |       0 |                                                
   user.ts                  |       0 |        0 |       0 |       0 |                                                
@@ -7175,8 +6959,8 @@ All files                  |   36.41 |    30.12 |   37.03 |   36.75 |
   AboutPage.tsx            |       0 |      100 |       0 |       0 | 8                                              
   taskPage.tsx             |       0 |        0 |       0 |       0 | 25-52                                          
 ---------------------------|---------|----------|---------|---------|------------------------------------------------
-Test Suites: 17 failed, 17 total
-Tests:       62 failed, 25 passed, 87 total
+Test Suites: 16 failed, 1 passed, 17 total
+Tests:       65 failed, 31 passed, 96 total
 Snapshots:   0 total
-Time:        19.404 s
+Time:        16.446 s
 Ran all test suites.

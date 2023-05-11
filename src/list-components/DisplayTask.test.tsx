@@ -63,7 +63,7 @@ function setTasks(newTasks: Task[]) {
     newTasks;
 }
 
-const testRole1 = "super";
+const testRole1 = "Super";
 const testRole2 = "admin";
 
 //testing with role being super
@@ -79,12 +79,12 @@ describe("DisplayView Tests", () => {
         );
     });
     test("Taskname is displayed", () => {
-        const taskName = screen.getByText(/test/i);
+        const taskName = screen.getByText(testTask.name);
         expect(taskName).toBeInTheDocument();
     });
     test("Num of TaskUsers is there if role is super", () => {
-        const UserNum = screen.getByText(/Number of Users/i);
-        expect(UserNum).toBeInTheDocument();
+        const num = screen.getByText(testTask.numUsers);
+        expect(num).toBeInTheDocument();
     });
     test("There is a checkbox", () => {
         const doneCheckbox = screen.getByRole("checkbox", {

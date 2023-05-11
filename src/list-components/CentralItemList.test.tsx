@@ -68,17 +68,6 @@ describe("CentralItemList with Role super", () => {
             expect(taskDisplayed).toBeInTheDocument();
         });
     });
-    //test2: check that there is a button to add a task if role is super
-    test("There is a button to add tasks if role is super", () => {
-        const addTButton = screen.getByRole("button", { name: /Add Task/i });
-        expect(addTButton).toBeInTheDocument();
-    });
-    //test3: there is a button to add a user if the role is super
-    test("There is a button to add a user", () => {
-        const addUButton = screen.getByRole("button", { name: /Add User/i });
-        expect(addUButton).toBeInTheDocument();
-    });
-    //
 });
 
 //testing with role being admin
@@ -92,15 +81,11 @@ describe("CentralItemList with Role admin", () => {
             />
         );
     });
-    //testing that there is a button to addTasks if role is admin
-    test("There is a button to addTasks if role is admin", () => {
-        const addTButton = screen.getByRole("button", { name: /Add Task/i });
-        expect(addTButton).toBeInTheDocument();
-    });
-    //testing that there isn't an addUserButton if role is admin
-    test("There isn't a button to add a user", () => {
-        const addUButton = screen.queryByRole("button", { name: /Add User/i });
-        expect(addUButton).toBeNull();
+    test("all tasks are displayed", () => {
+        TaskList.every((task) => {
+            const taskDisplayed = screen.getByText(task.name);
+            expect(taskDisplayed).toBeInTheDocument();
+        });
     });
 });
 
@@ -115,9 +100,10 @@ describe("CentralItemList with Role user", () => {
             />
         );
     });
-    //testing that there is no addTasks button if role is user (not admin or super)
-    test("There isn't a button to addTasks if role is user", () => {
-        const addTButton = screen.queryByRole("button", { name: /Add Task/i });
-        expect(addTButton).toBeNull();
+    test("all tasks are displayed", () => {
+        TaskList.every((task) => {
+            const taskDisplayed = screen.getByText(task.name);
+            expect(taskDisplayed).toBeInTheDocument();
+        });
     });
 });

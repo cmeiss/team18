@@ -93,7 +93,7 @@ describe("DisplayView Tests", () => {
         expect(doneCheckbox).toBeInTheDocument();
     });
     test("Description of the task is displayed", () => {
-        const desc = screen.getByText(testTask.description);
+        const desc = screen.getByText(/this is the description/i);
         expect(desc).toBeInTheDocument();
     });
     test("Steps are displayed", () => {

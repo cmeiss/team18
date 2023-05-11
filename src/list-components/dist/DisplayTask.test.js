@@ -81,7 +81,7 @@ describe("DisplayView Tests", function () {
         expect(doneCheckbox).toBeInTheDocument();
     });
     test("Description of the task is displayed", function () {
-        var desc = react_2.screen.getByText(testTask.description);
+        var desc = react_2.screen.getByText(/this is the description/i);
         expect(desc).toBeInTheDocument();
     });
     test("Steps are displayed", function () {

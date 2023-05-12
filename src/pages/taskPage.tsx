@@ -79,7 +79,7 @@ function TaskPage(): JSX.Element {
                     </hgroup>
 
                     <div className="dropdown">
-                        <span>Role select</span>
+                        <span>Role Select</span>
                         <div className="dropdown-content">
                             <div>
                                 <ChangeRole

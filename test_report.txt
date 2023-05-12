@@ -4079,6 +4079,76 @@ FAIL src/editing-components/EditTime.test.tsx
       at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/editing-components/EditTime.test.tsx:20:38)
 
+PASS src/list-components/ChangeRole.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      12 | describe("Change role test", () => {
+      13 |     beforeEach(() =>
+    > 14 |         render(
+         |         ^
+      15 |             <ChangeRole
+      16 |                 Role={ROLE1}
+      17 |                 roles={roleList}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/ChangeRole.test.tsx:14:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      12 | describe("Change role test", () => {
+      13 |     beforeEach(() =>
+    > 14 |         render(
+         |         ^
+      15 |             <ChangeRole
+      16 |                 Role={ROLE1}
+      17 |                 roles={roleList}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/ChangeRole.test.tsx:14:9)
+
+FAIL src/list-components/dist/ChangeRole.test.js
+  ● Change role test › change role component displays
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      10 | describe("Change role test", function () {
+      11 |     beforeEach(function () {
+    > 12 |         return react_2.render(react_1["default"].createElement(ChangeRole_1.ChangeRole, { Role: ROLE1, roles: roleList, setRole: function ( /*newUsers: User[]*/) {
+         |                                                  ^
+      13 |                 throw new Error("Function not implemented.");
+      14 |             } }));
+      15 |     });
+
+      at Object.<anonymous> (src/list-components/dist/ChangeRole.test.js:12:50)
+
+  ● Change role test › component updates
+
+    TypeError: Cannot read properties of undefined (reading 'createElement')
+
+      10 | describe("Change role test", function () {
+      11 |     beforeEach(function () {
+    > 12 |         return react_2.render(react_1["default"].createElement(ChangeRole_1.ChangeRole, { Role: ROLE1, roles: roleList, setRole: function ( /*newUsers: User[]*/) {
+         |                                                  ^
+      13 |                 throw new Error("Function not implemented.");
+      14 |             } }));
+      15 |     });
+
+      at Object.<anonymous> (src/list-components/dist/ChangeRole.test.js:12:50)
+
 FAIL src/editing-components/dist/edit-difficulty.test.js
   ● testing edit difficulty component › component displays
 
@@ -4152,7 +4222,7 @@ PASS src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|------------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                              
 ---------------------------|---------|----------|---------|---------|------------------------------------------------
-All files                  |   35.84 |    31.41 |   35.71 |   36.18 |                                                
+All files                  |   36.38 |    31.41 |   37.01 |   36.74 |                                                
  src                       |      25 |      100 |    37.5 |   26.19 |                                                
   App.tsx                  |       0 |      100 |       0 |       0 | 10                                             
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                                
@@ -4171,9 +4241,9 @@ All files                  |   35.84 |    31.41 |   35.71 |   36.18 |
  src/interfaces            |       0 |        0 |       0 |       0 |                                                
   task.ts                  |       0 |        0 |       0 |       0 |                                                
   user.ts                  |       0 |        0 |       0 |       0 |                                                
- src/list-components       |    35.4 |    32.25 |   36.79 |   35.31 |                                                
+ src/list-components       |   36.18 |    32.25 |   38.67 |   36.11 |                                                
   CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,147                                
-  ChangeRole.tsx           |       0 |      100 |       0 |       0 | 12-18                                          
+  ChangeRole.tsx           |     100 |      100 |     100 |     100 |                                                
   DisplayTask.tsx          |   83.33 |       75 |      75 |   83.33 | 52                                             
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37                                          
   UserList.tsx             |    18.3 |     17.3 |   16.66 |   18.57 | 38-56,65,72-157,178-179,186,201-207,228-255    
@@ -4187,8 +4257,8 @@ All files                  |   35.84 |    31.41 |   35.71 |   36.18 |
   taskPage.tsx             |       0 |        0 |       0 |       0 | 25-52                                          
 ---------------------------|---------|----------|---------|---------|------------------------------------------------
 
-Test Suites: 13 failed, 5 passed, 18 total
-Tests:       35 failed, 39 passed, 74 total
+Test Suites: 14 failed, 6 passed, 20 total
+Tests:       37 failed, 41 passed, 78 total
 Snapshots:   0 total
-Time:        15.068 s
+Time:        14.751 s
 Ran all test suites.

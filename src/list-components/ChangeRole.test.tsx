@@ -24,10 +24,13 @@ describe("Change role test", () => {
         )
     );
     test("change role component displays", () => {
-        const comp = screen.getByLabelText("Role Select");
+        const comp = screen.getByText(/Role Select/i);
         expect(comp).toBeInTheDocument;
     });
-    //test("component updates", () => {
-
-    // })
+    test("component updates", () => {
+        const chooseRole = screen.getByText("Role Select");
+        fireEvent.click(chooseRole);
+        const firstOption = screen.getByRole("option", { name: "user1" });
+        expect(firstOption).toBeInTheDocument();
+    });
 });

@@ -14,9 +14,13 @@ describe("Change role test", function () {
             } }));
     });
     test("change role component displays", function () {
-        var comp = react_2.screen.getByLabelText("Role Select");
+        var comp = react_2.screen.getByText(/Role Select/i);
         expect(comp).toBeInTheDocument;
     });
-    //test("component updates", () => {
-    // })
+    test("component updates", function () {
+        var chooseRole = react_2.screen.getByText("Role Select");
+        react_2.fireEvent.click(chooseRole);
+        var firstOption = react_2.screen.getByRole("option", { name: "user1" });
+        expect(firstOption).toBeInTheDocument();
+    });
 });

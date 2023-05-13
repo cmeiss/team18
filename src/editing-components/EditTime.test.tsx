@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { EditTime } from "./EditTime";
 
-const time = "1000";
+const time = "10:00";
 
 function setTime(newTime: string) {
     newTime;
@@ -16,18 +16,14 @@ describe("Testing EditTime", () => {
         const dropDown = screen.getByRole("select");
         expect(dropDown).toBeInTheDocument();
     });
-    test("time is displayed in military format", () => {
-        const displayedTime = screen.getByText(/10:00/i);
+    test("there is a message to indicate the currently selected time with colon", () => {
+        const displayedTime = screen.getByText(/Selected Time: 10:00/i);
         expect(displayedTime).toBeInTheDocument();
-    });
-    test("there is a message to indicate the currently selected time", () => {
-        const displayedMessage = screen.getByText(/Selected Time:/i);
-        expect(displayedMessage).toBeInTheDocument();
     });
     test("time is updating", () => {
         const chooseTime = screen.getByLabelText("Choose Time");
         fireEvent.click(chooseTime);
-        const newTime = screen.getByRole("option", { name: "1045" });
+        const newTime = screen.getByRole("option", { name: "10:45" });
         fireEvent.click(newTime);
         expect(newTime).toBeInTheDocument();
     });

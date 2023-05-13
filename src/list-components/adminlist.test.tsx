@@ -1,5 +1,5 @@
 import React from "react";
-import { screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import { AdminList } from "./adminlist";
 import { Task } from "../interfaces/task";
 import { renderWithDnd } from "../CustomRender";
@@ -25,9 +25,9 @@ const TasksAllDis = [
         status: false,
         image: "picture",
         steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
+        difficulty: 2,
         numUsers: 2,
-        time: "1915",
+        time: "0915",
         pendingMode: true
     },
     {
@@ -37,7 +37,7 @@ const TasksAllDis = [
         status: false,
         image: "picture",
         steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
+        difficulty: 1,
         numUsers: 1,
         time: "0945",
         pendingMode: true
@@ -47,7 +47,7 @@ const TasksAllDis = [
 const TasksPartlyDisplayed = [
     {
         id: 0,
-        name: "btest1",
+        name: "test1",
         description: "description a",
         status: false,
         image: "picture",
@@ -59,7 +59,7 @@ const TasksPartlyDisplayed = [
     },
     {
         id: 1,
-        name: "ftest2",
+        name: "test2",
         description: "this is the description",
         status: false,
         image: "picture",
@@ -71,34 +71,7 @@ const TasksPartlyDisplayed = [
     },
     {
         id: 2,
-        name: "atest3",
-        description: "a good description",
-        status: false,
-        image: "picture",
-        steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
-        numUsers: 1,
-        time: "0945",
-        pendingMode: true
-    }
-];
-
-const TaskDisplayed = [
-    {
-        id: 0,
-        name: "btest1",
-        description: "description a",
-        status: false,
-        image: "picture",
-        steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
-        numUsers: 0,
-        time: "1745",
-        pendingMode: true
-    },
-    {
-        id: 2,
-        name: "atest3",
+        name: "test3",
         description: "a good description",
         status: false,
         image: "picture",
@@ -163,28 +136,62 @@ describe("testing adminList with role Admin & all tasks are in pendingMode", () 
             ></AdminList>
         );
     });
-    test("Alphabetical Sorting Button is displayed", () => {
+    test("Alphabetical Sorting in AdminList", () => {
+        //testing the existance of the alphabetical sorting button
         const alphabetButton = screen.getByRole("button", {
             name: "Alphabetical"
         });
         expect(alphabetButton).toBeInTheDocument();
+        //testing functionality of alphabetical sorting button
+        fireEvent.click(alphabetButton);
+        const aTask = screen.getByText("atest3");
+        const bTask = screen.getByText("btest1");
+        const fTask = screen.getByText("ftest2");
+        expect(bTask.compareDocumentPosition(aTask)).toBe(2); //this tests if firstT comes before secondT
+        expect(fTask.compareDocumentPosition(bTask)).toBe(2);
     });
-    test("Difficulty Sorting Button is displayed", () => {
-        const alphabetButton = screen.getByRole("button", {
+
+    test("Difficulty Sorting Button", () => {
+        //testing existance of difficulty button
+        const difficultyButton = screen.getByRole("button", {
             name: "Difficulty"
         });
-        expect(alphabetButton).toBeInTheDocument();
+        expect(difficultyButton).toBeInTheDocument();
+        //testing functionality of difficulty button
+        fireEvent.click(difficultyButton);
+        const aTask = screen.getByText("atest3");
+        const bTask = screen.getByText("btest1");
+        const fTask = screen.getByText("ftest2");
+        expect(fTask.compareDocumentPosition(aTask)).toBe(2); //this tests if firstT comes before secondT
+        expect(bTask.compareDocumentPosition(fTask)).toBe(2);
     });
-    test("Time Sorting Button is displayed", () => {
-        const alphabetButton = screen.getByRole("button", {
+
+    test("Time Sorting Button", () => {
+        //Testing existance of time Button
+        const timeButton = screen.getByRole("button", {
             name: "Time"
         });
-        expect(alphabetButton).toBeInTheDocument();
+        expect(timeButton).toBeInTheDocument();
+        //testing functionality of time button
+        fireEvent.click(timeButton);
+        const aTask = screen.getByText("atest3");
+        const bTask = screen.getByText("btest1");
+        const fTask = screen.getByText("ftest2");
+        expect(aTask.compareDocumentPosition(fTask)).toBe(2); //this tests if firstT comes before secondT
+        expect(bTask.compareDocumentPosition(aTask)).toBe(2);
     });
     test("Reset Sorting Button is displayed", () => {
-        const alphabetButton = screen.getByRole("button", {
+        //testing existance of reset Button
+        const resetButton = screen.getByRole("button", {
             name: "Reset"
         });
-        expect(alphabetButton).toBeInTheDocument();
+        expect(resetButton).toBeInTheDocument();
+        //testing functionality of reset button
+        fireEvent.click(resetButton);
+        const aTask = screen.getByText("atest3");
+        const bTask = screen.getByText("btest1");
+        const fTask = screen.getByText("ftest2");
+        expect(fTask.compareDocumentPosition(bTask)).toBe(2); //this tests if firstT comes before secondT
+        expect(aTask.compareDocumentPosition(fTask)).toBe(2);
     });
 });

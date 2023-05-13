@@ -136,6 +136,11 @@ describe("testing adminList with role Admin & all tasks are in pendingMode", () 
             ></AdminList>
         );
     });
+    test("Pending (Admin) List is displayed", () => {
+        //testing for the presence of the list header
+        const pendingList = screen.getByText("Pending List");
+        expect(pendingList).toBeInTheDocument();
+    });
     test("Alphabetical Sorting in AdminList", () => {
         //testing the existance of the alphabetical sorting button
         const alphabetButton = screen.getByRole("button", {
@@ -193,5 +198,47 @@ describe("testing adminList with role Admin & all tasks are in pendingMode", () 
         const fTask = screen.getByText("ftest2");
         expect(fTask.compareDocumentPosition(bTask)).toBe(2); //this tests if firstT comes before secondT
         expect(aTask.compareDocumentPosition(fTask)).toBe(2);
+    });
+    test("TrashCan is displayed", () => {
+        const trashCan = screen.getByTestId("trashCan");
+        expect(trashCan).toBeInTheDocument();
+    });
+});
+
+describe("Testing AdminList with Role super", () => {
+    beforeEach(() => {
+        renderWithDnd(
+            <AdminList
+                tasks={TasksAllDis}
+                users={ListOfUsers}
+                setTasks={setTasks}
+                user={user2}
+                setUsers={setUsers}
+            ></AdminList>
+        );
+    });
+    test("Pending (Admin) List is displayed when role = super", () => {
+        //testing for the presence of the list header
+        const pendingList = screen.getByText("Pending List");
+        expect(pendingList).toBeInTheDocument();
+    });
+});
+
+describe("Testing AdminList with Role user", () => {
+    beforeEach(() => {
+        renderWithDnd(
+            <AdminList
+                tasks={TasksAllDis}
+                users={ListOfUsers}
+                setTasks={setTasks}
+                user={user3}
+                setUsers={setUsers}
+            ></AdminList>
+        );
+    });
+    test("Pending (Admin) List is not displayed when role = user (not admin or super)", () => {
+        //testing for the absence of the list header
+        const pendingList = screen.queryByText("Pending List");
+        expect(pendingList).not.toBeInTheDocument();
     });
 });

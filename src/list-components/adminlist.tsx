@@ -103,13 +103,13 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         });
         if (isOver && canDrop) {
             return (
-                <div ref={drop} className="trashOpen">
+                <div ref={drop} className="trashOpen" data-testid="trashCan">
                     <img src={require("../trashCanOpen.jpg")} width="100px" />
                 </div>
             );
         } else {
             return (
-                <div ref={drop} className="trashClosed">
+                <div ref={drop} className="trashClosed" data-testid="trashCan">
                     <img src={require("../trashCanClosed.jpg")} width="100px" />
                 </div>
             );

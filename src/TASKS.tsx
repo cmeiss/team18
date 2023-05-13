@@ -10,7 +10,7 @@ export const TASKS: Task[] = [
         steps: ["Sharpen pencil", "Open notepad", "Finish that homework!"],
         difficulty: 0,
         numUsers: 0,
-        time: "1800",
+        time: "18:00",
         pendingMode: false
     },
     {
@@ -26,7 +26,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 3,
         numUsers: 0,
-        time: "1345",
+        time: "13:45",
         pendingMode: false
     },
     {
@@ -38,7 +38,7 @@ export const TASKS: Task[] = [
         steps: ["Buy ingredients", "Prep ingredients", "Stir Fry!"],
         difficulty: 3,
         numUsers: 0,
-        time: "1745",
+        time: "17:45",
         pendingMode: false
     },
     {
@@ -50,7 +50,7 @@ export const TASKS: Task[] = [
         steps: ["Blend smootie", "Eat eggs", "Devour"],
         difficulty: 3,
         numUsers: 0,
-        time: "700",
+        time: "07:00",
         pendingMode: false
     },
     {
@@ -62,7 +62,7 @@ export const TASKS: Task[] = [
         steps: ["Pack bag", "Start walking", "Learn!"],
         difficulty: 3,
         numUsers: 0,
-        time: "1130",
+        time: "11:30",
         pendingMode: false
     },
     {
@@ -74,7 +74,7 @@ export const TASKS: Task[] = [
         steps: ["Buy gift", "Wrap gift", "Celebrate!"],
         difficulty: 3,
         numUsers: 0,
-        time: "1730",
+        time: "17:30",
         pendingMode: false
     },
     {
@@ -90,7 +90,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 3,
         numUsers: 0,
-        time: "1930",
+        time: "19:30",
         pendingMode: false
     },
     {
@@ -103,7 +103,7 @@ export const TASKS: Task[] = [
         steps: [],
         difficulty: 3,
         numUsers: 0,
-        time: "1130",
+        time: "11:30",
         pendingMode: false
     },
     {
@@ -120,7 +120,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 3,
         numUsers: 0,
-        time: "1200",
+        time: "12:00",
         pendingMode: false
     },
     {
@@ -136,7 +136,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 3,
         numUsers: 0,
-        time: "800",
+        time: "08:00",
         pendingMode: false
     },
     {
@@ -148,7 +148,7 @@ export const TASKS: Task[] = [
         steps: ["Get dressed up", "Drive to dance", "Have fun!"],
         difficulty: 3,
         numUsers: 0,
-        time: "1530",
+        time: "15:30",
         pendingMode: false
     },
     {
@@ -160,7 +160,7 @@ export const TASKS: Task[] = [
         steps: ["Grab kibble", "Pour"],
         difficulty: 3,
         numUsers: 0,
-        time: "815",
+        time: "08:15",
         pendingMode: false
     },
     {
@@ -172,7 +172,7 @@ export const TASKS: Task[] = [
         steps: ["Notice bird poop", "Groan", "Drive to carwash", "Pay up."],
         difficulty: 3,
         numUsers: 0,
-        time: "800",
+        time: "08:00",
         pendingMode: false
     },
     {
@@ -189,7 +189,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 3,
         numUsers: 0,
-        time: "1115",
+        time: "11:15",
         pendingMode: false
     },
     {
@@ -201,7 +201,7 @@ export const TASKS: Task[] = [
         steps: ["Grab a textbook", "Review notes", "Hope and pray"],
         difficulty: 3,
         numUsers: 0,
-        time: "1730",
+        time: "17:30",
         pendingMode: false
     },
     {
@@ -213,7 +213,7 @@ export const TASKS: Task[] = [
         steps: ["Review sheet music", "Play"],
         difficulty: 3,
         numUsers: 0,
-        time: "1230",
+        time: "12:30",
         pendingMode: false
     },
     {
@@ -225,7 +225,7 @@ export const TASKS: Task[] = [
         steps: ["Grab a bucket", "And a mop", "Get scrubing!"],
         difficulty: 3,
         numUsers: 0,
-        time: "1130",
+        time: "11:30",
         pendingMode: false
     },
     {
@@ -237,7 +237,7 @@ export const TASKS: Task[] = [
         steps: ["Put leash on", "Enjoy some fresh air", "Scoop poop"],
         difficulty: 2,
         numUsers: 0,
-        time: "1800",
+        time: "18:00",
         pendingMode: false
     },
     {
@@ -249,7 +249,7 @@ export const TASKS: Task[] = [
         steps: ["Drive to grocery", "Grab a cart", "Hunt and gather", "Pay"],
         difficulty: 3,
         numUsers: 0,
-        time: "1630",
+        time: "16:30",
         pendingMode: false
     },
     {
@@ -261,7 +261,7 @@ export const TASKS: Task[] = [
         steps: ["Fill watering can", "Water pothos", "Water hydrangea"],
         difficulty: 1,
         numUsers: 0,
-        time: "830",
+        time: "08:30",
         pendingMode: false
     },
     {
@@ -273,7 +273,7 @@ export const TASKS: Task[] = [
         steps: ["Notice the stentch", "See the pile", "Get scrubbing!"],
         difficulty: 2,
         numUsers: 0,
-        time: "930",
+        time: "09:30",
         pendingMode: false
     },
     {
@@ -285,7 +285,7 @@ export const TASKS: Task[] = [
         steps: ["Load washer", "Load dryer", "Fold", "Put away"],
         difficulty: 3,
         numUsers: 0,
-        time: "1115",
+        time: "11:15",
         pendingMode: false
     },
     {
@@ -298,7 +298,7 @@ export const TASKS: Task[] = [
         steps: ["Close trash bag", "Carry to the curb"],
         difficulty: 1,
         numUsers: 0,
-        time: "1230",
+        time: "12:30",
         pendingMode: false
     },
     {
@@ -314,7 +314,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 3,
         numUsers: 0,
-        time: "1130",
+        time: "11:30",
         pendingMode: false
     },
     {
@@ -326,7 +326,7 @@ export const TASKS: Task[] = [
         steps: ["Plan", "Motivate", "Acheive"],
         difficulty: 3,
         numUsers: 0,
-        time: "630",
+        time: "06:30",
         pendingMode: false
     },
     {
@@ -338,7 +338,7 @@ export const TASKS: Task[] = [
         steps: ["Jog", "Lift", "Bench", "Enjoy protien shake"],
         difficulty: 3,
         numUsers: 0,
-        time: "645",
+        time: "06:45",
         pendingMode: false
     },
     {
@@ -350,7 +350,7 @@ export const TASKS: Task[] = [
         steps: ["Pop popcorn", "Put 3D in", "Watch with anticipation"],
         difficulty: 1,
         numUsers: 0,
-        time: "1045",
+        time: "10:45",
         pendingMode: false
     },
     {
@@ -366,7 +366,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 69,
         numUsers: 0,
-        time: "1445",
+        time: "14:45",
         pendingMode: false
     },
     {
@@ -384,7 +384,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 23,
         numUsers: 0,
-        time: "700",
+        time: "07:00",
         pendingMode: false
     },
     {
@@ -400,7 +400,7 @@ export const TASKS: Task[] = [
         ],
         difficulty: 23,
         numUsers: 0,
-        time: "645",
+        time: "06:45",
         pendingMode: false
     },
     {
@@ -412,7 +412,7 @@ export const TASKS: Task[] = [
         steps: ["Grab gear", "2 hours of pain", "Shower"],
         difficulty: 23,
         numUsers: 0,
-        time: "630",
+        time: "06:30",
         pendingMode: false
     }
 ];

@@ -18,13 +18,20 @@ export function EditSteps({ steps, setSteps }: stepsProps) {
     }
     return (
         <div>
-            <Form.Group controlId="form">
-                <Form.Label style={{ fontWeight: "bold" }}>
+            <Form.Group data-testid="EditStepsForm">
+                <Form.Label
+                    data-testid="stepsLabel"
+                    style={{ fontWeight: "bold" }}
+                >
                     Change Steps:
                 </Form.Label>
-                <Form.Control value={steps} onChange={updateSteps} />
+                <Form.Control
+                    value={steps}
+                    onChange={updateSteps}
+                    data-testid="stepsTextbox"
+                />
             </Form.Group>
-            <div>
+            <div data-testid="stepsInstructions">
                 -To indicate different steps leave a comma symbol in between the
                 various steps; example: step1,step2
             </div>

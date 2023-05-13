@@ -686,7 +686,17 @@ FAIL src/App.test.tsx
                   [0mSteps:[0m
                   [36m<ol[39m
                     [33mstyle[39m=[32m"list-style-type: decimal;"[39m
-                  [36m/>[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0mSharpen pencil[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mOpen notepad[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mFinish that homework![0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
                   [36m<div>[39m
                     [36m<div>[39m
                       [0mNumber of Users: [0m
@@ -727,16 +737,7 @@ FAIL src/App.test.tsx
                     [33msrc[39m=[32m"gas.jpg"[39m
                     [33mwidth[39m=[32m"100px"[39m
                   [36m/>[39m
-                [36m</div>[39m
-              [36m</button>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"Task-Desc"[39m
-                [33mhidden[39m=[32m""[39m
-                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
-              [36m>[39m
-                [36m<p>[39m
-                  [36m<strong>[39m
-                    [0mTask...
+                ...
 
       70 |     });
       71 |     test("list is displayed", () => {
@@ -4642,7 +4643,17 @@ FAIL src/App.test.tsx
                   [0mSteps:[0m
                   [36m<ol[39m
                     [33mstyle[39m=[32m"list-style-type: decimal;"[39m
-                  [36m/>[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0mSharpen pencil[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mOpen notepad[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mFinish that homework![0m
+                    [36m</li>[39m
+                  [36m</ol>[39m
                   [36m<div>[39m
                     [36m<div>[39m
                       [0mNumber of Users: [0m
@@ -4683,16 +4694,7 @@ FAIL src/App.test.tsx
                     [33msrc[39m=[32m"gas.jpg"[39m
                     [33mwidth[39m=[32m"100px"[39m
                   [36m/>[39m
-                [36m</div>[39m
-              [36m</button>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"Task-Desc"[39m
-                [33mhidden[39m=[32m""[39m
-                [33mstyle[39m=[32m"border: 5px solid rgb(255, 239, 195);"[39m
-              [36m>[39m
-                [36m<p>[39m
-                  [36m<strong>[39m
-                    [0mTask...
+                ...
 
       70 |     });
       71 |     test("list is displayed", () => {
@@ -6860,5 +6862,5 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
 Test Suites: 14 failed, 7 passed, 21 total
 Tests:       37 failed, 46 passed, 83 total
 Snapshots:   0 total
-Time:        16.646 s
+Time:        15.491 s
 Ran all test suites.

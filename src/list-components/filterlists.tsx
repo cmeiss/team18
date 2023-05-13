@@ -15,7 +15,11 @@ export function filter_by_difficulty(list_of_tasks: Task[]): Task[] {
 // the function filter_by_alphabetical_order sorts the task list by the order of the task names in alphabetical order
 export function filter_by_alphabetical_order(list_of_tasks: Task[]): Task[] {
     // sort works like map, in js here I am just passing my sorting function found this on stack overflow
-    list_of_tasks.sort(function (a, b) {
+    const newList = list_of_tasks.map((T: Task) => ({
+        ...T,
+        steps: [...T.steps]
+    }));
+    newList.sort(function (a, b) {
         const nameA = a.name.toLowerCase();
         const nameB = b.name.toLowerCase();
         if (nameA < nameB)
@@ -24,25 +28,35 @@ export function filter_by_alphabetical_order(list_of_tasks: Task[]): Task[] {
         if (nameA > nameB) return 1;
         return 0; //default return value (no sorting)
     });
-    return list_of_tasks;
+    return newList;
 }
 
 export function filter_by_time_needed(list_of_tasks: Task[]): Task[] {
+    const newList = list_of_tasks.map((T: Task) => ({
+        ...T,
+        steps: [...T.steps]
+    }));
     function mycomparator(a: Task, b: Task) {
-        const aTime = parseInt(a.time);
-        const bTime = parseInt(b.time);
+        const newA = a.time.replace(":", "");
+        const newB = b.time.replace(":", "");
+        const aTime = parseInt(newA);
+        const bTime = parseInt(newB);
         return aTime - bTime;
     }
-    list_of_tasks.sort(mycomparator);
-    return list_of_tasks;
+    newList.sort(mycomparator);
+    return newList;
 }
 
 export function filter_by_numUsers(list_of_tasks: Task[]): Task[] {
+    const newList = list_of_tasks.map((T: Task) => ({
+        ...T,
+        steps: [...T.steps]
+    }));
     function myComparator(a: Task, b: Task) {
         return a.numUsers - b.numUsers;
     }
-    list_of_tasks.sort(myComparator);
-    return list_of_tasks;
+    newList.sort(myComparator);
+    return newList;
 }
 
 //export {}; //Nothing else to export for now

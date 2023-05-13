@@ -195,10 +195,10 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
                             </button>
                             <div className="Pendingsort-options">
                                 <Button onClick={updateAlphabetic}>
-                                    Alphabetical{" "}
+                                    Alphabetical
                                 </Button>
                                 <Button onClick={updateByDifficulty}>
-                                    Difficulty{" "}
+                                    Difficulty
                                 </Button>
                                 <Button onClick={updateByTime}>Time </Button>
                                 <Button onClick={() => setSorted(false)}>

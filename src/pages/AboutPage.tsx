@@ -3,8 +3,26 @@ import { Container } from "react-bootstrap";
 import { Link, Route, Routes } from "react-router-dom";
 import App from "../App";
 import TaskPage from "./taskPage";
+import { User } from "../interfaces/user";
+import { Task } from "../interfaces/task";
 
-export function AboutPage() {
+interface AboutPageProps {
+    role: User;
+    setRole: (newRole: User) => void;
+    roles: User[];
+    setRoles: (newRoles: User[]) => void;
+    tasks: Task[];
+    setTasks: (newTasks: Task[]) => void;
+}
+
+export function AboutPage({
+    role,
+    setRole,
+    roles,
+    setRoles,
+    tasks,
+    setTasks
+}: AboutPageProps) {
     return (
         <Container className="about">
             <nav
@@ -24,8 +42,32 @@ export function AboutPage() {
                 </ul>
             </nav>
             <Routes>
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/taskpage" element={<TaskPage />}></Route>
+                <Route
+                    path="/about"
+                    element={
+                        <AboutPage
+                            role={role}
+                            setRole={setRole}
+                            roles={roles}
+                            setRoles={setRoles}
+                            tasks={tasks}
+                            setTasks={setTasks}
+                        />
+                    }
+                />
+                <Route
+                    path="/taskpage"
+                    element={
+                        <TaskPage
+                            role={role}
+                            setRole={setRole}
+                            roles={roles}
+                            setRoles={setRoles}
+                            tasks={tasks}
+                            setTasks={setTasks}
+                        />
+                    }
+                ></Route>
                 <Route path="/homepage" element={<App />} />
             </Routes>
             <h1>About Us</h1>

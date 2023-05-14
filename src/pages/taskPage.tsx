@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import { CentralItemList } from "../list-components/CentralItemList";
 import { Task } from "../interfaces/task";
@@ -9,7 +9,6 @@ import { UserList } from "../list-components/UserList";
 import { ChangeRole } from "../list-components/ChangeRole";
 import { ModifyUsers } from "../list-components/ModifyUsers";
 import { AdminList } from "../list-components/adminlist";
-import { TASKS } from "../TASKS";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { AddTask } from "../list-components/addTask";
@@ -20,20 +19,24 @@ import { Link, Route, Routes } from "react-router-dom";
 import { AboutPage } from "./AboutPage";
 import App from "../App";
 
-function TaskPage(): JSX.Element {
-    // eslint-disable-next-line prettier/prettier
-    const [role, setRole] = useState<User>({ name: "User1", userList: [] }); //I set this intial user to make the user list display something
+interface TaskPageProps {
+    role: User;
+    setRole: (newRole: User) => void;
+    roles: User[];
+    setRoles: (newRoles: User[]) => void;
+    tasks: Task[];
+    setTasks: (newTasks: Task[]) => void;
+}
 
-    const [roles, setRoles] = useState<User[]>([
-        { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
-        { name: "Super", userList: [] },
-        {
-            name: "Admin",
-            userList: []
-        },
-        { name: "User1", userList: [] }
-    ]); // these are original users these can be changed
-    const [tasks, setTasks] = useState<Task[]>(TASKS);
+function TaskPage({
+    role,
+    setRole,
+    roles,
+    setRoles,
+    tasks,
+    setTasks
+}: TaskPageProps): JSX.Element {
+    //eslint-disable-next-line prettier/prettier
 
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
         const NewRole = roles.find(
@@ -73,7 +76,19 @@ function TaskPage(): JSX.Element {
                             </ul>
                         </nav>
                         <Routes>
-                            <Route path="/about" element={<AboutPage />} />
+                            <Route
+                                path="/about"
+                                element={
+                                    <AboutPage
+                                        role={role}
+                                        setRole={setRole}
+                                        roles={roles}
+                                        setRoles={setRoles}
+                                        tasks={tasks}
+                                        setTasks={setTasks}
+                                    />
+                                }
+                            />
                             <Route path="/homepage" element={<App />} />
                         </Routes>
                     </hgroup>

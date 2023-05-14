@@ -3899,8 +3899,8 @@ PASS src/editing-components/edit-difficulty.test.tsx
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 All files                  |    45.4 |    37.16 |    42.3 |   45.25 |                                             
- src                       |      25 |      100 |    37.5 |   26.19 |                                             
-  App.tsx                  |       0 |      100 |       0 |       0 | 10                                          
+ src                       |    23.4 |      100 |    37.5 |   24.44 |                                             
+  App.tsx                  |       0 |      100 |       0 |       0 | 14-27                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
   TASKS.tsx                |     100 |      100 |     100 |     100 |                                             
   TaskFunctions.tsx        |     100 |      100 |     100 |     100 |                                             
@@ -3929,8 +3929,8 @@ All files                  |    45.4 |    37.16 |    42.3 |   45.25 |
   filterlists.tsx          |   96.42 |       75 |     100 |   95.83 | 29                                          
   search.tsx               |       0 |      100 |       0 |       0 | 7-10                                        
  src/pages                 |       0 |        0 |       0 |       0 |                                             
-  AboutPage.tsx            |       0 |      100 |       0 |       0 | 8                                           
-  taskPage.tsx             |       0 |        0 |       0 |       0 | 25-52                                       
+  AboutPage.tsx            |       0 |      100 |       0 |       0 | 26                                          
+  taskPage.tsx             |       0 |        0 |       0 |       0 | 42-55                                       
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 
 Summary of all failing tests
@@ -5813,5 +5813,5 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
 Test Suites: 13 failed, 9 passed, 22 total
 Tests:       36 failed, 55 passed, 91 total
 Snapshots:   0 total
-Time:        16.416 s
+Time:        16.425 s
 Ran all test suites.

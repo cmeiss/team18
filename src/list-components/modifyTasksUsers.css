@@ -1,0 +1,10 @@
+.modifyUsers,
+.addTask,
+.deleteTask {
+    text-align: center;
+    color: rgb(71, 28, 3);
+    margin: 50px;
+    border-radius: 25px;
+    outline: 4px solid rgb(71, 28, 3);
+    width: 350px;
+}

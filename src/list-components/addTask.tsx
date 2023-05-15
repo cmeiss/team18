@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { useState } from "react";
+import "./modifyTasksUsers.css";
 //import the task state once it gets created
 
 interface addTaskProp {
@@ -86,11 +87,11 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
     }
 
     return (
-        <div>
+        <div className="addTask">
             <Form.Check
                 type={"switch"}
                 className="mx-auto"
-                style={{ width: "150px" }}
+                style={{ width: "150px", fontWeight: "bold" }}
                 id="editMode"
                 label="Add Task"
                 checked={neweditmode}

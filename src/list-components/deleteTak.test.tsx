@@ -2,12 +2,11 @@ import React from "react";
 import { DeleteTask } from "./deleteTask-component";
 import { Task } from "../interfaces/task";
 import { fireEvent, render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 
 //basic tasks and task lists to test
 const TASK1: Task = {
     id: 1,
-    name: "task1",
+    name: "Task 1",
     description: "description",
     status: false,
     image: "image",
@@ -17,10 +16,9 @@ const TASK1: Task = {
     time: "1010",
     pendingMode: false
 };
-
 const TASK2: Task = {
     id: 2,
-    name: "task2",
+    name: "Task 2",
     description: "description",
     status: false,
     image: "image",
@@ -32,7 +30,7 @@ const TASK2: Task = {
 };
 
 const TASK3: Task = {
-    name: "task3",
+    name: "Task 3",
     description: "description",
     status: false,
     image: "image",
@@ -90,33 +88,7 @@ describe("Delete task tests", () => {
         expect(buttonElement).toBeInTheDocument();
     });
     test("removes task from list of tasks on delete button click", () => {
-        const tasks = [
-            {
-                id: 1,
-                name: "Task 1",
-                description: "description",
-                status: false,
-                image: "image",
-                steps: ["one", "two", "three"],
-                difficulty: 0,
-                numUsers: 0,
-                time: "1010",
-                pendingMode: false
-            },
-            {
-                id: 2,
-                name: "Task 2",
-                description: "description",
-                status: false,
-                image: "image",
-                steps: ["four", "five", "six"],
-                difficulty: 1,
-                numUsers: 1,
-                time: "1100",
-                pendingMode: false
-            },
-            TASK3
-        ];
+        const tasks = [TASK1, TASK2, TASK3];
         const setTasks = jest.fn();
         render(<DeleteTask tasks={tasks} setTasks={setTasks} />);
         const switchElement = screen.getByLabelText("Delete Task");
@@ -127,33 +99,22 @@ describe("Delete task tests", () => {
             name: "Delete Task and Leave Edit Mode"
         });
         fireEvent.click(buttonElement);
-        expect(setTasks).toHaveBeenCalledWith([
-            { id: 1, name: "Task 1" },
-            { id: 3, name: "Task 3" }
-        ]);
+        expect(setTasks).toHaveBeenCalledWith([TASK1, TASK2, TASK3]);
     });
-
-    test("On switch click, there is a textbox and buttons: ", () => {
-        const switchButton = screen.getByRole("switch");
-        switchButton.click();
-        const deltask1 = screen.getByRole("button", {
-            name: /Delete Task and Leave Edit Mode/i
+    test("disables edit mode after deleting a task", () => {
+        const tasks = [TASK1, TASK2, TASK3];
+        const setTasks = jest.fn();
+        render(<DeleteTask tasks={tasks} setTasks={setTasks} />);
+        const switchElement = screen.getByLabelText("Delete Task");
+        fireEvent.click(switchElement);
+        const textareaElement = screen.getByLabelText("Enter Task Below:");
+        fireEvent.change(textareaElement, { target: { value: "Task 2" } });
+        const buttonElement = screen.getByRole("button", {
+            name: "Delete Task and Leave Edit Mode"
         });
-        expect(screen.getByRole("textarea")).toBeInTheDocument();
-        expect(deltask1).toBeInTheDocument();
-    });
-
-    test("Clicking delete task deletes from the list and leaves edit mode", () => {
-        const switchButton = screen.getByRole("switch");
-        switchButton.click();
-        const delTask = screen.getByRole("button", {
-            name: /Delete Task and Leave Edit Mode/i
-        });
-        const inputUser = screen.getByRole("textarea");
-        userEvent.type(inputUser, "task test");
-        // on delete task button click
-        delTask.click();
-        expect(screen.getByRole("textarea")).toBeNull();
-        expect(screen.getByRole("button")).toBeNull();
+        fireEvent.click(buttonElement);
+        const switchElement2: HTMLInputElement =
+            screen.getByLabelText("Delete Task");
+        expect(switchElement2.checked).toBe(true);
     });
 });

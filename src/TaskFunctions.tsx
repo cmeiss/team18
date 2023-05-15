@@ -13,8 +13,7 @@ export function makeTask(
     diff: number,
     num: number,
     time: string,
-    pending: boolean,
-    ULid: number
+    pending: boolean
 ): Task {
     const task: Task = {
         id: id,
@@ -26,8 +25,7 @@ export function makeTask(
         difficulty: diff,
         numUsers: num,
         time: time,
-        pendingMode: pending,
-        userListId: ULid
+        pendingMode: pending
     };
     return task;
 }
@@ -64,37 +62,10 @@ export function delTask(task: Task, tasks: Task[]) {
         task.difficulty,
         task.numUsers,
         task.time,
-        task.pendingMode,
-        task.userListId
+        task.pendingMode
     );
     const newTasks = tasks.filter(
         (task: Task): boolean => task.id !== taskToRemove.id /*&&
-            task.description !== taskToRemove.description &&
-            task.time !== taskToRemove.time &&
-            task.difficulty !== taskToRemove.difficulty*/
-    );
-    return newTasks;
-}
-
-//basically the same as delTask but compares tasks by their userListId, this allows us to delete
-//tasks individually from the userList
-export function delTaskUL(task: Task, tasks: Task[]) {
-    const taskToRemove = makeTask(
-        task.id,
-        task.name,
-        task.description,
-        task.status,
-        task.image,
-        task.steps,
-        task.difficulty,
-        task.numUsers,
-        task.time,
-        task.pendingMode,
-        task.userListId
-    );
-    const newTasks = tasks.filter(
-        (task: Task): boolean =>
-            task.userListId !== taskToRemove.userListId /*&&
             task.description !== taskToRemove.description &&
             task.time !== taskToRemove.time &&
             task.difficulty !== taskToRemove.difficulty*/

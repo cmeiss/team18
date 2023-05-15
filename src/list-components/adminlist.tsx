@@ -17,7 +17,6 @@ interface AdminItemProps {
     setUsers: (newUsers: User[]) => void;
     user: User;
     setTasks: (newTasks: Task[]) => void;
-    //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export function AdminList({ user, tasks, setTasks }: AdminItemProps) {

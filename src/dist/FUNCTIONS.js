@@ -18,7 +18,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 exports.__esModule = true;
-exports.filter_by_numUsers = exports.filter_by_time_needed = exports.filter_by_alphabetical_order = exports.filter_by_difficulty = exports.DisplayTask = exports.CentralItemList = exports.AdminList = exports.DeleteTask = exports.AddTask = exports.EditTime = exports.EditTask = exports.EditSteps = exports.EditStatus = exports.EditDescription = exports.EditDifficulty = void 0;
+exports.addTasktoUserList = exports.deleteTask = exports.deleteUser = exports.makeUser = exports.delTask = exports.addTask = exports.makeTask = exports.renderWithDnd = exports.UserList = exports.search = exports.ModifyUsers = exports.filter_by_numUsers = exports.filter_by_time_needed = exports.filter_by_alphabetical_order = exports.filter_by_difficulty = exports.DisplayTask = exports.CentralItemList = exports.AdminList = exports.DeleteTask = exports.AddTask = exports.EditTime = exports.EditTask = exports.EditSteps = exports.EditStatus = exports.EditDescription = exports.EditDifficulty = void 0;
 var react_1 = require("react");
 var react_2 = require("react");
 function EditDifficulty(_a) {
@@ -416,3 +416,279 @@ function filter_by_numUsers(list_of_tasks) {
     return list_of_tasks;
 }
 exports.filter_by_numUsers = filter_by_numUsers;
+function ModifyUsers(ChangeRoleProps) {
+    var _a = react_2.useState(false), editmode = _a[0], seteditmode = _a[1]; //whether the textbox will appear boolean
+    var _b = react_2.useState("User2"), newUser = _b[0], setNewUser = _b[1]; //the value currently in the text box of edit mode
+    //function that sets role based on the role clicked
+    function updateEditMode(event) {
+        seteditmode(event.target.checked);
+    }
+    function updateUsers(event) {
+        setNewUser(event.target.value);
+    }
+    function AddUsersandEditMode() {
+        ChangeRoleProps.setRoles(__spreadArrays(ChangeRoleProps.roles, [
+            { name: newUser, userList: [] }
+        ]));
+        seteditmode(false);
+    }
+    function DeleteUsersandEditMode() {
+        ChangeRoleProps.setRoles(__spreadArrays(ChangeRoleProps.roles).filter(function (role) {
+            return role.name !== newUser ? true : false;
+        }));
+        seteditmode(false);
+    }
+}
+exports.ModifyUsers = ModifyUsers;
+//search *********************************************************************************************************************
+function search(name, tasks) {
+    var tasks_with_word = tasks.filter(function (task) {
+        return task.name.toLowerCase().includes(name.toLowerCase());
+    });
+    return tasks_with_word;
+}
+exports.search = search;
+// export function UserList(user: UserProps): JSX.Element {
+function UserList(_a) {
+    var user = _a.user, setUser = _a.setUser, users = _a.users, tasks = _a.tasks, setTasks = _a.setTasks, setUsers = _a.setUsers;
+    var _b = react_2.useState(""), TaskSearched = _b[0], setTaskSearched = _b[1];
+    var _c = react_2.useState(false), SearchMode = _c[0], SetSearchMode = _c[1];
+    var _d = react_2.useState([]), SearchedTasks = _d[0], setSearchedTasks = _d[1];
+    function UpdateTaskSearched(event) {
+        setTaskSearched(event.target.value);
+        setSearchedTasks(search(TaskSearched, user.userList));
+    }
+    function setSearchMode() {
+        SetSearchMode(!SearchMode);
+    }
+    function sort(type_of_sort) {
+        if (type_of_sort == "alphabet") {
+            setUser({
+                name: user.name,
+                userList: filter_by_alphabetical_order(user.userList)
+            });
+        }
+        else if (type_of_sort == "time") {
+            setUser({
+                name: user.name,
+                userList: filter_by_time_needed(user.userList)
+            });
+        }
+        else if (type_of_sort == "difficulty") {
+            setUser({
+                name: user.name,
+                userList: filter_by_difficulty(user.userList)
+            });
+        }
+    }
+    var _e = useDrop({
+        accept: "task",
+        drop: function (item) { return addorDelTaskUserList(item.id, true); },
+        collect: function (monitor) { return ({
+            isOver: !!monitor.isOver()
+        }); }
+    }), isOver = _e[0].isOver, drop = _e[1];
+    function addorDelTaskUserList(id, addOrDel) {
+        var droppedTask = tasks.find(function (task) { return task.id === id; });
+        console.log(__assign({}, droppedTask));
+        console.log("dropping task");
+        if (droppedTask) {
+            //updating the Role state and add the new task to the currently displayed user list
+            if (addOrDel) {
+                setUser({
+                    name: user.name,
+                    userList: addTask(droppedTask, user.userList)
+                });
+                setUsers(updateUserTasks(addTask(droppedTask, user.userList)));
+            }
+            else {
+                setUser({
+                    name: user.name,
+                    userList: delTask(droppedTask, user.userList)
+                });
+                setUsers(updateUserTasks(delTask(droppedTask, user.userList)));
+            }
+            //updating the UserList in the Roles state to keep the correct user list after role changes
+            //updating the number of Users of the dropped task in the central item list if the user doesnt have
+            // the task already
+            var repeats = user.userList.reduce(function (currentTotal, task) {
+                return task.id === droppedTask.id
+                    ? currentTotal + 1
+                    : currentTotal + 0;
+            }, 0);
+            if (repeats === 0 && addOrDel)
+                changeTasks(tasks, droppedTask.id, addOrDel);
+            if (repeats === 1 && !addOrDel)
+                changeTasks(tasks, droppedTask.id, addOrDel);
+        }
+    }
+    function editUserList(newTasks) {
+        var newUser = { name: user.name, userList: newTasks };
+        setUser({ name: user.name, userList: newTasks });
+        var newRoles = users.map(function (role) {
+            return role.name === newUser.name
+                ? newUser
+                : {
+                    name: role.name,
+                    userList: role.userList.map(function (T) { return (__assign(__assign({}, T), { steps: __spreadArrays(T.steps) })); })
+                };
+        });
+        setUsers(newRoles);
+    }
+    function updateUserTasks(newTasks) {
+        var newUser = { name: user.name, userList: newTasks };
+        var newRoles = users.map(function (role) {
+            return role.name === newUser.name
+                ? newUser
+                : {
+                    name: role.name,
+                    userList: role.userList.map(function (T) { return (__assign(__assign({}, T), { steps: __spreadArrays(T.steps) })); })
+                };
+        });
+        return newRoles;
+    }
+    //this function increments the numberOfUsers of the task with the passed in ID
+    function changeTasks(tasks, id, incrOrDec) {
+        var copy = tasks.map(function (T) { return (__assign(__assign({}, T), { steps: __spreadArrays(T.steps) })); });
+        var currentNumUsers = tasks.find(function (T) {
+            return T.id === id ? T : null;
+        });
+        var newNumUsers = -1;
+        if (currentNumUsers && incrOrDec) {
+            newNumUsers = currentNumUsers.numUsers + 1;
+        }
+        if (currentNumUsers && !incrOrDec) {
+            newNumUsers = currentNumUsers.numUsers - 1;
+        }
+        setTasks(copy.map(function (TASK) {
+            return TASK.id === id
+                ? makeTask(id, TASK.name, TASK.description, TASK.status, TASK.image, TASK.steps, TASK.difficulty, newNumUsers, TASK.time, TASK.pendingMode)
+                : __assign(__assign({}, TASK), { steps: __spreadArrays(TASK.steps) });
+        }));
+    }
+    function TrashCan() {
+        var _a = useDrop({
+            accept: "task",
+            drop: function (item) { return addorDelTaskUserList(item.id, false); },
+            canDrop: function (item) { return canDel(item); },
+            collect: function (monitor) { return ({
+                isOver: !!monitor.isOver(),
+                canDrop: !!monitor.canDrop()
+            }); }
+        }), _b = _a[0], isOver = _b.isOver, canDrop = _b.canDrop, drop = _a[1];
+        if (isOver && canDrop) {
+            return (react_1["default"].createElement("div", { ref: drop, className: "trashOpen" },
+                react_1["default"].createElement("img", { src: require("../trashCanOpen.jpg"), width: "100px" })));
+        }
+        else {
+            return (react_1["default"].createElement("div", { ref: drop, className: "trashClosed" },
+                react_1["default"].createElement("img", { src: require("../trashCanClosed.jpg"), width: "100px" })));
+        }
+    }
+    function canDel(dropTask) {
+        var droppedTask = user.userList.find(function (task) { return task.id === dropTask.id; } //&&
+        //task.description === dropTask.description
+        //task.time === dropTask.time
+        //         &&task.difficulty === dropTask.difficulty
+        );
+        return droppedTask ? true : false;
+    }
+}
+exports.UserList = UserList;
+//custom render**************************************************************************************************************
+exports.renderWithDnd = function (ui) {
+    // eslint-disable-next-line react/prop-types
+    return render(react_1["default"].createElement(DndProvider, { backend: HTML5Backend }, ui));
+};
+//task functions*************************************************************************************************************
+function makeTask(id, name, desc, stat, img, steps, diff, num, time, pending) {
+    var task = {
+        id: id,
+        name: name,
+        description: desc,
+        status: stat,
+        image: img,
+        steps: steps,
+        difficulty: diff,
+        numUsers: num,
+        time: time,
+        pendingMode: pending
+    };
+    return task;
+}
+exports.makeTask = makeTask;
+/*
+Add task to a task array. Returns a deep copy of old task array plus the new task
+*/
+function addTask(task, tasks) {
+    return __spreadArrays(tasks.map(function (task) { return (__assign(__assign({}, task), { steps: __spreadArrays(task.steps) })); }), [
+        __assign(__assign({}, task), { steps: __spreadArrays(task.steps) })
+    ]);
+}
+exports.addTask = addTask;
+/*
+Delete task from a task array by receiving the task to be removed
+accessing it's name and filtering the list of tasks by not including the task with that name,
+Ids for each task would work better just in case tasks would have the same name.
+So this may need amendment later on.
+*/
+function delTask(task, tasks) {
+    var taskToRemove = makeTask(task.id, task.name, task.description, task.status, task.image, task.steps, task.difficulty, task.numUsers, task.time, task.pendingMode);
+    var newTasks = tasks.filter(function (task) { return task.id !== taskToRemove.id; } /*&&
+        task.description !== taskToRemove.description &&
+        task.time !== taskToRemove.time &&
+        task.difficulty !== taskToRemove.difficulty*/);
+    return newTasks;
+}
+exports.delTask = delTask;
+//user functions****************************************************************************************************************
+/**
+ * addUser function, adds user to the list of roles
+ */
+function makeUser(user, tasks, roles) {
+    var newUser = { name: user, userList: tasks };
+    roles.push(newUser);
+    return roles;
+}
+exports.makeUser = makeUser;
+/**
+ * deleteUser function, deletes a user from the list of roles
+ */
+function deleteUser(user, roles) {
+    user.name = "";
+    user.userList = [];
+    var list = __spreadArrays(roles);
+    list = list.filter(function (item) { return item != user; });
+    return list;
+}
+exports.deleteUser = deleteUser;
+/**
+ * deleteTask function, deletes a task from the userList
+ */
+function deleteTask(user, task) {
+    var list = __spreadArrays(user.userList);
+    list = list.filter(function (item) { return item != task; });
+    return list;
+}
+exports.deleteTask = deleteTask;
+/**
+ * addTask function, adds a task fto the userList
+ */
+function addTasktoUserList(user, id, name, desc, stat, img, step, diff, num, time, pend) {
+    var task = {
+        id: id,
+        name: name,
+        description: desc,
+        status: stat,
+        image: img,
+        steps: step,
+        difficulty: diff,
+        numUsers: num,
+        time: time,
+        pendingMode: pend
+    };
+    var list = __spreadArrays(user.userList);
+    list.push(task);
+    return list;
+}
+exports.addTasktoUserList = addTasktoUserList;

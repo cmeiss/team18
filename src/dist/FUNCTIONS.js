@@ -18,7 +18,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 exports.__esModule = true;
-exports.delTask = exports.addTask = exports.makeTask = exports.renderWithDnd = exports.UserList = exports.search = exports.ModifyUsers = exports.filter_by_numUsers = exports.filter_by_time_needed = exports.filter_by_alphabetical_order = exports.filter_by_difficulty = exports.DisplayTask = exports.CentralItemList = exports.AdminList = exports.DeleteTask = exports.AddTask = exports.EditTime = exports.EditTask = exports.EditSteps = exports.EditStatus = exports.EditDescription = exports.EditDifficulty = void 0;
+exports.UserList = exports.search = exports.ModifyUsers = exports.filter_by_numUsers = exports.filter_by_time_needed = exports.filter_by_alphabetical_order = exports.filter_by_difficulty = exports.DisplayTask = exports.CentralItemList = exports.AdminList = exports.DeleteTask = exports.AddTask = exports.EditTime = exports.EditTask = exports.EditSteps = exports.EditStatus = exports.EditDescription = exports.EditDifficulty = void 0;
 var react_1 = require("react");
 var react_2 = require("react");
 function EditDifficulty(_a) {
@@ -522,122 +522,5 @@ function UserList(_a) {
                 changeTasks(tasks, droppedTask.id, addOrDel);
         }
     }
-    function editUserList(newTasks) {
-        var newUser = { name: user.name, userList: newTasks };
-        setUser({ name: user.name, userList: newTasks });
-        var newRoles = users.map(function (role) {
-            return role.name === newUser.name
-                ? newUser
-                : {
-                    name: role.name,
-                    userList: role.userList.map(function (T) { return (__assign(__assign({}, T), { steps: __spreadArrays(T.steps) })); })
-                };
-        });
-        setUsers(newRoles);
-    }
-    function updateUserTasks(newTasks) {
-        var newUser = { name: user.name, userList: newTasks };
-        var newRoles = users.map(function (role) {
-            return role.name === newUser.name
-                ? newUser
-                : {
-                    name: role.name,
-                    userList: role.userList.map(function (T) { return (__assign(__assign({}, T), { steps: __spreadArrays(T.steps) })); })
-                };
-        });
-        return newRoles;
-    }
-    //this function increments the numberOfUsers of the task with the passed in ID
-    function changeTasks(tasks, id, incrOrDec) {
-        var copy = tasks.map(function (T) { return (__assign(__assign({}, T), { steps: __spreadArrays(T.steps) })); });
-        var currentNumUsers = tasks.find(function (T) {
-            return T.id === id ? T : null;
-        });
-        var newNumUsers = -1;
-        if (currentNumUsers && incrOrDec) {
-            newNumUsers = currentNumUsers.numUsers + 1;
-        }
-        if (currentNumUsers && !incrOrDec) {
-            newNumUsers = currentNumUsers.numUsers - 1;
-        }
-        setTasks(copy.map(function (TASK) {
-            return TASK.id === id
-                ? makeTask(id, TASK.name, TASK.description, TASK.status, TASK.image, TASK.steps, TASK.difficulty, newNumUsers, TASK.time, TASK.pendingMode)
-                : __assign(__assign({}, TASK), { steps: __spreadArrays(TASK.steps) });
-        }));
-    }
-    function TrashCan() {
-        var _a = useDrop({
-            accept: "task",
-            drop: function (item) { return addorDelTaskUserList(item.id, false); },
-            canDrop: function (item) { return canDel(item); },
-            collect: function (monitor) { return ({
-                isOver: !!monitor.isOver(),
-                canDrop: !!monitor.canDrop()
-            }); }
-        }), _b = _a[0], isOver = _b.isOver, canDrop = _b.canDrop, drop = _a[1];
-        if (isOver && canDrop) {
-            return (react_1["default"].createElement("div", { ref: drop, className: "trashOpen" },
-                react_1["default"].createElement("img", { src: require("../trashCanOpen.jpg"), width: "100px" })));
-        }
-        else {
-            return (react_1["default"].createElement("div", { ref: drop, className: "trashClosed" },
-                react_1["default"].createElement("img", { src: require("../trashCanClosed.jpg"), width: "100px" })));
-        }
-    }
-    function canDel(dropTask) {
-        var droppedTask = user.userList.find(function (task) { return task.id === dropTask.id; } //&&
-        //task.description === dropTask.description
-        //task.time === dropTask.time
-        //         &&task.difficulty === dropTask.difficulty
-        );
-        return droppedTask ? true : false;
-    }
 }
 exports.UserList = UserList;
-//custom render**************************************************************************************************************
-exports.renderWithDnd = function (ui) {
-    // eslint-disable-next-line react/prop-types
-    return render(react_1["default"].createElement(DndProvider, { backend: HTML5Backend }, ui));
-};
-//task functions*************************************************************************************************************
-function makeTask(id, name, desc, stat, img, steps, diff, num, time, pending) {
-    var task = {
-        id: id,
-        name: name,
-        description: desc,
-        status: stat,
-        image: img,
-        steps: steps,
-        difficulty: diff,
-        numUsers: num,
-        time: time,
-        pendingMode: pending
-    };
-    return task;
-}
-exports.makeTask = makeTask;
-/*
-Add task to a task array. Returns a deep copy of old task array plus the new task
-*/
-function addTask(task, tasks) {
-    return __spreadArrays(tasks.map(function (task) { return (__assign(__assign({}, task), { steps: __spreadArrays(task.steps) })); }), [
-        __assign(__assign({}, task), { steps: __spreadArrays(task.steps) })
-    ]);
-}
-exports.addTask = addTask;
-/*
-Delete task from a task array by receiving the task to be removed
-accessing it's name and filtering the list of tasks by not including the task with that name,
-Ids for each task would work better just in case tasks would have the same name.
-So this may need amendment later on.
-*/
-function delTask(task, tasks) {
-    var taskToRemove = makeTask(task.id, task.name, task.description, task.status, task.image, task.steps, task.difficulty, task.numUsers, task.time, task.pendingMode);
-    var newTasks = tasks.filter(function (task) { return task.id !== taskToRemove.id; } /*&&
-        task.description !== taskToRemove.description &&
-        task.time !== taskToRemove.time &&
-        task.difficulty !== taskToRemove.difficulty*/);
-    return newTasks;
-}
-exports.delTask = delTask;

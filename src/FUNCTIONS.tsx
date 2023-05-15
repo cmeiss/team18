@@ -3,6 +3,17 @@ import { User } from "./interfaces/user";
 import { Task } from "./interfaces/task";
 import { useState } from "react";
 
+//delTask function, implemented once and referenced multiple times
+//addTask function, implemented once and referenced mulitple times
+//makeTask function, implemented once and referenced multiple times
+//canDel function, implemented once and referenced maybe twice
+//TrashCan function, implemented and referenced once
+//changeTasks function, implemented once and referenced multiple times
+//updateUserTasks function, implemented once and referenced multiple times
+//editUserList function, implemented and referenced once
+
+
+
 //edit difficulty *************************************************************************************************************
 interface diffProp {
     diff: number;
@@ -728,180 +739,3 @@ export function UserList({
                 changeTasks(tasks, droppedTask.id, addOrDel);
         }
     }
-
-    function editUserList(newTasks: Task[]) {
-        const newUser = { name: user.name, userList: newTasks };
-        setUser({ name: user.name, userList: newTasks });
-        const newRoles = users.map((role: User) =>
-            role.name === newUser.name
-                ? newUser
-                : {
-                      name: role.name,
-                      userList: role.userList.map((T: Task) => ({
-                          ...T,
-                          steps: [...T.steps]
-                      }))
-                  }
-        );
-        setUsers(newRoles);
-    }
-
-    function updateUserTasks(newTasks: Task[]) {
-        const newUser = { name: user.name, userList: newTasks };
-        const newRoles = users.map((role: User) =>
-            role.name === newUser.name
-                ? newUser
-                : {
-                      name: role.name,
-                      userList: role.userList.map((T: Task) => ({
-                          ...T,
-                          steps: [...T.steps]
-                      }))
-                  }
-        );
-        return newRoles;
-    }
-
-    //this function increments the numberOfUsers of the task with the passed in ID
-    function changeTasks(tasks: Task[], id: number, incrOrDec: boolean) {
-        const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
-        const currentNumUsers = tasks.find((T: Task) =>
-            T.id === id ? T : null
-        );
-        let newNumUsers = -1;
-        if (currentNumUsers && incrOrDec) {
-            newNumUsers = currentNumUsers.numUsers + 1;
-        }
-        if (currentNumUsers && !incrOrDec) {
-            newNumUsers = currentNumUsers.numUsers - 1;
-        }
-        setTasks(
-            copy.map((TASK: Task) =>
-                TASK.id === id
-                    ? makeTask(
-                          id,
-                          TASK.name,
-                          TASK.description,
-                          TASK.status,
-                          TASK.image,
-                          TASK.steps,
-                          TASK.difficulty,
-                          newNumUsers,
-                          TASK.time,
-                          TASK.pendingMode
-                      )
-                    : { ...TASK, steps: [...TASK.steps] }
-            )
-        );
-    }
-
-    function TrashCan(): JSX.Element {
-        const [{ isOver, canDrop }, drop] = useDrop({
-            accept: "task",
-            drop: (item: Task) => addorDelTaskUserList(item.id, false),
-            canDrop: (item: Task) => canDel(item),
-            collect: (monitor) => ({
-                isOver: !!monitor.isOver(),
-                canDrop: !!monitor.canDrop()
-            })
-        });
-        if (isOver && canDrop) {
-            return (
-                <div ref={drop} className="trashOpen">
-                    <img src={require("../trashCanOpen.jpg")} width="100px" />
-                </div>
-            );
-        } else {
-            return (
-                <div ref={drop} className="trashClosed">
-                    <img src={require("../trashCanClosed.jpg")} width="100px" />
-                </div>
-            );
-        }
-    }
-
-    function canDel(dropTask: Task): boolean {
-        const droppedTask: Task | undefined = user.userList.find(
-            (task: Task) => task.id === dropTask.id //&&
-            //task.description === dropTask.description
-            //task.time === dropTask.time
-            //         &&task.difficulty === dropTask.difficulty
-        );
-        return droppedTask ? true : false;
-    }
-}
-//custom render**************************************************************************************************************
-export const renderWithDnd = (ui: {} | null | undefined) => {
-    // eslint-disable-next-line react/prop-types
-    return render(<DndProvider backend={HTML5Backend}>{ui}</DndProvider>);
-};
-//task functions*************************************************************************************************************
-export function makeTask(
-    id: number,
-    name: string,
-    desc: string,
-    stat: boolean,
-    img: string,
-    steps: string[],
-    diff: number,
-    num: number,
-    time: string,
-    pending: boolean
-): Task {
-    const task: Task = {
-        id: id,
-        name: name,
-        description: desc,
-        status: stat,
-        image: img,
-        steps: steps,
-        difficulty: diff,
-        numUsers: num,
-        time: time,
-        pendingMode: pending
-    };
-    return task;
-}
-
-/*
-Add task to a task array. Returns a deep copy of old task array plus the new task
-*/
-export function addTask(task: Task, tasks: Task[]) {
-    return [
-        ...tasks.map(
-            (task: Task): Task => ({
-                ...task,
-                steps: [...task.steps]
-            })
-        ),
-        { ...task, steps: [...task.steps] }
-    ];
-}
-
-/*
-Delete task from a task array by receiving the task to be removed
-accessing it's name and filtering the list of tasks by not including the task with that name,
-Ids for each task would work better just in case tasks would have the same name.
-So this may need amendment later on.
-*/
-export function delTask(task: Task, tasks: Task[]) {
-    const taskToRemove = makeTask(
-        task.id,
-        task.name,
-        task.description,
-        task.status,
-        task.image,
-        task.steps,
-        task.difficulty,
-        task.numUsers,
-        task.time,
-        task.pendingMode
-    );
-    const newTasks = tasks.filter(
-        (task: Task): boolean => task.id !== taskToRemove.id /*&&
-            task.description !== taskToRemove.description &&
-            task.time !== taskToRemove.time &&
-            task.difficulty !== taskToRemove.difficulty*/
-    );
-    return newTasks;
-}

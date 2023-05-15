@@ -1,7 +1,7 @@
 import React from "react";
 import { DeleteTask } from "./deleteTask-component";
 import { Task } from "../interfaces/task";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 //basic tasks and task lists to test
@@ -47,6 +47,7 @@ const TASKLIST1 = [TASK1, TASK2];
 //const TASKLIST3 = [TASK1, TASK2, TASK3];
 
 //actual tests
+
 describe("Delete task tests", () => {
     beforeEach(() =>
         render(
@@ -65,6 +66,19 @@ describe("Delete task tests", () => {
         const switchButton = screen.getByRole("switch");
         expect(switchButton).toBeInTheDocument();
     });
+    test("renders switch component", () => {
+        render(<DeleteTask tasks={[]} setTasks={() => {}} />);
+        const switchElement = screen.getByLabelText("Delete Task");
+        expect(switchElement).toBeInTheDocument();
+    });
+    test("renders textarea component when switch is toggled", () => {
+        render(<DeleteTask tasks={[]} setTasks={() => {}} />);
+        const switchElement = screen.getByLabelText("Delete Task");
+        fireEvent.click(switchElement);
+        const textareaElement = screen.getByLabelText("Enter Task Below:");
+        expect(textareaElement).toBeInTheDocument();
+    });
+
     test("On switch click, there is a textbox and buttons: ", () => {
         const switchButton = screen.getByRole("switch");
         switchButton.click();

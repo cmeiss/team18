@@ -2,6 +2,7 @@ import React from "react";
 import { User } from "./interfaces/user";
 import { Task } from "./interfaces/task";
 import { useState } from "react";
+//attribute interfaces?
 
 //delTask function, implemented once and referenced multiple times
 //addTask function, implemented once and referenced mulitple times
@@ -11,8 +12,10 @@ import { useState } from "react";
 //changeTasks function, implemented once and referenced multiple times
 //updateUserTasks function, implemented once and referenced multiple times
 //editUserList function, implemented and referenced once
-
-
+//askUserListaddorDelT function, implemented once and referenced twice
+//sort function, implemented once and referenced once
+//search function, implemented once and referenced once
+//ModifyUsers function, implemented once and referenced once (as wekl as its subfunctions)
 
 //edit difficulty *************************************************************************************************************
 interface diffProp {
@@ -601,141 +604,3 @@ export function filter_by_numUsers(list_of_tasks: Task[]): Task[] {
     list_of_tasks.sort(myComparator);
     return list_of_tasks;
 }
-//modify users ***************************************************************************************************************
-interface ChangeRoleProperties {
-    Role: User;
-    roles: User[];
-    setRoles: (newUsers: User[]) => void;
-}
-
-export function ModifyUsers(
-    ChangeRoleProps: ChangeRoleProperties
-): JSX.Element {
-    const [editmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
-    const [newUser, setNewUser] = useState<string>("User2"); //the value currently in the text box of edit mode
-    //function that sets role based on the role clicked
-    function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
-        seteditmode(event.target.checked);
-    }
-    function updateUsers(event: React.ChangeEvent<HTMLInputElement>) {
-        setNewUser(event.target.value);
-    }
-
-    function AddUsersandEditMode() {
-        ChangeRoleProps.setRoles([
-            ...ChangeRoleProps.roles,
-            { name: newUser, userList: [] }
-        ]);
-        seteditmode(false);
-    }
-    function DeleteUsersandEditMode() {
-        ChangeRoleProps.setRoles(
-            [...ChangeRoleProps.roles].filter((role: User): boolean =>
-                role.name !== newUser ? true : false
-            )
-        );
-        seteditmode(false);
-    }
-}
-//search *********************************************************************************************************************
-export function search(name: string, tasks: Task[]): Task[] {
-    const tasks_with_word = tasks.filter((task: Task) =>
-        task.name.toLowerCase().includes(name.toLowerCase())
-    );
-    return tasks_with_word;
-}
-//user list ****************************************************************************************************************
-interface UserProps {
-    user: User;
-    setUser: (newUser: User) => void;
-    users: User[];
-    tasks: Task[]; //this attribute is not used right now but will be needed to update the numUsers when we add things to userList
-    setTasks: (newTasks: Task[]) => void; ////this attribute is not used right now but will be needed to update the numUsers when we add things to userList
-    setUsers: (users: User[]) => void;
-    //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
-}
-
-// export function UserList(user: UserProps): JSX.Element {
-
-export function UserList({
-    user,
-    setUser,
-    users,
-    tasks,
-    setTasks,
-    setUsers
-}: UserProps): JSX.Element {
-    const [TaskSearched, setTaskSearched] = useState<string>("");
-    const [SearchMode, SetSearchMode] = useState<boolean>(false);
-    const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
-    function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {
-        setTaskSearched(event.target.value);
-        setSearchedTasks(search(TaskSearched, user.userList));
-    }
-    function setSearchMode() {
-        SetSearchMode(!SearchMode);
-    }
-    function sort(type_of_sort: string): void {
-        if (type_of_sort == "alphabet") {
-            setUser({
-                name: user.name,
-                userList: filter_by_alphabetical_order(user.userList)
-            });
-        } else if (type_of_sort == "time") {
-            setUser({
-                name: user.name,
-                userList: filter_by_time_needed(user.userList)
-            });
-        } else if (type_of_sort == "difficulty") {
-            setUser({
-                name: user.name,
-                userList: filter_by_difficulty(user.userList)
-            });
-        }
-    }
-
-    const [{ isOver }, drop] = useDrop({
-        accept: "task",
-        drop: (item: Task) => addorDelTaskUserList(item.id, true),
-        collect: (monitor) => ({
-            isOver: !!monitor.isOver()
-        })
-    });
-
-    function addorDelTaskUserList(id: number, addOrDel: boolean) {
-        const droppedTask: Task | undefined = tasks.find(
-            (task: Task) => task.id === id
-        );
-        console.log({ ...droppedTask });
-        console.log("dropping task");
-        if (droppedTask) {
-            //updating the Role state and add the new task to the currently displayed user list
-            if (addOrDel) {
-                setUser({
-                    name: user.name,
-                    userList: addTask(droppedTask, user.userList)
-                });
-                setUsers(updateUserTasks(addTask(droppedTask, user.userList)));
-            } else {
-                setUser({
-                    name: user.name,
-                    userList: delTask(droppedTask, user.userList)
-                });
-                setUsers(updateUserTasks(delTask(droppedTask, user.userList)));
-            }
-            //updating the UserList in the Roles state to keep the correct user list after role changes
-            //updating the number of Users of the dropped task in the central item list if the user doesnt have
-            // the task already
-            const repeats = user.userList.reduce(
-                (currentTotal: number, task: Task) =>
-                    task.id === droppedTask.id
-                        ? currentTotal + 1
-                        : currentTotal + 0,
-                0
-            );
-            if (repeats === 0 && addOrDel)
-                changeTasks(tasks, droppedTask.id, addOrDel);
-            if (repeats === 1 && !addOrDel)
-                changeTasks(tasks, droppedTask.id, addOrDel);
-        }
-    }

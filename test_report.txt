@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/list-components/adminlist.test.tsx (5.33 s)
+PASS src/list-components/adminlist.test.tsx (6.286 s)
   ● Console
 
     console.error
@@ -1672,7 +1672,7 @@ FAIL src/list-components/ModifyUsers.test.tsx
           at invokeGuardedCallbackAndCatchFirstError (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4291:25)
           at executeDispatch (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:9041:3) Error: Function not implemented.
           at Object.setRoles (/home/runner/work/team18/team18/src/list-components/ModifyUsers.test.tsx:19:31)
-          at AddUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:25:25)
+          at AddUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:26:25)
           at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
           at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -1736,7 +1736,7 @@ FAIL src/list-components/ModifyUsers.test.tsx
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>) Error: Function not implemented.
           at Object.setRoles (/home/runner/work/team18/team18/src/list-components/ModifyUsers.test.tsx:19:31)
-          at AddUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:25:25)
+          at AddUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:26:25)
           at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
           at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -1819,7 +1819,7 @@ FAIL src/list-components/ModifyUsers.test.tsx
           at invokeGuardedCallbackAndCatchFirstError (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4291:25)
           at executeDispatch (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:9041:3) Error: Function not implemented.
           at Object.setRoles (/home/runner/work/team18/team18/src/list-components/ModifyUsers.test.tsx:19:31)
-          at DeleteUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:32:25)
+          at DeleteUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:33:25)
           at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
           at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -1883,7 +1883,7 @@ FAIL src/list-components/ModifyUsers.test.tsx
           at Promise.then.completed (/home/runner/work/team18/team18/node_modules/jest-circus/build/utils.js:391:28)
           at new Promise (<anonymous>) Error: Function not implemented.
           at Object.setRoles (/home/runner/work/team18/team18/src/list-components/ModifyUsers.test.tsx:19:31)
-          at DeleteUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:32:25)
+          at DeleteUsersandEditMode (/home/runner/work/team18/team18/src/list-components/ModifyUsers.tsx:33:25)
           at HTMLUnknownElement.callCallback (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
           at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
           at innerInvokeEventListeners (/home/runner/work/team18/team18/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -1947,7 +1947,7 @@ FAIL src/list-components/ModifyUsers.test.tsx
       22 |             />
 
       at Object.setRoles (src/list-components/ModifyUsers.test.tsx:19:31)
-      at AddUsersandEditMode (src/list-components/ModifyUsers.tsx:25:25)
+      at AddUsersandEditMode (src/list-components/ModifyUsers.tsx:26:25)
       at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:4164:14)
       at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
       at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -2007,7 +2007,7 @@ FAIL src/list-components/ModifyUsers.test.tsx
       22 |             />
 
       at Object.setRoles (src/list-components/ModifyUsers.test.tsx:19:31)
-      at DeleteUsersandEditMode (src/list-components/ModifyUsers.tsx:32:25)
+      at DeleteUsersandEditMode (src/list-components/ModifyUsers.tsx:33:25)
       at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:4164:14)
       at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
       at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -2528,10 +2528,12 @@ FAIL src/list-components/deleteTak.test.tsx
     Ignored nodes: comments, <script />, <style />
     [36m<body>[39m
       [36m<div>[39m
-        [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"deleteTask"[39m
+        [36m>[39m
           [36m<div[39m
             [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px;"[39m
+            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -2584,10 +2586,12 @@ FAIL src/list-components/deleteTak.test.tsx
     Ignored nodes: comments, <script />, <style />
     [36m<body>[39m
       [36m<div>[39m
-        [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"deleteTask"[39m
+        [36m>[39m
           [36m<div[39m
             [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px;"[39m
+            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -2640,10 +2644,12 @@ FAIL src/list-components/deleteTak.test.tsx
     Ignored nodes: comments, <script />, <style />
     [36m<body>[39m
       [36m<div>[39m
-        [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"deleteTask"[39m
+        [36m>[39m
           [36m<div[39m
             [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px;"[39m
+            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -2800,10 +2806,12 @@ FAIL src/list-components/addTask.test.tsx
     Ignored nodes: comments, <script />, <style />
     [36m<body>[39m
       [36m<div>[39m
-        [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"addTask"[39m
+        [36m>[39m
           [36m<div[39m
             [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px;"[39m
+            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -2856,10 +2864,12 @@ FAIL src/list-components/addTask.test.tsx
     Ignored nodes: comments, <script />, <style />
     [36m<body>[39m
       [36m<div>[39m
-        [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"addTask"[39m
+        [36m>[39m
           [36m<div[39m
             [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px;"[39m
+            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -2912,10 +2922,12 @@ FAIL src/list-components/addTask.test.tsx
     Ignored nodes: comments, <script />, <style />
     [36m<body>[39m
       [36m<div>[39m
-        [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"addTask"[39m
+        [36m>[39m
           [36m<div[39m
             [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px;"[39m
+            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
           [36m>[39m
             [36m<input[39m
               [33mclass[39m=[32m"form-check-input"[39m
@@ -3291,11 +3303,11 @@ All files                  |    45.3 |    37.16 |   42.13 |   45.27 |
   CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,147                             
   ChangeRole.tsx           |     100 |      100 |     100 |     100 |                                             
   DisplayTask.tsx          |   85.71 |       75 |      80 |   85.71 | 64                                          
-  ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 29,37                                       
+  ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 30,38                                       
   UserList.tsx             |    17.8 |     17.3 |   15.62 |    18.3 | 36-61,70,77-162,183-184,191,206-209,230-257 
-  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 29-85                                       
+  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 30-86                                       
   adminlist.tsx            |   65.07 |    53.84 |      52 |   65.57 | 31,38-70,97-98,105,176                      
-  deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 17-27                                       
+  deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 18-30                                       
   filterlists.tsx          |   96.42 |       75 |     100 |   95.83 | 29                                          
   search.tsx               |       0 |      100 |       0 |       0 | 7-10                                        
  src/pages                 |       0 |        0 |       0 |       0 |                                             
@@ -3306,5 +3318,5 @@ All files                  |    45.3 |    37.16 |   42.13 |   45.27 |
 Test Suites: 9 failed, 10 passed, 19 total
 Tests:       25 failed, 60 passed, 85 total
 Snapshots:   0 total
-Time:        20.039 s
+Time:        23.318 s
 Ran all test suites.

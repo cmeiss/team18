@@ -37,6 +37,18 @@ export function DisplayTask(display: displayProps): JSX.Element {
         })
     });
 
+    function DisplayEditTask(): JSX.Element {
+        return (
+            <div hidden={false}>
+                <EditTask
+                    tasks={display.tasks}
+                    updateTasks={display.updateTasks}
+                    task={display.task}
+                ></EditTask>
+            </div>
+        );
+    }
+
     return (
         <div
             ref={drag}
@@ -104,13 +116,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                                 ></EditTask>
                             </div>
                         ) : (
-                            <div hidden={false}>
-                                <EditTask
-                                    tasks={display.tasks}
-                                    updateTasks={display.updateTasks}
-                                    task={display.task}
-                                ></EditTask>
-                            </div>
+                            <DisplayEditTask></DisplayEditTask>
                         )}
                     </div>
                 </p>

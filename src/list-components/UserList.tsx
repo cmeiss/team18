@@ -18,10 +18,7 @@ interface UserProps {
     tasks: Task[]; //this attribute is not used right now but will be needed to update the numUsers when we add things to userList
     setTasks: (newTasks: Task[]) => void; ////this attribute is not used right now but will be needed to update the numUsers when we add things to userList
     setUsers: (users: User[]) => void;
-    //setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
-
-// export function UserList(user: UserProps): JSX.Element {
 
 export function UserList({
     user,
@@ -34,6 +31,14 @@ export function UserList({
     const [TaskSearched, setTaskSearched] = useState<string>("");
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
+
+    function copyUL() {
+        return user.userList.map((TASK: Task) => ({
+            ...TASK,
+            steps: [...TASK.steps]
+        }));
+    }
+
     function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {
         setTaskSearched(event.target.value);
         setSearchedTasks(search(TaskSearched, user.userList));
@@ -45,17 +50,17 @@ export function UserList({
         if (type_of_sort == "alphabet") {
             setUser({
                 name: user.name,
-                userList: filter_by_alphabetical_order(user.userList)
+                userList: filter_by_alphabetical_order(copyUL())
             });
         } else if (type_of_sort == "time") {
             setUser({
                 name: user.name,
-                userList: filter_by_time_needed(user.userList)
+                userList: filter_by_time_needed(copyUL())
             });
         } else if (type_of_sort == "difficulty") {
             setUser({
                 name: user.name,
-                userList: filter_by_difficulty(user.userList)
+                userList: filter_by_difficulty(copyUL())
             });
         }
     }
@@ -79,15 +84,15 @@ export function UserList({
             if (addOrDel) {
                 setUser({
                     name: user.name,
-                    userList: addTask(droppedTask, user.userList)
+                    userList: addTask(droppedTask, copyUL())
                 });
-                setUsers(updateUserTasks(addTask(droppedTask, user.userList)));
+                setUsers(updateUserTasks(addTask(droppedTask, copyUL())));
             } else {
                 setUser({
                     name: user.name,
-                    userList: delTask(droppedTask, user.userList)
+                    userList: delTask(droppedTask, copyUL())
                 });
-                setUsers(updateUserTasks(delTask(droppedTask, user.userList)));
+                setUsers(updateUserTasks(delTask(droppedTask, copyUL())));
             }
             //updating the UserList in the Roles state to keep the correct user list after role changes
             //updating the number of Users of the dropped task in the central item list if the user doesnt have
@@ -184,13 +189,13 @@ export function UserList({
         });
         if (isOver && canDrop) {
             return (
-                <div ref={drop} className="trashOpen">
+                <div ref={drop} className="trashOpen" data-testid="trashCan">
                     <img src={require("../trashCanOpen.jpg")} width="100px" />
                 </div>
             );
         } else {
             return (
-                <div ref={drop} className="trashClosed">
+                <div ref={drop} className="trashClosed" data-testid="trashCan">
                     <img src={require("../trashCanClosed.jpg")} width="100px" />
                 </div>
             );
@@ -199,10 +204,7 @@ export function UserList({
 
     function canDel(dropTask: Task): boolean {
         const droppedTask: Task | undefined = user.userList.find(
-            (task: Task) => task.id === dropTask.id //&&
-            //task.description === dropTask.description
-            //task.time === dropTask.time
-            //         &&task.difficulty === dropTask.difficulty
+            (task: Task) => task.id === dropTask.id
         );
         return droppedTask ? true : false;
     }
@@ -282,9 +284,6 @@ export function UserList({
                 </div>
             </div>
         );
-        // {console.log("userList")}
-        // {console.log(...user.userList)}
-        // {console.log(setTasks)}
     } else {
         return <></>;
     }

@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 //basic tasks and task lists to test
 const TASK1: Task = {
-    id: 0,
+    id: 1,
     name: "task1",
     description: "description",
     status: false,
@@ -19,7 +19,7 @@ const TASK1: Task = {
 };
 
 const TASK2: Task = {
-    id: 1,
+    id: 2,
     name: "task2",
     description: "description",
     status: false,
@@ -31,7 +31,7 @@ const TASK2: Task = {
     pendingMode: false
 };
 
-/*const TASK3: Task = {
+const TASK3: Task = {
     name: "task3",
     description: "description",
     status: false,
@@ -39,8 +39,10 @@ const TASK2: Task = {
     steps: ["seven", "eight", "nine"],
     difficulty: 2,
     numUsers: 2,
-    time: 1200
-}; */
+    time: "1200",
+    id: 3,
+    pendingMode: false
+};
 
 const TASKLIST1 = [TASK1, TASK2];
 //const TASKLIST2 = [TASK3];
@@ -112,7 +114,8 @@ describe("Delete task tests", () => {
                 numUsers: 1,
                 time: "1100",
                 pendingMode: false
-            }
+            },
+            TASK3
         ];
         const setTasks = jest.fn();
         render(<DeleteTask tasks={tasks} setTasks={setTasks} />);

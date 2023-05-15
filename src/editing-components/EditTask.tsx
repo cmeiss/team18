@@ -47,7 +47,8 @@ export function EditTask(edit: editProps): JSX.Element {
         diff: number,
         num: number,
         time: string,
-        pend: boolean
+        pend: boolean,
+        ULid: number
     ) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(
@@ -63,7 +64,8 @@ export function EditTask(edit: editProps): JSX.Element {
                           diff,
                           num,
                           time,
-                          pend
+                          pend,
+                          ULid
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )
@@ -81,7 +83,8 @@ export function EditTask(edit: editProps): JSX.Element {
                           diff,
                           num,
                           time,
-                          pend
+                          pend,
+                          ULid
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )
@@ -127,7 +130,8 @@ export function EditTask(edit: editProps): JSX.Element {
                                     diff,
                                     numUsers,
                                     time,
-                                    pending
+                                    pending,
+                                    edit.task.userListId
                                 )
                             }
                         >

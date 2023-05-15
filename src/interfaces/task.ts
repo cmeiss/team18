@@ -12,4 +12,5 @@ export interface Task {
     numUsers: number;
     time: string;
     pendingMode: boolean;
+    userListId: number; //this id is assigned when a task is added to the user list and used to delete tasks individually from the user list
 }

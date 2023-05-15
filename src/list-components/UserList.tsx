@@ -11,6 +11,8 @@ import { useDrop } from "react-dnd";
 import { addTask, delTask, makeTask } from "../TaskFunctions";
 import { search } from "./search";
 
+//Question for Lab: do we need one unchangable id?
+
 interface UserProps {
     user: User;
     setUser: (newUser: User) => void;
@@ -67,36 +69,52 @@ export function UserList({
 
     const [{ isOver }, drop] = useDrop({
         accept: "task",
-        drop: (item: Task) => addorDelTaskUserList(item.id, true),
+        drop: (item: Task) =>
+            //addorDelTaskUserList(item.id, item.userListId, true),
+            adddroppedTask(item.id),
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
     });
 
-    function addorDelTaskUserList(id: number, addOrDel: boolean) {
+    function setULid(task: Task) {
+        //this function changes the id of a task to be the userList id
+        let max = -1;
+        if (user.userList[0]) {
+            user.userList.map((TASK: Task) => {
+                if (TASK.id > max) {
+                    max = TASK.id;
+                }
+            });
+        }
+        const newTask = makeTask(
+            //task.id,
+            max + 1,
+            task.name,
+            task.description,
+            task.status,
+            task.image,
+            task.steps,
+            task.difficulty,
+            task.numUsers,
+            task.time,
+            task.pendingMode,
+            //max + 1
+            task.userListId
+        );
+        return newTask;
+    }
+
+    function adddroppedTask(id: number) {
         const droppedTask: Task | undefined = tasks.find(
             (task: Task) => task.id === id
         );
-        console.log({ ...droppedTask });
-        console.log("dropping task");
         if (droppedTask) {
-            //updating the Role state and add the new task to the currently displayed user list
-            if (addOrDel) {
-                setUser({
-                    name: user.name,
-                    userList: addTask(droppedTask, copyUL())
-                });
-                setUsers(updateUserTasks(addTask(droppedTask, copyUL())));
-            } else {
-                setUser({
-                    name: user.name,
-                    userList: delTask(droppedTask, copyUL())
-                });
-                setUsers(updateUserTasks(delTask(droppedTask, copyUL())));
-            }
-            //updating the UserList in the Roles state to keep the correct user list after role changes
-            //updating the number of Users of the dropped task in the central item list if the user doesnt have
-            // the task already
+            setUser({
+                name: user.name,
+                userList: addTask(setULid(droppedTask), copyUL())
+            });
+            setUsers(updateUserTasks(addTask(setULid(droppedTask), copyUL())));
             const repeats = user.userList.reduce(
                 (currentTotal: number, task: Task) =>
                     task.id === droppedTask.id
@@ -104,12 +122,80 @@ export function UserList({
                         : currentTotal + 0,
                 0
             );
-            if (repeats === 0 && addOrDel)
-                changeTasks(tasks, droppedTask.id, addOrDel);
-            if (repeats === 1 && !addOrDel)
-                changeTasks(tasks, droppedTask.id, addOrDel);
+            if (repeats === 0) changeTasks(tasks, droppedTask.id, true);
         }
     }
+
+    function deleteTask(ULid: number) {
+        const droppedTask: Task | undefined = user.userList.find(
+            (task: Task) => task.id === ULid
+        );
+        if (droppedTask) {
+            setUser({
+                name: user.name,
+                userList: delTask(droppedTask, copyUL())
+            });
+            setUsers(updateUserTasks(delTask(droppedTask, copyUL())));
+            const repeats = user.userList.reduce(
+                (currentTotal: number, task: Task) =>
+                    task.id === droppedTask.id
+                        ? currentTotal + 1
+                        : currentTotal + 0,
+                0
+            );
+            if (repeats === 1) changeTasks(tasks, droppedTask.id, false);
+        }
+    }
+
+    // function addorDelTaskUserList(id: number, ULid: number, addOrDel: boolean) {
+    //     console.log("ULid");
+    //     console.log(ULid);
+    //     const droppedTask: Task | undefined = tasks.find(
+    //         (task: Task) => task.id === id
+    //     );
+    //     console.log({ ...droppedTask });
+    //     console.log("dropping task");
+    //     if (droppedTask) {
+    //         //updating the Role state and add the new task to the currently displayed user list
+    //         if (addOrDel) {
+    //             setUser({
+    //                 name: user.name,
+    //                 userList: addTask(setULid(droppedTask), copyUL())
+    //             });
+    //             setUsers(
+    //                 updateUserTasks(addTask(setULid(droppedTask), copyUL()))
+    //             );
+    //         } else {
+    //             const TaskToDel: Task | undefined = user.userList.find(
+    //                 (task: Task) => task.userListId === ULid
+    //             );
+    //             console.log("task to delete");
+    //             console.log(TaskToDel);
+    //             console.log(ULid);
+    //             if (TaskToDel) {
+    //                 setUser({
+    //                     name: user.name,
+    //                     userList: delTaskUL(TaskToDel, copyUL())
+    //                 });
+    //                 setUsers(updateUserTasks(delTaskUL(TaskToDel, copyUL())));
+    //             }
+    //         }
+    //         //updating the UserList in the Roles state to keep the correct user list after role changes
+    //         //updating the number of Users of the dropped task in the central item list if the user doesnt have
+    //         // the task already
+    //         const repeats = user.userList.reduce(
+    //             (currentTotal: number, task: Task) =>
+    //                 task.id === droppedTask.id
+    //                     ? currentTotal + 1
+    //                     : currentTotal + 0,
+    //             0
+    //         );
+    //         if (repeats === 0 && addOrDel)
+    //             changeTasks(tasks, droppedTask.id, addOrDel);
+    //         if (repeats === 1 && !addOrDel)
+    //             changeTasks(tasks, droppedTask.id, addOrDel);
+    //     }
+    // }
 
     function editUserList(newTasks: Task[]) {
         const newUser = { name: user.name, userList: newTasks };
@@ -170,7 +256,8 @@ export function UserList({
                           TASK.difficulty,
                           newNumUsers,
                           TASK.time,
-                          TASK.pendingMode
+                          TASK.pendingMode,
+                          TASK.userListId
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )
@@ -180,7 +267,9 @@ export function UserList({
     function TrashCan(): JSX.Element {
         const [{ isOver, canDrop }, drop] = useDrop({
             accept: "task",
-            drop: (item: Task) => addorDelTaskUserList(item.id, false),
+            drop: (item: Task) =>
+                //addorDelTaskUserList(item.id, item.userListId, false),
+                deleteTask(item.id),
             canDrop: (item: Task) => canDel(item),
             collect: (monitor) => ({
                 isOver: !!monitor.isOver(),
@@ -212,6 +301,8 @@ export function UserList({
     if (user.name !== "Super" && user.name !== "Admin") {
         return (
             <div className="UserList">
+                {console.log("userlist")}
+                {console.log(user.userList)}
                 <Row>
                     <Col>
                         <TrashCan></TrashCan>

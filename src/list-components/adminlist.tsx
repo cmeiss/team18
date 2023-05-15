@@ -78,7 +78,8 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
                           TASK.difficulty,
                           TASK.numUsers,
                           TASK.time,
-                          pending
+                          pending,
+                          TASK.userListId
                       )
                     : { ...TASK, steps: [...TASK.steps] }
             )

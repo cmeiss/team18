@@ -8,38 +8,38 @@ import { renderWithDnd } from "../CustomRender";
 const TaskList = [
     {
         id: 0,
-        name: "test1",
+        name: "btest1",
         description: "description a",
         status: false,
         image: "picture",
         steps: ["a", "b", "c", "GutenTag", "469476"],
         difficulty: 3,
         numUsers: 2,
-        time: "1345",
+        time: "1545",
         pendingMode: false
     },
     {
         id: 1,
-        name: "test2",
+        name: "ftest2",
         description: "this is the description",
         status: false,
         image: "picture",
         steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
+        difficulty: 2,
         numUsers: 2,
         time: "1345",
         pendingMode: false
     },
     {
         id: 2,
-        name: "test3",
+        name: "atest3",
         description: "a good description",
         status: false,
         image: "picture",
         steps: ["a", "b", "c", "GutenTag", "469476"],
-        difficulty: 3,
+        difficulty: 1,
         numUsers: 2,
-        time: "1345",
+        time: "1445",
         pendingMode: false
     }
 ];
@@ -89,8 +89,35 @@ describe("Testing User List", () => {
         });
     });
     test("Check presence of header", () => {
-        const header = screen.getByRole("heading", { name: /List/i });
+        const header = screen.getByRole("heading", { name: /Schedule/i });
         expect(header).toBeInTheDocument();
+    });
+    test("Alphabetical Sorting in UserList", () => {
+        //testing the existance of the alphabetical sorting button
+        const alphabetButton = screen.getByRole("button", {
+            name: "Alphabetical"
+        });
+        expect(alphabetButton).toBeInTheDocument();
+    });
+
+    test("Difficulty Sorting Button", () => {
+        //testing existance of difficulty button
+        const difficultyButton = screen.getByRole("button", {
+            name: "Difficulty"
+        });
+        expect(difficultyButton).toBeInTheDocument();
+    });
+
+    test("Time Sorting Button", () => {
+        //Testing existance of time Button
+        const timeButton = screen.getByRole("button", {
+            name: "Time Needed"
+        });
+        expect(timeButton).toBeInTheDocument();
+    });
+    test("TrashCan is displayed", () => {
+        const trashCan = screen.getByTestId("trashCan");
+        expect(trashCan).toBeInTheDocument();
     });
 });
 

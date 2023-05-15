@@ -114,40 +114,44 @@ function TaskPage({
                     William Sharp, Sydni Wright
                 </div>
                 {/*Adding and Deleting Users: */}
-                <div>
-                    <div>
-                        {role.name === "Super" ? (
-                            <ModifyUsers
-                                Role={role}
-                                roles={roles}
-                                setRoles={setRoles}
-                            ></ModifyUsers>
-                        ) : null}
-                    </div>
-                </div>
+                <Row>
+                    <Col>
+                        <div>
+                            {role.name === "Super" ? (
+                                <ModifyUsers
+                                    Role={role}
+                                    roles={roles}
+                                    setRoles={setRoles}
+                                ></ModifyUsers>
+                            ) : null}
+                        </div>
+                    </Col>
 
-                {/*Adding and Deleting Tasks: */}
-                <div>
-                    <div>
-                        {role.name === "Super" || role.name === "Admin" ? (
-                            <AddTask
-                                tasks={tasks}
-                                //item={task}
-                                setTasks={setTasks}
-                            ></AddTask>
-                        ) : null}
-                    </div>
+                    {/*Adding and Deleting Tasks: */}
 
-                    <div>
-                        {role.name === "Super" || role.name === "Admin" ? (
-                            <DeleteTask
-                                tasks={tasks}
-                                //item={task}
-                                setTasks={setTasks}
-                            ></DeleteTask>
-                        ) : null}
-                    </div>
-                </div>
+                    <Col>
+                        <div>
+                            {role.name === "Super" || role.name === "Admin" ? (
+                                <AddTask
+                                    tasks={tasks}
+                                    //item={task}
+                                    setTasks={setTasks}
+                                ></AddTask>
+                            ) : null}
+                        </div>
+                    </Col>
+                    <Col>
+                        <div>
+                            {role.name === "Super" || role.name === "Admin" ? (
+                                <DeleteTask
+                                    tasks={tasks}
+                                    //item={task}
+                                    setTasks={setTasks}
+                                ></DeleteTask>
+                            ) : null}
+                        </div>
+                    </Col>
+                </Row>
 
                 {/* Displaying the Lists: */}
 

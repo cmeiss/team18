@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { User } from "../interfaces/user";
+import "./modifyTasksUsers.css";
 //this is a function that returns a jsx element in our app.tsx file
 interface ChangeRoleProperties {
     Role: User;
@@ -37,13 +38,13 @@ export function ModifyUsers(
         seteditmode(false);
     }
     return (
-        <div>
+        <div className="modifyUsers">
             <Form.Check
                 type={"switch"}
                 id="editMode"
                 label="Edit Users"
                 className="mx-auto"
-                style={{ width: "150px" }}
+                style={{ width: "150px", fontWeight: "bold" }}
                 checked={editmode}
                 onChange={updateEditMode}
             />

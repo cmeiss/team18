@@ -2,6 +2,7 @@ import React from "react";
 import { Task } from "../interfaces/task";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import "./modifyTasksUsers.css";
 
 export interface delTaskProp {
     tasks: Task[];
@@ -21,26 +22,30 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
     }
 
     function remTask() {
-        [...taskProps.tasks].filter((item: Task): boolean =>
-            item.name != deltask ? true : false
+        taskProps.setTasks(
+            [...taskProps.tasks].filter((item: Task): boolean =>
+                item.name.toLowerCase() != deltask.toLowerCase() ? true : false
+            )
         );
         seteditmode(false);
     }
 
     return (
-        <div>
+        <div className="deleteTask">
             <Form.Check
                 type={"switch"}
                 id="editMode"
                 label="Delete Task"
                 className="mx-auto"
-                style={{ width: "150px" }}
+                style={{ width: "150px", fontWeight: "bold" }}
                 checked={editMode}
                 onChange={updateEditMode}
             />
             {editMode ? (
                 <Form.Group controlId="CheckAnswer">
-                    <Form.Label>Enter Task Below: </Form.Label>
+                    <Form.Label style={{ fontWeight: "bold" }}>
+                        Enter Task Below:{" "}
+                    </Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={3}

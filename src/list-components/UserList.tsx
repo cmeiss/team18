@@ -11,6 +11,8 @@ import { useDrop } from "react-dnd";
 import { addTask, delTask, makeTask } from "../TaskFunctions";
 import { search } from "./search";
 
+//Question for Lab: do we need one unchangable id?
+
 interface UserProps {
     user: User;
     setUser: (newUser: User) => void;
@@ -32,6 +34,7 @@ export function UserList({
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
 
+    //this function copies the userList to ensure immutability
     function copyUL() {
         return user.userList.map((TASK: Task) => ({
             ...TASK,
@@ -39,6 +42,7 @@ export function UserList({
         }));
     }
 
+    //The next three functions are for sorting and searching in the list
     function UpdateTaskSearched(event: React.ChangeEvent<HTMLInputElement>) {
         setTaskSearched(event.target.value);
         setSearchedTasks(search(TaskSearched, user.userList));
@@ -65,38 +69,52 @@ export function UserList({
         }
     }
 
+    //This function enables dropping tasks in the list and adds them to the UserList
     const [{ isOver }, drop] = useDrop({
         accept: "task",
-        drop: (item: Task) => addorDelTaskUserList(item.id, true),
+        drop: (item: Task) => adddroppedTask(item.id),
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
     });
 
-    function addorDelTaskUserList(id: number, addOrDel: boolean) {
+    //This function updates the id of the task to the userListId to be able to find tasks individually
+    function setULid(task: Task) {
+        //this function changes the id of a task to be the userList id
+        let max = -1;
+        if (user.userList[0]) {
+            user.userList.map((TASK: Task) => {
+                if (TASK.id > max) {
+                    max = TASK.id;
+                }
+            });
+        }
+        const newTask = makeTask(
+            max + 1,
+            task.name,
+            task.description,
+            task.status,
+            task.image,
+            task.steps,
+            task.difficulty,
+            task.numUsers,
+            task.time,
+            task.pendingMode
+        );
+        return newTask;
+    }
+
+    //This function adds a dropped task to the userList
+    function adddroppedTask(id: number) {
         const droppedTask: Task | undefined = tasks.find(
             (task: Task) => task.id === id
         );
-        console.log({ ...droppedTask });
-        console.log("dropping task");
         if (droppedTask) {
-            //updating the Role state and add the new task to the currently displayed user list
-            if (addOrDel) {
-                setUser({
-                    name: user.name,
-                    userList: addTask(droppedTask, copyUL())
-                });
-                setUsers(updateUserTasks(addTask(droppedTask, copyUL())));
-            } else {
-                setUser({
-                    name: user.name,
-                    userList: delTask(droppedTask, copyUL())
-                });
-                setUsers(updateUserTasks(delTask(droppedTask, copyUL())));
-            }
-            //updating the UserList in the Roles state to keep the correct user list after role changes
-            //updating the number of Users of the dropped task in the central item list if the user doesnt have
-            // the task already
+            setUser({
+                name: user.name,
+                userList: addTask(setULid(droppedTask), copyUL())
+            });
+            setUsers(updateUserTasks(addTask(setULid(droppedTask), copyUL())));
             const repeats = user.userList.reduce(
                 (currentTotal: number, task: Task) =>
                     task.id === droppedTask.id
@@ -104,13 +122,33 @@ export function UserList({
                         : currentTotal + 0,
                 0
             );
-            if (repeats === 0 && addOrDel)
-                changeTasks(tasks, droppedTask.id, addOrDel);
-            if (repeats === 1 && !addOrDel)
-                changeTasks(tasks, droppedTask.id, addOrDel);
+            if (repeats === 0) changeTasks(tasks, droppedTask.id, true);
         }
     }
 
+    //This function deletes a dropped task from the userList
+    function deleteTask(ULid: number) {
+        const droppedTask: Task | undefined = user.userList.find(
+            (task: Task) => task.id === ULid
+        );
+        if (droppedTask) {
+            setUser({
+                name: user.name,
+                userList: delTask(droppedTask, copyUL())
+            });
+            setUsers(updateUserTasks(delTask(droppedTask, copyUL())));
+            const repeats = user.userList.reduce(
+                (currentTotal: number, task: Task) =>
+                    task.id === droppedTask.id
+                        ? currentTotal + 1
+                        : currentTotal + 0,
+                0
+            );
+            if (repeats === 1) changeTasks(tasks, droppedTask.id, false);
+        }
+    }
+
+    //This function sets Role and Roles state with a new UserList
     function editUserList(newTasks: Task[]) {
         const newUser = { name: user.name, userList: newTasks };
         setUser({ name: user.name, userList: newTasks });
@@ -128,6 +166,7 @@ export function UserList({
         setUsers(newRoles);
     }
 
+    //This function returns a new roles array with a changed userList
     function updateUserTasks(newTasks: Task[]) {
         const newUser = { name: user.name, userList: newTasks };
         const newRoles = users.map((role: User) =>
@@ -177,10 +216,11 @@ export function UserList({
         );
     }
 
+    //This function implements the trashcan to delete individual tasks via drag and drop
     function TrashCan(): JSX.Element {
         const [{ isOver, canDrop }, drop] = useDrop({
             accept: "task",
-            drop: (item: Task) => addorDelTaskUserList(item.id, false),
+            drop: (item: Task) => deleteTask(item.id),
             canDrop: (item: Task) => canDel(item),
             collect: (monitor) => ({
                 isOver: !!monitor.isOver(),
@@ -202,6 +242,7 @@ export function UserList({
         }
     }
 
+    //This function actually deletes a task dropped on the trashcan
     function canDel(dropTask: Task): boolean {
         const droppedTask: Task | undefined = user.userList.find(
             (task: Task) => task.id === dropTask.id

@@ -78,6 +78,15 @@ describe("Delete task tests", () => {
         const textareaElement = screen.getByLabelText("Enter Task Below:");
         expect(textareaElement).toBeInTheDocument();
     });
+    test("renders delete button when switch is toggled", () => {
+        render(<DeleteTask tasks={[]} setTasks={() => {}} />);
+        const switchElement = screen.getByLabelText("Delete Task");
+        fireEvent.click(switchElement);
+        const buttonElement = screen.getByRole("button", {
+            name: "Delete Task and Leave Edit Mode"
+        });
+        expect(buttonElement).toBeInTheDocument();
+    });
 
     test("On switch click, there is a textbox and buttons: ", () => {
         const switchButton = screen.getByRole("switch");

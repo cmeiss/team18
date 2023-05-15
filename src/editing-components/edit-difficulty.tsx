@@ -12,7 +12,7 @@ export function EditDifficulty({ diff, setDifficulty }: diffProp) {
 
     return (
         <span className="fs-8" style={{ fontWeight: "bold" }}>
-            Change Difficulty: <br></br>
+            Choose Difficulty: <br></br>
             {[...Array(5)].map((star, index) => {
                 index += 1;
                 return (

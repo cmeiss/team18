@@ -3,11 +3,11 @@ import { Button, Form } from "react-bootstrap";
 import { Task } from "../interfaces/task";
 import { useState } from "react";
 import "./modifyTasksUsers.css";
-//import the task state once it gets created
+import { EditDifficulty } from "../editing-components/edit-difficulty";
+import { EditTime } from "../editing-components/EditTime";
 
 interface addTaskProp {
     tasks: Task[];
-    //item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 
@@ -19,16 +19,20 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
     const [newsteps, setSteps] = useState<string[]>([""]);
     const [newdifficulty, setDifficulty] = useState<number>(0);
     const [newtime, setTime] = useState<string>("");
-    const [newnumusers, setNumUsers] = useState<number>(0);
     //states needed for editing functions
     const [neweditmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
     const [newTask, setNewTask] = useState<string>("");
-    const [newId, setNewId] = useState<number>(0);
 
-    //change id
-    function updateNewId(event: React.ChangeEvent<HTMLInputElement>) {
-        setNewId(parseInt(event.target.value));
+    function findMax(existingTasks: Task[]) {
+        let max = existingTasks[0].id;
+        existingTasks.map((TASK: Task) => {
+            if (TASK.id > max) {
+                max = TASK.id;
+            }
+        });
+        return max;
     }
+
     //change description function
     function updateDescription(event: React.ChangeEvent<HTMLInputElement>) {
         setDescription(event.target.value);
@@ -43,19 +47,8 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
     }
     //change steps function
     function updateSteps(event: React.ChangeEvent<HTMLInputElement>) {
-        setSteps([event.target.value]);
-    }
-    //change difficulty function
-    function updateDifficulty(event: React.ChangeEvent<HTMLInputElement>) {
-        setDifficulty(parseInt(event.target.value));
-    }
-    //change time function
-    function updateTime(event: React.ChangeEvent<HTMLInputElement>) {
-        setTime(event.target.value);
-    }
-    //change num users function
-    function updateNumUsers(event: React.ChangeEvent<HTMLInputElement>) {
-        setNumUsers(parseInt(event.target.value));
+        const newSteps = String(event.target.value).split(",");
+        setSteps(newSteps);
     }
     //change edit mode
     function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
@@ -71,7 +64,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
         taskProps.setTasks([
             ...taskProps.tasks,
             {
-                id: newId,
+                id: findMax(taskProps.tasks) + 1, //newId,
                 name: newTask,
                 description: newdescription,
                 status: newstatus,
@@ -79,7 +72,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                 steps: newsteps,
                 difficulty: newdifficulty,
                 time: newtime,
-                numUsers: newnumusers,
+                numUsers: 0, //newnumusers,
                 pendingMode: false
             }
         ]);
@@ -88,76 +81,89 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
 
     return (
         <div className="addTask">
-            <Form.Check
-                type={"switch"}
-                className="mx-auto"
-                style={{ width: "150px", fontWeight: "bold" }}
-                id="editMode"
-                label="Add Task"
-                checked={neweditmode}
-                onChange={updateEditMode}
-            />
+            <div className="addTaskSwitch">
+                <Form.Check
+                    type={"switch"}
+                    className="mx-auto"
+                    style={{ width: "150px", fontWeight: "bold" }}
+                    id="editMode"
+                    label="Add Task"
+                    checked={neweditmode}
+                    onChange={updateEditMode}
+                />
+            </div>
             {neweditmode ? (
                 <Form.Group controlId="CheckAnswer">
-                    <Form.Label>Enter New Task Name Below:</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={newTask}
-                        onChange={updateNewTask}
-                    />
-                    <Form.Label>Enter New Task Id Below:</Form.Label>
-                    <Form.Control
-                        type="number"
-                        value={newId}
-                        onChange={updateNewId}
-                    />
-                    <Form.Label>Enter New Task Description Below:</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={newdescription}
-                        onChange={updateDescription}
-                    />
-                    <Form.Label>Check New Task Status Below:</Form.Label>
-                    <Form.Control
-                        type="checbox"
-                        checked={newstatus}
-                        onChange={updateStatus}
-                    />
-                    <Form.Label>Enter New Task Image Below:</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={newimage}
-                        onChange={updateImage}
-                    />
-                    <Form.Label>Enter New Task Steps Below:</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={newsteps}
-                        onChange={updateSteps}
-                    />
-                    <Form.Label>Enter New Task Difficulty Below:</Form.Label>
-                    <Form.Control
-                        type="number"
-                        value={newdifficulty}
-                        onChange={updateDifficulty}
-                    />
-                    <Form.Label>Enter New Task Time Below:</Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={newtime}
-                        onChange={updateTime}
-                    />
-                    <Form.Label>Enter New Task Num Users Below:</Form.Label>
-                    <Form.Control
-                        type="number"
-                        value={newnumusers}
-                        onChange={updateNumUsers}
-                    />
+                    <div className="newTaskName">
+                        <Form.Label style={{ fontWeight: "bold" }}>
+                            New Task Name:
+                        </Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            rows={3}
+                            value={newTask}
+                            onChange={updateNewTask}
+                            placeholder="Enter name here"
+                        />
+                    </div>
+                    <div className="newTaskDescription">
+                        <Form.Label style={{ fontWeight: "bold" }}>
+                            New Task Description:
+                        </Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            rows={3}
+                            value={newdescription}
+                            onChange={updateDescription}
+                            placeholder="Enter description here"
+                        />
+                    </div>
+                    <div className="newTaskStatus">
+                        <Form.Label style={{ fontWeight: "bold" }}>
+                            Check New Task Status Below:
+                        </Form.Label>
+                        <div>
+                            <input
+                                type="checkbox"
+                                checked={newstatus}
+                                onChange={updateStatus}
+                            />
+                            {newstatus ? "✔️" : "❌"}
+                        </div>
+                    </div>
+                    <div className="newTaskImage">
+                        <Form.Label style={{ fontWeight: "bold" }}>
+                            New Task Image:
+                        </Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            rows={3}
+                            value={newimage}
+                            onChange={updateImage}
+                            placeholder="Enter image URL here"
+                        />
+                    </div>
+                    <div className="newTaskSteps">
+                        <Form.Label style={{ fontWeight: "bold" }}>
+                            New Task Steps:
+                        </Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            rows={3}
+                            value={newsteps}
+                            onChange={updateSteps}
+                            placeholder="Enter steps as a comma seperated list, e.g. step1,step2"
+                        />
+                    </div>
+                    <div className="newTaskDifficulty">
+                        <EditDifficulty
+                            diff={newdifficulty}
+                            setDifficulty={setDifficulty}
+                        ></EditDifficulty>
+                    </div>
+                    <div className="newTaskTime">
+                        <EditTime time={newtime} setTime={setTime}></EditTime>
+                    </div>
                 </Form.Group>
             ) : null}
             {neweditmode ? (

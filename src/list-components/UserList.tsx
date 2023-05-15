@@ -243,12 +243,13 @@ export function UserList({
                 <Row>
                     <Button onClick={setSearchMode}>Search:</Button>
                     {SearchMode ? (
-                        <Form.Group controlId="ChecKAnswer">
+                        <Form.Group controlId="CheckAnswer">
                             <Form.Control
                                 as="textarea"
                                 rows={3}
                                 value={TaskSearched}
                                 onChange={UpdateTaskSearched}
+                                placeholder="Which task are you looking for?"
                             />
                         </Form.Group>
                     ) : null}

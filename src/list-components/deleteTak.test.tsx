@@ -87,6 +87,48 @@ describe("Delete task tests", () => {
         });
         expect(buttonElement).toBeInTheDocument();
     });
+    test("removes task from list of tasks on delete button click", () => {
+        const tasks = [
+            {
+                id: 1,
+                name: "Task 1",
+                description: "description",
+                status: false,
+                image: "image",
+                steps: ["one", "two", "three"],
+                difficulty: 0,
+                numUsers: 0,
+                time: "1010",
+                pendingMode: false
+            },
+            {
+                id: 2,
+                name: "Task 2",
+                description: "description",
+                status: false,
+                image: "image",
+                steps: ["four", "five", "six"],
+                difficulty: 1,
+                numUsers: 1,
+                time: "1100",
+                pendingMode: false
+            }
+        ];
+        const setTasks = jest.fn();
+        render(<DeleteTask tasks={tasks} setTasks={setTasks} />);
+        const switchElement = screen.getByLabelText("Delete Task");
+        fireEvent.click(switchElement);
+        const textareaElement = screen.getByLabelText("Enter Task Below:");
+        fireEvent.change(textareaElement, { target: { value: "Task 2" } });
+        const buttonElement = screen.getByRole("button", {
+            name: "Delete Task and Leave Edit Mode"
+        });
+        fireEvent.click(buttonElement);
+        expect(setTasks).toHaveBeenCalledWith([
+            { id: 1, name: "Task 1" },
+            { id: 3, name: "Task 3" }
+        ]);
+    });
 
     test("On switch click, there is a textbox and buttons: ", () => {
         const switchButton = screen.getByRole("switch");

@@ -85,7 +85,10 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                 <Form.Check
                     type={"switch"}
                     className="mx-auto"
-                    style={{ width: "150px", fontWeight: "bold" }}
+                    style={{
+                        width: "150px",
+                        fontWeight: "bold"
+                    }}
                     id="editMode"
                     label="Add Task"
                     checked={neweditmode}
@@ -167,7 +170,14 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                 </Form.Group>
             ) : null}
             {neweditmode ? (
-                <Button onClick={addTask}>Add Task and Leave Edit Mode</Button>
+                <Button
+                    onClick={addTask}
+                    style={{
+                        backgroundColor: "rgb(247, 197, 140)"
+                    }}
+                >
+                    Add Task and Leave Edit Mode
+                </Button>
             ) : null}
         </div>
     );

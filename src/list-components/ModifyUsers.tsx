@@ -60,12 +60,22 @@ export function ModifyUsers(
                 </Form.Group>
             ) : null}
             {editmode ? (
-                <Button onClick={AddUsersandEditMode}>
+                <Button
+                    onClick={AddUsersandEditMode}
+                    style={{
+                        backgroundColor: "rgb(247, 197, 140)"
+                    }}
+                >
                     Add User and Leave Edit Mode
                 </Button>
             ) : null}
             {editmode ? (
-                <Button onClick={DeleteUsersandEditMode}>
+                <Button
+                    onClick={DeleteUsersandEditMode}
+                    style={{
+                        backgroundColor: "rgb(247, 197, 140)"
+                    }}
+                >
                     Delete User and Leave Edit Mode
                 </Button>
             ) : null}

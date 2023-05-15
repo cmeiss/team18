@@ -159,6 +159,14 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+.search-button {
+    margin: auto;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    position: relative;
+}
 /* App.css */
 /* Navbar.css */
 .navbar {

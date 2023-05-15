@@ -268,13 +268,28 @@ export function UserList({
                                 Sort by ▾
                             </button>
                             <div className="Usersort-options">
-                                <Button onClick={() => sort("alphabet")}>
+                                <Button
+                                    onClick={() => sort("alphabet")}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Alphabetical{" "}
                                 </Button>
-                                <Button onClick={() => sort("difficulty")}>
+                                <Button
+                                    onClick={() => sort("difficulty")}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Difficulty{" "}
                                 </Button>
-                                <Button onClick={() => sort("time")}>
+                                <Button
+                                    onClick={() => sort("time")}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Time Needed{" "}
                                 </Button>
                             </div>
@@ -282,7 +297,15 @@ export function UserList({
                     </Col>
                 </Row>
                 <Row>
-                    <Button onClick={setSearchMode}>Search:</Button>
+                    <Button
+                        onClick={setSearchMode}
+                        style={{
+                            backgroundColor: "rgb(247, 197, 140)"
+                        }}
+                        className="search-button"
+                    >
+                        Search:
+                    </Button>
                     {SearchMode ? (
                         <Form.Group controlId="CheckAnswer">
                             <Form.Control

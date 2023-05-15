@@ -85,6 +85,9 @@ export function EditStatus(edit: editProps): JSX.Element {
                         flipSaved();
                     }}
                     hidden={saved}
+                    style={{
+                        backgroundColor: "rgb(247, 197, 140)"
+                    }}
                 >
                     Confirm
                 </Button>

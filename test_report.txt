@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/list-components/adminlist.test.tsx (6.286 s)
+PASS src/list-components/adminlist.test.tsx (5.699 s)
   ● Console
 
     console.error
@@ -2054,7 +2054,7 @@ FAIL src/list-components/ModifyUsers.test.tsx
 
       at Object.<anonymous> (src/list-components/ModifyUsers.test.tsx:74:45)
 
-PASS src/editing-components/EditTask.test.tsx
+FAIL src/editing-components/EditTask.test.tsx
   ● Console
 
     console.error
@@ -2170,6 +2170,721 @@ PASS src/editing-components/EditTask.test.tsx
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/editing-components/EditTask.test.tsx:78:9)
+
+  ● Testing EditTask › The edit difficulty component is displayed
+
+    TestingLibraryElementError: Unable to find an element with the text: /Change Difficulty:/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mstyle[39m=[32m"background-color: red; width: 100px; height: 40px; display: inline-block; margin-left: 220px;"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mEdit ✏️[0m
+          [36m</button>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"formDescriptionName"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
+                [36m>[39m
+                  [0mChange Description:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mid[39m=[32m"formDescriptionName"[39m
+                  [33mvalue[39m=[32m"description a"[39m
+                [36m/>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mdata-testid[39m=[32m"EditStepsForm"[39m
+              [36m>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mdata-testid[39m=[32m"stepsLabel"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
+                [36m>[39m
+                  [0mChange Steps:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mdata-testid[39m=[32m"stepsTextbox"[39m
+                  [33mvalue[39m=[32m"a,b,c,GutenTag,469476"[39m
+                [36m/>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mdata-testid[39m=[32m"stepsInstructions"[39m
+              [36m>[39m
+                [0m-To indicate different steps leave a comma symbol in between the various steps; example: step1,step2[0m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"editTime"[39m
+                  [33mstyle[39m=[32m"font-weight: bold;"[39m
+                [36m>[39m
+                  [0mChoose Time[0m
+                [36m</label>[39m
+                [36m<select[39m
+                  [33mclass[39m=[32m"form-select"[39m
+                  [33mid[39m=[32m"editTime"[39m
+                  [33mrole[39m=[32m"select"[39m
+                [36m>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"Choose Time"[39m
+                  [36m>[39m
+                    [0mChoose Time[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"00:00"[39m
+                  [36m>[39m
+                    [0m00:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"00:15"[39m
+                  [36m>[39m
+                    [0m00:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"00:30"[39m
+                  [36m>[39m
+                    [0m00:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"00:45"[39m
+                  [36m>[39m
+                    [0m00:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"01:00"[39m
+                  [36m>[39m
+                    [0m01:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"01:15"[39m
+                  [36m>[39m
+                    [0m01:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"01:30"[39m
+                  [36m>[39m
+                    [0m01:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"01:45"[39m
+                  [36m>[39m
+                    [0m01:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"02:00"[39m
+                  [36m>[39m
+                    [0m02:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"02:15"[39m
+                  [36m>[39m
+                    [0m02:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"02:30"[39m
+                  [36m>[39m
+                    [0m02:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"02:45"[39m
+                  [36m>[39m
+                    [0m02:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"03:00"[39m
+                  [36m>[39m
+                    [0m03:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"03:15"[39m
+                  [36m>[39m
+                    [0m03:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"03:30"[39m
+                  [36m>[39m
+                    [0m03:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"03:45"[39m
+                  [36m>[39m
+                    [0m03:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"04:00"[39m
+                  [36m>[39m
+                    [0m04:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"04:15"[39m
+                  [36m>[39m
+                    [0m04:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"04:30"[39m
+                  [36m>[39m
+                    [0m04:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"04:45"[39m
+                  [36m>[39m
+                    [0m04:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"05:00"[39m
+                  [36m>[39m
+                    [0m05:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"05:15"[39m
+                  [36m>[39m
+                    [0m05:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"05:30"[39m
+                  [36m>[39m
+                    [0m05:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"05:45"[39m
+                  [36m>[39m
+                    [0m05:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"06:00"[39m
+                  [36m>[39m
+                    [0m06:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"06:15"[39m
+                  [36m>[39m
+                    [0m06:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"06:30"[39m
+                  [36m>[39m
+                    [0m06:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"06:45"[39m
+                  [36m>[39m
+                    [0m06:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"07:00"[39m
+                  [36m>[39m
+                    [0m07:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"07:15"[39m
+                  [36m>[39m
+                    [0m07:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"07:30"[39m
+                  [36m>[39m
+                    [0m07:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"07:45"[39m
+                  [36m>[39m
+                    [0m07:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"08:00"[39m
+                  [36m>[39m
+                    [0m08:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"08:15"[39m
+                  [36m>[39m
+                    [0m08:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"08:30"[39m
+                  [36m>[39m
+                    [0m08:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"08:45"[39m
+                  [36m>[39m
+                    [0m08:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"09:00"[39m
+                  [36m>[39m
+                    [0m09:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"09:15"[39m
+                  [36m>[39m
+                    [0m09:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"09:30"[39m
+                  [36m>[39m
+                    [0m09:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"09:45"[39m
+                  [36m>[39m
+                    [0m09:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"10:00"[39m
+                  [36m>[39m
+                    [0m10:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"10:15"[39m
+                  [36m>[39m
+                    [0m10:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"10:30"[39m
+                  [36m>[39m
+                    [0m10:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"10:45"[39m
+                  [36m>[39m
+                    [0m10:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"11:00"[39m
+                  [36m>[39m
+                    [0m11:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"11:15"[39m
+                  [36m>[39m
+                    [0m11:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"11:30"[39m
+                  [36m>[39m
+                    [0m11:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"11:45"[39m
+                  [36m>[39m
+                    [0m11:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"12:00"[39m
+                  [36m>[39m
+                    [0m12:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"12:15"[39m
+                  [36m>[39m
+                    [0m12:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"12:30"[39m
+                  [36m>[39m
+                    [0m12:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"12:45"[39m
+                  [36m>[39m
+                    [0m12:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"13:00"[39m
+                  [36m>[39m
+                    [0m13:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"13:15"[39m
+                  [36m>[39m
+                    [0m13:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"13:30"[39m
+                  [36m>[39m
+                    [0m13:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"13:45"[39m
+                  [36m>[39m
+                    [0m13:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"14:00"[39m
+                  [36m>[39m
+                    [0m14:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"14:15"[39m
+                  [36m>[39m
+                    [0m14:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"14:30"[39m
+                  [36m>[39m
+                    [0m14:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"14:45"[39m
+                  [36m>[39m
+                    [0m14:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"15:00"[39m
+                  [36m>[39m
+                    [0m15:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"15:15"[39m
+                  [36m>[39m
+                    [0m15:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"15:30"[39m
+                  [36m>[39m
+                    [0m15:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"15:45"[39m
+                  [36m>[39m
+                    [0m15:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"16:00"[39m
+                  [36m>[39m
+                    [0m16:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"16:15"[39m
+                  [36m>[39m
+                    [0m16:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"16:30"[39m
+                  [36m>[39m
+                    [0m16:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"16:45"[39m
+                  [36m>[39m
+                    [0m16:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"17:00"[39m
+                  [36m>[39m
+                    [0m17:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"17:15"[39m
+                  [36m>[39m
+                    [0m17:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"17:30"[39m
+                  [36m>[39m
+                    [0m17:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"17:45"[39m
+                  [36m>[39m
+                    [0m17:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"18:00"[39m
+                  [36m>[39m
+                    [0m18:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"18:15"[39m
+                  [36m>[39m
+                    [0m18:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"18:30"[39m
+                  [36m>[39m
+                    [0m18:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"18:45"[39m
+                  [36m>[39m
+                    [0m18:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"19:00"[39m
+                  [36m>[39m
+                    [0m19:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"19:15"[39m
+                  [36m>[39m
+                    [0m19:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"19:30"[39m
+                  [36m>[39m
+                    [0m19:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"19:45"[39m
+                  [36m>[39m
+                    [0m19:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"20:00"[39m
+                  [36m>[39m
+                    [0m20:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"20:15"[39m
+                  [36m>[39m
+                    [0m20:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"20:30"[39m
+                  [36m>[39m
+                    [0m20:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"20:45"[39m
+                  [36m>[39m
+                    [0m20:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"21:00"[39m
+                  [36m>[39m
+                    [0m21:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"21:15"[39m
+                  [36m>[39m
+                    [0m21:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"21:30"[39m
+                  [36m>[39m
+                    [0m21:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"21:45"[39m
+                  [36m>[39m
+                    [0m21:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"22:00"[39m
+                  [36m>[39m
+                    [0m22:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"22:15"[39m
+                  [36m>[39m
+                    [0m22:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"22:30"[39m
+                  [36m>[39m
+                    [0m22:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"22:45"[39m
+                  [36m>[39m
+                    [0m22:45[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"23:00"[39m
+                  [36m>[39m
+                    [0m23:00[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"23:15"[39m
+                  [36m>[39m
+                    [0m23:15[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"23:30"[39m
+                  [36m>[39m
+                    [0m23:30[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mrole[39m=[32m"option"[39m
+                    [33mvalue[39m=[32m"23:45"[39m
+                  [36m>[39m
+                    [0m23:45[0m
+                  [36m</option>[39m
+                [36m</select>[39m
+              [36m</div>[39m
+              [0m-Selected Time: [0m
+              [0m1345[0m
+            [36m</div>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m"fs-8"[39m
+              [33mstyle[39m=[32m"font-weight: bold;"[39m
+            [36m>[39m
+              [0mChoose Difficulty: [0m
+              [36m<br />[39m
+              [36m<span[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+              [36m>[39m
+                [0m★[0m
+              [36m</span>[39m
+              [36m<span[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+              [36m>[39m
+                [0m★[0m
+              [36m</span>[39m
+              [36m<span[39m
+                [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+              [36m>[39m
+                [0m★[0m
+              [36m</span>[39m
+              [36m<span[39m
+                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+              [36m>[39m
+                [0m★[0m
+              [36m</span>[39m
+              [36m<span[39m
+                [33mstyle[39m=[32m"color: gray; cursor: pointer;"[39m
+              [36m>[39m
+                [0m★[0m
+              [36m</span>[39m
+            [36m</span>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSave Changes[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+       95 |     });
+       96 |     test("The edit difficulty component is displayed", () => {
+    >  97 |         const editDiff = screen.getByText(/Change Difficulty:/i);
+          |                                 ^
+       98 |         expect(editDiff).toBeInTheDocument();
+       99 |     });
+      100 |     test("the edit steps component is displayed", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/EditTask.test.tsx:97:33)
 
 PASS src/list-components/CentralItemList.test.tsx
   ● Console
@@ -2810,21 +3525,25 @@ FAIL src/list-components/addTask.test.tsx
           [33mclass[39m=[32m"addTask"[39m
         [36m>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
+            [33mclass[39m=[32m"addTaskSwitch"[39m
           [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+              [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
             [36m>[39m
-              [0mAdd Task[0m
-            [36m</label>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"form-check-input"[39m
+                [33mid[39m=[32m"editMode"[39m
+                [33mtype[39m=[32m"checkbox"[39m
+              [36m/>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-check-label"[39m
+                [33mfor[39m=[32m"editMode"[39m
+                [33mtitle[39m=[32m""[39m
+              [36m>[39m
+                [0mAdd Task[0m
+              [36m</label>[39m
+            [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -2868,21 +3587,25 @@ FAIL src/list-components/addTask.test.tsx
           [33mclass[39m=[32m"addTask"[39m
         [36m>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
+            [33mclass[39m=[32m"addTaskSwitch"[39m
           [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+              [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
             [36m>[39m
-              [0mAdd Task[0m
-            [36m</label>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"form-check-input"[39m
+                [33mid[39m=[32m"editMode"[39m
+                [33mtype[39m=[32m"checkbox"[39m
+              [36m/>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-check-label"[39m
+                [33mfor[39m=[32m"editMode"[39m
+                [33mtitle[39m=[32m""[39m
+              [36m>[39m
+                [0mAdd Task[0m
+              [36m</label>[39m
+            [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -2926,21 +3649,25 @@ FAIL src/list-components/addTask.test.tsx
           [33mclass[39m=[32m"addTask"[39m
         [36m>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
+            [33mclass[39m=[32m"addTaskSwitch"[39m
           [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
+              [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
             [36m>[39m
-              [0mAdd Task[0m
-            [36m</label>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"form-check-input"[39m
+                [33mid[39m=[32m"editMode"[39m
+                [33mtype[39m=[32m"checkbox"[39m
+              [36m/>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-check-label"[39m
+                [33mfor[39m=[32m"editMode"[39m
+                [33mtitle[39m=[32m""[39m
+              [36m>[39m
+                [0mAdd Task[0m
+              [36m</label>[39m
+            [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -3236,7 +3963,7 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
 
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
-PASS src/editing-components/edit-difficulty.test.tsx
+FAIL src/editing-components/edit-difficulty.test.tsx
   ● Console
 
     console.error
@@ -3277,10 +4004,93 @@ PASS src/editing-components/edit-difficulty.test.tsx
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:13:9)
 
+  ● testing edit difficulty component › component displays
+
+    expect(received).toBeInTheDocument()
+
+    received value must be an HTMLElement or an SVGElement.
+    Received has value: null
+
+      20 |     test("component displays", () => {
+      21 |         const compDisplayed = screen.queryByText(/Change Difficulty:/i);
+    > 22 |         expect(compDisplayed).toBeInTheDocument();
+         |                               ^
+      23 |     });
+      24 |     test("difficulty is updating", () => {
+      25 |         const chooseDifficulty = screen.getByText("Change Difficulty:");
+
+      at __EXTERNAL_MATCHER_TRAP__ (node_modules/expect/build/index.js:386:30)
+      at Object.toBeInTheDocument (node_modules/expect/build/index.js:387:15)
+      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:22:31)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
+  ● testing edit difficulty component › difficulty is updating
+
+    TestingLibraryElementError: Unable to find an element with the text: Change Difficulty:. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"fs-8"[39m
+          [33mstyle[39m=[32m"font-weight: bold;"[39m
+        [36m>[39m
+          [0mChoose Difficulty: [0m
+          [36m<br />[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
+          [36m>[39m
+            [0m★[0m
+          [36m</span>[39m
+        [36m</span>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      23 |     });
+      24 |     test("difficulty is updating", () => {
+    > 25 |         const chooseDifficulty = screen.getByText("Change Difficulty:");
+         |                                         ^
+      26 |         fireEvent.click(chooseDifficulty);
+      27 |         expect(chooseDifficulty).toBeInTheDocument();
+      28 |     });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:25:41)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                  |    45.3 |    37.16 |   42.13 |   45.27 |                                             
+All files                  |   44.77 |    36.18 |   42.67 |   44.72 |                                             
  src                       |    23.4 |      100 |    37.5 |   24.44 |                                             
   App.tsx                  |       0 |      100 |       0 |       0 | 14-27                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
@@ -3299,13 +4109,13 @@ All files                  |    45.3 |    37.16 |   42.13 |   45.27 |
  src/interfaces            |       0 |        0 |       0 |       0 |                                             
   task.ts                  |       0 |        0 |       0 |       0 |                                             
   user.ts                  |       0 |        0 |       0 |       0 |                                             
- src/list-components       |   47.76 |    40.32 |   44.64 |    47.1 |                                             
+ src/list-components       |   47.01 |    39.06 |   45.45 |   46.33 |                                             
   CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,147                             
   ChangeRole.tsx           |     100 |      100 |     100 |     100 |                                             
   DisplayTask.tsx          |   85.71 |       75 |      80 |   85.71 | 64                                          
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 30,38                                       
-  UserList.tsx             |    17.8 |     17.3 |   15.62 |    18.3 | 36-61,70,77-162,183-184,191,206-209,230-257 
-  addTask.tsx              |   47.82 |       50 |    8.33 |   47.82 | 30-86                                       
+  UserList.tsx             |    17.8 |     17.3 |   15.62 |    18.3 | 36-61,70,77-162,183-184,191,206-209,230-258 
+  addTask.tsx              |   39.13 |       25 |      10 |   39.13 | 27-79                                       
   adminlist.tsx            |   65.07 |    53.84 |      52 |   65.57 | 31,38-70,97-98,105,176                      
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 18-30                                       
   filterlists.tsx          |   96.42 |       75 |     100 |   95.83 | 29                                          
@@ -3314,9 +4124,8 @@ All files                  |    45.3 |    37.16 |   42.13 |   45.27 |
   AboutPage.tsx            |       0 |      100 |       0 |       0 | 26                                          
   taskPage.tsx             |       0 |        0 |       0 |       0 | 42-55                                       
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-
-Test Suites: 9 failed, 10 passed, 19 total
-Tests:       25 failed, 60 passed, 85 total
+Test Suites: 11 failed, 8 passed, 19 total
+Tests:       28 failed, 57 passed, 85 total
 Snapshots:   0 total
-Time:        23.318 s
+Time:        22.072 s
 Ran all test suites.

@@ -18,7 +18,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 exports.__esModule = true;
-exports.addTasktoUserList = exports.deleteTask = exports.deleteUser = exports.makeUser = exports.delTask = exports.addTask = exports.makeTask = exports.renderWithDnd = exports.UserList = exports.search = exports.ModifyUsers = exports.filter_by_numUsers = exports.filter_by_time_needed = exports.filter_by_alphabetical_order = exports.filter_by_difficulty = exports.DisplayTask = exports.CentralItemList = exports.AdminList = exports.DeleteTask = exports.AddTask = exports.EditTime = exports.EditTask = exports.EditSteps = exports.EditStatus = exports.EditDescription = exports.EditDifficulty = void 0;
+exports.delTask = exports.addTask = exports.makeTask = exports.renderWithDnd = exports.UserList = exports.search = exports.ModifyUsers = exports.filter_by_numUsers = exports.filter_by_time_needed = exports.filter_by_alphabetical_order = exports.filter_by_difficulty = exports.DisplayTask = exports.CentralItemList = exports.AdminList = exports.DeleteTask = exports.AddTask = exports.EditTime = exports.EditTask = exports.EditSteps = exports.EditStatus = exports.EditDescription = exports.EditDifficulty = void 0;
 var react_1 = require("react");
 var react_2 = require("react");
 function EditDifficulty(_a) {
@@ -641,54 +641,3 @@ function delTask(task, tasks) {
     return newTasks;
 }
 exports.delTask = delTask;
-//user functions****************************************************************************************************************
-/**
- * addUser function, adds user to the list of roles
- */
-function makeUser(user, tasks, roles) {
-    var newUser = { name: user, userList: tasks };
-    roles.push(newUser);
-    return roles;
-}
-exports.makeUser = makeUser;
-/**
- * deleteUser function, deletes a user from the list of roles
- */
-function deleteUser(user, roles) {
-    user.name = "";
-    user.userList = [];
-    var list = __spreadArrays(roles);
-    list = list.filter(function (item) { return item != user; });
-    return list;
-}
-exports.deleteUser = deleteUser;
-/**
- * deleteTask function, deletes a task from the userList
- */
-function deleteTask(user, task) {
-    var list = __spreadArrays(user.userList);
-    list = list.filter(function (item) { return item != task; });
-    return list;
-}
-exports.deleteTask = deleteTask;
-/**
- * addTask function, adds a task fto the userList
- */
-function addTasktoUserList(user, id, name, desc, stat, img, step, diff, num, time, pend) {
-    var task = {
-        id: id,
-        name: name,
-        description: desc,
-        status: stat,
-        image: img,
-        steps: step,
-        difficulty: diff,
-        numUsers: num,
-        time: time,
-        pendingMode: pend
-    };
-    var list = __spreadArrays(user.userList);
-    list.push(task);
-    return list;
-}
-exports.addTasktoUserList = addTasktoUserList;

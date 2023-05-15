@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/list-components/adminlist.test.tsx (5.699 s)
+PASS src/list-components/adminlist.test.tsx
   ● Console
 
     console.error
@@ -37,7 +37,7 @@ PASS src/list-components/adminlist.test.tsx (5.699 s)
           at div
           at DisplayCorrectList
           at div
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:23:29)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:22:29)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -59,7 +59,7 @@ PASS src/list-components/adminlist.test.tsx (5.699 s)
           at div
           at DisplayCorrectList
           at div
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:23:29)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:22:29)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -460,7 +460,7 @@ FAIL src/App.test.tsx
           at useDragDropManager (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDragDropManager.ts:12:2)
           at useDropTargetMonitor (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDrop/useDropTargetMonitor.ts:8:18)
           at useDrop (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDrop/useDrop.ts:26:18)
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:29:32)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:28:32)
           at renderWithHooks (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
           at mountIndeterminateComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
           at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -513,7 +513,7 @@ FAIL src/App.test.tsx
     console.error
       The above error occurred in the <AdminList> component:
       
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:23:29)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:22:29)
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -837,19 +837,19 @@ FAIL src/App.test.tsx
 
     Invariant Violation: Expected drag drop context
 
-      27 |     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
-      28 |
-    > 29 |     const [{ isOver }, drop] = useDrop({
+      26 |     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
+      27 |
+    > 28 |     const [{ isOver }, drop] = useDrop({
          |                                ^
-      30 |         accept: "task",
-      31 |         drop: (item: Task) => addTaskToAdminList(item.id),
-      32 |         collect: (monitor) => ({
+      29 |         accept: "task",
+      30 |         drop: (item: Task) => addTaskToAdminList(item.id),
+      31 |         collect: (monitor) => ({
 
       at invariant (node_modules/@react-dnd/invariant/src/index.ts:28:12)
       at useDragDropManager (node_modules/react-dnd/src/hooks/useDragDropManager.ts:12:2)
       at useDropTargetMonitor (node_modules/react-dnd/src/hooks/useDrop/useDropTargetMonitor.ts:8:18)
       at useDrop (node_modules/react-dnd/src/hooks/useDrop/useDrop.ts:26:18)
-      at AdminList (src/list-components/adminlist.tsx:29:32)
+      at AdminList (src/list-components/adminlist.tsx:28:32)
       at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
       at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20074:13)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -1220,7 +1220,7 @@ PASS src/list-components/UserList.test.tsx
           at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
           at div
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:24:5)
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:26:5)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1241,7 +1241,7 @@ PASS src/list-components/UserList.test.tsx
           at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
           at div
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:24:5)
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:26:5)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -4090,7 +4090,7 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                  |   44.77 |    36.18 |   42.67 |   44.72 |                                             
+All files                  |   43.71 |    35.71 |   41.35 |   43.86 |                                             
  src                       |    23.4 |      100 |    37.5 |   24.44 |                                             
   App.tsx                  |       0 |      100 |       0 |       0 | 14-27                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
@@ -4109,14 +4109,14 @@ All files                  |   44.77 |    36.18 |   42.67 |   44.72 |
  src/interfaces            |       0 |        0 |       0 |       0 |                                             
   task.ts                  |       0 |        0 |       0 |       0 |                                             
   user.ts                  |       0 |        0 |       0 |       0 |                                             
- src/list-components       |   47.01 |    39.06 |   45.45 |   46.33 |                                             
+ src/list-components       |   45.48 |    38.46 |   43.47 |   45.11 |                                             
   CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,147                             
   ChangeRole.tsx           |     100 |      100 |     100 |     100 |                                             
   DisplayTask.tsx          |   85.71 |       75 |      80 |   85.71 | 64                                          
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 30,38                                       
-  UserList.tsx             |    17.8 |     17.3 |   15.62 |    18.3 | 36-61,70,77-162,183-184,191,206-209,230-258 
+  UserList.tsx             |   15.85 |    16.66 |   13.51 |   16.66 | 39-65,75,84-201,223-224,231,247-250,271-299 
   addTask.tsx              |   39.13 |       25 |      10 |   39.13 | 27-79                                       
-  adminlist.tsx            |   65.07 |    53.84 |      52 |   65.57 | 31,38-70,97-98,105,176                      
+  adminlist.tsx            |   65.07 |    53.84 |      52 |   65.57 | 30,37-69,96-97,104,175                      
   deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 18-30                                       
   filterlists.tsx          |   96.42 |       75 |     100 |   95.83 | 29                                          
   search.tsx               |       0 |      100 |       0 |       0 | 7-10                                        
@@ -4127,5 +4127,5 @@ All files                  |   44.77 |    36.18 |   42.67 |   44.72 |
 Test Suites: 11 failed, 8 passed, 19 total
 Tests:       28 failed, 57 passed, 85 total
 Snapshots:   0 total
-Time:        22.072 s
+Time:        15.461 s
 Ran all test suites.

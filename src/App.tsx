@@ -9,7 +9,6 @@ import { User } from "./interfaces/user";
 import { Task } from "./interfaces/task";
 import { TASKS } from "./TASKS";
 import { Col, Row } from "react-bootstrap";
-import taskPage from "./pages/taskPage";
 import { ChangeRole } from "./list-components/ChangeRole";
 
 function App(): JSX.Element {

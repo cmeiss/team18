@@ -4079,7 +4079,7 @@ File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered 
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 All files                  |   45.02 |    38.31 |   43.82 |   45.23 |                                             
  src                       |   21.56 |        0 |   33.33 |   22.44 |                                             
-  App.tsx                  |       0 |        0 |       0 |       0 | 17-39                                       
+  App.tsx                  |       0 |        0 |       0 |       0 | 16-38                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
   TASKS.tsx                |     100 |      100 |     100 |     100 |                                             
   TaskFunctions.tsx        |     100 |      100 |     100 |     100 |                                             
@@ -4114,5 +4114,5 @@ All files                  |   45.02 |    38.31 |   43.82 |   45.23 |
 Test Suites: 11 failed, 8 passed, 19 total
 Tests:       27 failed, 60 passed, 87 total
 Snapshots:   0 total
-Time:        14.974 s
+Time:        17.888 s
 Ran all test suites.

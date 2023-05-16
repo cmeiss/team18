@@ -658,6 +658,7 @@ FAIL src/App.test.tsx
                 [36m>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mstyle[39m=[32m"background-color: rgb(247, 197, 140);"[39m
                     [33mtype[39m=[32m"button"[39m
                   [36m>[39m
                     [0mAlphabetical[0m
@@ -665,6 +666,7 @@ FAIL src/App.test.tsx
                   [36m</button>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mstyle[39m=[32m"background-color: rgb(247, 197, 140);"[39m
                     [33mtype[39m=[32m"button"[39m
                   [36m>[39m
                     [0mDifficulty[0m
@@ -672,12 +674,15 @@ FAIL src/App.test.tsx
                   [36m</button>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mstyle[39m=[32m"background-color: rgb(247, 197, 140);"[39m
                     [33mtype[39m=[32m"button"[39m
                   [36m>[39m
-                    [0mTime [0m
+                    [0mTime[0m
+                    [0m [0m
                   [36m</button>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mstyle[39m=[32m"background-color: rgb(247, 197, 140);"[39m
                     [33mtype[39m=[32m"button"[39m
                   [36m>[39m
                     [0mNumber Users (Low to High)[0m
@@ -685,6 +690,7 @@ FAIL src/App.test.tsx
                   [36m</button>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mstyle[39m=[32m"background-color: rgb(247, 197, 140);"[39m
                     [33mtype[39m=[32m"button"[39m
                   [36m>[39m
                     [0mReset[0m
@@ -750,6 +756,7 @@ FAIL src/App.test.tsx
                       [36m<button[39m
                         [33mclass[39m=[32m"btn btn-primary"[39m
                         [33mhidden[39m=[32m""[39m
+                        [33mstyle[39m=[32m"background-color: rgb(247, 197, 140);"[39m
                         [33mtype[39m=[32m"button"[39m
                       [36m>[39m
                         [0mConfirm[0m
@@ -803,21 +810,7 @@ FAIL src/App.test.tsx
               [33mclass[39m=[32m"Task"[39m
               [33mdraggable[39m=[32m"true"[39m
             [36m>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"Task-Button btn btn-primary"[39m
-                [33mstyle[39m=[32m"border: 0px;"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<h4>[39m
-                    [0mGet gas[0m
-                  [36m</h4>[39m
-                  [36m<img[39m
-                    [33malt[39m=[32m""[39m
-                    [33msrc[39m=[32m"gas.jpg"[39m
-                    [33mwidth[39m=[32m"100px"[39m
-                  [36m/>[39m
-                ...
+              [36m<button[39...
 
       70 |     });
       71 |     test("list is displayed", () => {
@@ -873,7 +866,7 @@ FAIL src/App.test.tsx
     expect(element).toBeEmptyDOMElement()
 
     Received:
-      "<div class=\"pending-list\"><div class=\"row\"><div class=\"col\"><div class=\"trashClosed\" data-testid=\"trashCan\"><img src=\"trashCanClosed.jpg\" width=\"100px\"></div></div><div class=\"col\"><h2> Pending List </h2></div><div class=\"col\"><div class=\"Pendingsort-dropdown\"><button class=\"Pendingsort-dropbtn\">Sort by ▾</button><div class=\"Pendingsort-options\"><button type=\"button\" class=\"btn btn-primary\">Alphabetical</button><button type=\"button\" class=\"btn btn-primary\">Difficulty</button><button type=\"button\" class=\"btn btn-primary\">Time </button><button type=\"button\" class=\"btn btn-primary\">Reset</button></div></div></div></div><div class=\"pending-tasks\" style=\"background-color: white;\"></div></div>"
+      "<div class=\"pending-list\"><div class=\"row\"><div class=\"col\"><div class=\"trashClosed\" data-testid=\"trashCan\"><img src=\"trashCanClosed.jpg\" width=\"100px\"></div></div><div class=\"col\"><h2> Pending List </h2></div><div class=\"col\"><div class=\"Pendingsort-dropdown\"><button class=\"Pendingsort-dropbtn\">Sort by ▾</button><div class=\"Pendingsort-options\"><button style=\"background-color: rgb(247, 197, 140);\" type=\"button\" class=\"btn btn-primary\">Alphabetical</button><button style=\"background-color: rgb(247, 197, 140);\" type=\"button\" class=\"btn btn-primary\">Difficulty</button><button style=\"background-color: rgb(247, 197, 140);\" type=\"button\" class=\"btn btn-primary\">Time </button><button style=\"background-color: rgb(247, 197, 140);\" type=\"button\" class=\"btn btn-primary\">Reset</button></div></div></div></div><div class=\"pending-tasks\" style=\"background-color: white;\"></div></div>"
 
       158 |             ></AdminList>
       159 |         );
@@ -1404,6 +1397,123 @@ PASS src/list-components/UserList.test.tsx
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at renderWithDnd (src/CustomRender.tsx:9:12)
       at Object.<anonymous> (src/list-components/UserList.test.tsx:142:31)
+
+PASS src/list-components/deleteTak.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      51 | describe("Delete task tests", () => {
+      52 |     beforeEach(() =>
+    > 53 |         render(
+         |         ^
+      54 |             <DeleteTask
+      55 |                 //item={TASK1}
+      56 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:53:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      51 | describe("Delete task tests", () => {
+      52 |     beforeEach(() =>
+    > 53 |         render(
+         |         ^
+      54 |             <DeleteTask
+      55 |                 //item={TASK1}
+      56 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:53:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      51 | describe("Delete task tests", () => {
+      52 |     beforeEach(() =>
+    > 53 |         render(
+         |         ^
+      54 |             <DeleteTask
+      55 |                 //item={TASK1}
+      56 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:53:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      51 | describe("Delete task tests", () => {
+      52 |     beforeEach(() =>
+    > 53 |         render(
+         |         ^
+      54 |             <DeleteTask
+      55 |                 //item={TASK1}
+      56 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:53:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      51 | describe("Delete task tests", () => {
+      52 |     beforeEach(() =>
+    > 53 |         render(
+         |         ^
+      54 |             <DeleteTask
+      55 |                 //item={TASK1}
+      56 |                 tasks={TASKLIST1}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:53:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      106 |         const tasks = [TASK1, TASK2, TASK3];
+      107 |         const setTasks = jest.fn();
+    > 108 |         render(<DeleteTask tasks={tasks} setTasks={setTasks} />);
+          |         ^
+      109 |         const switchElement = screen.getByLabelText("Delete Task");
+      110 |         fireEvent.click(switchElement);
+      111 |         const textareaElement = screen.getByLabelText("Enter Task Below:");
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:108:9)
 
 PASS src/list-components/DisplayTask.test.tsx
   ● Console
@@ -2862,6 +2972,7 @@ FAIL src/editing-components/EditTask.test.tsx
             [36m<div>[39m
               [36m<button[39m
                 [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mstyle[39m=[32m"background-color: rgb(247, 197, 140);"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
                 [0mSave Changes[0m
@@ -3162,240 +3273,6 @@ FAIL src/list-components/dist/deleteTak.test.js
       49 |             //item={TASK1}
 
       at Object.<anonymous> (src/list-components/dist/deleteTak.test.js:46:50)
-
-FAIL src/list-components/deleteTak.test.tsx
-  ● Console
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      50 | describe("Delete task tests", () => {
-      51 |     beforeEach(() =>
-    > 52 |         render(
-         |         ^
-      53 |             <DeleteTask
-      54 |                 //item={TASK1}
-      55 |                 tasks={TASKLIST1}
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:52:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      50 | describe("Delete task tests", () => {
-      51 |     beforeEach(() =>
-    > 52 |         render(
-         |         ^
-      53 |             <DeleteTask
-      54 |                 //item={TASK1}
-      55 |                 tasks={TASKLIST1}
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:52:9)
-
-    console.error
-      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
-
-      50 | describe("Delete task tests", () => {
-      51 |     beforeEach(() =>
-    > 52 |         render(
-         |         ^
-      53 |             <DeleteTask
-      54 |                 //item={TASK1}
-      55 |                 tasks={TASKLIST1}
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
-      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
-      at node_modules/@testing-library/react/dist/pure.js:101:25
-      at act (node_modules/react/cjs/react.development.js:2512:16)
-      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:52:9)
-
-  ● Delete task tests › There is a switch
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
-
-    Here are the accessible roles:
-
-      checkbox:
-
-      Name "Delete Task":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"editMode"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"deleteTask"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
-          [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
-            [36m>[39m
-              [0mDelete Task[0m
-            [36m</label>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      63 |     );
-      64 |     test("There is a switch", () => {
-    > 65 |         const switchButton = screen.getByRole("switch");
-         |                                     ^
-      66 |         expect(switchButton).toBeInTheDocument();
-      67 |     });
-      68 |     test("On switch click, there is a textbox and buttons: ", () => {
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:65:37)
-
-  ● Delete task tests › On switch click, there is a textbox and buttons: 
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
-
-    Here are the accessible roles:
-
-      checkbox:
-
-      Name "Delete Task":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"editMode"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"deleteTask"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
-          [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
-            [36m>[39m
-              [0mDelete Task[0m
-            [36m</label>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      67 |     });
-      68 |     test("On switch click, there is a textbox and buttons: ", () => {
-    > 69 |         const switchButton = screen.getByRole("switch");
-         |                                     ^
-      70 |         switchButton.click();
-      71 |         const deltask1 = screen.getByRole("button", {
-      72 |             name: /Delete Task and Leave Edit Mode/i
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:69:37)
-
-  ● Delete task tests › Clicking delete task deletes from the list and leaves edit mode
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "switch"
-
-    Here are the accessible roles:
-
-      checkbox:
-
-      Name "Delete Task":
-      [36m<input[39m
-        [33mclass[39m=[32m"form-check-input"[39m
-        [33mid[39m=[32m"editMode"[39m
-        [33mtype[39m=[32m"checkbox"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"deleteTask"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"mx-auto form-check form-switch"[39m
-            [33mstyle[39m=[32m"width: 150px; font-weight: bold;"[39m
-          [36m>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-check-input"[39m
-              [33mid[39m=[32m"editMode"[39m
-              [33mtype[39m=[32m"checkbox"[39m
-            [36m/>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-check-label"[39m
-              [33mfor[39m=[32m"editMode"[39m
-              [33mtitle[39m=[32m""[39m
-            [36m>[39m
-              [0mDelete Task[0m
-            [36m</label>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      77 |
-      78 |     test("Clicking delete task deletes from the list and leaves edit mode", () => {
-    > 79 |         const switchButton = screen.getByRole("switch");
-         |                                     ^
-      80 |         switchButton.click();
-      81 |         const delTask = screen.getByRole("button", {
-      82 |             name: /Delete Task and Leave Edit Mode/i
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/list-components/deleteTak.test.tsx:79:37)
 
 PASS src/TaskFunctions.test.tsx
 FAIL src/list-components/dist/addTask.test.js
@@ -3864,7 +3741,7 @@ PASS src/editing-components/EditTime.test.tsx
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/editing-components/EditTime.test.tsx:13:9)
 
-PASS src/list-components/ChangeRole.test.tsx
+FAIL src/list-components/ChangeRole.test.tsx
   ● Console
 
     console.error
@@ -3904,6 +3781,116 @@ PASS src/list-components/ChangeRole.test.tsx
       at act (node_modules/react/cjs/react.development.js:2512:16)
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/list-components/ChangeRole.test.tsx:14:9)
+
+  ● Change role test › change role component displays
+
+    TestingLibraryElementError: Unable to find an element with the text: /Role Select/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+            [36m>[39m
+              [0mSelect your role:[0m
+            [36m</label>[39m
+            [36m<select[39m
+              [33mclass[39m=[32m"form-select"[39m
+            [36m>[39m
+              [36m<option[39m
+                [33mrole[39m=[32m"option"[39m
+                [33mvalue[39m=[32m"user1"[39m
+              [36m>[39m
+                [0muser1[0m
+              [36m</option>[39m
+              [36m<option[39m
+                [33mrole[39m=[32m"option"[39m
+                [33mvalue[39m=[32m"user2"[39m
+              [36m>[39m
+                [0muser2[0m
+              [36m</option>[39m
+              [36m<option[39m
+                [33mrole[39m=[32m"option"[39m
+                [33mvalue[39m=[32m"user3"[39m
+              [36m>[39m
+                [0muser3[0m
+              [36m</option>[39m
+            [36m</select>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      25 |     );
+      26 |     test("change role component displays", () => {
+    > 27 |         const comp = screen.getByText(/Role Select/i);
+         |                             ^
+      28 |         expect(comp).toBeInTheDocument;
+      29 |     });
+      30 |     test("component updates", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/ChangeRole.test.tsx:27:29)
+
+  ● Change role test › component updates
+
+    TestingLibraryElementError: Unable to find an element with the text: Role Select. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+            [36m>[39m
+              [0mSelect your role:[0m
+            [36m</label>[39m
+            [36m<select[39m
+              [33mclass[39m=[32m"form-select"[39m
+            [36m>[39m
+              [36m<option[39m
+                [33mrole[39m=[32m"option"[39m
+                [33mvalue[39m=[32m"user1"[39m
+              [36m>[39m
+                [0muser1[0m
+              [36m</option>[39m
+              [36m<option[39m
+                [33mrole[39m=[32m"option"[39m
+                [33mvalue[39m=[32m"user2"[39m
+              [36m>[39m
+                [0muser2[0m
+              [36m</option>[39m
+              [36m<option[39m
+                [33mrole[39m=[32m"option"[39m
+                [33mvalue[39m=[32m"user3"[39m
+              [36m>[39m
+                [0muser3[0m
+              [36m</option>[39m
+            [36m</select>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      29 |     });
+      30 |     test("component updates", () => {
+    > 31 |         const chooseRole = screen.getByText("Role Select");
+         |                                   ^
+      32 |         fireEvent.click(chooseRole);
+      33 |         const firstOption = screen.getByRole("option", { name: "user1" });
+      34 |         expect(firstOption).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/list-components/ChangeRole.test.tsx:31:35)
 
 FAIL src/list-components/dist/ChangeRole.test.js
   ● Change role test › change role component displays
@@ -4090,9 +4077,9 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                  |   43.71 |    35.71 |   41.35 |   43.86 |                                             
- src                       |    23.4 |      100 |    37.5 |   24.44 |                                             
-  App.tsx                  |       0 |      100 |       0 |       0 | 14-27                                       
+All files                  |   45.02 |    38.31 |   43.82 |   45.23 |                                             
+ src                       |   21.56 |        0 |   33.33 |   22.44 |                                             
+  App.tsx                  |       0 |        0 |       0 |       0 | 17-39                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
   TASKS.tsx                |     100 |      100 |     100 |     100 |                                             
   TaskFunctions.tsx        |     100 |      100 |     100 |     100 |                                             
@@ -4109,23 +4096,23 @@ All files                  |   43.71 |    35.71 |   41.35 |   43.86 |
  src/interfaces            |       0 |        0 |       0 |       0 |                                             
   task.ts                  |       0 |        0 |       0 |       0 |                                             
   user.ts                  |       0 |        0 |       0 |       0 |                                             
- src/list-components       |   45.48 |    38.46 |   43.47 |   45.11 |                                             
-  CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,147                             
+ src/list-components       |   47.29 |    41.53 |   46.95 |   46.99 |                                             
+  CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,170                             
   ChangeRole.tsx           |     100 |      100 |     100 |     100 |                                             
   DisplayTask.tsx          |   85.71 |       75 |      80 |   85.71 | 64                                          
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 30,38                                       
-  UserList.tsx             |   15.85 |    16.66 |   13.51 |   16.66 | 39-65,75,84-201,223-224,231,247-250,271-299 
+  UserList.tsx             |   15.85 |    16.66 |   13.51 |   16.66 | 39-65,75,84-201,223-224,231,247-250,272-322 
   addTask.tsx              |   39.13 |       25 |      10 |   39.13 | 27-79                                       
   adminlist.tsx            |   65.07 |    53.84 |      52 |   65.57 | 30,37-69,96-97,104,175                      
-  deleteTask-component.tsx |    37.5 |    33.33 |      20 |    37.5 | 18-30                                       
+  deleteTask-component.tsx |     100 |      100 |     100 |     100 |                                             
   filterlists.tsx          |   96.42 |       75 |     100 |   95.83 | 29                                          
   search.tsx               |       0 |      100 |       0 |       0 | 7-10                                        
  src/pages                 |       0 |        0 |       0 |       0 |                                             
-  AboutPage.tsx            |       0 |      100 |       0 |       0 | 26                                          
-  taskPage.tsx             |       0 |        0 |       0 |       0 | 42-55                                       
+  AboutPage.tsx            |       0 |      100 |       0 |       0 | 5                                           
+  taskPage.tsx             |       0 |        0 |       0 |       0 | 36-39                                       
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 Test Suites: 11 failed, 8 passed, 19 total
-Tests:       28 failed, 57 passed, 85 total
+Tests:       27 failed, 60 passed, 87 total
 Snapshots:   0 total
-Time:        15.461 s
+Time:        14.974 s
 Ran all test suites.

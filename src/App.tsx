@@ -91,8 +91,20 @@ function App(): JSX.Element {
                         ></TaskPage>
                     }
                 ></Route>
+                <Route
+                    path="/"
+                    element={
+                        <TaskPage
+                            role={role}
+                            setRole={setRole}
+                            roles={roles}
+                            setRoles={setRoles}
+                            tasks={tasks}
+                            setTasks={setTasks}
+                        ></TaskPage>
+                    }
+                ></Route>
                 <Route path="/homepage" element={<Navigate to="/taskpage" />} />
-                <Route path="/" element={taskPage}></Route>
             </Routes>
         </div>
     );

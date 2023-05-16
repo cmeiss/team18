@@ -14,25 +14,6 @@ export function EditTime({ time, setTime }: TimeProps) {
         const newT = event.target.value;
         setTime(newT);
     }
-    // function printTime(time: string) {
-    //     let display = "time";
-    //     if (parseInt(time) < 100) {
-    //         display = "00:" + time.toString();
-    //     } else if (parseInt(time) < 1000 && parseInt(time) % 100 === 0) {
-    //         display = "0" + Math.trunc(parseInt(time) / 100) + ":00";
-    //     } else if (parseInt(time) < 1000) {
-    //         "0" +
-    //             Math.trunc(parseInt(time) / 100) +
-    //             ":" +
-    //             (parseInt(time) % 100).toString();
-    //     } else {
-    //         display =
-    //             Math.trunc(parseInt(time) / 100) +
-    //             ":" +
-    //             (parseInt(time) % 100).toString();
-    //     }
-    //     return display;
-    // }
 
     return (
         <div>

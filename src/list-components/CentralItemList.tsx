@@ -18,7 +18,7 @@ interface CentralItemProps {
 }
 
 export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
-    const [sorted, setSorted] = useState<boolean>(false); //indicated whether the adminList is sorted right now
+    const [sorted, setSorted] = useState<boolean>(false); //indicates whether the centralItemList is sorted right now
     const [alphabetic, setAlphabetic] = useState<boolean>(false);
     const [byTime, setByTime] = useState<boolean>(false);
     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
@@ -28,6 +28,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         return taskList.map((TASK: Task) => TASK);
     }
 
+    //this function updates the sorting state variables for alphabetic sorting
     function updateAlphabetic() {
         setSorted(true);
         setAlphabetic(true);
@@ -35,6 +36,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         setByDifficulty(false);
         setByNumUsers(false);
     }
+    //this function updates the sorting state variables for sorting by time
     function updateByTime() {
         setSorted(true);
         setAlphabetic(false);
@@ -42,6 +44,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         setByDifficulty(false);
         setByNumUsers(false);
     }
+    //this function updates the sorting state variables for sorting by difficulty
     function updateByDifficulty() {
         setSorted(true);
         setAlphabetic(false);
@@ -49,6 +52,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         setByDifficulty(true);
         setByNumUsers(false);
     }
+    //this function updates the sorting state variables for by the number of users
     function updateByNumUsers() {
         setSorted(true);
         setAlphabetic(false);
@@ -57,6 +61,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
         setByNumUsers(true);
     }
 
+    //this function displays a passed in list
     function displayList(taskList: Task[]): JSX.Element {
         return (
             <div className="central-tasks">
@@ -74,8 +79,8 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
     }
 
     function DisplayCorrectList(): JSX.Element {
-        //this function checks if we are displaying the adminList sorted or unsorted.
-        //If we display it unsorted, we directly pull it out of the central item list.
+        //this function checks if we are displaying the CentralItemList sorted or unsorted.
+        //If we display it unsorted, we directly pull it out of the tasks state.
         //If we display it sorted, we create a new sorted temporary list and display that.
         if (!sorted) {
             return displayList(newCentralList(tasks));
@@ -94,13 +99,14 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
             const SortedList = filter_by_numUsers(newCentralList(tasks));
             return displayList(SortedList);
         } else {
-            return <div>AdminList failed to load.</div>;
+            return <div>CentralItemList failed to load.</div>;
         }
     }
     if (role !== "Admin" && role !== "Super") {
         role = "user-central";
     }
     if (role !== "Super") {
+        //displaying the central item list without sorting options
         return (
             <div className="central-list">
                 <h2> Sample Tasks </h2>
@@ -121,6 +127,7 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
             </div>
         );
     } else {
+        //displaying the centralItemList with sorting options
         return (
             <div className="central-list">
                 <Row>
@@ -134,17 +141,44 @@ export function CentralItemList({ role, tasks, setTasks }: CentralItemProps) {
                                 Sort by ▾
                             </button>
                             <div className="Centralsort-options">
-                                <Button onClick={updateAlphabetic}>
+                                <Button
+                                    onClick={updateAlphabetic}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Alphabetical{" "}
                                 </Button>
-                                <Button onClick={updateByDifficulty}>
+                                <Button
+                                    onClick={updateByDifficulty}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Difficulty{" "}
                                 </Button>
-                                <Button onClick={updateByTime}>Time </Button>
-                                <Button onClick={updateByNumUsers}>
+                                <Button
+                                    onClick={updateByTime}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
+                                    Time{" "}
+                                </Button>
+                                <Button
+                                    onClick={updateByNumUsers}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Number Users (Low to High){" "}
                                 </Button>
-                                <Button onClick={() => setSorted(false)}>
+                                <Button
+                                    onClick={() => setSorted(false)}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Reset
                                 </Button>
                             </div>

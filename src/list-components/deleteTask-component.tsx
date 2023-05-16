@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./modifyTasksUsers.css";
 
+//this component is used to delete a task by entering the task's name in a textbox
 export interface delTaskProp {
     tasks: Task[];
-    //item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 
@@ -34,6 +34,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
         <div className="deleteTask">
             <Form.Check
                 type={"switch"}
+                role="switch"
                 id="editMode"
                 label="Delete Task"
                 className="mx-auto"
@@ -55,7 +56,12 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                 </Form.Group>
             ) : null}
             {editMode ? (
-                <Button onClick={remTask}>
+                <Button
+                    onClick={remTask}
+                    style={{
+                        backgroundColor: "rgb(247, 197, 140)"
+                    }}
+                >
                     Delete Task and Leave Edit Mode
                 </Button>
             ) : null}

@@ -23,6 +23,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
     const [neweditmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
     const [newTask, setNewTask] = useState<string>("");
 
+    //this function finds the maximum id currently used in the list
     function findMax(existingTasks: Task[]) {
         let max = existingTasks[0].id;
         existingTasks.map((TASK: Task) => {
@@ -64,7 +65,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
         taskProps.setTasks([
             ...taskProps.tasks,
             {
-                id: findMax(taskProps.tasks) + 1, //newId,
+                id: findMax(taskProps.tasks) + 1, //newId is the highest current id + 1
                 name: newTask,
                 description: newdescription,
                 status: newstatus,
@@ -72,7 +73,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                 steps: newsteps,
                 difficulty: newdifficulty,
                 time: newtime,
-                numUsers: 0, //newnumusers,
+                numUsers: 0,
                 pendingMode: false
             }
         ]);
@@ -85,7 +86,10 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                 <Form.Check
                     type={"switch"}
                     className="mx-auto"
-                    style={{ width: "150px", fontWeight: "bold" }}
+                    style={{
+                        width: "150px",
+                        fontWeight: "bold"
+                    }}
                     id="editMode"
                     label="Add Task"
                     checked={neweditmode}
@@ -167,7 +171,14 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                 </Form.Group>
             ) : null}
             {neweditmode ? (
-                <Button onClick={addTask}>Add Task and Leave Edit Mode</Button>
+                <Button
+                    onClick={addTask}
+                    style={{
+                        backgroundColor: "rgb(247, 197, 140)"
+                    }}
+                >
+                    Add Task and Leave Edit Mode
+                </Button>
             ) : null}
         </div>
     );

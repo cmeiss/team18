@@ -1,3 +1,5 @@
+//This file provides a variable for creating our time drop down menu.
+//The time is displayed in 15 minute intervals.
 export const TIMES = [
     "Choose Time",
     "00:00",

@@ -6,27 +6,15 @@ import "./DisplayTask.css";
 import { useDrag } from "react-dnd";
 import { EditStatus } from "../editing-components/EditStatus";
 
-//this is the old interface for the display task function, I am keeping it here as a reference if we need it again
-// export interface displayProps {
-//     name: string;
-//     description: string;
-//     status: boolean;
-//     image: string;
-//     steps: string[];
-//     difficulty: number;
-//     numUsers: number;
-//     time: number;
-//     role: string; //added this in here to be able to pass the role state from app
-// }
-
 export interface displayProps {
     task: Task;
     tasks: Task[];
-    //updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
     updateTasks: (newTasks: Task[]) => void;
     role: string;
 }
 
+/* DisplayTask displays each individual task. It is called in all list functions and needs to be 
+called on every displayed task. It also holds the edit task button and connects the task to the editing component. */
 export function DisplayTask(display: displayProps): JSX.Element {
     const [hideDetails, setHideDetails] = useState<boolean>(true);
     const [{ isDragging }, drag] = useDrag({
@@ -76,6 +64,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                 hidden={hideDetails}
                 style={{ border: "5px solid rgb(255, 239, 195)" }}
             >
+                {/*Displaying the task's attributes: */}
                 <p>
                     <strong>Task: {display.task.name}</strong>
                     <br />
@@ -106,6 +95,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                             <div>{""}</div>
                         )}
                     </div>
+                    {/*Edit Task Button:  */}
                     <div>
                         {display.role === "user-central" ? (
                             <div hidden={true}>
@@ -124,12 +114,3 @@ export function DisplayTask(display: displayProps): JSX.Element {
         </div>
     );
 }
-
-//To implement the edit mode, we will have to create and import components
-//to edit all the attributes. These components need to be imported
-//and called in DisplayView
-//We will need an "editMode" state that specifies whether or not
-//the edit components are showed
-//This "editMode" state is changed when component is clicked, ask if
-//this can be a button or if this needs to be throught the drag and
-//drop technique

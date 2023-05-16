@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 
 import { AboutPage } from "./pages/AboutPage";
 import TaskPage from "./pages/taskPage";
 import { User } from "./interfaces/user";
 import { Task } from "./interfaces/task";
 import { TASKS } from "./TASKS";
+import { Col, Row } from "react-bootstrap";
+import taskPage from "./pages/taskPage";
+import { ChangeRole } from "./list-components/ChangeRole";
 
 function App(): JSX.Element {
     //state needs to be defined here to keep changes after switching between pages
@@ -24,38 +27,57 @@ function App(): JSX.Element {
     ]);
     const [tasks, setTasks] = useState<Task[]>(TASKS);
 
+    function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
+        const NewRole = roles.find(
+            (role: User) => role.name === event.target.value
+        );
+        if (NewRole) {
+            setRole(NewRole);
+        }
+    }
+
     return (
         <div className="App">
             <nav
                 className="navbar
                         "
             >
-                <ul>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/taskpage">Schedule Builder</Link>
-                    </li>
-                    <li>
-                        <Link to="/hompage">Home Page</Link>
-                    </li>
-                </ul>
+                <div>
+                    <Row>
+                        <Col>
+                            <Link to="/about">About</Link>
+                        </Col>
+                        <Col>
+                            <Link to="/taskpage">Schedule Builder</Link>
+                        </Col>
+                        <Col className="role-select-pos">
+                            <div className="dropdown">
+                                <span style={{ fontWeight: "bold" }}>
+                                    Choose Role
+                                </span>
+                                <div className="dropdown-content">
+                                    <div>
+                                        <ChangeRole
+                                            Role={role}
+                                            roles={roles}
+                                            setRole={updateRole}
+                                        ></ChangeRole>
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
             </nav>
+            <header className="App-header">
+                <hgroup>
+                    <h1>TimeWise</h1>
+                    <i>Never waste another second</i>
+                    <p></p>
+                </hgroup>
+            </header>
             <Routes>
-                <Route
-                    path="/about"
-                    element={
-                        <AboutPage
-                            role={role}
-                            setRole={setRole}
-                            roles={roles}
-                            setRoles={setRoles}
-                            tasks={tasks}
-                            setTasks={setTasks}
-                        />
-                    }
-                />
+                <Route path="/about" element={<AboutPage />} />
                 <Route
                     path="/taskpage"
                     element={
@@ -69,18 +91,9 @@ function App(): JSX.Element {
                         ></TaskPage>
                     }
                 ></Route>
-                <Route path="/" element={App}></Route>
+                <Route path="/homepage" element={<Navigate to="/taskpage" />} />
+                <Route path="/" element={taskPage}></Route>
             </Routes>
-            <header className="App-header">
-                <hgroup>
-                    <h1>TimeWise</h1>
-                    <i>Never waste another second</i>
-                    <p>
-                        Build your dream schedule today by clicking the Schedule
-                        Builder Link in the top right corner
-                    </p>
-                </hgroup>
-            </header>
         </div>
     );
 }

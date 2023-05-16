@@ -55,7 +55,12 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                 </Form.Group>
             ) : null}
             {editMode ? (
-                <Button onClick={remTask}>
+                <Button
+                    onClick={remTask}
+                    style={{
+                        backgroundColor: "rgb(247, 197, 140)"
+                    }}
+                >
                     Delete Task and Leave Edit Mode
                 </Button>
             ) : null}

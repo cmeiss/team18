@@ -130,6 +130,9 @@ export function EditTask(edit: editProps): JSX.Element {
                                     pending
                                 )
                             }
+                            style={{
+                                backgroundColor: "rgb(247, 197, 140)"
+                            }}
                         >
                             Save Changes
                         </Button>

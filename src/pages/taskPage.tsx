@@ -2,11 +2,8 @@ import React from "react";
 import "../App.css";
 import { CentralItemList } from "../list-components/CentralItemList";
 import { Task } from "../interfaces/task";
-//import { ChangeRole } from "./list-components/selectuser";
 import { User } from "../interfaces/user";
-//import { Button, Form } from "react-bootstrap";
 import { UserList } from "../list-components/UserList";
-import { ChangeRole } from "../list-components/ChangeRole";
 import { ModifyUsers } from "../list-components/ModifyUsers";
 import { AdminList } from "../list-components/adminlist";
 import { DndProvider } from "react-dnd";
@@ -14,10 +11,6 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { AddTask } from "../list-components/addTask";
 import { DeleteTask } from "../list-components/deleteTask-component";
 import { Col, Row } from "react-bootstrap";
-import { Link, Route, Routes } from "react-router-dom";
-
-import { AboutPage } from "./AboutPage";
-import App from "../App";
 
 interface TaskPageProps {
     role: User;
@@ -38,15 +31,6 @@ function TaskPage({
 }: TaskPageProps): JSX.Element {
     //eslint-disable-next-line prettier/prettier
 
-    function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {
-        const NewRole = roles.find(
-            (role: User) => role.name === event.target.value
-        );
-        if (NewRole) {
-            setRole(NewRole);
-        }
-    }
-
     //the following function is just calling setTasks but is easier to include in test cases than the setTask function alone
     function updateTasks(tasks: Task[]) {
         setTasks(tasks);
@@ -55,63 +39,12 @@ function TaskPage({
     return (
         <DndProvider backend={HTML5Backend}>
             <div className="App">
-                <header className="App-header">
-                    <hgroup>
-                        <h1>TimeWise</h1>
-                        <i>Never waste another second</i>
-                        <nav
-                            className="navbar
-                        "
-                        >
-                            <ul>
-                                <li>
-                                    <Link to="/about">About</Link>
-                                </li>
-                                <li>
-                                    <Link to="/taskpage">Schedule Builder</Link>
-                                </li>
-                                <li>
-                                    <Link to="/homepage">Homepage</Link>
-                                </li>
-                            </ul>
-                        </nav>
-                        <Routes>
-                            <Route
-                                path="/about"
-                                element={
-                                    <AboutPage
-                                        role={role}
-                                        setRole={setRole}
-                                        roles={roles}
-                                        setRoles={setRoles}
-                                        tasks={tasks}
-                                        setTasks={setTasks}
-                                    />
-                                }
-                            />
-                            <Route path="/homepage" element={<App />} />
-                        </Routes>
-                    </hgroup>
-
-                    <div className="dropdown">
-                        <span>Role Select</span>
-                        <div className="dropdown-content">
-                            <div>
-                                <ChangeRole
-                                    Role={role}
-                                    roles={roles}
-                                    setRole={updateRole}
-                                ></ChangeRole>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <div className="welcome">
+                <header className="welcome">
                     Welcome {role.name}, lets reclaim the day!
-                </div>
+                </header>
                 <div>
-                    Team Members: Cornelia Meiss, Kaitlyn Sullivan,Aaron Oster,
-                    William Sharp, Sydni Wright
+                    Team 18 - Members: Cornelia Meiss, Kaitlyn Sullivan, Aaron
+                    Oster, William Sharp, Sydni Wright
                 </div>
                 {/*Adding and Deleting Users: */}
                 <Row>

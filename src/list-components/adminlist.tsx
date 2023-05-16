@@ -193,14 +193,36 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
                                 Sort by ▾
                             </button>
                             <div className="Pendingsort-options">
-                                <Button onClick={updateAlphabetic}>
+                                <Button
+                                    onClick={updateAlphabetic}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Alphabetical
                                 </Button>
-                                <Button onClick={updateByDifficulty}>
+                                <Button
+                                    onClick={updateByDifficulty}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Difficulty
                                 </Button>
-                                <Button onClick={updateByTime}>Time </Button>
-                                <Button onClick={() => setSorted(false)}>
+                                <Button
+                                    onClick={updateByTime}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
+                                    Time{" "}
+                                </Button>
+                                <Button
+                                    onClick={() => setSorted(false)}
+                                    style={{
+                                        backgroundColor: "rgb(247, 197, 140)"
+                                    }}
+                                >
                                     Reset
                                 </Button>
                             </div>

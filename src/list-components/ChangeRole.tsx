@@ -12,7 +12,7 @@ export function ChangeRole(ChangeRoleProps: ChangeRoleProperties): JSX.Element {
     return (
         <div>
             <div>
-                <Form.Label>Role Select</Form.Label>
+                <Form.Label>Select your role:</Form.Label>
                 <Form.Select value="Roles" onChange={ChangeRoleProps.setRole}>
                     {ChangeRoleProps.roles.map((role: User, index: number) => (
                         // eslint-disable-next-line react/jsx-key

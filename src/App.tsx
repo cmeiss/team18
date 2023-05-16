@@ -91,7 +91,7 @@ function App(): JSX.Element {
                     }
                 ></Route>
                 <Route
-                    path="/"
+                    path="/team18/"
                     element={
                         <TaskPage
                             role={role}
@@ -103,6 +103,7 @@ function App(): JSX.Element {
                         ></TaskPage>
                     }
                 ></Route>
+                <Route path="/" element={"/taskPage"}></Route>
                 <Route path="/homepage" element={<Navigate to="/taskpage" />} />
             </Routes>
         </div>

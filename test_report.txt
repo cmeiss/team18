@@ -33,11 +33,11 @@ PASS src/list-components/adminlist.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at DisplayCorrectList
           at div
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:22:29)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:23:29)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -55,11 +55,11 @@ PASS src/list-components/adminlist.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at DisplayCorrectList
           at div
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:22:29)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:23:29)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -254,7 +254,7 @@ FAIL src/App.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at DisplayCorrectList
           at div
@@ -276,7 +276,7 @@ FAIL src/App.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at DisplayCorrectList
           at div
@@ -460,7 +460,7 @@ FAIL src/App.test.tsx
           at useDragDropManager (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDragDropManager.ts:12:2)
           at useDropTargetMonitor (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDrop/useDropTargetMonitor.ts:8:18)
           at useDrop (/home/runner/work/team18/team18/node_modules/react-dnd/src/hooks/useDrop/useDrop.ts:26:18)
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:28:32)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:30:32)
           at renderWithHooks (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
           at mountIndeterminateComponent (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
           at beginWork (/home/runner/work/team18/team18/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -513,7 +513,7 @@ FAIL src/App.test.tsx
     console.error
       The above error occurred in the <AdminList> component:
       
-          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:22:29)
+          at AdminList (/home/runner/work/team18/team18/src/list-components/adminlist.tsx:23:29)
       
       Consider adding an error boundary to your tree to customize error handling behavior.
       Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -830,19 +830,19 @@ FAIL src/App.test.tsx
 
     Invariant Violation: Expected drag drop context
 
-      26 |     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
-      27 |
-    > 28 |     const [{ isOver }, drop] = useDrop({
+      28 |
+      29 |     //enabeling draging tasks into the adminList
+    > 30 |     const [{ isOver }, drop] = useDrop({
          |                                ^
-      29 |         accept: "task",
-      30 |         drop: (item: Task) => addTaskToAdminList(item.id),
-      31 |         collect: (monitor) => ({
+      31 |         accept: "task",
+      32 |         drop: (item: Task) => addTaskToAdminList(item.id),
+      33 |         collect: (monitor) => ({
 
       at invariant (node_modules/@react-dnd/invariant/src/index.ts:28:12)
       at useDragDropManager (node_modules/react-dnd/src/hooks/useDragDropManager.ts:12:2)
       at useDropTargetMonitor (node_modules/react-dnd/src/hooks/useDrop/useDropTargetMonitor.ts:8:18)
       at useDrop (node_modules/react-dnd/src/hooks/useDrop/useDrop.ts:26:18)
-      at AdminList (src/list-components/adminlist.tsx:28:32)
+      at AdminList (src/list-components/adminlist.tsx:30:32)
       at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
       at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20074:13)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21587:16)
@@ -1210,10 +1210,10 @@ PASS src/list-components/UserList.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:26:5)
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:28:5)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1231,10 +1231,10 @@ PASS src/list-components/UserList.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at div
-          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:26:5)
+          at UserList (/home/runner/work/team18/team18/src/list-components/UserList.tsx:28:5)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1546,7 +1546,7 @@ PASS src/list-components/DisplayTask.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -1564,7 +1564,7 @@ PASS src/list-components/DisplayTask.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at DndProvider (/home/runner/work/team18/team18/node_modules/react-dnd/src/core/DndProvider.tsx:28:25)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
@@ -3022,7 +3022,7 @@ PASS src/list-components/CentralItemList.test.tsx
     console.log
       Central Item List
 
-      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+      at CentralItemList (src/list-components/CentralItemList.tsx:124:26)
 
     console.log
       {
@@ -3060,7 +3060,7 @@ PASS src/list-components/CentralItemList.test.tsx
         pendingMode: false
       }
 
-      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+      at CentralItemList (src/list-components/CentralItemList.tsx:125:26)
 
     console.error
       Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
@@ -3071,7 +3071,7 @@ PASS src/list-components/CentralItemList.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at div
           at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:20:35)
@@ -3092,7 +3092,7 @@ PASS src/list-components/CentralItemList.test.tsx
           at p
           at div
           at div
-          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:31:43)
+          at DisplayTask (/home/runner/work/team18/team18/src/list-components/DisplayTask.tsx:19:43)
           at div
           at div
           at CentralItemList (/home/runner/work/team18/team18/src/list-components/CentralItemList.tsx:20:35)
@@ -3129,7 +3129,7 @@ PASS src/list-components/CentralItemList.test.tsx
     console.log
       Central Item List
 
-      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+      at CentralItemList (src/list-components/CentralItemList.tsx:124:26)
 
     console.log
       {
@@ -3167,7 +3167,7 @@ PASS src/list-components/CentralItemList.test.tsx
         pendingMode: false
       }
 
-      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+      at CentralItemList (src/list-components/CentralItemList.tsx:125:26)
 
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
@@ -3191,7 +3191,7 @@ PASS src/list-components/CentralItemList.test.tsx
     console.log
       Central Item List
 
-      at CentralItemList (src/list-components/CentralItemList.tsx:118:26)
+      at CentralItemList (src/list-components/CentralItemList.tsx:124:26)
 
     console.log
       {
@@ -3229,7 +3229,7 @@ PASS src/list-components/CentralItemList.test.tsx
         pendingMode: false
       }
 
-      at CentralItemList (src/list-components/CentralItemList.tsx:119:26)
+      at CentralItemList (src/list-components/CentralItemList.tsx:125:26)
 
 FAIL src/list-components/dist/deleteTak.test.js
   ● Delete task tests › There is a switch
@@ -4077,19 +4077,19 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                  |   45.02 |    38.31 |   43.82 |   45.23 |                                             
+All files                  |   45.26 |    38.81 |   44.09 |   45.47 |                                             
  src                       |   21.56 |        0 |   33.33 |   22.44 |                                             
-  App.tsx                  |       0 |        0 |       0 |       0 | 16-38                                       
+  App.tsx                  |       0 |        0 |       0 |       0 | 19-43                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
   TASKS.tsx                |     100 |      100 |     100 |     100 |                                             
   TaskFunctions.tsx        |     100 |      100 |     100 |     100 |                                             
   user-functions.ts        |       0 |      100 |       0 |       0 | 7-62                                        
   user-tests.tsx           |       0 |      100 |       0 |       0 | 6-63                                        
- src/editing-components    |   58.82 |    41.66 |    42.3 |   61.22 |                                             
+ src/editing-components    |   61.22 |       50 |      44 |   63.82 |                                             
   EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15                                       
   EditStatus.tsx           |   27.27 |       25 |   14.28 |      30 | 15,21-40,72-85                              
   EditSteps.tsx            |     100 |      100 |     100 |     100 |                                             
-  EditTask.tsx             |      65 |    33.33 |   28.57 |   68.42 | 52-73,119                                   
+  EditTask.tsx             |   72.22 |       50 |   33.33 |   76.47 | 53-56,102                                   
   EditTime.tsx             |      60 |      100 |   66.66 |      60 | 14-15                                       
   Times.tsx                |     100 |      100 |     100 |     100 |                                             
   edit-difficulty.tsx      |      60 |      100 |      50 |      60 | 10,25                                       
@@ -4097,22 +4097,22 @@ All files                  |   45.02 |    38.31 |   43.82 |   45.23 |
   task.ts                  |       0 |        0 |       0 |       0 |                                             
   user.ts                  |       0 |        0 |       0 |       0 |                                             
  src/list-components       |   47.29 |    41.53 |   46.95 |   46.99 |                                             
-  CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 32-57,82-97,170                             
+  CentralItemList.tsx      |   33.33 |    43.75 |   58.33 |      32 | 33-61,87-102,177                            
   ChangeRole.tsx           |     100 |      100 |     100 |     100 |                                             
-  DisplayTask.tsx          |   85.71 |       75 |      80 |   85.71 | 64                                          
+  DisplayTask.tsx          |   85.71 |       75 |      80 |   85.71 | 52                                          
   ModifyUsers.tsx          |      80 |     87.5 |     100 |      80 | 30,38                                       
-  UserList.tsx             |   15.85 |    16.66 |   13.51 |   16.66 | 39-65,75,84-201,223-224,231,247-250,272-322 
-  addTask.tsx              |   39.13 |       25 |      10 |   39.13 | 27-79                                       
-  adminlist.tsx            |   65.07 |    53.84 |      52 |   65.57 | 30,37-69,96-97,104,175                      
+  UserList.tsx             |   15.85 |    16.66 |   13.51 |   16.66 | 41-67,77,86-203,225-226,233,249-252,274-324 
+  addTask.tsx              |   39.13 |       25 |      10 |   39.13 | 28-80                                       
+  adminlist.tsx            |   65.07 |    53.84 |      52 |   65.57 | 32,40-74,102-103,110,185                    
   deleteTask-component.tsx |     100 |      100 |     100 |     100 |                                             
   filterlists.tsx          |   96.42 |       75 |     100 |   95.83 | 29                                          
   search.tsx               |       0 |      100 |       0 |       0 | 7-10                                        
  src/pages                 |       0 |        0 |       0 |       0 |                                             
   AboutPage.tsx            |       0 |      100 |       0 |       0 | 5                                           
-  taskPage.tsx             |       0 |        0 |       0 |       0 | 36-39                                       
+  taskPage.tsx             |       0 |        0 |       0 |       0 | 37-40                                       
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 Test Suites: 11 failed, 8 passed, 19 total
 Tests:       27 failed, 60 passed, 87 total
 Snapshots:   0 total
-Time:        15.806 s
+Time:        16.607 s
 Ran all test suites.

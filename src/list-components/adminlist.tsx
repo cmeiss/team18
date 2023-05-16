@@ -19,12 +19,14 @@ interface AdminItemProps {
     setTasks: (newTasks: Task[]) => void;
 }
 
+//Admin List displays tasks that need special attention by the admin or super
 export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
     const [sorted, setSorted] = useState<boolean>(false); //indicated whether the adminList is sorted right now
     const [alphabetic, setAlphabetic] = useState<boolean>(false);
     const [byTime, setByTime] = useState<boolean>(false);
     const [byDifficulty, setByDifficulty] = useState<boolean>(false);
 
+    //enabeling draging tasks into the adminList
     const [{ isOver }, drop] = useDrop({
         accept: "task",
         drop: (item: Task) => addTaskToAdminList(item.id),
@@ -33,6 +35,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         })
     });
 
+    //this function sets a task's pendingMode field to true so that it is displayed in the adminList
     function addTaskToAdminList(id: number): void {
         const droppedTask: Task | undefined = tasks.find(
             (task: Task) => task.id === id
@@ -42,6 +45,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         }
     }
 
+    //this function sets a task's pendingMode field to false so that it is not displayed in the adminList
     function delTaskToAdminList(id: number): void {
         const droppedTask: Task | undefined = tasks.find(
             (task: Task) => task.id === id
@@ -62,6 +66,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         }
     }
 
+    //this updates the tasks state after changing the pendingmode of the tasks
     function updatePending(tasks: Task[], id: number, pending: boolean) {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         setTasks(
@@ -90,6 +95,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         return tasks.filter((TASK: Task) => TASK.pendingMode === true);
     }
 
+    //This function displays an open or closed trashcan as visible drop target to delete tasks
     function TrashCan(): JSX.Element {
         const [{ isOver, canDrop }, drop] = useDrop({
             accept: "task",
@@ -115,18 +121,21 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         }
     }
 
+    //This function sets the sorting state variables for alphabetic sorting
     function updateAlphabetic() {
         setSorted(true);
         setAlphabetic(true);
         setByTime(false);
         setByDifficulty(false);
     }
+    //This function sets the sorting state variables for sorting by time
     function updateByTime() {
         setSorted(true);
         setAlphabetic(false);
         setByTime(true);
         setByDifficulty(false);
     }
+    //This function sets the sorting state variables for sorting by difficulty
     function updateByDifficulty() {
         setSorted(true);
         setAlphabetic(false);
@@ -134,6 +143,7 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
         setByDifficulty(true);
     }
 
+    //this function displays the list that is passed in
     function displayList(taskList: Task[]): JSX.Element {
         return (
             <div
@@ -175,8 +185,8 @@ export function AdminList({ user, tasks, setTasks }: AdminItemProps) {
             return <div>Pending List failed to load.</div>;
         }
     }
-
     if (user.name === "Admin" || user.name === "Super") {
+        //the admin list is only displayed if the current role is either admin or super
         return (
             <div className="pending-list">
                 <Row>

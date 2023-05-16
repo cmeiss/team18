@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./modifyTasksUsers.css";
 
+//this component is used to delete a task by entering the task's name in a textbox
 export interface delTaskProp {
     tasks: Task[];
-    //item: Task;
     setTasks: (newTasks: Task[]) => void;
 }
 

@@ -4077,14 +4077,12 @@ FAIL src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                  |   45.26 |    38.81 |   44.09 |   45.47 |                                             
- src                       |   21.56 |        0 |   33.33 |   22.44 |                                             
+All files                  |   49.42 |    38.81 |   46.71 |   49.55 |                                             
+ src                       |   57.89 |        0 |   66.66 |   57.89 |                                             
   App.tsx                  |       0 |        0 |       0 |       0 | 19-43                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
   TASKS.tsx                |     100 |      100 |     100 |     100 |                                             
   TaskFunctions.tsx        |     100 |      100 |     100 |     100 |                                             
-  user-functions.ts        |       0 |      100 |       0 |       0 | 7-62                                        
-  user-tests.tsx           |       0 |      100 |       0 |       0 | 6-63                                        
  src/editing-components    |   61.22 |       50 |      44 |   63.82 |                                             
   EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15                                       
   EditStatus.tsx           |   27.27 |       25 |   14.28 |      30 | 15,21-40,72-85                              
@@ -4114,5 +4112,5 @@ All files                  |   45.26 |    38.81 |   44.09 |   45.47 |
 Test Suites: 11 failed, 8 passed, 19 total
 Tests:       27 failed, 60 passed, 87 total
 Snapshots:   0 total
-Time:        16.607 s
+Time:        15.017 s
 Ran all test suites.

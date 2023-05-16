@@ -11,10 +11,14 @@ import { TASKS } from "./TASKS";
 import { Col, Row } from "react-bootstrap";
 import { ChangeRole } from "./list-components/ChangeRole";
 
+//this function creates our navigation bar and header and enables switchig between pages.
+//The header and navigation bar is displayed on all pages.
 function App(): JSX.Element {
     //state needs to be defined here to keep changes after switching between pages
+    //role state holds the currently selected user
     const [role, setRole] = useState<User>({ name: "User1", userList: [] }); //I set this intial user to make the user list display something
 
+    //roles state holds all available users
     const [roles, setRoles] = useState<User[]>([
         { name: "Please Select: ", userList: [] }, //Please select is necessary because the first item in drop down list is not selectable
         { name: "Super", userList: [] },
@@ -24,6 +28,7 @@ function App(): JSX.Element {
         },
         { name: "User1", userList: [] }
     ]);
+    //tasks state holds the current list of tasks
     const [tasks, setTasks] = useState<Task[]>(TASKS);
 
     function updateRole(event: React.ChangeEvent<HTMLSelectElement>) {

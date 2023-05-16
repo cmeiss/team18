@@ -1,13 +1,14 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import { User } from "../interfaces/user";
-//this is a function that returns a jsx element in our app.tsx file
+
 interface ChangeRoleProperties {
     Role: User;
     roles: User[];
     setRole: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
+//this component creates a drop-down menu that allows the user to select their role
 export function ChangeRole(ChangeRoleProps: ChangeRoleProperties): JSX.Element {
     return (
         <div>

@@ -22,6 +22,8 @@ interface UserProps {
     setUsers: (users: User[]) => void;
 }
 
+/* User List displays the list of the currently selected role. If the current role is admin or super, 
+user list is not displayed. Tasks can be added and deleted from the user list via drag and drop. */
 export function UserList({
     user,
     setUser,

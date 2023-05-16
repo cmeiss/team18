@@ -7,20 +7,20 @@ import { EditTime } from "./EditTime";
 import { EditDifficulty } from "./edit-difficulty";
 import { EditDescription } from "./EditDescription";
 import { EditSteps } from "./EditSteps";
-//import { EditStatus } from "./EditStatus";
 
 export interface editProps {
     tasks: Task[];
     updateTasks: (newTasks: Task[]) => void;
-    //updateTasks: React.Dispatch<React.SetStateAction<Task[]>>;
     task: Task;
 }
 
+/*
+This component allows the editing of tasks. It calls other components to get the new values
+for a task, combines them into a new task and replaces the old task in that tasks state with 
+the new task.
+ */
 export function EditTask(edit: editProps): JSX.Element {
-    {
-        /* all attribute state needs a setter function too, but it gave me linting errors to do so in  advance
-        we need to add the functions whenever we connect a new editing component*/
-    }
+    //the state variables below hold the new values for each task field
     const [id] = useState<number>(edit.task.id);
     const [name] = useState<string>(edit.task.name);
     const [desc, setDesc] = useState<string>(edit.task.description);
@@ -31,6 +31,7 @@ export function EditTask(edit: editProps): JSX.Element {
     const [diff, setDifficulty] = useState<number>(edit.task.difficulty);
     const [numUsers] = useState<number>(edit.task.numUsers);
     const [time, setTime] = useState<string>(edit.task.time);
+    //the visible state determines whether the editing fields are visible
     const [visible, setVisible] = useState<boolean>(false);
     function updateVisibility() {
         setVisible(!visible);
@@ -52,24 +53,6 @@ export function EditTask(edit: editProps): JSX.Element {
         const copy = tasks.map((T: Task) => ({ ...T, steps: [...T.steps] }));
         edit.updateTasks(
             copy.map((TASK: Task) =>
-                TASK.id === id
-                    ? makeTask(
-                          id,
-                          name,
-                          desc,
-                          stat,
-                          img,
-                          steps,
-                          diff,
-                          num,
-                          time,
-                          pend
-                      )
-                    : { ...TASK, steps: [...TASK.steps] }
-            )
-        );
-        console.log(
-            tasks.map((TASK: Task) =>
                 TASK.id === id
                     ? makeTask(
                           id,
@@ -142,7 +125,3 @@ export function EditTask(edit: editProps): JSX.Element {
         </div>
     );
 }
-
-//we probably won't need this file!!, see explanation in display view
-//after writing this function, check function call in display task,
-//we might need to add some arguments

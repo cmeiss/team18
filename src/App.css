@@ -17,7 +17,7 @@
     width: 100%;
     background-image: url(/desktopview.jpg);
     background-repeat: no-repeat;
-    background-size: 1400px;
+    background-size: 100%;
     background-position: center;
     min-height: 35vh;
     display: flex;
@@ -181,5 +181,3 @@
     background: none;
     background-color: bisque;
 }
-
-

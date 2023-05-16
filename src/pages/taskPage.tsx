@@ -21,6 +21,7 @@ interface TaskPageProps {
     setTasks: (newTasks: Task[]) => void;
 }
 
+//This function creates our main page, the schedule builder.
 function TaskPage({
     role,
     setRole,

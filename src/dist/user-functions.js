@@ -40,7 +40,7 @@ exports.deleteTask = deleteTask;
 /**
  * addTask function, adds a task fto the userList
  */
-function addTasktoUserList(user, id, name, desc, stat, img, step, diff, num, time) {
+function addTasktoUserList(user, id, name, desc, stat, img, step, diff, num, time, pend) {
     var task = {
         id: id,
         name: name,
@@ -50,7 +50,8 @@ function addTasktoUserList(user, id, name, desc, stat, img, step, diff, num, tim
         steps: step,
         difficulty: diff,
         numUsers: num,
-        time: time
+        time: time,
+        pendingMode: pend
     };
     var list = __spreadArrays(user.userList);
     list.push(task);

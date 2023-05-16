@@ -34,6 +34,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
         <div className="deleteTask">
             <Form.Check
                 type={"switch"}
+                role="switch"
                 id="editMode"
                 label="Delete Task"
                 className="mx-auto"

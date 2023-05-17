@@ -23,9 +23,9 @@ var testTask = {
     time: "1345",
     pendingMode: false
 };
-var role1 = "Super";
+//const role1 = "Super";
 //const role2 = "Admin";
-//const role3 = "User1";
+var role3 = "User1";
 var User1 = { name: "user1", userList: TASKS_1.TASKS };
 var User2 = { name: "Super", userList: TASKS_1.TASKS };
 var User3 = { name: "Admin", userList: TASKS_1.TASKS };
@@ -40,12 +40,12 @@ function setUsers(newUsers) {
     newUsers;
 }
 //test that components are displayed
-//super: central list, add/delete task, add/delete user, edit task
+//super: central list, add/delete task, add/delete user, edit task, admin list
 //admin: admin list, central item list, edit task
 //user: central item list, user list, edit task
 describe("Tesing Central Item List in App", function () {
     beforeEach(function () {
-        CustomRender_1.renderWithDnd(react_1["default"].createElement(CentralItemList_1.CentralItemList, { tasks: TASKS_1.TASKS, role: role1, setTasks: setTasks }));
+        CustomRender_1.renderWithDnd(react_1["default"].createElement(CentralItemList_1.CentralItemList, { tasks: TASKS_1.TASKS, role: role3, setTasks: setTasks }));
     });
     test("list is displayed", function () {
         var listDisplayed = react_2.screen.getByText("Sample Tasks");

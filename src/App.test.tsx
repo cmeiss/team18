@@ -25,9 +25,9 @@ const testTask = {
     pendingMode: false
 };
 
-const role1 = "Super";
+//const role1 = "Super";
 //const role2 = "Admin";
-//const role3 = "User1";
+const role3 = "User1";
 
 const User1: User = { name: "user1", userList: TASKS };
 const User2: User = { name: "Super", userList: TASKS };
@@ -45,7 +45,7 @@ function setUsers(newUsers: User[]) {
 }
 
 //test that components are displayed
-//super: central list, add/delete task, add/delete user, edit task
+//super: central list, add/delete task, add/delete user, edit task, admin list
 //admin: admin list, central item list, edit task
 //user: central item list, user list, edit task
 
@@ -54,7 +54,7 @@ describe("Tesing Central Item List in App", () => {
         renderWithDnd(
             <CentralItemList
                 tasks={TASKS}
-                role={role1}
+                role={role3}
                 setTasks={setTasks}
             ></CentralItemList>
         );

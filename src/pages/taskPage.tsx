@@ -78,6 +78,7 @@ function TaskPage({
                         <div>
                             {role.name === "Super" || role.name === "Admin" ? (
                                 <DeleteTask
+                                    roles={roles}
                                     tasks={tasks}
                                     //item={task}
                                     setTasks={setTasks}

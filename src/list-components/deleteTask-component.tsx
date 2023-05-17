@@ -9,7 +9,8 @@ import { User } from "../interfaces/user";
 export interface delTaskProp {
     tasks: Task[];
     setTasks: (newTasks: Task[]) => void;
-    roles: User[];
+    roles: User[]; //these are all of the users which will be used to access their tasks and delete them.
+    setRoles: (newRoles: User[]) => void;
 }
 
 export function DeleteTask(taskProps: delTaskProp): JSX.Element {
@@ -37,6 +38,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                         : false
                 )
             );
+            taskProps.roles.map;
             seteditmode(false);
             setDelTask("");
             setPlaceholder("Enter Task");

@@ -78,7 +78,7 @@ function TaskPage({
                         <div>
                             {role.name === "Super" || role.name === "Admin" ? (
                                 <DeleteTask
-                                    roles={roles}
+                                    roles={roles} // added the state of all the roles so this can delete from each users list
                                     tasks={tasks}
                                     //item={task}
                                     setTasks={setTasks}

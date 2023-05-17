@@ -27,7 +27,6 @@ describe("test editSteps", () => {
         expect(description).toBeInTheDocument();
     });
     test("The description starts with the correct text", () => {
-        //const description = screen.getByTestId("stepsInstructions");
         const firstDescrLet = screen.getByText(/-To indicate different steps/i);
         expect(firstDescrLet).toBeInTheDocument();
     });

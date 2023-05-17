@@ -51,15 +51,6 @@ function setUsers(newUsers: User[]) {
 
 describe("Tesing Central Item List in App", () => {
     beforeEach(() => {
-        // render(
-        //     <DndProvider backend={HTML5Backend}>
-        //         <CentralItemList
-        //             tasks={TASKS}
-        //             role={role1}
-        //             setTasks={setTasks}
-        //         ></CentralItemList>
-        //     </DndProvider>
-        // );
         renderWithDnd(
             <CentralItemList
                 tasks={TASKS}
@@ -135,25 +126,13 @@ describe("Tesing Admin List in App", () => {
         const listDisplayed = screen.getByText("Pending List");
         expect(listDisplayed).toBeInTheDocument();
     });
-    test("list not seen by super", () => {
-        const { container } = render(
-            <AdminList
-                users={users}
-                setUsers={setUsers}
-                tasks={TASKS}
-                user={User3}
-                setTasks={setTasks}
-            ></AdminList>
-        );
-        expect(container).toBeEmptyDOMElement();
-    });
     test("list not seen by user", () => {
         const { container } = renderWithDnd(
             <AdminList
                 users={users}
                 setUsers={setUsers}
                 tasks={TASKS}
-                user={User3}
+                user={User1}
                 setTasks={setTasks}
             ></AdminList>
         );

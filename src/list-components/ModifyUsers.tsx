@@ -13,7 +13,8 @@ export function ModifyUsers(
     ChangeRoleProps: ChangeRoleProperties
 ): JSX.Element {
     const [editmode, seteditmode] = useState<boolean>(false); //whether the textbox will appear boolean
-    const [newUser, setNewUser] = useState<string>("User2"); //the value currently in the text box of edit mode
+    const [newUser, setNewUser] = useState<string>(""); //the value currently in the text box of edit mode
+    const [placeholder, setPlaceholder] = useState<string>("Enter User"); //holds the current placeholder text to ask for input
     //function that sets role based on the role clicked
     function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
         seteditmode(event.target.checked);
@@ -23,19 +24,43 @@ export function ModifyUsers(
     }
 
     function AddUsersandEditMode() {
-        ChangeRoleProps.setRoles([
-            ...ChangeRoleProps.roles,
-            { name: newUser, userList: [] }
-        ]);
-        seteditmode(false);
+        const duplicate = ChangeRoleProps.roles.some(
+            (user: User) => String(user.name) === newUser
+        );
+        if (!duplicate) {
+            ChangeRoleProps.setRoles([
+                ...ChangeRoleProps.roles,
+                { name: newUser, userList: [] }
+            ]);
+            seteditmode(false);
+            setNewUser("");
+            setPlaceholder("Enter User");
+        } else {
+            const newPH =
+                newUser + " already exists, please enter a different name";
+            setPlaceholder(newPH);
+            setNewUser("");
+        }
     }
     function DeleteUsersandEditMode() {
-        ChangeRoleProps.setRoles(
-            [...ChangeRoleProps.roles].filter((role: User): boolean =>
-                role.name !== newUser ? true : false
-            )
+        const exists = ChangeRoleProps.roles.some(
+            (user: User) => String(user.name) === newUser
         );
-        seteditmode(false);
+        if (exists) {
+            ChangeRoleProps.setRoles(
+                [...ChangeRoleProps.roles].filter((role: User): boolean =>
+                    role.name !== newUser ? true : false
+                )
+            );
+            seteditmode(false);
+            setNewUser("");
+            setPlaceholder("Enter User");
+        } else {
+            const newPH =
+                newUser + " doesn't exist, please enter a different name";
+            setPlaceholder(newPH);
+            setNewUser("");
+        }
     }
     return (
         <div className="modifyUsers">
@@ -50,12 +75,15 @@ export function ModifyUsers(
             />
             {editmode ? (
                 <Form.Group controlId="ChecKAnswer">
-                    <Form.Label>Enter New User Below:</Form.Label>
+                    <Form.Label style={{ fontWeight: "bold" }}>
+                        Which user would you like to edit?
+                    </Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={3}
                         value={newUser}
                         onChange={updateUsers}
+                        placeholder={placeholder}
                     />
                 </Form.Group>
             ) : null}

@@ -27,8 +27,6 @@ export function ModifyUsers(
         const duplicate = ChangeRoleProps.roles.some(
             (user: User) => String(user.name) === newUser
         );
-        console.log("duplicate:");
-        console.log(duplicate);
         if (!duplicate) {
             ChangeRoleProps.setRoles([
                 ...ChangeRoleProps.roles,
@@ -45,12 +43,24 @@ export function ModifyUsers(
         }
     }
     function DeleteUsersandEditMode() {
-        ChangeRoleProps.setRoles(
-            [...ChangeRoleProps.roles].filter((role: User): boolean =>
-                role.name !== newUser ? true : false
-            )
+        const exists = ChangeRoleProps.roles.some(
+            (user: User) => String(user.name) === newUser
         );
-        seteditmode(false);
+        if (exists) {
+            ChangeRoleProps.setRoles(
+                [...ChangeRoleProps.roles].filter((role: User): boolean =>
+                    role.name !== newUser ? true : false
+                )
+            );
+            seteditmode(false);
+            setNewUser("");
+            setPlaceholder("Enter User");
+        } else {
+            const newPH =
+                newUser + " doesn't exist, please enter a different name";
+            setPlaceholder(newPH);
+            setNewUser("");
+        }
     }
     return (
         <div className="modifyUsers">
@@ -65,7 +75,9 @@ export function ModifyUsers(
             />
             {editmode ? (
                 <Form.Group controlId="ChecKAnswer">
-                    <Form.Label>Enter New User Below:</Form.Label>
+                    <Form.Label style={{ fontWeight: "bold" }}>
+                        Which user would you like to edit?
+                    </Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={3}

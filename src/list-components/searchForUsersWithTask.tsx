@@ -11,8 +11,11 @@ interface UserProps {
     setTasks: (newTasks: Task[]) => void; ////this attribute is not used right now but will be needed to update the numUsers when we add things to userList
     setUsers: (users: User[]) => void;
 }
-export function searchInSuper(UserProperties: UserProps):{
-    const [searchMode, SetSearchMode] = useState<boolean>(false);
+export function searchInSuper(UserProperties: UserProps): JSX.Element {
+    const [SearchMode, SetSearchMode] = useState<boolean>(false);
+    function setSearchMode() {
+        SetSearchMode(!SearchMode);
+    }
     return (
         <div>
             <Button
@@ -27,7 +30,3 @@ export function searchInSuper(UserProperties: UserProps):{
         </div>
     );
 }
-function setSearchMode(event: MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    
-}
-

@@ -80,4 +80,11 @@ describe("EditMode Component tests", () => {
         compCheckBox.click();
         expect(screen.getByText(/Completion Status: ✔️/i)).toBeInTheDocument();
     });
+    test("After initial click of checkbox a button should appear and should say confirm", () => {
+        const compCheckBox = screen.getByRole("checkbox");
+        compCheckBox.click();
+        expect(screen.queryByRole("button")).toBeInTheDocument();
+        expect(screen.getByText(/Confirm/i)).toBeInTheDocument();
+        //const confirmButton = screen.getByRole("button");
+    });
 });

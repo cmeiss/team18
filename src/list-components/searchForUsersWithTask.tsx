@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { search } from "./search";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
@@ -13,6 +13,7 @@ interface UserProps {
 }
 export function searchInSuper(UserProperties: UserProps): JSX.Element {
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
+    const [tasktosearch, SetTaskToSearch] = useState<string>("");
     function setSearchMode() {
         SetSearchMode(!SearchMode);
     }
@@ -27,6 +28,21 @@ export function searchInSuper(UserProperties: UserProps): JSX.Element {
             >
                 Search:
             </Button>
+            {SearchMode ? (
+                <Form.Group controlId="ChecKAnswer">
+                    <Form.Label style={{ fontWeight: "bold" }}>
+                        Which user would you like to edit?
+                    </Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={3}
+                        value={newUser}
+                        onChange={updateUsers}
+                        placeholder={placeholder}
+                        type={"textboxUserInput"}
+                    />
+                </Form.Group>
+            ) : null}
         </div>
     );
 }

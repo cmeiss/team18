@@ -3,6 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { EditStatus } from "./EditStatus";
 import userEvent from "@testing-library/user-event";
 import { Task } from "../interfaces/task";
+import { User } from "../interfaces/user";
 
 const testTask = {
     id: 1,
@@ -56,6 +57,8 @@ let TaskList = [
     }
 ];
 
+const User1: User = { name: "user1", userList: TaskList };
+
 function setTasks(newTasks: Task[]) {
     TaskList = newTasks;
 }
@@ -80,7 +83,7 @@ describe("EditMode Component tests", () => {
         compCheckBox.click();
         expect(screen.getByText(/Completion Status: ✔️/i)).toBeInTheDocument();
     });
-    test("After initial click of checkbox a button should appear and should say confirm", () => {
+    test("After initial click of checkbox a button should appear and should say confirm, the state of the user's task's status should not be changed", () => {
         const compCheckBox = screen.getByRole("checkbox");
         compCheckBox.click();
         expect(screen.queryByRole("button")).toBeInTheDocument();

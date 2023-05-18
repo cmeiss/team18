@@ -1,7 +1,8 @@
 import { Button } from "react-bootstrap";
 import { search } from "./search";
-//Question for Lab: do we need one unchangable id?
-
+import { Task } from "../interfaces/task";
+import { User } from "../interfaces/user";
+import React, { useState } from "react";
 interface UserProps {
     user: User;
     setUser: (newUser: User) => void;
@@ -10,9 +11,9 @@ interface UserProps {
     setTasks: (newTasks: Task[]) => void; ////this attribute is not used right now but will be needed to update the numUsers when we add things to userList
     setUsers: (users: User[]) => void;
 }
-export function searchInSuper(): JSX.Element {
+export function searchInSuper(UserProperties: UserProps):{
+    const [searchMode, SetSearchMode] = useState<boolean>(false);
     return (
-        // eslint-disable-next-line react/react-in-jsx-scope
         <div>
             <Button
                 onClick={setSearchMode}
@@ -26,3 +27,7 @@ export function searchInSuper(): JSX.Element {
         </div>
     );
 }
+function setSearchMode(event: MouseEvent<HTMLButtonElement, MouseEvent>): void {
+    
+}
+

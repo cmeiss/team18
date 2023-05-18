@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { EditStatus } from "./EditStatus";
-import userEvent from "@testing-library/user-event";
+//import userEvent from "@testing-library/user-event";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 
@@ -95,5 +95,6 @@ describe("EditMode Component tests", () => {
         compCheckBox.click();
         const confirmButton = screen.getByRole("button");
         confirmButton.click();
+        expect(User1.userList[0].status).toBeTruthy();
     });
 });

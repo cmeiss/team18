@@ -10,7 +10,6 @@ import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
 import { addTask, delTask, makeTask } from "../TaskFunctions";
 import { search } from "./search";
-
 //Question for Lab: do we need one unchangable id?
 
 interface UserProps {
@@ -148,6 +147,15 @@ export function UserList({
             );
             if (repeats === 1) changeTasks(tasks, droppedTask.id, false);
         }
+    }
+
+    function deleteAllCompleted() {
+        const newTasks = copyUL().filter((task: Task): boolean => !task.status);
+        setUser({
+            name: user.name,
+            userList: newTasks
+        });
+        setUsers(updateUserTasks(newTasks));
     }
 
     //This function sets Role and Roles state with a new UserList
@@ -295,6 +303,25 @@ export function UserList({
                                     Time Needed{" "}
                                 </Button>
                             </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div
+                            style={{
+                                position: "relative",
+                                float: "left",
+                                bottom: -12,
+                                right: 30
+                            }}
+                        >
+                            <Button
+                                onClick={deleteAllCompleted}
+                                style={{
+                                    backgroundColor: "red"
+                                }}
+                            >
+                                Remove ✔️ Tasks
+                            </Button>
                         </div>
                     </Col>
                 </Row>

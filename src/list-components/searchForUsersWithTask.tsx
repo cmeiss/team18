@@ -5,15 +5,12 @@ import { User } from "../interfaces/user";
 import React, { useState } from "react";
 interface UserProps {
     user: User;
-    setUser: (newUser: User) => void;
     users: User[];
-    tasks: Task[]; //this attribute is not used right now but will be needed to update the numUsers when we add things to userList
-    setTasks: (newTasks: Task[]) => void; ////this attribute is not used right now but will be needed to update the numUsers when we add things to userList
-    setUsers: (users: User[]) => void;
 }
-export function searchInSuper(UserProperties: UserProps): JSX.Element {
+export function SearchInSuper(UserProperties: UserProps): JSX.Element {
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [tasktosearch, SetTaskToSearch] = useState<string>("");
+    const [placeholder, setPlaceholder] = useState<string>("Enter User"); //holds the current placeholder text to ask for input
     function setSearchMode() {
         SetSearchMode(!SearchMode);
     }
@@ -42,7 +39,6 @@ export function searchInSuper(UserProperties: UserProps): JSX.Element {
                         value={tasktosearch}
                         onChange={updatetasktoSearch}
                         placeholder={placeholder}
-                        type={"textboxUserInput"}
                     />
                 </Form.Group>
             ) : null}

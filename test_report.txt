@@ -29,7 +29,7 @@ PASS src/list-components/adminlist.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
           at p
           at div
           at div
@@ -936,7 +936,7 @@ PASS src/App.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
           at p
           at div
           at div
@@ -1228,7 +1228,7 @@ PASS src/list-components/UserList.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
           at p
           at div
           at div
@@ -1771,7 +1771,7 @@ PASS src/list-components/DisplayTask.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
           at p
           at div
           at div
@@ -1937,6 +1937,85 @@ PASS src/list-components/DisplayTask.test.tsx
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at renderWithDnd (src/CustomRender.tsx:9:12)
       at Object.<anonymous> (src/list-components/DisplayTask.test.tsx:116:9)
+
+PASS src/editing-components/EditStatus.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      65 | describe("EditMode Component tests", () => {
+      66 |     beforeEach(() =>
+    > 67 |         render(
+         |         ^
+      68 |             <EditStatus
+      69 |                 tasks={TaskList}
+      70 |                 updateTasks={setTasks}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditStatus.test.tsx:67:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      65 | describe("EditMode Component tests", () => {
+      66 |     beforeEach(() =>
+    > 67 |         render(
+         |         ^
+      68 |             <EditStatus
+      69 |                 tasks={TaskList}
+      70 |                 updateTasks={setTasks}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditStatus.test.tsx:67:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      65 | describe("EditMode Component tests", () => {
+      66 |     beforeEach(() =>
+    > 67 |         render(
+         |         ^
+      68 |             <EditStatus
+      69 |                 tasks={TaskList}
+      70 |                 updateTasks={setTasks}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditStatus.test.tsx:67:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      65 | describe("EditMode Component tests", () => {
+      66 |     beforeEach(() =>
+    > 67 |         render(
+         |         ^
+      68 |             <EditStatus
+      69 |                 tasks={TaskList}
+      70 |                 updateTasks={setTasks}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditStatus.test.tsx:67:9)
 
 PASS src/list-components/addTask.test.tsx
   ● Console
@@ -2977,7 +3056,7 @@ PASS src/list-components/CentralItemList.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:17:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
           at p
           at div
           at div
@@ -3650,15 +3729,15 @@ PASS src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                  |   50.65 |    41.25 |   47.16 |   51.08 |                                             
+All files                  |   52.74 |    43.12 |   50.94 |   52.98 |                                             
  src                       |   57.89 |        0 |   66.66 |   57.89 |                                             
   App.tsx                  |       0 |        0 |       0 |       0 | 19-43                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
   TASKS.tsx                |     100 |      100 |     100 |     100 |                                             
   TaskFunctions.tsx        |     100 |      100 |     100 |     100 |                                             
- src/editing-components    |   61.22 |       50 |      44 |   63.82 |                                             
+ src/editing-components    |   77.55 |       80 |      68 |   78.72 |                                             
   EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15                                       
-  EditStatus.tsx           |   27.27 |       25 |   14.28 |      30 | 15,21-40,72-85                              
+  EditStatus.tsx           |     100 |      100 |     100 |     100 |                                             
   EditSteps.tsx            |     100 |      100 |     100 |     100 |                                             
   EditTask.tsx             |   72.22 |       50 |   33.33 |   76.47 | 53-56,102                                   
   EditTime.tsx             |      60 |      100 |   66.66 |      60 | 14-15                                       
@@ -4954,8 +5033,8 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
 
-Test Suites: 9 failed, 12 passed, 21 total
-Tests:       16 failed, 74 passed, 90 total
+Test Suites: 9 failed, 13 passed, 22 total
+Tests:       16 failed, 78 passed, 94 total
 Snapshots:   0 total
-Time:        21.267 s
+Time:        16.683 s
 Ran all test suites.

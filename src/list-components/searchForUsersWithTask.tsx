@@ -17,6 +17,9 @@ export function searchInSuper(UserProperties: UserProps): JSX.Element {
     function setSearchMode() {
         SetSearchMode(!SearchMode);
     }
+    function updatetasktoSearch(event: React.ChangeEvent<HTMLInputElement>) {
+        SetTaskToSearch(event.target.value);
+    }
     return (
         <div>
             <Button
@@ -36,8 +39,8 @@ export function searchInSuper(UserProperties: UserProps): JSX.Element {
                     <Form.Control
                         as="textarea"
                         rows={3}
-                        value={newUser}
-                        onChange={updateUsers}
+                        value={tasktosearch}
+                        onChange={updatetasktoSearch}
                         placeholder={placeholder}
                         type={"textboxUserInput"}
                     />

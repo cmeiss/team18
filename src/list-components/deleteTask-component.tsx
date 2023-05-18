@@ -26,18 +26,10 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
     function updateTasks(event: React.ChangeEvent<HTMLInputElement>) {
         setDelTask(event.target.value);
     }
-    function helper_func(User: User): User {
-        taskProps.setUser({
-            name: User.name,
-            userList: [
-                ...User.userList.filter((item: Task): boolean =>
-                    item.name.toLowerCase() != deltask.toLowerCase()
-                        ? true
-                        : false
-                )
-            ]
-        });
-        return taskProps.user;
+    function helper_func(User: User): void {
+        User.userList = User.userList.filter((item: Task): boolean =>
+            item.name.toLowerCase() != deltask.toLowerCase() ? true : false
+        );
     }
 
     function remTask() {
@@ -53,12 +45,9 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                         : false
                 )
             );
-            let new_roles: User[] = [];
             for (let i = 0; taskProps.roles.length; i++) {
                 helper_func(taskProps.roles[i]);
-                new_roles = [...new_roles, taskProps.user];
             }
-            taskProps.setRoles(new_roles);
             seteditmode(false);
             setDelTask("");
             setPlaceholder("Enter Task");

@@ -10,7 +10,6 @@ import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
 import { addTask, delTask, makeTask } from "../TaskFunctions";
 import { search } from "./search";
-import { deleteAllCompleted } from "./deleteAllCompleted";
 //Question for Lab: do we need one unchangable id?
 
 interface UserProps {
@@ -35,9 +34,6 @@ export function UserList({
     const [TaskSearched, setTaskSearched] = useState<string>("");
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
-    const [completedUserList, setCompletedUserList] = useState<Task[]>(
-        user.userList
-    );
 
     //this function copies the userList to ensure immutability
     function copyUL() {
@@ -151,6 +147,15 @@ export function UserList({
             );
             if (repeats === 1) changeTasks(tasks, droppedTask.id, false);
         }
+    }
+
+    function deleteAllCompleted() {
+        const newTasks = copyUL().filter((task: Task): boolean => !task.status);
+        setUser({
+            name: user.name,
+            userList: newTasks
+        });
+        setUsers(updateUserTasks(newTasks));
     }
 
     //This function sets Role and Roles state with a new UserList
@@ -301,10 +306,23 @@ export function UserList({
                         </div>
                     </Col>
                     <Col>
-                        <deleteAllCompleted
-                            tasks={completedUserList}
-                            setTasks={setCompletedUserList}
-                        ></deleteAllCompleted>
+                        <div
+                            style={{
+                                position: "relative",
+                                float: "left",
+                                bottom: -12,
+                                right: 30
+                            }}
+                        >
+                            <Button
+                                onClick={deleteAllCompleted}
+                                style={{
+                                    backgroundColor: "red"
+                                }}
+                            >
+                                Remove ✔️ Tasks
+                            </Button>
+                        </div>
                     </Col>
                 </Row>
                 <Row>

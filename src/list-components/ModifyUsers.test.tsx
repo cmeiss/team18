@@ -1,7 +1,6 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { ModifyUsers } from "./ModifyUsers";
-import userEvent from "@testing-library/user-event";
 import { User } from "../interfaces/user";
 
 const ROLE1: User = { name: "user1", userList: [] };
@@ -14,11 +13,9 @@ describe("Modify User tests", () => {
             <ModifyUsers
                 Role={ROLE1}
                 roles={[ROLE1, ROLE2, ROLE3]}
-                setRoles={
-                    function (/*newUsers: User[]*/): void {
-                        throw new Error("Function not implemented.");
-                    }
-                }
+                setRoles={function (newUsers: User[]): void {
+                    newUsers;
+                }}
             />
         )
     );
@@ -47,18 +44,13 @@ describe("Modify User tests", () => {
             name: /Add User and Leave Edit Mode/i
         });
         const inputUser = screen.getByRole("textbox");
-        userEvent.type(inputUser, "user test");
-        // on add user button click
+        fireEvent.change(inputUser, { target: { value: "test user 2" } });
         addUser.click();
-        // need help figuring out if it actually adds a user
         // leaves edit mode: no textbox and no buttons
-        expect(screen.getByRole("textbox")).toBeNull();
-        expect(screen.getByRole("button")).toBeNull();
-        // may need to render the roll select dropdown. At this moment I dont see how we do that without rendering
-        //all of App. we will come back to this later
+        expect(screen.queryByRole("textbox")).not.toBeInTheDocument();
+        expect(screen.queryByRole("button")).not.toBeInTheDocument();
     });
-    // how are we deleting users? it shouldn't be through textbox entry
-    test("Clicking delete user adds a user and leaves edit mode", () => {
+    test("Clicking delete user deletes a user and leaves edit mode", () => {
         // setting up the scenario
         const switchButton = screen.getByRole("checkbox");
         switchButton.click();
@@ -66,14 +58,10 @@ describe("Modify User tests", () => {
             name: /Delete User and Leave Edit Mode/i
         });
         const inputUser = screen.getByRole("textbox");
-        userEvent.type(inputUser, "user test");
-        // on delete user button click
+        fireEvent.change(inputUser, { target: { value: "user1" } });
         delUser.click();
-        // need help figuring out if it actually adds a user
         // leaves edit mode: no textbox and no buttons
-        expect(screen.getByRole("textbox")).toBeNull();
-        expect(screen.getByRole("button")).toBeNull();
-        // may need to render the roll select dropdown. At this moment I dont see how we do that without rendering
-        //all of App. we will come back to this later
+        expect(screen.queryByRole("textbox")).toBeNull();
+        expect(screen.queryByRole("button")).toBeNull();
     });
 });

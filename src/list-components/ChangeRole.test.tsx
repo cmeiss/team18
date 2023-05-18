@@ -15,11 +15,9 @@ describe("Change role test", () => {
             <ChangeRole
                 Role={ROLE1}
                 roles={roleList}
-                setRole={
-                    function (/*newUsers: User[]*/): void {
-                        throw new Error("Function not implemented.");
-                    }
-                }
+                setRole={function (): void {
+                    throw new Error("Function not implemented.");
+                }}
             ></ChangeRole>
         )
     );

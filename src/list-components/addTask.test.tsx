@@ -40,40 +40,60 @@ describe("Add tasks tests", () => {
             <AddTask
                 //item={TASK1}
                 tasks={TASKLIST1}
-                setTasks={
-                    function (/*newTasks: Tasks[]*/): void {
-                        throw new Error("Function not implemented.");
-                    }
-                }
+                setTasks={function (newTasks: Task[]): void {
+                    newTasks;
+                }}
             />
         )
     );
     test("There is a switch", () => {
-        const switchButton = screen.getByRole("switch");
+        const switchButton = screen.getByRole("checkbox");
         expect(switchButton).toBeInTheDocument();
     });
-    test("On switch click, there is a textbox and buttons: ", () => {
-        const switchButton = screen.getByRole("switch");
+    test("On switch click, is an add task button: ", () => {
+        const switchButton = screen.getByRole("checkbox");
         switchButton.click();
         const addTask = screen.getByRole("button", {
             name: /Add Task and Leave Edit Mode/i
         });
-        expect(screen.getByRole("textbox")).toBeInTheDocument();
         expect(addTask).toBeInTheDocument();
     });
     test("Clicking add task adds a task and leaves edit mode", () => {
         // setting up the scenario
-        const switchButton = screen.getByRole("switch");
+        const switchButton = screen.getByRole("checkbox");
         switchButton.click();
         const addTask = screen.getByRole("button", {
             name: /Add Task and Leave Edit Mode/i
         });
-        const inputUser = screen.getByRole("textarea");
+        const inputUser = screen.getByRole("textboxName");
         userEvent.type(inputUser, "task test");
         // on add user button click
         addTask.click();
 
-        expect(screen.getByRole("textarea")).toBeNull();
-        expect(screen.getByRole("button")).toBeNull();
+        expect(screen.queryByRole("textbox")).toBeNull();
+        expect(screen.queryByRole("button")).toBeNull();
+    });
+    test("On switch click, there is a textbox for name, description, image and steps: ", () => {
+        const switchButton = screen.getByRole("checkbox");
+        switchButton.click();
+        expect(screen.queryByRole("textboxName")).toBeInTheDocument();
+        expect(screen.queryByRole("textboxDesc")).toBeInTheDocument();
+        expect(screen.queryByRole("textboxImg")).toBeInTheDocument();
+        expect(screen.queryByRole("textboxSteps")).toBeInTheDocument();
+    });
+    test("On switch click there is a checkbox for status", () => {
+        const switchButton = screen.getByRole("checkbox");
+        switchButton.click();
+        expect(screen.getByRole("checkboxStatus")).toBeInTheDocument();
+    });
+    test("On switch click, there is a dropdown for time", () => {
+        const switchButton = screen.getByRole("checkbox");
+        switchButton.click();
+        expect(screen.getByRole("select")).toBeInTheDocument();
+    });
+    test("On switch click, there is a field for difficulty", () => {
+        const switchButton = screen.getByRole("checkbox");
+        switchButton.click();
+        expect(screen.getByText(/Choose Difficulty:/i)).toBeInTheDocument();
     });
 });

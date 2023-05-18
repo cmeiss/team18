@@ -82,7 +82,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
 
     return (
         <div className="addTask">
-            <div className="addTaskSwitch">
+            <div className="addTaskSwitch" role="switch">
                 <Form.Check
                     type={"switch"}
                     className="mx-auto"
@@ -98,7 +98,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
             </div>
             {neweditmode ? (
                 <Form.Group controlId="CheckAnswer">
-                    <div className="newTaskName">
+                    <div className="newTaskName" role="textboxName">
                         <Form.Label style={{ fontWeight: "bold" }}>
                             New Task Name:
                         </Form.Label>
@@ -110,7 +110,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                             placeholder="Enter name here"
                         />
                     </div>
-                    <div className="newTaskDescription">
+                    <div className="newTaskDescription" role="textboxDesc">
                         <Form.Label style={{ fontWeight: "bold" }}>
                             New Task Description:
                         </Form.Label>
@@ -131,11 +131,12 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                                 type="checkbox"
                                 checked={newstatus}
                                 onChange={updateStatus}
+                                role="checkboxStatus"
                             />
                             {newstatus ? "✔️" : "❌"}
                         </div>
                     </div>
-                    <div className="newTaskImage">
+                    <div className="newTaskImage" role="textboxImg">
                         <Form.Label style={{ fontWeight: "bold" }}>
                             New Task Image:
                         </Form.Label>
@@ -147,7 +148,7 @@ export function AddTask(taskProps: addTaskProp): JSX.Element {
                             placeholder="Enter image URL here"
                         />
                     </div>
-                    <div className="newTaskSteps">
+                    <div className="newTaskSteps" role="textboxSteps">
                         <Form.Label style={{ fontWeight: "bold" }}>
                             New Task Steps:
                         </Form.Label>

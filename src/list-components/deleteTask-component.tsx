@@ -3,23 +3,32 @@ import { Task } from "../interfaces/task";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./modifyTasksUsers.css";
+import { User } from "../interfaces/user";
 
 //this component is used to delete a task by entering the task's name in a textbox
 export interface delTaskProp {
     tasks: Task[];
     setTasks: (newTasks: Task[]) => void;
+    roles: User[]; //these are all of the users which will be used to access their tasks and delete them.
+    setRoles: (newRoles: User[]) => void;
+    user: User;
+    setUser: (newUser: User) => void;
 }
 
 export function DeleteTask(taskProps: delTaskProp): JSX.Element {
     const [editMode, seteditmode] = useState<boolean>(false);
     const [deltask, setDelTask] = useState<string>("");
     const [placeholder, setPlaceholder] = useState<string>("Enter Task");
-
     function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
         seteditmode(event.target.checked);
     }
     function updateTasks(event: React.ChangeEvent<HTMLInputElement>) {
         setDelTask(event.target.value);
+    }
+    function helper_func(User: User): void {
+        User.userList = User.userList.filter((item: Task): boolean =>
+            item.name.toLowerCase() != deltask.toLowerCase() ? true : false
+        );
     }
 
     function remTask() {
@@ -35,6 +44,9 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                         : false
                 )
             );
+            for (let i = 0; taskProps.roles.length; i++) {
+                helper_func(taskProps.roles[i]);
+            }
             seteditmode(false);
             setDelTask("");
             setPlaceholder("Enter Task");

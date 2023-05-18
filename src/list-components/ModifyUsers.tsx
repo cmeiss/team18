@@ -84,6 +84,7 @@ export function ModifyUsers(
                         value={newUser}
                         onChange={updateUsers}
                         placeholder={placeholder}
+                        type={"textboxUserInput"}
                     />
                 </Form.Group>
             ) : null}

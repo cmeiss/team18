@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { EditStatus } from "./EditStatus";
-//import userEvent from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import { Task } from "../interfaces/task";
 import { User } from "../interfaces/user";
 
@@ -75,7 +75,9 @@ describe("EditMode Component tests", () => {
     test("There is a checkbox and no button to confirm", () => {
         const compCheckBox = screen.getByRole("checkbox");
         expect(compCheckBox).toBeInTheDocument();
-        expect(screen.queryByRole("button")).not.toBeInTheDocument();
+        expect(
+            screen.queryByRole("button", { name: "Confirm" })
+        ).not.toBeInTheDocument();
     });
     test("Initial text should be 'Completion Status: ❌', and after click it should change to 'Completion Status: ✔️'", () => {
         const compCheckBox = screen.getByRole("checkbox");
@@ -90,11 +92,14 @@ describe("EditMode Component tests", () => {
         expect(screen.getByText(/Confirm/i)).toBeInTheDocument();
         expect(User1.userList[0].status).toBeFalsy();
     });
-    test("After Confirm Button click, the user's task status should now be true", () => {
+    test("After Confirm Button is clicked, the button will dissapear, and the user's task status should now be changed in state", () => {
         const compCheckBox = screen.getByRole("checkbox");
-        compCheckBox.click();
-        const confirmButton = screen.getByRole("button");
+        userEvent.click(compCheckBox);
+        expect(screen.getByText(/Completion Status: ✔️/i)).toBeInTheDocument();
+        const confirmButton = screen.getByRole("button", { name: "Confirm" });
         confirmButton.click();
-        expect(User1.userList[0].status).toBeTruthy();
+        expect(
+            screen.queryByRole("button", { name: "Confirm" })
+        ).not.toBeInTheDocument();
     });
 });

@@ -88,6 +88,12 @@ describe("EditMode Component tests", () => {
         compCheckBox.click();
         expect(screen.queryByRole("button")).toBeInTheDocument();
         expect(screen.getByText(/Confirm/i)).toBeInTheDocument();
-        //const confirmButton = screen.getByRole("button");
+        expect(User1.userList[0].status).toBeFalsy();
+    });
+    test("After Confirm Button click, the user's task status should now be true", () => {
+        const compCheckBox = screen.getByRole("checkbox");
+        compCheckBox.click();
+        const confirmButton = screen.getByRole("button");
+        confirmButton.click();
     });
 });

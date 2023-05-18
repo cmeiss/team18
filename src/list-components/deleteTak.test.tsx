@@ -5,6 +5,9 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { User } from "../interfaces/user";
 
 import { TASKS } from "../TASKS";
+function setUser(newUser: User) {
+    newUser;
+}
 const User1: User = { name: "user1", userList: TASKS };
 const User2: User = { name: "Super", userList: TASKS };
 const User3: User = { name: "Admin", userList: TASKS };
@@ -58,6 +61,8 @@ describe("Delete task tests", () => {
     beforeEach(() =>
         render(
             <DeleteTask
+                user={users[0]}
+                setUser={setUser}
                 roles={users}
                 setRoles={function setUsers(newUsers: User[]) {
                     newUsers;
@@ -117,6 +122,8 @@ describe("Delete task tests", () => {
         const setTasks = jest.fn();
         render(
             <DeleteTask
+                user={users[0]}
+                setUser={setUser}
                 roles={users}
                 setRoles={function setUsers(newUsers: User[]) {
                     newUsers;

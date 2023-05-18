@@ -49,7 +49,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                         : false
                 )
             );
-            taskProps.setRoles(taskProps.roles.map(helper_func));
+            taskProps.setRoles([...taskProps.roles.map(helper_func)]);
             seteditmode(false);
             setDelTask("");
             setPlaceholder("Enter Task");

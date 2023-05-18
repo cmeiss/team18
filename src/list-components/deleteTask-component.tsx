@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./modifyTasksUsers.css";
 import { User } from "../interfaces/user";
+import { ChangeRole } from "./ChangeRole";
 
 //this component is used to delete a task by entering the task's name in a textbox
 export interface delTaskProp {
@@ -19,7 +20,6 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
     const [editMode, seteditmode] = useState<boolean>(false);
     const [deltask, setDelTask] = useState<string>("");
     const [placeholder, setPlaceholder] = useState<string>("Enter Task");
-
     function updateEditMode(event: React.ChangeEvent<HTMLInputElement>) {
         seteditmode(event.target.checked);
     }

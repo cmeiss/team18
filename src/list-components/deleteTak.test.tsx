@@ -2,7 +2,13 @@ import React from "react";
 import { DeleteTask } from "./deleteTask-component";
 import { Task } from "../interfaces/task";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { User } from "../interfaces/user";
 
+import { TASKS } from "../TASKS";
+const User1: User = { name: "user1", userList: TASKS };
+const User2: User = { name: "Super", userList: TASKS };
+const User3: User = { name: "Admin", userList: TASKS };
+const users = [User1, User2, User3];
 //basic tasks and task lists to test
 const TASK1: Task = {
     id: 1,
@@ -52,6 +58,10 @@ describe("Delete task tests", () => {
     beforeEach(() =>
         render(
             <DeleteTask
+                roles={users}
+                setRoles={function setUsers(newUsers: User[]) {
+                    newUsers;
+                }}
                 //item={TASK1}
                 tasks={TASKLIST1}
                 setTasks={
@@ -105,7 +115,16 @@ describe("Delete task tests", () => {
     test("disables edit mode after deleting a task", () => {
         const tasks = [TASK1, TASK2, TASK3];
         const setTasks = jest.fn();
-        render(<DeleteTask tasks={tasks} setTasks={setTasks} />);
+        render(
+            <DeleteTask
+                roles={users}
+                setRoles={function setUsers(newUsers: User[]) {
+                    newUsers;
+                }}
+                tasks={tasks}
+                setTasks={setTasks}
+            />
+        );
         const switchElement = screen.getByLabelText("Delete Task");
         fireEvent.click(switchElement);
         const textareaElement = screen.getByLabelText("Enter Task Below:");

@@ -143,6 +143,8 @@ describe("Testing Delete task in App", () => {
     beforeEach(() =>
         renderWithDnd(
             <DeleteTask
+                roles={users}
+                setRoles={setUsers}
                 tasks={TASKS}
                 setTasks={function (): void {
                     throw new Error("function not implemented");

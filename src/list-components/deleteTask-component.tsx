@@ -11,6 +11,8 @@ export interface delTaskProp {
     setTasks: (newTasks: Task[]) => void;
     roles: User[]; //these are all of the users which will be used to access their tasks and delete them.
     setRoles: (newRoles: User[]) => void;
+    user: User;
+    setUser: (newUser: User) => void;
 }
 
 export function DeleteTask(taskProps: delTaskProp): JSX.Element {
@@ -23,6 +25,15 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
     }
     function updateTasks(event: React.ChangeEvent<HTMLInputElement>) {
         setDelTask(event.target.value);
+    }
+    function helper_func(User: User): User {
+        taskProps.setUser({
+            name: User.name,
+            userList: User.userList.filter((item: Task): boolean =>
+                item.name.toLowerCase() != deltask.toLowerCase() ? true : false
+            )
+        });
+        return taskProps.user;
     }
 
     function remTask() {
@@ -38,7 +49,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                         : false
                 )
             );
-            taskProps.roles.map;
+            taskProps.setRoles(taskProps.roles.map(helper_func));
             seteditmode(false);
             setDelTask("");
             setPlaceholder("Enter Task");

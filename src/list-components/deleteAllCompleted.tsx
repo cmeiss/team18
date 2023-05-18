@@ -7,7 +7,7 @@ export interface delCompletedTaskProp {
     setTasks: (newTasks: Task[]) => void;
 }
 
-export function delelteAllCompleted(
+export function deleteAllCompleted(
     tasksProp: delCompletedTaskProp
 ): JSX.Element {
     const newTasks = tasksProp.tasks.filter(
@@ -21,8 +21,10 @@ export function delelteAllCompleted(
     }
 
     return (
-        <Button onClick={() => updatedTasks(newTasks)}>
-            Delete All Completed
-        </Button>
+        <div>
+            <Button onClick={() => updatedTasks(newTasks)}>
+                Delete All Completed
+            </Button>
+        </div>
     );
 }

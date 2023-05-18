@@ -10,7 +10,7 @@ import { filter_by_time_needed } from "./filterlists";
 import { useDrop } from "react-dnd";
 import { addTask, delTask, makeTask } from "../TaskFunctions";
 import { search } from "./search";
-
+import { deleteAllCompleted } from "./deleteAllCompleted";
 //Question for Lab: do we need one unchangable id?
 
 interface UserProps {
@@ -35,6 +35,9 @@ export function UserList({
     const [TaskSearched, setTaskSearched] = useState<string>("");
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [SearchedTasks, setSearchedTasks] = useState<Task[]>([]);
+    const [completedUserList, setCompletedUserList] = useState<Task[]>(
+        user.userList
+    );
 
     //this function copies the userList to ensure immutability
     function copyUL() {
@@ -296,6 +299,12 @@ export function UserList({
                                 </Button>
                             </div>
                         </div>
+                    </Col>
+                    <Col>
+                        <deleteAllCompleted
+                            tasks={completedUserList}
+                            setTasks={setCompletedUserList}
+                        ></deleteAllCompleted>
                     </Col>
                 </Row>
                 <Row>

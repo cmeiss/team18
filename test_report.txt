@@ -3491,7 +3491,7 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
          |                                           ^
       13 |     });
       14 |     test("component displays", function () {
-      15 |         var compDisplayed = react_2.screen.queryByText(/Change Difficulty:/i);
+      15 |         var compDisplayed = react_2.screen.getByText("Choose Difficulty:");
 
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
@@ -3505,11 +3505,11 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
          |                                           ^
       13 |     });
       14 |     test("component displays", function () {
-      15 |         var compDisplayed = react_2.screen.queryByText(/Change Difficulty:/i);
+      15 |         var compDisplayed = react_2.screen.getByText("Choose Difficulty:");
 
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
-FAIL src/editing-components/edit-difficulty.test.tsx
+PASS src/editing-components/edit-difficulty.test.tsx
   ● Console
 
     console.error
@@ -3550,89 +3550,6 @@ FAIL src/editing-components/edit-difficulty.test.tsx
       at render (node_modules/@testing-library/react/dist/pure.js:97:26)
       at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:13:9)
 
-  ● testing edit difficulty component › component displays
-
-    expect(received).toBeInTheDocument()
-
-    received value must be an HTMLElement or an SVGElement.
-    Received has value: null
-
-      20 |     test("component displays", () => {
-      21 |         const compDisplayed = screen.queryByText(/Change Difficulty:/i);
-    > 22 |         expect(compDisplayed).toBeInTheDocument();
-         |                               ^
-      23 |     });
-      24 |     test("difficulty is updating", () => {
-      25 |         const chooseDifficulty = screen.getByText("Change Difficulty:");
-
-      at __EXTERNAL_MATCHER_TRAP__ (node_modules/expect/build/index.js:386:30)
-      at Object.toBeInTheDocument (node_modules/expect/build/index.js:387:15)
-      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:22:31)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  ● testing edit difficulty component › difficulty is updating
-
-    TestingLibraryElementError: Unable to find an element with the text: Change Difficulty:. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<span[39m
-          [33mclass[39m=[32m"fs-8"[39m
-          [33mstyle[39m=[32m"font-weight: bold;"[39m
-        [36m>[39m
-          [0mChoose Difficulty: [0m
-          [36m<br />[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-        [36m</span>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      23 |     });
-      24 |     test("difficulty is updating", () => {
-    > 25 |         const chooseDifficulty = screen.getByText("Change Difficulty:");
-         |                                         ^
-      26 |         fireEvent.click(chooseDifficulty);
-      27 |         expect(chooseDifficulty).toBeInTheDocument();
-      28 |     });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:25:41)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
@@ -3668,6 +3585,7 @@ All files                  |   48.67 |    37.97 |   43.94 |   49.17 |
   AboutPage.tsx            |       0 |      100 |       0 |       0 | 5                                           
   taskPage.tsx             |       0 |        0 |       0 |       0 | 37-40                                       
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
+
 Summary of all failing tests
 FAIL src/list-components/filterlists.test.tsx
   ● filter › Testing the filter by time needed function
@@ -5039,7 +4957,7 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
          |                                           ^
       13 |     });
       14 |     test("component displays", function () {
-      15 |         var compDisplayed = react_2.screen.queryByText(/Change Difficulty:/i);
+      15 |         var compDisplayed = react_2.screen.getByText("Choose Difficulty:");
 
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
@@ -5053,97 +4971,13 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
          |                                           ^
       13 |     });
       14 |     test("component displays", function () {
-      15 |         var compDisplayed = react_2.screen.queryByText(/Change Difficulty:/i);
+      15 |         var compDisplayed = react_2.screen.getByText("Choose Difficulty:");
 
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
-FAIL src/editing-components/edit-difficulty.test.tsx
-  ● testing edit difficulty component › component displays
 
-    expect(received).toBeInTheDocument()
-
-    received value must be an HTMLElement or an SVGElement.
-    Received has value: null
-
-      20 |     test("component displays", () => {
-      21 |         const compDisplayed = screen.queryByText(/Change Difficulty:/i);
-    > 22 |         expect(compDisplayed).toBeInTheDocument();
-         |                               ^
-      23 |     });
-      24 |     test("difficulty is updating", () => {
-      25 |         const chooseDifficulty = screen.getByText("Change Difficulty:");
-
-      at __EXTERNAL_MATCHER_TRAP__ (node_modules/expect/build/index.js:386:30)
-      at Object.toBeInTheDocument (node_modules/expect/build/index.js:387:15)
-      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:22:31)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  ● testing edit difficulty component › difficulty is updating
-
-    TestingLibraryElementError: Unable to find an element with the text: Change Difficulty:. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<span[39m
-          [33mclass[39m=[32m"fs-8"[39m
-          [33mstyle[39m=[32m"font-weight: bold;"[39m
-        [36m>[39m
-          [0mChoose Difficulty: [0m
-          [36m<br />[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-          [36m<span[39m
-            [33mstyle[39m=[32m"color: orange; cursor: pointer;"[39m
-          [36m>[39m
-            [0m★[0m
-          [36m</span>[39m
-        [36m</span>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      23 |     });
-      24 |     test("difficulty is updating", () => {
-    > 25 |         const chooseDifficulty = screen.getByText("Change Difficulty:");
-         |                                         ^
-      26 |         fireEvent.click(chooseDifficulty);
-      27 |         expect(chooseDifficulty).toBeInTheDocument();
-      28 |     });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/editing-components/edit-difficulty.test.tsx:25:41)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-
-Test Suites: 10 failed, 11 passed, 21 total
-Tests:       20 failed, 66 passed, 86 total
+Test Suites: 9 failed, 12 passed, 21 total
+Tests:       18 failed, 68 passed, 86 total
 Snapshots:   0 total
-Time:        14.685 s
+Time:        15.363 s
 Ran all test suites.

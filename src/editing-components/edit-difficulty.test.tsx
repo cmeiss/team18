@@ -18,13 +18,12 @@ describe("testing edit difficulty component", () => {
         );
     });
     test("component displays", () => {
-        const compDisplayed = screen.queryByText(/Change Difficulty:/i);
+        const compDisplayed = screen.getByText("Choose Difficulty:");
         expect(compDisplayed).toBeInTheDocument();
     });
     test("difficulty is updating", () => {
-        const chooseDifficulty = screen.getByText("Change Difficulty:");
+        const chooseDifficulty = screen.getByText("Choose Difficulty:");
         fireEvent.click(chooseDifficulty);
         expect(chooseDifficulty).toBeInTheDocument();
     });
-    //not sure how to test for the value as of right now, placeholder for now
 });

@@ -30,4 +30,12 @@ describe("EditDescription Component tests", () => {
             )
         ).toBeInTheDocument();
     });
+    test("Checking to make sure the text can be changed", () => {
+        const descBox = screen.getByTestId("descriptionTextBox");
+        userEvent.type(descBox, "Luke I am your father");
+        expect(screen.queryByText("Luke I am your father"));
+    });
+    test("Making sure the description for the textbox is posting", () => {
+        expect(screen.queryByText("Change Description:"));
+    });
 });

@@ -5,9 +5,10 @@ import { Task } from "../interfaces/task";
 import { makeTask } from "../TaskFunctions";
 import { editProps } from "./EditTask";
 /**
-interface statusProps {
-    status: boolean;
-    setStatus: (newStatus: boolean) => void;
+interface editProps {
+    tasks: Task[];
+    updateTasks: (newTasks: Task[]) => void;
+    task: Task;
 }
 */
 export function EditStatus(edit: editProps): JSX.Element {
@@ -17,6 +18,7 @@ export function EditStatus(edit: editProps): JSX.Element {
     const [status, setStatus] = useState<boolean>(edit.task.status);
     const [saved, setSaved] = useState<boolean>(true);
 
+    //This is some state to know when the the button is pressed to confirm or save the status change into the user's task.
     function flipSaved(): void {
         setSaved(!saved);
     }

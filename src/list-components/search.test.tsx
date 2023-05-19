@@ -2,6 +2,7 @@ import { SearchUserByTask, search } from "./search";
 import { TASKS } from "../TASKS";
 import { User } from "../interfaces/user";
 
+//Creating Users for a User List to be tested
 const BillyBob: User = {
     name: "BillyBob",
     userList: [
@@ -70,6 +71,7 @@ const AbbySue: User = {
     ]
 };
 
+//Creating the list of users
 const users: User[] = [BillyBob, AbbySue];
 
 describe("Search Component tests", () => {

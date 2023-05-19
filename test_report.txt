@@ -1944,7 +1944,7 @@ PASS src/editing-components/EditStatus.test.tsx
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      65 | describe("EditMode Component tests", () => {
+      65 | describe("EditStatus Component tests", () => {
       66 |     beforeEach(() =>
     > 67 |         render(
          |         ^
@@ -1963,7 +1963,7 @@ PASS src/editing-components/EditStatus.test.tsx
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      65 | describe("EditMode Component tests", () => {
+      65 | describe("EditStatus Component tests", () => {
       66 |     beforeEach(() =>
     > 67 |         render(
          |         ^
@@ -1982,7 +1982,7 @@ PASS src/editing-components/EditStatus.test.tsx
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      65 | describe("EditMode Component tests", () => {
+      65 | describe("EditStatus Component tests", () => {
       66 |     beforeEach(() =>
     > 67 |         render(
          |         ^
@@ -2001,7 +2001,7 @@ PASS src/editing-components/EditStatus.test.tsx
     console.error
       Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
 
-      65 | describe("EditMode Component tests", () => {
+      65 | describe("EditStatus Component tests", () => {
       66 |     beforeEach(() =>
     > 67 |         render(
          |         ^
@@ -2297,6 +2297,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m</label>[39m
                 [36m<input[39m
                   [33mclass[39m=[32m"form-control"[39m
+                  [33mdata-testid[39m=[32m"descriptionTextBox"[39m
                   [33mid[39m=[32m"formDescriptionName"[39m
                   [33mvalue[39m=[32m"description a"[39m
                 [36m/>[39m
@@ -3409,6 +3410,85 @@ FAIL src/editing-components/dist/EditSteps.test.js
       at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
       at Object.<anonymous> (src/editing-components/dist/EditSteps.test.js:5:19)
 
+PASS src/editing-components/EditDescription.test.tsx
+  ● Console
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      13 | describe("EditDescription Component tests", () => {
+      14 |     beforeEach(() =>
+    > 15 |         render(
+         |         ^
+      16 |             <EditDescription
+      17 |                 description={testDescription}
+      18 |                 setDescription={setDescription}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditDescription.test.tsx:15:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      13 | describe("EditDescription Component tests", () => {
+      14 |     beforeEach(() =>
+    > 15 |         render(
+         |         ^
+      16 |             <EditDescription
+      17 |                 description={testDescription}
+      18 |                 setDescription={setDescription}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditDescription.test.tsx:15:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      13 | describe("EditDescription Component tests", () => {
+      14 |     beforeEach(() =>
+    > 15 |         render(
+         |         ^
+      16 |             <EditDescription
+      17 |                 description={testDescription}
+      18 |                 setDescription={setDescription}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditDescription.test.tsx:15:9)
+
+    console.error
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+
+      13 | describe("EditDescription Component tests", () => {
+      14 |     beforeEach(() =>
+    > 15 |         render(
+         |         ^
+      16 |             <EditDescription
+      17 |                 description={testDescription}
+      18 |                 setDescription={setDescription}
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at Object.render (node_modules/react-dom/cjs/react-dom.development.js:29670:5)
+      at node_modules/@testing-library/react/dist/pure.js:101:25
+      at act (node_modules/react/cjs/react.development.js:2512:16)
+      at render (node_modules/@testing-library/react/dist/pure.js:97:26)
+      at Object.<anonymous> (src/editing-components/EditDescription.test.tsx:15:9)
+
 PASS src/editing-components/EditSteps.test.tsx
   ● Console
 
@@ -3729,14 +3809,14 @@ PASS src/editing-components/edit-difficulty.test.tsx
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 ---------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                  |   52.74 |    43.12 |   50.94 |   52.98 |                                             
+All files                  |   53.26 |    43.12 |   51.57 |   53.53 |                                             
  src                       |   57.89 |        0 |   66.66 |   57.89 |                                             
   App.tsx                  |       0 |        0 |       0 |       0 | 19-43                                       
   CustomRender.tsx         |     100 |      100 |     100 |     100 |                                             
   TASKS.tsx                |     100 |      100 |     100 |     100 |                                             
   TaskFunctions.tsx        |     100 |      100 |     100 |     100 |                                             
- src/editing-components    |   77.55 |       80 |      68 |   78.72 |                                             
-  EditDescription.tsx      |   33.33 |      100 |      50 |   33.33 | 14-15                                       
+ src/editing-components    |   81.63 |       80 |      72 |   82.97 |                                             
+  EditDescription.tsx      |     100 |      100 |     100 |     100 |                                             
   EditStatus.tsx           |     100 |      100 |     100 |     100 |                                             
   EditSteps.tsx            |     100 |      100 |     100 |     100 |                                             
   EditTask.tsx             |   72.22 |       50 |   33.33 |   76.47 | 53-56,102                                   
@@ -4176,6 +4256,7 @@ FAIL src/editing-components/EditTask.test.tsx
                 [36m</label>[39m
                 [36m<input[39m
                   [33mclass[39m=[32m"form-control"[39m
+                  [33mdata-testid[39m=[32m"descriptionTextBox"[39m
                   [33mid[39m=[32m"formDescriptionName"[39m
                   [33mvalue[39m=[32m"description a"[39m
                 [36m/>[39m
@@ -5033,8 +5114,8 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
 
-Test Suites: 9 failed, 13 passed, 22 total
-Tests:       16 failed, 78 passed, 94 total
+Test Suites: 9 failed, 14 passed, 23 total
+Tests:       16 failed, 82 passed, 98 total
 Snapshots:   0 total
-Time:        16.683 s
+Time:        16.692 s
 Ran all test suites.

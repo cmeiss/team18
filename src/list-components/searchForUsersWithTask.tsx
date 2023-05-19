@@ -7,8 +7,8 @@ interface UserProps {
     users: User[];
 }
 export function SearchInSuper(UserProperties: UserProps): JSX.Element {
-    const [SearchMode, SetSearchMode] = useState<boolean>(false);
-    const [tasktosearch, SetTaskToSearch] = useState<string>("");
+    const [SearchMode, SetSearchMode] = useState<boolean>(false); // this is uses to decide whether we should render the textbox and users etc.
+    const [tasktosearch, SetTaskToSearch] = useState<string>(""); // this is the value the user has entered into the textbox
     const [placeholder] = useState<string>("Enter User"); //holds the current placeholder text to ask for input
 
     const [NamesOfUsers, SetNamesOfUsers] = useState<string>("");

@@ -77,8 +77,14 @@ describe("Search Component tests", () => {
         expect(search("Breakfast", TASKS)).toStrictEqual([TASKS[3]]);
         expect(search("Homework", TASKS)).toStrictEqual([TASKS[0]]);
     });
-    test("Testing the search by tasks component", () => {
+    test("Testing the search for user by task using different tasks in list", () => {
         expect(SearchUserByTask("Research", users)).toStrictEqual([BillyBob]);
         expect(SearchUserByTask("Gardening", users)).toStrictEqual([AbbySue]);
+    });
+    test("Testing the search for user by task using the same task in each user List", () => {
+        expect(SearchUserByTask("Dance Recital", users)).toStrictEqual([
+            BillyBob,
+            AbbySue
+        ]);
     });
 });

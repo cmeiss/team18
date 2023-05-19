@@ -94,7 +94,7 @@ describe("Testing EditTask", () => {
         expect(editTime).toBeInTheDocument();
     });
     test("The edit difficulty component is displayed", () => {
-        const editDiff = screen.getByText(/Change Difficulty:/i);
+        const editDiff = screen.getByText(/Choose Difficulty:/i);
         expect(editDiff).toBeInTheDocument();
     });
     test("the edit steps component is displayed", () => {

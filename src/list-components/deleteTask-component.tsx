@@ -26,8 +26,14 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
         setDelTask(event.target.value);
     }
     function helper_func(User: User): void {
-        User.userList = User.userList.filter((item: Task): boolean =>
+        const newUserList = User.userList.filter((item: Task): boolean =>
             item.name.toLowerCase() != deltask.toLowerCase() ? true : false
+        );
+        const newUser = { name: User.name, userList: newUserList };
+        taskProps.setRoles(
+            taskProps.roles.map((role: User) =>
+                role.name === User.name ? newUser : role
+            )
         );
     }
 
@@ -44,7 +50,7 @@ export function DeleteTask(taskProps: delTaskProp): JSX.Element {
                         : false
                 )
             );
-            for (let i = 0; taskProps.roles.length; i++) {
+            for (let i = 0; i < taskProps.roles.length; i++) {
                 helper_func(taskProps.roles[i]);
             }
             seteditmode(false);

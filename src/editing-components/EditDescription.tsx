@@ -6,6 +6,11 @@ interface descriptionProps {
     setDescription: (newDescription: string) => void;
 }
 
+/**
+ * Nothing too crazy here, just a textbox being used to update the description of
+ * a task, it cannot change the user's tasks itself, but will change the shallow state that the
+ * EditTask component will save
+ */
 export function EditDescription({
     description,
     setDescription

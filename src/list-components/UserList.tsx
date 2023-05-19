@@ -149,6 +149,9 @@ export function UserList({
         }
     }
 
+    /**
+     * This function gives the user the ability to delete all completed tasks from their list
+     */
     function deleteAllCompleted() {
         const newTasks = copyUL().filter((task: Task): boolean => !task.status);
         setUser({

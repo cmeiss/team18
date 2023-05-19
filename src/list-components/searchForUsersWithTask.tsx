@@ -26,6 +26,8 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
         const Users = SearchUserByTask(tasktosearch, UserProperties.users);
         SetNamesOfUsers(ConvertListToString(Users));
     }
+    // this is a helper function i use that converts the users with taks list to a list of strings and then joins them so I can render
+    // it as one string
     function ConvertListToString(usersWithTask: User[]) {
         const new_array_of_names = usersWithTask.map((user: User) => {
             return user.name;

@@ -11,7 +11,7 @@ const BillyBob: User = {
             description:
                 "Whether your deep into the furthest reaches of AI tech, or discovering how much ketchup is the perfect amount for every fry, make time for your undiscovered knowledge!.",
             status: false,
-            image: require("./task-images/research.jpg"),
+            image: "yes",
             steps: [
                 "Put on lab coat",
                 "Review safety modules",
@@ -20,6 +20,18 @@ const BillyBob: User = {
             difficulty: 3,
             numUsers: 0,
             time: "12:00",
+            pendingMode: false
+        },
+        {
+            id: 10,
+            name: "Dance Recital",
+            description: "I like to tango.",
+            status: false,
+            image: "No",
+            steps: ["Get dressed up", "Drive to dance", "Have fun!"],
+            difficulty: 3,
+            numUsers: 0,
+            time: "15:30",
             pendingMode: false
         }
     ]
@@ -32,7 +44,7 @@ const AbbySue: User = {
             name: "Gardening",
             description: "Tend those taters!",
             status: false,
-            image: require("./task-images/gardening.png"),
+            image: "No",
             steps: [
                 "Put on gloves and overalls",
                 "Repot that plant.",
@@ -41,6 +53,18 @@ const AbbySue: User = {
             difficulty: 3,
             numUsers: 0,
             time: "08:00",
+            pendingMode: false
+        },
+        {
+            id: 10,
+            name: "Dance Recital",
+            description: "I like to tango.",
+            status: false,
+            image: "No",
+            steps: ["Get dressed up", "Drive to dance", "Have fun!"],
+            difficulty: 3,
+            numUsers: 0,
+            time: "15:30",
             pendingMode: false
         }
     ]

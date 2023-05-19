@@ -39,19 +39,21 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
             >
                 Search For Users With Task Name:
             </Button>
-            <Button
-                onClick={UpdateUsersWithTask}
-                style={{
-                    backgroundColor: "rgb(247, 197, 140)"
-                }}
-                className="search-button2"
-            >
-                Check If Users With Task Exist
-            </Button>
 
             {SearchMode ? (
                 <div>
-                    {"Users With Task: " + NamesOfUsers}
+                    <Button
+                        onClick={UpdateUsersWithTask}
+                        style={{
+                            backgroundColor: "rgb(247, 197, 140)"
+                        }}
+                        className="search-button2"
+                    >
+                        Check If Users With Task Exist
+                    </Button>
+                    {NamesOfUsers !== ""
+                        ? "Users With Task: " + NamesOfUsers
+                        : "No users have this task "}
                     <Form.Group controlId="ChecKForUser">
                         <Form.Label style={{ fontWeight: "bold" }}></Form.Label>
                         <Form.Control

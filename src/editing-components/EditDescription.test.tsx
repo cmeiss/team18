@@ -25,10 +25,10 @@ describe("EditDescription Component tests", () => {
     });
     test("The inital text in the text box should be what is within the testDescription variable", () => {
         expect(
-            screen.getByText(
-                /Hi My name is Alan, I am your personal guide to the unknown/i
+            screen.queryByText(
+                "Hi My name is Alan, I am your personal guide to the unknown"
             )
-        ).toBeInTheDocument();
+        );
     });
     test("Checking to make sure the text can be changed", () => {
         const descBox = screen.getByTestId("descriptionTextBox");

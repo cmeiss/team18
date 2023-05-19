@@ -11,7 +11,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { AddTask } from "../list-components/addTask";
 import { DeleteTask } from "../list-components/deleteTask-component";
 import { Col, Row } from "react-bootstrap";
-
+import { SearchInSuper } from "../list-components/searchForUsersWithTask";
 interface TaskPageProps {
     role: User;
     setRole: (newRole: User) => void;
@@ -52,11 +52,18 @@ function TaskPage({
                     <Col>
                         <div>
                             {role.name === "Super" ? (
-                                <ModifyUsers
-                                    Role={role}
-                                    roles={roles}
-                                    setRoles={setRoles}
-                                ></ModifyUsers>
+                                <div>
+                                    {" "}
+                                    <ModifyUsers
+                                        Role={role}
+                                        roles={roles}
+                                        setRoles={setRoles}
+                                    ></ModifyUsers>
+                                    <SearchInSuper
+                                        user={role}
+                                        users={roles}
+                                    ></SearchInSuper>
+                                </div>
                             ) : null}
                         </div>
                     </Col>

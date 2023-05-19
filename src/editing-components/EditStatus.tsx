@@ -11,6 +11,10 @@ interface editProps {
     task: Task;
 }
 */
+/**This function takes the editProp component similiar to the EditTask component as
+ * it needs to save the state in a similiar way to EditTask since it does not reside within it
+ * unlike the other editing components
+ */
 export function EditStatus(edit: editProps): JSX.Element {
     function updateStatus(event: React.ChangeEvent<HTMLInputElement>) {
         setStatus(event.target.checked);

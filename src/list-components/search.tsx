@@ -10,7 +10,7 @@ export function search(name: string, tasks: Task[]): Task[] {
     );
     return tasks_with_word;
 }
-
+// the function search user by task is taking a list of users and a taskname. It returns the users that have the task in their userlist
 export function SearchUserByTask(taskName: string, users: User[]): User[] {
     function return_if_true(user: User): boolean {
         return user.userList.some(

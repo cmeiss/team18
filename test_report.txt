@@ -29,7 +29,7 @@ PASS src/list-components/adminlist.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
           at p
           at div
           at div
@@ -936,7 +936,7 @@ PASS src/App.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
           at p
           at div
           at div
@@ -1228,7 +1228,7 @@ PASS src/list-components/UserList.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
           at p
           at div
           at div
@@ -1771,7 +1771,7 @@ PASS src/list-components/DisplayTask.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
           at p
           at div
           at div
@@ -3057,7 +3057,7 @@ PASS src/list-components/CentralItemList.test.tsx
           at div
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
-          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:18:56)
+          at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
           at p
           at div
           at div
@@ -3221,6 +3221,7 @@ PASS src/list-components/CentralItemList.test.tsx
 
       at CentralItemList (src/list-components/CentralItemList.tsx:125:26)
 
+PASS src/list-components/search.test.tsx
 PASS src/list-components/ModifyUsers.test.tsx
   ● Console
 
@@ -3809,7 +3810,7 @@ PASS src/editing-components/edit-difficulty.test.tsx
 -----------------------------|---------|----------|---------|---------|---------------------------------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                           
 -----------------------------|---------|----------|---------|---------|---------------------------------------------
-All files                    |   51.25 |    42.07 |    48.8 |   51.43 |                                             
+All files                    |   52.76 |    42.07 |   51.78 |      53 |                                             
  src                         |   57.89 |        0 |   66.66 |   57.89 |                                             
   App.tsx                    |       0 |        0 |       0 |       0 | 19-43                                       
   CustomRender.tsx           |     100 |      100 |     100 |     100 |                                             
@@ -3826,17 +3827,17 @@ All files                    |   51.25 |    42.07 |    48.8 |   51.43 |
  src/interfaces              |       0 |        0 |       0 |       0 |                                             
   task.ts                    |       0 |        0 |       0 |       0 |                                             
   user.ts                    |       0 |        0 |       0 |       0 |                                             
- src/list-components         |   46.78 |    42.95 |   44.27 |   46.81 |                                             
+ src/list-components         |   48.62 |    42.95 |   48.09 |   48.72 |                                             
   CentralItemList.tsx        |    19.6 |       25 |   16.66 |      20 | 28-102,131-177                              
   ChangeRole.tsx             |     100 |      100 |     100 |     100 |                                             
   DisplayTask.tsx            |   85.71 |       75 |      80 |   85.71 | 52                                          
   ModifyUsers.tsx            |   77.77 |    83.33 |     100 |   77.77 | 40-42,60-62                                 
-  UserList.tsx               |   15.11 |    16.66 |   12.82 |   16.04 | 40-66,76,85-211,233-234,241,257-260,282-351 
+  UserList.tsx               |   15.11 |    16.66 |   12.82 |   16.04 | 40-66,76,85-214,236-237,244,260-263,285-354 
   addTask.tsx                |   73.91 |     87.5 |      50 |   73.91 | 39-52,60                                    
   adminlist.tsx              |   65.07 |    53.84 |      52 |   65.57 | 32,40-74,102-103,110,185                    
   deleteTask-component.tsx   |   72.72 |       80 |     100 |   71.42 | 50-57                                       
   filterlists.tsx            |   96.42 |       75 |     100 |   95.83 | 29                                          
-  search.tsx                 |       0 |      100 |       0 |       0 | 8-20                                        
+  search.tsx                 |     100 |      100 |     100 |     100 |                                             
   searchForUsersWithTask.tsx |       0 |        0 |       0 |       0 | 10-37                                       
  src/pages                   |       0 |        0 |       0 |       0 |                                             
   AboutPage.tsx              |       0 |      100 |       0 |       0 | 5                                           
@@ -5115,8 +5116,8 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
       at Object.<anonymous> (src/editing-components/dist/edit-difficulty.test.js:12:43)
 
 
-Test Suites: 9 failed, 14 passed, 23 total
-Tests:       16 failed, 82 passed, 98 total
+Test Suites: 9 failed, 15 passed, 24 total
+Tests:       16 failed, 85 passed, 101 total
 Snapshots:   0 total
-Time:        17.37 s
+Time:        17.834 s
 Ran all test suites.

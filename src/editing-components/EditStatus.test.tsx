@@ -62,7 +62,7 @@ const User1: User = { name: "user1", userList: TaskList };
 function setTasks(newTasks: Task[]) {
     TaskList = newTasks;
 }
-describe("EditMode Component tests", () => {
+describe("EditStatus Component tests", () => {
     beforeEach(() =>
         render(
             <EditStatus

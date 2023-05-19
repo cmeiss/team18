@@ -23,6 +23,7 @@ export function EditDescription({
                 <Form.Control
                     value={description}
                     onChange={updateDescription}
+                    data-testid="descriptionTextBox"
                 />
             </Form.Group>
         </div>

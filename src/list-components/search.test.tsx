@@ -1,4 +1,4 @@
-import { search } from "./search";
+import { SearchUserByTask, search } from "./search";
 import { TASKS } from "../TASKS";
 import { User } from "../interfaces/user";
 
@@ -24,6 +24,27 @@ const BillyBob: User = {
         }
     ]
 };
+const AbbySue: User = {
+    name: "AbbySue",
+    userList: [
+        {
+            id: 9,
+            name: "Gardening",
+            description: "Tend those taters!",
+            status: false,
+            image: require("./task-images/gardening.png"),
+            steps: [
+                "Put on gloves and overalls",
+                "Repot that plant.",
+                "Get hands dirty"
+            ],
+            difficulty: 3,
+            numUsers: 0,
+            time: "08:00",
+            pendingMode: false
+        }
+    ]
+};
 
 const users: User[] = [BillyBob, AbbySue];
 
@@ -32,5 +53,8 @@ describe("Search Component tests", () => {
         expect(search("Breakfast", TASKS)).toStrictEqual([TASKS[3]]);
         expect(search("Homework", TASKS)).toStrictEqual([TASKS[0]]);
     });
-    test("Testing the search by tasks component", () => {});
+    test("Testing the search by tasks component", () => {
+        expect(SearchUserByTask("Research", users)).toStrictEqual([BillyBob]);
+        expect(SearchUserByTask("Gardening", users)).toStrictEqual([AbbySue]);
+    });
 });

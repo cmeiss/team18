@@ -1,6 +1,5 @@
 import { Button, Form } from "react-bootstrap";
-import { SearchUserByTask, search } from "./search";
-import { Task } from "../interfaces/task";
+import { SearchUserByTask } from "./search";
 import { User } from "../interfaces/user";
 import React, { useState } from "react";
 interface UserProps {
@@ -11,13 +10,23 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
     const [SearchMode, SetSearchMode] = useState<boolean>(false);
     const [tasktosearch, SetTaskToSearch] = useState<string>("");
     const [placeholder] = useState<string>("Enter User"); //holds the current placeholder text to ask for input
-    const [UsersWithTask, SetUsersWithTask] = useState<User[]>([]);
+
+    const [NamesOfUsers, SetNamesOfUsers] = useState<string>("");
     function setSearchMode() {
         SetSearchMode(!SearchMode);
     }
     function updatetasktoSearch(event: React.ChangeEvent<HTMLInputElement>) {
         SetTaskToSearch(event.target.value);
-        SetUsersWithTask(SearchUserByTask(tasktosearch, UserProperties.users));
+    }
+    function UpdateUsersWithTask() {
+        const Users = SearchUserByTask(tasktosearch, UserProperties.users);
+        SetNamesOfUsers(ConvertListToString(Users));
+    }
+    function ConvertListToString(usersWithTask: User[]) {
+        const new_array_of_names = usersWithTask.map((user: User) => {
+            return user.name;
+        });
+        return new_array_of_names.join(", ");
     }
     return (
         <div>
@@ -30,19 +39,30 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
             >
                 Search For Users With Task Name:
             </Button>
+            <Button
+                onClick={UpdateUsersWithTask}
+                style={{
+                    backgroundColor: "rgb(247, 197, 140)"
+                }}
+                className="search-button2"
+            >
+                Check If Users With Task Exist
+            </Button>
+
             {SearchMode ? (
-                <Form.Group controlId="ChecKForUser">
-                    <Form.Label style={{ fontWeight: "bold" }}>
-                        Which user would you like to edit?
-                    </Form.Label>
-                    <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={tasktosearch}
-                        onChange={updatetasktoSearch}
-                        placeholder={placeholder}
-                    />
-                </Form.Group>
+                <div>
+                    {"Users With Task: " + NamesOfUsers}
+                    <Form.Group controlId="ChecKForUser">
+                        <Form.Label style={{ fontWeight: "bold" }}></Form.Label>
+                        <Form.Control
+                            as="textarea"
+                            rows={3}
+                            value={tasktosearch}
+                            onChange={updatetasktoSearch}
+                            placeholder={placeholder}
+                        />
+                    </Form.Group>
+                </div>
             ) : null}
         </div>
     );

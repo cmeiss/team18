@@ -12,7 +12,14 @@ export function search(name: string, tasks: Task[]): Task[] {
 }
 
 export function SearchUserByTask(taskName: string, users: User[]): User[] {
-    return users.filter((user: User) => {
-        user.userList.find((task) => task.name === taskName) ? true : false;
-    });
+    let users_to_return: User[] = [];
+    for (let i = 0; i < users.length; i++) {
+        for (let j = 0; j < users[i].userList.length; j++) {
+            if (users[i].userList[j].name === taskName) {
+                users_to_return = [...users_to_return, users[i]];
+                break;
+            }
+        }
+    }
+    return users_to_return;
 }

@@ -20,6 +20,8 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
     function updatetasktoSearch(event: React.ChangeEvent<HTMLInputElement>) {
         SetTaskToSearch(event.target.value);
     }
+    //this function gets called when you click the button to search for the users with the task it changes the names of users to the usernames
+    // that have the task in their userlist
     function UpdateUsersWithTask() {
         const Users = SearchUserByTask(tasktosearch, UserProperties.users);
         SetNamesOfUsers(ConvertListToString(Users));

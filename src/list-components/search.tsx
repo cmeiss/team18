@@ -12,14 +12,10 @@ export function search(name: string, tasks: Task[]): Task[] {
 }
 
 export function SearchUserByTask(taskName: string, users: User[]): User[] {
-    let users_to_return: User[] = [];
-    for (let i = 0; i < users.length; i++) {
-        for (let j = 0; j < users[i].userList.length; j++) {
-            if (users[i].userList[j].name === taskName) {
-                users_to_return = [...users_to_return, users[i]];
-                break;
-            }
-        }
+    function return_if_true(user: User): boolean {
+        return user.userList.some(
+            (task) => task.name.toLowerCase() === taskName.toLowerCase()
+        );
     }
-    return users_to_return;
+    return users.filter(return_if_true);
 }

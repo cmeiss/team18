@@ -84,8 +84,10 @@ export function EditStatus(edit: editProps): JSX.Element {
                             edit.task.time,
                             edit.task.pendingMode
                         );
+                        //Here is when the user will hit the confirm button and 'save' the state
                         flipSaved();
                     }}
+                    //Confirm Button is hidden if the state is saved
                     hidden={saved}
                     style={{
                         backgroundColor: "rgb(247, 197, 140)"

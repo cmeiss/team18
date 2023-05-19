@@ -11,10 +11,12 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
     const [tasktosearch, SetTaskToSearch] = useState<string>(""); // this is the value the user has entered into the textbox
     const [placeholder] = useState<string>("Enter User"); //holds the current placeholder text to ask for input
 
-    const [NamesOfUsers, SetNamesOfUsers] = useState<string>("");
+    const [NamesOfUsers, SetNamesOfUsers] = useState<string>(""); // these are the names of all the users that have this task
     function setSearchMode() {
+        //an onclick function that activates when we click the search user button renders textbox
         SetSearchMode(!SearchMode);
     }
+    // this function below executes whenever you types something in the textbox it updates the value to search
     function updatetasktoSearch(event: React.ChangeEvent<HTMLInputElement>) {
         SetTaskToSearch(event.target.value);
     }

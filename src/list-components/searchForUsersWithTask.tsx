@@ -34,32 +34,21 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
         });
         return new_array_of_names.join(", ");
     }
+
     return (
-        <div>
-            <Button
-                onClick={setSearchMode}
-                style={{
-                    backgroundColor: "rgb(247, 197, 140)"
-                }}
-                className="search-button"
-            >
-                Search For Users With Task Name:
-            </Button>
+        <div className="searchCertainTask">
+            <Form.Check
+                type={"switch"}
+                id="SearchMode"
+                label="Search for Users with certain Task Name"
+                className="mx-auto"
+                style={{ width: "150px", fontWeight: "bold" }}
+                checked={SearchMode}
+                onChange={setSearchMode}
+            />
 
             {SearchMode ? (
                 <div>
-                    <Button
-                        onClick={UpdateUsersWithTask}
-                        style={{
-                            backgroundColor: "rgb(247, 197, 140)"
-                        }}
-                        className="search-button2"
-                    >
-                        Check If Users With Task Exist
-                    </Button>
-                    {NamesOfUsers !== ""
-                        ? "Users With Task: " + NamesOfUsers
-                        : "No users have this task "}
                     <Form.Group controlId="ChecKForUser">
                         <Form.Label style={{ fontWeight: "bold" }}></Form.Label>
                         <Form.Control
@@ -70,6 +59,20 @@ export function SearchInSuper(UserProperties: UserProps): JSX.Element {
                             placeholder={placeholder}
                         />
                     </Form.Group>
+                    <Button
+                        onClick={UpdateUsersWithTask}
+                        style={{
+                            backgroundColor: "rgb(247, 197, 140)"
+                        }}
+                        className="search-button2"
+                    >
+                        Check If Users With Task Exist
+                    </Button>
+                    <div>
+                        {NamesOfUsers !== ""
+                            ? "Users with Task: " + NamesOfUsers
+                            : "No users have this task "}
+                    </div>
                 </div>
             ) : null}
         </div>

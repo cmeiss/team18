@@ -263,6 +263,10 @@ export function UserList({
         return droppedTask ? true : false;
     }
 
+    function UserName(user: User) {
+        return String(user.name);
+    }
+
     if (user.name !== "Super" && user.name !== "Admin") {
         return (
             <div className="UserList">
@@ -356,7 +360,7 @@ export function UserList({
                                   task={TASK}
                                   tasks={user.userList}
                                   updateTasks={editUserList}
-                                  role={user.name}
+                                  role={UserName(user)}
                               ></DisplayTask>
                           ))
                         : null}
@@ -375,7 +379,7 @@ export function UserList({
                             task={TASK}
                             tasks={user.userList}
                             updateTasks={editUserList}
-                            role={user.name}
+                            role={UserName(user)}
                         ></DisplayTask>
                     ))}
                 </div>

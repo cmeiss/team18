@@ -1,6 +1,7 @@
 .modifyUsers,
 .addTask,
-.deleteTask {
+.deleteTask,
+.searchCertainTask {
     text-align: center;
     color: rgb(71, 28, 3);
     margin: 50px;

@@ -37,6 +37,17 @@ export function DisplayTask(display: displayProps): JSX.Element {
         );
     }
 
+    //this function calls the component to display the status of the task
+    function CallEditStatus(): JSX.Element {
+        return (
+            <EditStatus
+                tasks={display.tasks}
+                updateTasks={display.updateTasks}
+                task={display.task}
+            ></EditStatus>
+        );
+    }
+
     return (
         <div
             ref={drag}
@@ -70,11 +81,7 @@ export function DisplayTask(display: displayProps): JSX.Element {
                     <br />
                     {display.task.description}
                     <br />
-                    <EditStatus
-                        tasks={display.tasks}
-                        updateTasks={display.updateTasks}
-                        task={display.task}
-                    ></EditStatus>
+                    <CallEditStatus></CallEditStatus>
                     <br />
                     Difficulty: {display.task.difficulty}
                     <br />

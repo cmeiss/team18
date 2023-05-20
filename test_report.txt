@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/list-components/adminlist.test.tsx (5.435 s)
+PASS src/list-components/adminlist.test.tsx
   ● Console
 
     console.error
@@ -30,6 +30,7 @@ PASS src/list-components/adminlist.test.tsx (5.435 s)
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
           at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
+          at CallEditStatus
           at p
           at div
           at div
@@ -637,6 +638,7 @@ PASS src/App.test.tsx
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
           at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
+          at CallEditStatus
           at p
           at div
           at div
@@ -929,6 +931,7 @@ PASS src/list-components/UserList.test.tsx
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
           at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
+          at CallEditStatus
           at p
           at div
           at div
@@ -1265,6 +1268,7 @@ PASS src/list-components/DisplayTask.test.tsx
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
           at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
+          at CallEditStatus
           at p
           at div
           at div
@@ -1834,6 +1838,7 @@ PASS src/list-components/CentralItemList.test.tsx
           at /home/runner/work/team18/team18/node_modules/react-bootstrap/cjs/FormCheck.js:31:3
           at div
           at EditStatus (/home/runner/work/team18/team18/src/editing-components/EditStatus.tsx:22:56)
+          at CallEditStatus
           at p
           at div
           at div
@@ -2606,9 +2611,9 @@ All files                    |   53.98 |    42.77 |   52.35 |   54.26 |
  src/list-components         |   50.15 |    43.75 |   48.87 |   50.31 |                                             
   CentralItemList.tsx        |    19.6 |       25 |   16.66 |      20 | 28-102,131-177                              
   ChangeRole.tsx             |     100 |      100 |     100 |     100 |                                             
-  DisplayTask.tsx            |   85.71 |       75 |      80 |   85.71 | 52                                          
+  DisplayTask.tsx            |    87.5 |       75 |   83.33 |    87.5 | 63                                          
   ModifyUsers.tsx            |   77.77 |    83.33 |     100 |   77.77 | 40-42,60-62                                 
-  UserList.tsx               |   16.09 |    16.66 |      15 |   17.07 | 40-66,76,85-214,236-237,244,260-263,289-358 
+  UserList.tsx               |   15.11 |    16.66 |   12.82 |   16.04 | 40-66,76,85-214,236-237,244,260-263,285-354 
   addTask.tsx                |   73.91 |     87.5 |      50 |   73.91 | 39-52,60                                    
   adminlist.tsx              |   65.07 |    53.84 |      52 |   65.57 | 32,40-74,102-103,110,185                    
   deleteTask-component.tsx   |      88 |    83.33 |     100 |    87.5 | 61-63                                       
@@ -2808,5 +2813,5 @@ FAIL src/editing-components/dist/edit-difficulty.test.js
 Test Suites: 6 failed, 18 passed, 24 total
 Tests:       10 failed, 91 passed, 101 total
 Snapshots:   0 total
-Time:        23.304 s
+Time:        20.493 s
 Ran all test suites.
